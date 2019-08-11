@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2019-08-11T15:29:07.543Z</updated>
+  <updated>2019-08-11T15:51:19.021Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://orzff.cn/b17f/"/>
     <id>http://orzff.cn/b17f/</id>
     <published>2019-08-11T12:51:17.000Z</published>
-    <updated>2019-08-11T15:29:07.543Z</updated>
+    <updated>2019-08-11T15:51:19.021Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,14 @@
     
     </summary>
     
-      <category term="题解" scheme="http://orzff.cn/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM" scheme="http://orzff.cn/categories/ACM/"/>
+    
+      <category term="多校" scheme="http://orzff.cn/categories/ACM/%E5%A4%9A%E6%A0%A1/"/>
+    
+      <category term="牛客多校" scheme="http://orzff.cn/categories/ACM/%E5%A4%9A%E6%A0%A1/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/"/>
     
     
-      <category term="多校" scheme="http://orzff.cn/tags/%E5%A4%9A%E6%A0%A1/"/>
+      <category term="题解" scheme="http://orzff.cn/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
@@ -41,7 +45,7 @@
     <link href="http://orzff.cn/2105/"/>
     <id>http://orzff.cn/2105/</id>
     <published>2019-08-11T12:50:58.000Z</published>
-    <updated>2019-08-11T15:28:09.340Z</updated>
+    <updated>2019-08-11T15:51:32.198Z</updated>
     
     <summary type="html">
     
@@ -49,10 +53,14 @@
     
     </summary>
     
-      <category term="题解" scheme="http://orzff.cn/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM" scheme="http://orzff.cn/categories/ACM/"/>
+    
+      <category term="多校" scheme="http://orzff.cn/categories/ACM/%E5%A4%9A%E6%A0%A1/"/>
+    
+      <category term="牛客多校" scheme="http://orzff.cn/categories/ACM/%E5%A4%9A%E6%A0%A1/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/"/>
     
     
-      <category term="多校" scheme="http://orzff.cn/tags/%E5%A4%9A%E6%A0%A1/"/>
+      <category term="题解" scheme="http://orzff.cn/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
@@ -61,7 +69,7 @@
     <link href="http://orzff.cn/81cc/"/>
     <id>http://orzff.cn/81cc/</id>
     <published>2019-08-11T06:57:09.000Z</published>
-    <updated>2019-08-11T12:37:55.517Z</updated>
+    <updated>2019-08-11T15:50:47.382Z</updated>
     
     <summary type="html">
     
