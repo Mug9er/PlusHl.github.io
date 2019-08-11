@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2019-08-11T05:06:08.648Z</updated>
+  <updated>2019-08-11T09:49:15.887Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -17,74 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>second-page</title>
-    <link href="http://orzff.cn/50c6/"/>
-    <id>http://orzff.cn/50c6/</id>
-    <published>2019-08-11T15:58:23.000Z</published>
-    <updated>2019-08-11T05:06:08.648Z</updated>
+    <title>second</title>
+    <link href="http://orzff.cn/d944/"/>
+    <id>http://orzff.cn/d944/</id>
+    <published>2019-08-11T09:42:46.000Z</published>
+    <updated>2019-08-11T09:49:15.887Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/50c6/2732x2048.jpg&quot; alt=&quot;xx&quot;&gt;&lt;/p&gt;
-    
     </summary>
     
-      <category term="test" scheme="http://orzff.cn/categories/test/"/>
-    
-    
-      <category term="测试1" scheme="http://orzff.cn/tags/%E6%B5%8B%E8%AF%951/"/>
-    
-      <category term="测试2" scheme="http://orzff.cn/tags/%E6%B5%8B%E8%AF%952/"/>
     
   </entry>
   
   <entry>
-    <title>third page</title>
-    <link href="http://orzff.cn/9f30/"/>
-    <id>http://orzff.cn/9f30/</id>
-    <published>2019-08-11T05:03:39.000Z</published>
-    <updated>2019-08-11T05:05:21.646Z</updated>
+    <title>My First Blog</title>
+    <link href="http://orzff.cn/81cc/"/>
+    <id>http://orzff.cn/81cc/</id>
+    <published>2019-08-11T06:57:09.000Z</published>
+    <updated>2019-08-11T10:17:11.907Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/9f30/2732x2048.jpg&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;/81cc/Cover.jpg&quot; alt=&quot;img1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这是我的第一篇博客，主要写一些Hexo的配置&lt;/p&gt;
     
     </summary>
     
-      <category term="test1" scheme="http://orzff.cn/categories/test1/"/>
-    
-      <category term="test2" scheme="http://orzff.cn/categories/test1/test2/"/>
+      <category term="杂谈" scheme="http://orzff.cn/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="测试一" scheme="http://orzff.cn/tags/%E6%B5%8B%E8%AF%95%E4%B8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>First Page</title>
-    <link href="http://orzff.cn/15c5/"/>
-    <id>http://orzff.cn/15c5/</id>
-    <published>2019-08-08T15:58:23.000Z</published>
-    <updated>2019-08-10T15:18:21.811Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/15c5/2732x2048.jpg&quot; alt=&quot;xx&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="test" scheme="http://orzff.cn/categories/test/"/>
-    
-    
-      <category term="测试1" scheme="http://orzff.cn/tags/%E6%B5%8B%E8%AF%951/"/>
-    
-      <category term="测试2" scheme="http://orzff.cn/tags/%E6%B5%8B%E8%AF%952/"/>
+      <category term="Hexo" scheme="http://orzff.cn/tags/Hexo/"/>
     
   </entry>
   
