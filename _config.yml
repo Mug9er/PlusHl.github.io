@@ -131,3 +131,7 @@ abbrlink:
  # 网页底部是否显示
   total_symbols: true
   total_time: true
+deploy:
+  type: git
+  repository: git@github.com:PlusHl/PlusHl.github.io.git
+  branch: master
