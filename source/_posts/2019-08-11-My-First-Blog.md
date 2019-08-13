@@ -1,6 +1,6 @@
 ---
 title: My First Blog
-maathjax: true
+mathjax: true
 categories: 杂谈
 tags: Hexo
 abbrlink: 81cc
