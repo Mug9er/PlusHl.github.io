@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://orzff.cn # 博客所要绑定的域名，没有则不填
 root: /
-permalink: :abbrlink/
+perma: :abbrlink/
 permalink_defaults:
 
 # Directory
@@ -89,12 +89,25 @@ baidusitemap: # 百度站点地图
 
 # Deployment # 非常重要的部署设置
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repository: http://github.com/PlusHl/PlusHl.github.io.git
-  branch: master 
 social:
-  github: https://github.com/PlusHl
+  GitHub: https://github.com/PlusHl || github
+  E-Mail: mailto:643719884@qq.com || envelope
+  CSDN: https://blog.csdn.net/henu_jizhideqingwa || CSDN
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+
+social_icons:
+  enable: true
+  GitHub: github
+  Twitter: twitter
+  微博: weibo
+  E-Mail: envelope
 
 index_generator:
   per_page: 5
@@ -110,3 +123,11 @@ tag_generator:
 abbrlink:
   alg: crc16
   rep: hex
+
+  symbols_count_time:
+ #文章内是否显示
+  symbols: true
+  time: true
+ # 网页底部是否显示
+  total_symbols: true
+  total_time: true
