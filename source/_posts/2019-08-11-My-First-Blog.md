@@ -30,7 +30,7 @@ Hexo/themes/next/目录下的_config.yml称为主题配置文件
 ![img1](2019-08-11-My-First-Blog/Hexo-img1.png)
 
 ```stylus
- git clone https://github.com/theme-next/hexo-theme-next themes / next
+ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
 
 在站点配置文件 `_config.yml`
@@ -376,6 +376,29 @@ post_meta:
 
 ## 17. Latex公式
 
+更换Hexo的Markdown渲染引擎
+
+```c
+npm uninstall hexo-renderer-marked --save
+npm install hexo-renderer-kramed --save
+```
+
+然后打开`node_modules/kramed/lib/rules/inline.js`
+
+替换11行的escape变量
+
+```c
+//  escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
+  escape: /^\\([`*\[\]()#$+\-.!_>])/
+```
+
+改变20行的em变量
+
+```c
+//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/
+```
+
 next集成了Mathjax，编辑主题配置文件`_config.yml`
 
 ```yaml
@@ -407,7 +430,7 @@ abbrlink:
   rep: hex    #support dec(default) and hex
 
 # 更改 permalink 值
-permalink: p/:abbrlink.html 
+permalink: /:abbrlink/
 ```
 
 ## 19. 文章封面图片
@@ -427,6 +450,7 @@ social:
   #GitHub: https://github.com/yourname || github
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
+  #E-Mail: mailto:yourname@gmail.com || envelope
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -741,6 +765,10 @@ font:
     family: 'Comic Neue'
     size:
 ```
+
+刚开始的字体是默认14px，在代码部分会很小，所以可以在`themes/next/source/css/_variables/base.styl`
+
+修改 font size和code font  为18px就很好
 
 ## 26. 设置新建文件配置
 
