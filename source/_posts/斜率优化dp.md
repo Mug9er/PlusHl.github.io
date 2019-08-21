@@ -192,19 +192,102 @@ int main() {
 
 序列分割，给你n个数字，你把序列分割成m个段，每一段的的方差为$v$
 
-输出最小的每一段的$\times m^2$之和
+输出最小的每一段的之和$\times m^2$
 
 #### 思路
 
+提前声明一下， 下面的$c_i$都是一段路的距离之和，而不是单条路的距离，所以是$m$段而不是$n$段
+
+$s^2=\frac{(\frac{\sum\limits_{i=1}^{m}c_i}{n}-c_1)^2+(\frac{\sum\limits_{i=1}^{m}c_i}{m}-c_2)^2+...+(\frac{\sum\limits_{i=1}^{m}c_i}{m}-c_n)^2}{m}$
+
+$s^2=\frac{(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_1+c_1^2+(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_2+c_2^2+...+(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_n+c_n^2}{m}$
+
+$s^2=\frac{m\times (\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$
+
+$s^2=\frac{\frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}-2\times \frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$
 
 
 
+$s^2=\frac{-\frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$
 
+$s^2\times m^2=-(\sum\limits_{i=1}^{n}c_i)^2+m\times (\sum\limits_{i=1}^{n}c_i^2)$
 
+我们发现前面一项是一个常数，而$s^2\times m^2$最小是在$\sum\limits_{i=1}^{m}c_i^2$最小时
 
+这样我们在进行$dp$转移的时候,我们用$sum[x] = \sum\limits_{i=1}^{x}val[i]$    $val[x]$时每一条路的长度
 
+$dp[i] = \min\{dp[x] + (sum[i]-sum[x])^2\}$
 
+按照以往的套路，存在$k<j<i$并且$j$比$k$要优
 
+$dp[j]+(sum[i]-sum[j])^2\le dp[k]+(sum[i]+sum[k])^2$
+
+$dp[j]+sum[j]^2-(dp[k]+sum[k]^2)\le2\times sum[i]sum[j]-2\times sum[i]sum[k]$
+
+$\frac{dp[j]+sum[j]^2-(dp[k]+sum[k]^2)}{2\times(sum[j]]-sum[k])}\le sum[i]$
+
+这样斜率就推出来了，因为$sum[i]$是个递增的值，所以我们可以用单调队列来维护凸壳
+
+然后用一个滚动数组来记录最优值
+
+#### AC代码
+
+```c
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int maxn = 1e5 + 5;
+const int inf = 0x3f3f3f3f;
+const int mod = 1e9+7;
+
+ll sum[maxn], g[maxn], val[maxn];
+ll q[maxn], dp[maxn];
+
+ll getDp(ll i, int j) {
+    return g[j] + (val[i] - val[j]) * (val[i] - val[j]);
+}
+
+ll getUp(int j) {
+    return g[j] + val[j] * val[j];
+}
+
+ll getDown(int j) {
+    return 2 * val[j];
+}
+
+double Calc(int x, int y) {
+    if(getDown(x) == getDown(y)) return -1e9;
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for (int i = 1; i <= n; i ++) {
+        scanf("%lld", &val[i]);
+        val[i] += val[i-1];
+        g[i] = val[i] * val[i]; 
+   }
+    for (int t = 1; t < m; t ++) {
+        int head, tail;
+        head = tail = 1;
+        for (int i = 1; i <= n; i ++) {
+            while(head < tail && Calc(q[head+1], q[head]) <= val[i])
+                head ++;
+            dp[i] = getDp(i, q[head]);
+            while(head < tail && Calc(i, q[tail]) <= Calc(q[tail], q[tail-1]))
+                tail --;
+            q[++tail] = i;
+        }
+        for (int i = 1; i <= n; i ++)  g[i] = dp[i];   
+    }
+    printf("%lld\n", m * dp[n] - val[n] * val[n]);
+
+    return 0;
+}
+```
+
+这道题貌似可以用WQS加斜率dp来写，下次来补一下
 
 
 
