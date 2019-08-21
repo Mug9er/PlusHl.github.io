@@ -39,3 +39,172 @@ $dp[i] = \min\limits_{x=1}^{x<i}$  $or$  $\max\limits_{x=1}^{x<i}$ $\{dp[x] + f(
 
 当我们去最小值是，我们有一下这么几个点
 
+![img1](斜率优化dp/img1.png)
+
+我们维护一个下凸壳，那么我们找的最小值的直线一定是沿着下凸壳的边缘
+
+![img2](斜率优化dp/img2.png)
+
+所以说不处于凸壳上的点是没有意义的
+
+另外：最小值维护下凸壳，最大值维护上凸壳
+
+## 如何使用
+
+### 求斜率
+
+我们已经把式子化成这么一个形式$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ ,那么我们求斜率可以这么写
+
+以HDU 3507为例：
+
+```c
+ll getUp(ll j) {
+    return dp[j] + sum[j] * sum[j];
+}
+
+ll getDown(ll j) {
+    return 2 * sum[j];
+}
+
+double Calc(ll x, ll y) {
+    if(getDown(x) == getDown(y)) return -1e9; //加一下防止除零的情况
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+```
+
+###　单调队列
+
+当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$是单调的，那么我们可以用单调队列来维护这个凸壳，并且队首是最优解
+
+因为我们维护一个单调的队列，所以当我们在队列里面加点时，根据凸壳的单调性我们可以这么写
+
+```c
+while(head < tail && Calc(i, q[tail]) <= Calc(q[tail], q[tail-1])) tail --;
+            q[++tail] = i;
+```
+
+而如果存在$k<j<i$并且$j$比$k$优，的情况，也就是$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 
+
+我们在队首把$k$踢出去,因为$k$已经不是最优的
+
+```c
+while(head < tail && Calc(q[head+1], q[head]) <= sum[i])
+                head ++;
+```
+
+这样我们就可以用单调队列去维护一个单调的凸壳，并且单调队列里面的队首就是最优情况
+
+### 单调栈
+
+当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$不是单调的，那么我们可以用单调栈来维护这个凸壳
+
+因为凸壳是单调的，所以我们要找的这个$k_i$可以用二分来查找
+
+## 例题
+
+### HDU 3507 Print Article
+
+#### 题意
+
+有一个$C_i$序列，你可以把序列分为几段，每段的权值为$(\sum\limits_{i=1}^{k}C_i)^2+M$，
+
+求出最小的权值和
+
+####　思路
+
+很容易想到转移方程$dp[i] = \min\limits_{x=1}^{x<i}\{dp[x] + m + (sum[i] - sum[x])^2\}$
+
+我们假设存在一个$k<j<i$并且$j$比$k$要优
+
+那么$dp[j]+m+(sum[i]-sum[j]^2)\leq dp[k]+m+(sum[i]-sum[k])^2$
+
+移项并合并同类项后：
+
+$\frac{dp[j]+sum[j] \times sum[j] - (dp[k]+sum[k]\times sum[k])}{2(sum[j]-sum[k])}\le sum[i]]$
+
+
+
+我们设$Y=dp[x]-sum[x],X=2\times sum[x]$
+
+那么式子可以化成:$\frac{Y(j)-Y(k)}{X(j)-X(k)}\le sum[i]$
+
+因为是$sum[i]$是递增的，所以我们可以用单调队列维护一个下凸壳
+
+#### AC代码
+
+```c
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+const ll maxn = 5e5 + 7;
+const ll inf = 0x3f3f3f3f;
+const ll mod = 1e9 + 7;
+const double eps = 0.0000000001;
+typedef pair<ll, ll> pis;
+
+ll dp[maxn], q[maxn];
+ll sum[maxn];
+
+ll head, tail, n, m;
+
+ll getDp(ll i, ll j) {
+    return dp[j] + m + (sum[i] - sum[j]) * (sum[i] - sum[j]);
+}
+
+ll getUp(ll j) {
+    return dp[j] + sum[j] * sum[j];
+}
+
+ll getDown(ll j) {
+    return 2 * sum[j];
+}
+
+double Calc(ll x, ll y) {
+    if(getDown(x) == getDown(y)) return -1e9;
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() { 
+    while(~scanf("%lld %lld", &n, &m)) {
+        for (ll i = 1; i <= n; i ++)
+            scanf("%lld", &sum[i]);
+        sum[0] = dp[0] = 0;
+        for (ll i = 1; i <= n; i ++)
+            sum[i] += sum[i-1];
+        head = tail = 1;
+        for (ll i = 1; i <= n; i ++) {
+            while(head < tail && Calc(q[head+1], q[head]) <= 1.0 * sum[i])
+                head ++;
+            dp[i] = getDp(i, q[head]);
+            while(head < tail && Calc(i, q[tail]) <= Calc(q[tail], q[tail-1])) tail --;
+            q[++tail] = i;
+        }
+        printf("%lld\n", dp[n]);
+    }
+    return 0;
+}
+```
+
+### 洛谷 P4072 征途
+
+#### 题意
+
+序列分割，给你n个数字，你把序列分割成m个段，每一段的的方差为$v$
+
+输出最小的每一段的$\times m^2$之和
+
+#### 思路
+
+
+
+
+
+
+
+
+
+
+
+
+
