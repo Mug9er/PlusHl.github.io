@@ -1,12 +1,13 @@
 ---
 title: 斜率优化dp
 mathjax: true
-date: 2019-08-20 16:48:50
 categories:
   - ACM
   - 算法学习笔记
 tags:
   - dp优化
+abbrlink: f1b7e3b7
+date: 2019-08-20 16:48:50
 ---
 
 ![header](斜率优化dp/header.jpg)
@@ -76,7 +77,7 @@ double Calc(ll x, ll y) {
 }
 ```
 
-###　单调队列
+### 单调队列
 
 当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$是单调的，那么我们可以用单调队列来维护这个凸壳，并且队首是最优解
 
