@@ -1,7 +1,7 @@
-@echo off
 set Path="C:\Program Files\Git\bin\git.exe"
 %Path% pull
 %Path% add .
 %Path% commit -m "updata"
 %Path% push
-start PushHexo.bat
+call hexo clean
+call hexo d -g
