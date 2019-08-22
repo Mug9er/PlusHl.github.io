@@ -1,7 +1,6 @@
-set Git="C:\Program Files\Git\bin\git.exe"
-%Git% pull
-%Git% add .
-%Git% commit -m "updata"
-%Git% push
-call hexo clean
-call hexo d -g
+git pull
+git add .
+git commit -m "updata"
+git push
+hexo clean
+hexo d -g
