@@ -4,5 +4,5 @@ set Path="C:\Program Files\Git\bin\git.exe"
 %Path% add .
 %Path% commit -m "updata"
 %Path% push
-echo clean
-echo d -g
+echo hexo clean
+echo hexo d -g
