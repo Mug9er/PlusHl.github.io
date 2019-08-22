@@ -1,6 +1,7 @@
+@echo off
 git pull
 git add .
 git commit -m "updata"
 git push
-hexo clean
-hexo d -g
+call hexo clean
+call hexo d -g
