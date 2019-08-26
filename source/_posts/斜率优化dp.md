@@ -600,7 +600,93 @@ int main() {
 }
 ```
 
+### 2019牛客多校第十场 J.Wood Processing
 
+#### 题意
+
+把n块木板求成高度相同的k块，求浪费的最小
+
+#### 思路
+
+可以说是斜率dp的模板题
+
+我们把高度从高到低排序，那么$dp$转移式就是
+
+$dp[i]=max\{dp[x]+(sum[i]-sum[x])\times h[i]\}$ $sum$是宽的前缀和
+
+我们假设$j>k$并且$j$比$k$优
+
+$dp[j]+(sum[i]-sum[j])\times h[i] >= dp[k]+(sum[i]-sum[k])\times h[i]$
+
+$\frac{dp[j]-dp[k]}{sum[j]-sum[k]}\ge h[i]$
+
+#### AC代码
+
+```c
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int maxn = 5005;
+const int inf = 0x3f3f3f3f;
+const int mod = 1e9+7;
+typedef pair<int, int> pis;
+
+struct Node{
+    ll p, h, w;
+}node[maxn][2];
+struct Plan{
+    ll h, w;
+}plan[maxn];
+int n, k;
+ll ans = 0;
+ll dp[maxn], q[maxn], g[maxn];
+
+bool cmp(Plan a, Plan b) {
+    return a.h > b.h;
+}
+
+ll getUp(int j) {
+    return g[j]; 
+}
+
+ll getDown(int i) {
+    return plan[i].w;
+}
+
+double Cal(int x, int y) {
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+ll getDp(int x, int i) {
+    return g[x] + (plan[i].w - plan[x].w) * plan[i].h; 
+}
+
+void solve() {
+    int head, tail;
+    head = tail = 1;
+    for (int i = 1; i <= n; i ++) {
+        while(head < tail && Cal(q[head+1], q[head]) >= plan[i].h) head ++;
+        dp[i] = getDp(q[head], i);
+        while(head < tail && Cal(i, q[tail]) >= Cal(q[tail], q[tail-1])) tail --;
+        q[++tail] = i;
+    }
+    for (int i = 1; i <= n; i ++) g[i] = dp[i];
+}
+
+int main() {
+    scanf("%d %d", &n, &k);
+    ll sum = 0;
+    for (int i = 1; i <= n; i ++) {
+        scanf("%lld %lld", &plan[i].w, &plan[i].h);
+        sum += plan[i].w * plan[i].h;
+    }
+    sort(plan + 1, plan + 1 + n, cmp);
+    for (int i = 1; i <= n; i ++) plan[i].w += plan[i-1].w;
+    for (int i = 1; i <= k; i ++) solve();
+    printf("%lld\n", sum-dp[n]);
+    return 0;
+}
+```
 
 
 
