@@ -109,17 +109,17 @@ void GetG(long long n) {
 
 ### 洛谷P5325
 
-### 题意
+#### 题意
 
 定义$f(x)$, 且$f(p^k)=p^k(p^k-1)$，$p$是一个质数,求$\sum\limits_{i=1}^{n}f(i)$,对$1e9+7$取模
 
-### 思路
+#### 思路
 
 当$p$为质数时 $f(p)=p(p-1)=p^2-p$
 
 设$g(x)=x^2,h(x)=x,f(x)=g(x)-h(x)$
 
-### AC代码
+#### AC代码
 
 ```c
 #include<bits/stdc++.h>
