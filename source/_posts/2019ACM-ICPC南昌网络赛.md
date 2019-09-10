@@ -1,16 +1,19 @@
 ---
 title: 2019ACM-ICPC南昌网络赛
 mathjax: true
-date: 2019-09-10 14:13:02
 categories:
   - ACM
   - ICPC
   - 南昌网络赛
 tags:
   - 题解
+abbrlink: 4e0518cb
+date: 2019-09-10 14:13:02
 ---
 
 ![header](2019ACM-ICPC南昌网络赛/header.jpg)
+
+<!--less-->
 
 ## H: The Nth Item
 
