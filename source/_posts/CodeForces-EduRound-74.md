@@ -1,12 +1,13 @@
 ---
 title: CodeForces EduRound 74
 mathjax: true
-date: 2019-10-10 20:12:20
 categories:
-	- ACM
-	- Codeforces
+  - ACM
+  - Codeforces
 tags:
-	- 题解
+  - 题解
+abbrlink: b223976b
+date: 2019-10-10 20:12:20
 ---
 
 ![header](CodeForces-EduRound-74/header.jpg)
