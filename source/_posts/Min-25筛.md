@@ -10,7 +10,7 @@ abbrlink: ecec6bcc
 date: 2019-09-02 20:39:13
 ---
 
-![header](Min-25筛/header.jpg)
+![https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog%20picture/Min-25%E7%AD%9B.jpg](https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog picture/Min-25筛.jpg)
 
 <!-- less -->
 

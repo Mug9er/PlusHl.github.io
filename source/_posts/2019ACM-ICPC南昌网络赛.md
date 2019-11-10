@@ -11,7 +11,7 @@ abbrlink: 4e0518cb
 date: 2019-09-10 14:13:02
 ---
 
-![header](2019ACM-ICPC南昌网络赛/header.jpg)
+![https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog%20picture/2019-ACM-ICPC%E5%8D%97%E6%98%8C%E9%82%80%E8%AF%B7%E8%B5%9B.jpg](https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog picture/2019-ACM-ICPC南昌邀请赛.jpg)
 
 <!--less-->
 

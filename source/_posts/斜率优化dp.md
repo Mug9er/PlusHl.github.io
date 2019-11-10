@@ -10,7 +10,7 @@ abbrlink: f1b7e3b7
 date: 2019-08-20 16:48:50
 ---
 
-![header](斜率优化dp/header.jpg)
+![https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog%20picture/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp.jpg](https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog picture/斜率优化dp.jpg)
 
 <!-- less -->
 

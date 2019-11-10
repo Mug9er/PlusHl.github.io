@@ -10,7 +10,7 @@ abbrlink: b223976b
 date: 2019-10-10 20:12:20
 ---
 
-![header](CodeForces-EduRound-74/header.jpg)
+![https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog%20picture/CodeForces-EduRound-74.jpg](https://raw.githubusercontent.com/PlusHl/PlusHl-s-Picture/master/blog picture/CodeForces-EduRound-74.jpg)
 
 <!-- less -->
 
