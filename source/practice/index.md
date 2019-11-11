@@ -21,7 +21,6 @@ $\bullet$   .  : 未提交
     a{text-decoration:none}
     a:hover{text-decoration:none}
 </style>
-
 <table><tbody>
    <tr>
    		<th colspan="3" style="text-align:center">比赛</th><th colspan="2" style="text-align:center">通过</th><th colspan="3" style="text-align:center">日期</th>
