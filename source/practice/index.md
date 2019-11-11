@@ -27,10 +27,18 @@ $\bullet$   .  : 未提交
        	<th style="text-align:center">M</th><th style="text-align:center">N</th>
    </tr>
     <tr>
-   		<th colspan="3" style="text-align:center">Codeforces Round 599(Div 2)</th><th colspan="2" style="text-align:center">4/6</th><th colspan="3" style="text-align:center">11/10/2019</th>
+   		<th colspan="3" style="text-align:center">Codeforces Round 599(Div 2)</th><th colspan="2" style="text-align:center">4/6</th><th colspan="3" style="text-align:center">10/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">.</th><th style="text-align:center">.</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th>
+   </tr>
+    <tr>
+   		<th colspan="3" style="text-align:center">Education Codeforces Round 75(Div 2)</th><th colspan="2" style="text-align:center">2/7</th><th colspan="3" style="text-align:center">11/10/2019</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">.</th>
+       	<th style="text-align:center">.</th><th style="text-align:center">.</th><th style="text-align:center">.</th>
+       <th style="text-align:center">.</th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
