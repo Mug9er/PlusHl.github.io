@@ -40,7 +40,7 @@ $\bullet$   .  : 未提交
    </tr>
     <tr>
    		<th colspan="3" style="text-align:center"><a href="http://codeforces.com/contest/1251">Education Codeforces Round 75(Div 2)</a></th><th colspan="2" style="text-align:center">2/7</th><th colspan="3" style="text-align:center">11/10/2019</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">.</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">!</th>
        	<th style="text-align:center">.</th><th style="text-align:center">.</th><th style="text-align:center">.</th>
        <th style="text-align:center">.</th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
