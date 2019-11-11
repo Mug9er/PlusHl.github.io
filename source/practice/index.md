@@ -7,13 +7,13 @@ mathjax: true
 
 #### 格式：
 
-$\bullet$   ✓ : 赛时通过
+$\bullet$   ✓  : 赛时通过
 
-$\bullet$  ✗ ：赛时为通过
+$\bullet$  ✗  ：赛时未通过
 
-$\bullet$   !  : 赛时提交但未通过
+$\bullet$  ★  : 赛后通过
 
-$\bullet$   .  : 未提交 
+$\bullet$   ✧  : 未提交 
 
 #### 比赛记录：
 
@@ -33,16 +33,16 @@ $\bullet$   .  : 未提交
     <tr>
    		<th colspan="3" style="text-align:center"><a href="http://codeforces.com/contest/1243">Codeforces Round 599(Div 2)</a></th><th colspan="2" style="text-align:center">4/6</th><th colspan="3" style="text-align:center">10/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">.</th><th style="text-align:center">.</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
     <tr>
    		<th colspan="3" style="text-align:center"><a href="http://codeforces.com/contest/1251">Education Codeforces Round 75(Div 2)</a></th><th colspan="2" style="text-align:center">2/7</th><th colspan="3" style="text-align:center">11/10/2019</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">!</th>
-       	<th style="text-align:center">.</th><th style="text-align:center">.</th><th style="text-align:center">.</th>
-       <th style="text-align:center">.</th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">★</th>
+       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       <th style="text-align:center">✧</th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
