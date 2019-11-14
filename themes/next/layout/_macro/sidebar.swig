@@ -109,6 +109,13 @@
             </div>
           {% endif %}
 
+          <!-- Music -->
+          <div>
+            {% if theme.background_music %}
+              <iframe frameborder="no" border = "0" marginwidth="0" width=210 height = "110" src = "{{theme.background_music}}"></iframe>
+            {% endif %}
+          </div>
+
           {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
           {% if theme.creative_commons in cc %}
             <div class="cc-license motion-element" itemprop="license">

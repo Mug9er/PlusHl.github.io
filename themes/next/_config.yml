@@ -42,6 +42,8 @@ keywords: "Hexo, NexT"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
+background_music: //music.163.com/outchain/player?type=0&id=3074622324&auto=1&height=66
+
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
