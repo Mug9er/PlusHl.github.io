@@ -62,5 +62,13 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
+     <tr>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1257">Educational Codeforces Round 76 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/7</th><th colspan="3" style="text-align:center">14/10/2019</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
+       	<th style="text-align:center">★</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       <th style="text-align:center">✧</th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th>
+   </tr>
 </table>  
 
