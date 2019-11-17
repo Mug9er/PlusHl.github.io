@@ -86,5 +86,15 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
+
+<tr>
+   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1250>2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)</a>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
+       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✓</th>
+       <th style="text-align:center">✧</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✧</th><th style="text-align:center">✓</th>
+       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+   </tr>
+
 </table>  
 
