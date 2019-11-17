@@ -88,7 +88,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1250>2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)</a>
+   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1250>2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)</a></th><th colspan="2" style="text-align:center">6/14</th><th colspan="3" style="text-align:center">17/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✓</th>
        <th style="text-align:center">✧</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
