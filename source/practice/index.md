@@ -96,5 +96,14 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th>
    </tr>
 
+<tr>
+   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1209>[Codeforces Round #584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)</a>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
+       	<th style="text-align:center">★</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       <th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th>
+   </tr>
+
 </table>  
 
