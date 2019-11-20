@@ -37,10 +37,11 @@ favicon:
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
 
+livere_uid: MTAyMC80NTk3Ni8yMjQ4Nw==
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 footer:
   # Specify the date when the site was setup.
@@ -49,18 +50,19 @@ footer:
 
   # Icon between year and copyright info.
   icon: user
+  counter: true
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -222,8 +224,12 @@ auto_excerpt:
 # Post meta display settings
 post_meta:
   item_text: true
-  created_at: true
-  updated_at: false
+  created_at: true   # 创建时间
+  updated_at: true   # 更新时间
+  # Only show 'updated' if different from 'created'.
+  updated_diff: false # 只使用更新时间
+  # If true, post's time format will be hexo config's date_format + ' ' + time_format.
+  date_time_merge: false
   categories: true
 
 # Post wordcount display settings
@@ -249,7 +255,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -342,13 +348,13 @@ font:
 
 # MathJax Support
 mathjax:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
+  engine: mathjax
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
 han: false
-
 # Swiftype Search API Key
 #swiftype_key:
 
@@ -373,6 +379,18 @@ changyan:
   appid:
   appkey:
 
+# Post wordcount display settings
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  separated_meta: true
+  #文章中的显示是否显示文字（本文字数|阅读时长） 
+  item_text_post: true
+  #网页底部的显示是否显示文字（站点总字数|站点阅读时长） 
+  item_text_total: false
+  # Average Word Length (chars count in word)
+  awl: 4
+  # Words Per Minute
+  wpm: 275
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
@@ -547,21 +565,29 @@ firestore:
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  total_visitors: true
+  total_visitors_icon: user
+  total_view: true
+  total_views_icon: eye
+  post_views: false
+  post_view_icon: eye
+  site_uv_header: <i class="fa fa-user"></i> 访客数
+  site_uv_footer: 人
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_header: <i class="fa fa-eye"></i> 总访问量
+  site_pv_footer: 次
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  page_pv_header: <i class="fa fa-file-o"></i>  阅读数
+  page_pv_footer: 次
 
 
 # Tencent analytics ID
@@ -811,3 +837,5 @@ images: images
 
 # Theme version
 version: 5.1.4
+
+
