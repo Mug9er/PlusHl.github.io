@@ -30,7 +30,17 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center">J</th><th style="text-align:center">K</th><th style="text-align:center">L</th>
        	<th style="text-align:center">M</th><th style="text-align:center">N</th>
    </tr>
-    <tr>
+
+<tr>
+   		<th colspan="3" style="text-align:center"><a herf="https://codeforces.com/contest/1217">Educational Codeforces Round 72 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
+       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th>
+   </tr>
+
+​    <tr>
    		<th colspan="3" style="text-align:center"><a href="http://codeforces.com/contest/1243">Codeforces Round 599(Div 2)</a></th><th colspan="2" style="text-align:center">4/6</th><th colspan="3" style="text-align:center">10/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
@@ -79,7 +89,7 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
 <tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1253>Codeforces Round #600 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/7</th><th colspan="3" style="text-align:center">16/10/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1253">Codeforces Round #600 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/7</th><th colspan="3" style="text-align:center">16/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">★</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center">✧</th><th style="text-align:center"></th><th style="text-align:center"></th>
@@ -88,7 +98,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1250>2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)</a></th><th colspan="2" style="text-align:center">6/14</th><th colspan="3" style="text-align:center">17/10/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1250">2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)</a></th><th colspan="2" style="text-align:center">6/14</th><th colspan="3" style="text-align:center">17/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✓</th>
        <th style="text-align:center">✧</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
@@ -97,7 +107,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1209>Codeforces Round #584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)</a></th><th colspan="2" style="text-align:center">3/7</th><th colspan="3" style="text-align:center">18/10/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1209">Codeforces Round #584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)</a></th><th colspan="2" style="text-align:center">3/7</th><th colspan="3" style="text-align:center">18/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">★</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center"></th>
@@ -106,7 +116,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1255> Codeforces Round #601 (Div. 2)</a></th><th colspan="2" style="text-align:center">1/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1255"> Codeforces Round #601 (Div. 2)</a></th><th colspan="2" style="text-align:center">1/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">★</th><th style="text-align:center">✧</th>
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
@@ -114,14 +124,7 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center"></th><th style="text-align:center"></th>
    </tr>
 
-<tr>
-   		<th colspan="3" style="text-align:center"><a <https://codeforces.com/contest/1217>Educational Codeforces Round 72 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
-       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
-       <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
-       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
-       	<th style="text-align:center"></th><th style="text-align:center"></th>
-   </tr>
+
 
 </table>  
 
