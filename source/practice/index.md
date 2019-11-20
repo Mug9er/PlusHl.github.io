@@ -32,7 +32,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a herf="https://codeforces.com/contest/1217">Educational Codeforces Round 72 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1217">Educational Codeforces Round 72 (Div. 2)</a></th><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">19/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
