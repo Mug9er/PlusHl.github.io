@@ -34,7 +34,7 @@ $\bullet$   ✧  : 未提交
 <tr>
    		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1206/my">Codeforces Round #580 (Div. 2)</a><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">22/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
-       	<th style="text-align:center">★/th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       	<th style="text-align:center">★</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
