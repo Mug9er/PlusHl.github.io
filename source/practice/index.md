@@ -32,7 +32,7 @@ $\bullet$   ✧  : 未提交
    </tr>
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1262">Codeforces Round #602 (Div. 2, based on Technocup 2020 Elimination Round 3</a>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1262">Codeforces Round #602 (Div. 2)</a>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✗</th><th style="text-align:center">✧</th>
        <th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center"></th>
