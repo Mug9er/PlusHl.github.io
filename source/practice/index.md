@@ -31,6 +31,19 @@ $\bullet$   ✧  : 未提交
        	<th style="text-align:center">M</th><th style="text-align:center">N</th>
    </tr>
 
+
+
+<tr>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1202">Educational Codeforces Round 70 (Div.2)</a><th colspan="2" style="text-align:center">2/6</th><th colspan="3" style="text-align:center">26/10/2019</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✧</th>
+       	<th style="text-align:center">★ </th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+       <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
+       	<th style="text-align:center"></th><th style="text-align:center"></th>
+   </tr>
+
+
+
 <tr>
    		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1200">Codeforces Round #578 (Div. 2)</a><th colspan="2" style="text-align:center">3/6</th><th colspan="3" style="text-align:center">25/10/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
