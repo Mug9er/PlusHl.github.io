@@ -34,9 +34,9 @@ $\bullet$   ✧  : 未提交
 
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1187">Educational Codeforces Round 67 (Div. 2)</a><th colspan="2" style="text-align:center">5/6</th><th colspan="3" style="text-align:center">06/12/2019</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
-       	<th style="text-align:center">✓</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1187">Educational Codeforces Round 67 (Div. 2)</a><th colspan="2" style="text-align:center">2/6</th><th colspan="3" style="text-align:center">09/12/2019</th>
+       	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">★ </th>
+       	<th style="text-align:center">✧</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
        	<th style="text-align:center"></th><th style="text-align:center"></th>
@@ -45,7 +45,7 @@ $\bullet$   ✧  : 未提交
 
 
 <tr>
-   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1189">Codeforces Round #574 (Div. 2)</a><th colspan="2" style="text-align:center">5/6</th><th colspan="3" style="text-align:center">06/12/2019</th>
+   		<th colspan="3" style="text-align:center"><a href="https://codeforces.com/contest/1189">Codeforces Round #574 (Div. 2)</a><th colspan="2" style="text-align:center">5/6</th><th colspan="3" style="text-align:center">07/12/2019</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✓</th><th style="text-align:center">✓</th>
        	<th style="text-align:center">✓</th><th style="text-align:center">✧</th><th style="text-align:center">✧</th>
        <th style="text-align:center"></th><th style="text-align:center"></th><th style="text-align:center"></th>
