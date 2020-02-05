@@ -7,7 +7,7 @@ abbrlink: 81cc
 date: 2019-08-11 14:57:09
 ---
 
-![img1](2019-08-11-My-First-Blog/Cover.jpg)
+![img1](https://s2.ax1x.com/2020/02/05/1sr9MR.jpg)
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
