@@ -11,7 +11,7 @@ abbrlink: 4e0518cb
 date: 2019-09-10 14:13:02
 ---
 
-![1.png](https://wx1.sinaimg.cn/mw690/0083TyOJly1gbltwoe1igj31c00u0b29.jpg)
+![1.png](https://wx3.sinaimg.cn/mw690/0083TyOJly1gblvhn386gj31c00u0b29.jpg)
 
 <!--less-->
 
@@ -116,7 +116,7 @@ int main() {
 
 
 
-![1e6](2019ACM-ICPC南昌网络赛/1e6.png)
+![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gblvbmhd8ij30h0010mwz.jpg)
 
 ### 思路
 
@@ -206,5 +206,5 @@ int main() {
 
 ```
 
-![loop](2019ACM-ICPC南昌网络赛/loop.png)
+![loop](https://wx3.sinaimg.cn/mw690/0083TyOJly1gblvbjcjr2j30gt01aweb.jpg)
 

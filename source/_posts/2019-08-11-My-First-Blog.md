@@ -7,7 +7,7 @@ abbrlink: 81cc
 date: 2019-08-11 14:57:09
 ---
 
-[![1sr9MR.md.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gbltwvw246j31hc0tpgwa.jpg)](https://imgchr.com/i/1sr9MR)
+[![1sr9MR.md.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblviaaj7aj31hc0tpgwa.jpg)](https://imgchr.com/i/1sr9MR)
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
@@ -27,7 +27,7 @@ Hexo/themes/next/目录下的_config.yml称为主题配置文件
 
 下载next主题
 
-![img1](2019-08-11-My-First-Blog/Hexo-img1.png)
+![img1](https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv57b6g3j30om01v74a.jpg)
 
 ```stylus
  git clone https://github.com/theme-next/hexo-theme-next themes/next
@@ -35,7 +35,7 @@ Hexo/themes/next/目录下的_config.yml称为主题配置文件
 
 在站点配置文件 `_config.yml`
 
-![img2](2019-08-11-My-First-Blog/Hexo-img2.png)
+![img2](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblv59sp7bj30el03i0t4.jpg)
 
 ```yaml
 # Extensions
@@ -46,7 +46,7 @@ theme: next
 
 在主题配置文件`_config.yml`中可以选择四种scheme，我选择的是`Gemini`
 
-![img3](2019-08-11-My-First-Blog/Hexo-img3.png)
+![img3](https://wx1.sinaimg.cn/mw690/0083TyOJly1gblv5clsagj309q07raa7.jpg)
 
 ```yaml
 # ---------------------------------------------------------------
@@ -105,7 +105,7 @@ hexo new page "categories"
 hexo new page "about"
 ```
 
-![img4](2019-08-11-My-First-Blog/Hexo-img4.png)
+![img4](https://wx4.sinaimg.cn/mw690/0083TyOJly1gblv5ezol4j30c401kjrb.jpg)
 
 这时在`Hexo/source/`下出现一个`tags/index.md`和`categories/index.md`
 
@@ -332,7 +332,7 @@ post_meta:
 
 在所示位置加上代码：
 
-![img5](2019-08-11-My-First-Blog/Hexo-img5.png)
+![img5](https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv5hgdmij30so0j0diq.jpg)
 
 ```python
 {### 运行时间 ####}

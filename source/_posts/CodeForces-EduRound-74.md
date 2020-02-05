@@ -10,7 +10,7 @@ abbrlink: b223976b
 date: 2019-10-10 20:12:20
 ---
 
-![wallhaven-wyvrj6.png](https://wx2.sinaimg.cn/mw690/0083TyOJly1gbltwz3rn7j31hc0u0wg4.jpg)
+![wallhaven-wyvrj6.png](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblvj9ccz7j31hc0u0wg4.jpg)
 
 <!-- less -->
 
