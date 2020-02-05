@@ -9,9 +9,9 @@ date: 2019-08-11 14:57:09
 
 [![1sr9MR.md.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblviaaj7aj31hc0tpgwa.jpg)](https://imgchr.com/i/1sr9MR)
 
-这是我的第一篇博客，主要写一些Hexo的配置
-
 <!-- less -->
+
+这是我的第一篇博客，主要写一些Hexo的配置
 
 # 一. Hexo + Github 搭建博客：
 
