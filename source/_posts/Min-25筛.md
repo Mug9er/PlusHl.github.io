@@ -10,7 +10,7 @@ abbrlink: ecec6bcc
 date: 2019-09-02 20:39:13
 ---
 
-![](https://s2.ax1x.com/2020/02/05/1sc4jH.png)
+![wallhaven-73ov8v.png](https://i.loli.net/2020/02/05/nt25FlPAIU6jcsg.png)
 
 <!-- less -->
 

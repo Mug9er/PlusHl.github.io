@@ -10,7 +10,7 @@ abbrlink: b223976b
 date: 2019-10-10 20:12:20
 ---
 
-![](https://s2.ax1x.com/2020/02/05/1sci1e.png)
+![wallhaven-wyvrj6.png](https://i.loli.net/2020/02/05/zPOv3lR1b5pycIW.png)
 
 <!-- less -->
 
