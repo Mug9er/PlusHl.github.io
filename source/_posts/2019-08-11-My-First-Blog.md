@@ -7,7 +7,7 @@ abbrlink: 81cc
 date: 2019-08-11 14:57:09
 ---
 
-![wallhaven-967rgd.jpg](https://i.loli.net/2020/02/05/JCy5YXVrTb1lQce.jpg)
+![wallhaven-967rgd.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gbltwvw246j31hc0tpgwa.jpg)
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
