@@ -1,13 +1,16 @@
 ---
 title: python 爬取压缩过的数据
 mathjax: true
-date: 2020-02-06 13:16:57
 categories:
   - spider
   - python 报错处理
 tags:
   - python
+abbrlink: 757817fb
+date: 2020-02-06 13:16:57
 ---
+
+<meta name="referrer" content="no-referrer"/>
 
 ![](https://wx4.sinaimg.cn/mw690/0083TyOJly1gbmm3u79pwj31hc0u0qn6.jpg)
 
