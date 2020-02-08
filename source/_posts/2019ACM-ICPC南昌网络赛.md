@@ -11,6 +11,8 @@ abbrlink: 4e0518cb
 date: 2019-09-10 14:13:02
 ---
 
+<meta name = "referrer" content = "no-referrer" />
+
 ![1.png](https://wx3.sinaimg.cn/mw690/0083TyOJly1gblvhn386gj31c00u0b29.jpg)
 
 <!--less-->

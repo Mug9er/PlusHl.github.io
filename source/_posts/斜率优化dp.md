@@ -10,6 +10,8 @@ abbrlink: f1b7e3b7
 date: 2019-08-20 16:48:50
 ---
 
+<meta name="referrer" content="no-referrer" />
+
 ![](https://wx4.sinaimg.cn/mw690/0083TyOJly1gblx0dys6pj31hc0u04qw.jpg)
 
 <!-- less -->

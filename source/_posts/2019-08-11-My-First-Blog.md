@@ -7,7 +7,9 @@ abbrlink: 81cc
 date: 2019-08-11 14:57:09
 ---
 
-[![1sr9MR.md.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblviaaj7aj31hc0tpgwa.jpg)](https://imgchr.com/i/1sr9MR)
+<meta name = "referrer" content = "no-referrer" />
+
+![1sr9MR.md.jpg](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblviaaj7aj31hc0tpgwa.jpg)](https://imgchr.com/i/1sr9MR)
 
 <!-- less -->
 

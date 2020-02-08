@@ -10,7 +10,9 @@ abbrlink: ecec6bcc
 date: 2019-09-02 20:39:13
 ---
 
-[![1s48RP.md.png](https://wx1.sinaimg.cn/mw690/0083TyOJly1gblvk9hifxj31hc0u0kjn.jpg)](https://imgchr.com/i/1s48RP)
+<meta name = "referrer" content = "no-referrer" />
+
+![1s48RP.md.png](https://wx1.sinaimg.cn/mw690/0083TyOJly1gblvk9hifxj31hc0u0kjn.jpg)](https://imgchr.com/i/1s48RP)
 
 <!-- less -->
 
