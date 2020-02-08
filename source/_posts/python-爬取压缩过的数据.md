@@ -10,7 +10,7 @@ abbrlink: 757817fb
 date: 2020-02-06 13:16:57
 ---
 
-<meta name="referrer" content="no-referrer"/>
+<meta name = "referrer" content = "no-referrer" />
 
 ![](https://wx4.sinaimg.cn/mw690/0083TyOJly1gbmm3u79pwj31hc0u0qn6.jpg)
 
