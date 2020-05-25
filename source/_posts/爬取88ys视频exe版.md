@@ -1,14 +1,15 @@
 ---
 title: 爬取88ys视频exe版
 mathjax: true
-date: 2020-03-01 14:57:56
 categories:
   - spider
 tags:
   - python
+abbrlink: 581490d4
+date: 2020-03-01 14:57:56
 ---
 
-![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gcefl0zsx6j30u0140kfn.jpg)
+![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gf4sw3im9mj317h0u0x0i.jpg)
 
 <!--less-->
 
