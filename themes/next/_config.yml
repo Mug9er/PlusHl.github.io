@@ -59,7 +59,7 @@ footer:
   powered: false
 
   theme:
-    # Theme & scheme info link (Theme - NexT.scheme).
+    # Theme & scheme info link (Theme - TonyNexT.scheme).
     enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: false
@@ -154,7 +154,7 @@ links_layout: block
 #links:
   #Title: http://example.com/
 links:
-    Tony5t4rk: tony5t4rk.cn
+    Tony5t4rk: https://tony5t4rk.cn
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
