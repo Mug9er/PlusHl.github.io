@@ -154,7 +154,7 @@ links_layout: block
 #links:
   #Title: http://example.com/
 links:
-    Tony5t4rk: https://tony5t4rk.cn
+    Tony5t4rk: http://tony5t4rk.cn/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
