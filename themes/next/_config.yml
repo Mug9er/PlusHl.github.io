@@ -157,6 +157,12 @@ links_layout: block
 links:
     Tony5t4rk: http://tony5t4rk.cn/
 
+    
+back2top:
+    enable: true
+    sidebar: false
+    scrollpercent: false
+    
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
