@@ -1,16 +1,16 @@
 ---
 title: 记录一下利用tcp使得服务器与android客户端相连
 mathjax: true
-date: 2020-10-21 22:11:20
 categories:
-	- 小项目 
+  - 小项目
 tags:
-	- 服务器
-	- android
+  - 服务器
+  - android
+abbrlink: b4b2d023
+date: 2020-10-21 22:11:20
 ---
 
 <meta name = "referrer" content = "no-referrer" />
-
 ![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gjxbd3rshij31c00u0qv5.jpg)
 
 <!-- less -->
