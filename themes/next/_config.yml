@@ -734,7 +734,7 @@ pace_theme: pace-theme-minimal
 canvas_nest: true
 
 # three_waves
-three_waves: true
+three_waves: false
 
 # canvas_lines
 canvas_lines: true
@@ -748,7 +748,7 @@ canvas_sphere: true
 # alpha: The transparency of the ribbon.
 # zIndex: The display level of the ribbon.
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 300
   alpha: 0.6
   zIndex: -1
