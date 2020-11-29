@@ -31,7 +31,7 @@ date: 2020-11-29 11:20:30
 
 默认五种颜色
 
-![img1](https://wx1.sinaimg.cn/mw690/0083TyOJly1gl5vwju72tj304r03xmxg.jpg))
+![img1](https://wx1.sinaimg.cn/mw690/0083TyOJly1gl5vwju72tj304r03xmxg.jpg)
 
 ### Bracket Pair Colorizer 2
 
