@@ -1,5 +1,5 @@
 ---
-title: vscdoe 配置Vue
+title: vscode 配置Vue
 mathjax: true
 categories:
   - Vue
