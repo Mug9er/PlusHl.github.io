@@ -1,12 +1,13 @@
 ---
-title: vscdoe 配置html
+title: vscdoe 配置Vue
 mathjax: true
-date: 2020-11-29 11:20:30
-categories: 
-	- Vue
+categories:
+  - Vue
 tags:
-	- html
-	- vscode 配置
+  - html
+  - vscode 配置
+abbrlink: 9c6f56ad
+date: 2020-11-29 11:20:30
 ---
 
 <meta name = "referrer" content = "no-referrer" />
