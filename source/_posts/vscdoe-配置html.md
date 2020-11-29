@@ -2,12 +2,14 @@
 title: vscdoe 配置html
 mathjax: true
 date: 2020-11-29 11:20:30
-categories: vscode
-tags:html
+categories: 
+	- Vue
+tags:
+	- html
+	- vscode 配置
 ---
 
 <meta name = "referrer" content = "no-referrer" />
-
 ![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gl5vrpaevzj318g0p0tqv.jpg)
 
 <!-- less -->
