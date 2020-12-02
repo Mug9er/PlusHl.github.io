@@ -6,7 +6,7 @@
     "version": "3.9.0"
   },
   "dependencies": {
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "core-js": "^3.2.1",
     "dependencies": "0.0.1",
     "eslint": "^6.6.0",
