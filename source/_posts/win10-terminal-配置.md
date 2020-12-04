@@ -1,11 +1,12 @@
 ---
 title: win10 terminal 配置
 mathjax: true
-date: 2020-12-04 23:29:20
 categories:
-	- 配置
+  - 配置
 tags:
-	- terminal
+  - terminal
+abbrlink: e96d644
+date: 2020-12-04 23:29:20
 ---
 
 <meta name = "referrer" content = "no-referrer" />

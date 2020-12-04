@@ -106,3 +106,11 @@ npm i -g express
 npm install
 ```
 
+## 5.hexo提交
+
+```
+hexo clean
+hexo g
+hexo d
+```
+
