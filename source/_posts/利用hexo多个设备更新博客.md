@@ -31,6 +31,24 @@ tags:
 
 在github->`setting`->`SSH && GPG keys`->`new ssh key`
 
+测试是否成功
+
+`ssh -T git@github.com`
+
+如果出现
+
+```
+Hi username! You've successfully authenticated, but GitHub does not 
+provide shell access.
+```
+
+### 3.1 设置用户信息
+
+```js
+$ git config --global user.name "用户名"
+$ git config --global user.email  "你希望的邮箱名"
+```
+
 ## 4. 资源配置依赖
 
 ### 4.1 更换淘宝镜像
