@@ -3,8 +3,8 @@ title: 利用hexo多个设备更新博客
 mathjax: true
 abbrlink: 1351aa80
 date: 2020-12-04 22:30:57
-categories:
-tags:
+categories: 配置
+tags: Hexo
 ---
 
 <meta name = "referrer" content = "no-referrer" />
