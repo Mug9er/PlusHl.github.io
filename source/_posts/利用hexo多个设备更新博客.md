@@ -21,6 +21,8 @@ tags:
 
 [Node.js](https://nodejs.org/en/)
 
+版本不要太高
+
 ## 3.新电脑创建新的ssh密钥
 
 在Git-bash中
