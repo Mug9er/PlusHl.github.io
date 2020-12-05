@@ -1,11 +1,12 @@
 ---
 title: 码云和github同步更新
 mathjax: true
-date: 2020-12-06 00:44:13
 categories:
-	- 配置
+  - 配置
 tags:
-	- 服务器
+  - 服务器
+abbrlink: 2d45259f
+date: 2020-12-06 00:44:13
 ---
 
 <meta name = "referrer" content = "no-referrer" />
