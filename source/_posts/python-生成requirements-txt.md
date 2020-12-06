@@ -1,11 +1,12 @@
 ---
 title: python 生成requirements.txt
 mathjax: true
-date: 2020-12-06 10:49:16
 categories:
-	- spider
+  - spider
 tags:
-	- python
+  - python
+abbrlink: 3d982a67
+date: 2020-12-06 10:49:16
 ---
 
 <meta name = "referrer" content = "no-referrer" />
