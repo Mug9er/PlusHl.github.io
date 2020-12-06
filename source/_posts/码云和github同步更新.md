@@ -31,7 +31,9 @@ date: 2020-12-06 00:44:13
 
 ### 3 加上github的链接
 
-由于是在gitee上clone的项目，所以在config中只有gitee的链接，在gitee链接下面加上github的链接
+由于是在gitee上clone的项目，所以在config中只有gitee的链接，在github链接下面加上gitee的链接
+
+注意： 一定是github下面加gitee的链接
 
 ![img3](https://wx2.sinaimg.cn/mw690/0083TyOJly1gldgqh0or2j30f8010mx1.jpg)
 
