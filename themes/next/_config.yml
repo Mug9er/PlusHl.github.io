@@ -103,7 +103,6 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
   practice: /practice/ || practice
-  log: /log/ || log
   
 # Enable/Disable menu icons.
 menu_icons:
