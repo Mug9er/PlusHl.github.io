@@ -1,5 +1,5 @@
 ---
-title: wallHaven.cc 模拟登录
+title: wallpaper 模拟登录
 mathjax: true
 categories:
   - spider
@@ -23,29 +23,36 @@ date: 2020-02-11 15:26:29
 因为登录信息中有``_token``，所以要先get一下获取网页的``_token`` ，并且用get到的cookie来请求登录
 
 ```py
-import requests
-from bs4 import BeautifulSoup
-from user_agent_list import getheaders
+    def __init__(self):
+        self.get_url = "https://wallhaven.cc/login"
+        self.post_url = "https://wallhaven.cc/auth/login"
+        self.proxies = spider_proxy.SpiderProxy()
+        self.data = {}
+        self._token = ""
+        self.cookies = {}
+        self.Is = False
 
-get_token_url = "https://wallhaven.cc/login"
-login_url = "https://wallhaven.cc/auth/login"
-toplist_url = "https://wallhaven.cc/toplist"
-user_agent = getheaders() #user_agent是获取User-Agent 
-session = requests.session()
-response = requests.get(get_token_url, headers = user_agent)
-cookie = ""
-for c in response.cookies:
-    cookie += c.name + "=" + c.value + ";"
-user_agent['Cookie'] = cookie
-html = response.content.decode('utf-8')
-soup = BeautifulSoup(html, 'html.parser')
-_token = soup.find_all(type='hidden')[0]['value']
-post_data={
-    '_token': _token,
-    'username': '******',
-    'password': '******'
-}
-response = requests.post(login_url, headers=user_agent, data=post_data)
+    # 1. 请求页面获得_token 和 cookie
+    def get_html(self):
+        response = requests.get(self.get_url, headers=self.proxies.header, proxies=self.proxies.proxy)
+        response_data = response.content.decode('utf-8')
+
+        self._token = re.findall(r'<meta name="csrf-token" content="(.*?)">', response_data, re.S)
+
+        cookies = ""
+        for cookie in response.cookies:
+            cookies += cookie.name + "=" + cookie.value + ";"
+
+        # 用header来携带cookie
+        self.proxies.header['Cookie'] = cookies
+
+    # 2.装填data
+    def combined_data(self):
+        self.data = {
+            '_token': self._token,
+            'username': '643719884@qq.com',
+            'password': 'dhl643719884'
+        }
 
 ```
 
@@ -78,21 +85,81 @@ wallhaven_session=eyJpdiI6IkJoY1dITVJtQWJ4bzRqamJOVkxKeFE9PSIsInZhbHVlIjoiZjBXZU
 我们就直接组装一个cookie
 
 ```py
-temp_cookie = user_agent['Cookie']
-temp_cookie_list = temp_cookie.split(";")
-cookie_dict={}
-cookie_dict.update(__cfduid = temp_cookie_list[0].split('=')[1])
-cookies_list = cook.split("; ")
-for cookie in cookies_list:
-    cookie_dict[cookie.split('=')[0]] = cookie.split('=')[1]
-print(cookie_dict)
-user_agent.pop('Cookie')
-response = requests.get(toplist_url, headers=user_agent, cookies = cookie_dict)
-data = response.content.decode('utf-8')
-with open("awewall.html", 'w') as f:
-    f.write(data)
+# 3. 组装cookie
+    def combined_cookie(self):
+        response = requests.post(self.post_url, headers=self.proxies.header, proxies=self.proxies.proxy, data=self.data)
+
+        # 这里拿到的cookie是相对比较齐全的cookie，主要用这个cookie来组装
+        post_cookies = response.request.headers['Cookie']
+        post_cookies_list = post_cookies.split("; ")
+
+        # 这里cookie只要__cfduid
+        temp_cookie = self.proxies.header['Cookie']
+        temp_cookie_list = temp_cookie.split(";")
+
+        # 组装
+        self.cookies.update(__cfduid = temp_cookie_list[0].split('=')[1])
+        for cookie in post_cookies_list:
+            self.cookies[cookie.split('=')[0]] = cookie.split('=')[1]
+
+        # header pop掉Cookie
+        self.proxies.header.pop('Cookie')
+
+    # 4.登录
+    def post_html(self):
+        response = requests.get(self.post_url, headers=self.proxies.header, proxies=self.proxies.proxy, cookies=self.cookies)
+        print(response)
+        if response.status_code == 200:
+            print("Cookies获取成功")
+            self.Is = True
+        else:
+            print("Cookies获取失败")
+
+    def update(self):
+        self.__init__()
+        self.get_html()
+        self.combined_data()
+        self.combined_cookie()
+        self.post_html()
+     
 ```
 
 这样我们就得到了登陆后访问toplist的页面
 
-完整项目地址: [https://github.com/Mug9er/Python-Spider/tree/master/wallhaven.cc%20%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95](https://github.com/Mug9er/Python-Spider/tree/master/wallhaven.cc 模拟登录)
+完整项目地址: [Mug-9/Python-Spider: Spider (github.com)](https://github.com/Mug-9/Python-Spider)
+
+### session 登录
+
+这里不可行,其他地方可行
+
+```py
+import requests
+import sys
+
+#登录时需要POST的数据
+data = {
+	data
+	}
+
+#设置请求头
+headers = {'User-agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'}
+
+#登录时表单提交到的地址（用开发者工具可以看到）
+login_url = 'login_url'
+
+#构造Session
+session = requests.Session()
+
+#在session中发送登录请求，此后这个session里就存储了cookie
+#可以用print(session.cookies.get_dict())查看
+resp = session.post(login_url, data)
+
+#登录后才能访问的网页
+url = 'url'
+
+#发送访问请求
+resp = session.get(url)
+
+print(resp.content.decode('utf-8'))
+```
+
