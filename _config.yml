@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mug9er's blog # 博客名
+title: Mug-9's blog # 博客名
 subtitle: Stay Hungry, Stay Foolish # 副标题
 description: Let life be beautiful like summer flowers and death like autumn leaves. # 站点描述
-author: Mug9er # 作者名
+author: Mug-9 # 作者名
 language: zh-Hans # 语言设置
 timezone: Asia/Shanghai
 
@@ -81,7 +81,7 @@ feed: # RSS订阅插件
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
 
 plugins:
 baidusitemap: # 百度站点地图
@@ -90,7 +90,7 @@ baidusitemap: # 百度站点地图
 # Deployment # 非常重要的部署设置
 ## Docs: https://hexo.io/docs/deployment.html
 social:
-  GitHub: https://github.com/Mug9er || github
+  GitHub: https://github.com/Mug-9 || github
   E-Mail: mailto:643719884@qq.com || envelope
   CSDN: https://blog.csdn.net/henu_jizhideqingwa || CSDN
   #Google: https://plus.google.com/yourname || google
@@ -125,14 +125,14 @@ abbrlink:
   rep: hex
 
   symbols_count_time:
- #文章内是否显示
+  #文章内是否显示
   symbols: true
   time: true
- # 网页底部是否显示
+  # 网页底部是否显示
   total_symbols: true
   total_time: true
 
 deploy:
- type: git
- repo: git@github.com:PlusHl/PlusHl.github.io.git
- branch: master
+  type: git
+  repo: git@github.com:PlusHl/PlusHl.github.io.git
+  branch: master
