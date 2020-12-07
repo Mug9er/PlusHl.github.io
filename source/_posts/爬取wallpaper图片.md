@@ -1,12 +1,13 @@
 ---
 title: 爬取wallpaper图片
 mathjax: true
-date: 2020-12-07 14:21:42
 categories:
-	- spider
+  - spider
 tags:
-	- python	
-	- 小项目
+  - python
+  - 小项目
+abbrlink: 2514ad2c
+date: 2020-12-07 14:21:42
 ---
 
 <meta name="referrer" content="no-referrer" />
