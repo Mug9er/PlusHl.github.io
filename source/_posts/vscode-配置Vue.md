@@ -146,24 +146,24 @@ module.exports = {
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true
 ```
 
+### Eva Theme
+
+Eva 主题
+
 ## 我的配置文件
 
 ```json
 {
-  "python.jediEnabled": false,
-  "editor.fontFamily": "Cascadia Code", 
+  "editor.fontFamily": "Cascadia Code",
   "editor.fontSize": 20,
   "editor.fontWeight": "300",
   "editor.fontLigatures": true,
-  "terminal.integrated.fontSize": 22,
+  "terminal.integrated.fontSize": 20,
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.cursorStyle": "underline",
-  "debug.console.fontSize": 20,
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
-  "backgroundCover.imagePath": "e:\\Picture\\wallhaven-13mdr3.jpg",
-  "backgroundCover.opacity": 0.5,
+  "debug.console.fontSize": 18,
+  "workbench.iconTheme": "material-icon-theme",
   "explorer.confirmDelete": false,
-  "c-cpp-compile-run.run-in-external-terminal": true,
   "files.autoSave": "onFocusChange",
 
   // 保存时自动格式化代码
@@ -194,9 +194,18 @@ module.exports = {
   "better-comments.multilineComments": true,
   "better-comments.highlightPlainText": false,
   "cSpell.enableFiletypes": ["vue", "vue-html"],
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.colorTheme": "Eva Dark Italic",
   "explorer.confirmDragAndDrop": false,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "backgroundCover.imagePath": "e:\\picture\\2020-12-11\\wallhaven-e7ozz8.png",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "backgroundCover.randomImageFolder": "e:\\picture\\2020-12-07",
+  "backgroundCover.autoStatus": false,
+  "backgroundCover.opacity": 0.5,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.enableSmartCommit": true,
+  "window.zoomLevel": 1
 }
 
 ```
