@@ -247,7 +247,18 @@ rm tmp.pub
 
 在服务器中执行
 
+```js
+vim /etc/ssh/sshd_config
+ 
+ClientAliveInterval  60      // 每隔60S向客户端发送请求消息，并等待客户端响应
+ClientAliveCountMax  10   // 客户端超过十次没响应，自动断开（即10分钟）
 
+//重启sshd服务
+//centos6
+service ssh restart
+//centos7
+systemctl restart sshds
+```
 
 进入所在用户的`.ssh`目录,
 
