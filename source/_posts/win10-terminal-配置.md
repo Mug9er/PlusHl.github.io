@@ -247,18 +247,18 @@ rm tmp.pub
 
 在服务器中执行
 
-```
-sudo vim /etc/ssh/sshd_config
 
-// 在文件中添加
-ClientAliveInterval 60 #每隔50秒就向服务器发送一个请求
-ClientAliveCountMax 3 #允许超时的次数，一般都会响应
 
-//重启服务centos6 ssh重启
-service sshd restart
-//centos7 重启ssh
-systemctl restart sshd
-```
+进入所在用户的`.ssh`目录,
+
+root用户的目录在：`/root/.ssh/`
+创建`config`文件
+`vim /root/.ssh/config`
+在文件中添加：
+`ServerAliveInterval 60`
+保存退出，重新从终端通过`ssh`进入服务器后不会因为长时间操作断开。
+
+加入这句之后，`ssh`客户端会每隔一段时间自动与`ssh`服务器通信一次，所以长时间操作不会断开。
 
 ## 3`terminal` 添加右键
 
