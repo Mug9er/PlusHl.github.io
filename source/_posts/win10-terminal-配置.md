@@ -248,11 +248,11 @@ rm tmp.pub
 在服务器中执行
 
 ```
-sudo vim /etc/ssh/ssh_config
+sudo vim /etc/ssh/sshd_config
 
 // 在文件中添加
-ServerAliveInterval 60 #每隔50秒就向服务器发送一个请求
-ServerAliveCountMax 3  #允许超时的次数，一般都会响应
+ClientAliveInterval 60 #每隔50秒就向服务器发送一个请求
+ClientAliveCountMax 3 #允许超时的次数，一般都会响应
 
 //重启服务centos6 ssh重启
 service sshd restart
