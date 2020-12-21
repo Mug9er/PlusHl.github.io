@@ -242,3 +242,75 @@ rm tmp.pub
 ### 2.3重启terminal
 
 成功！
+
+### 2.4 解决终端链接服务器长时间不操作卡死
+
+在服务器中执行
+
+```
+sudo vim /etc/ssh/ssh_config
+
+// 在文件中添加
+ServerAliveInterval 60 #每隔50秒就向服务器发送一个请求
+ServerAliveCountMax 3  #允许超时的次数，一般都会响应
+
+//重启服务centos6 ssh重启
+service sshd restart
+//centos7 重启ssh
+systemctl restart sshd
+```
+
+## 3`terminal` 添加右键
+
+### 3.1 检查常量
+
+```
+echo %USERPROFILE%
+
+echo %LOCALAPPDATA%
+```
+
+### 3.2 获取图标
+
+创建`Terminal`文件夹
+
+```
+mkdir "%USERPROFILE%\AppData\Local\Terminal"
+```
+
+保存这个 [图标](https://gitee.com/Jioho/img/raw/master/wsl/terminal.ico)
+
+![](https://gitee.com/Jioho/img/raw/master/wsl/terminal.ico)
+
+### 3.3 添加注册表文件
+
+新建一个文件 `new.reg`
+
+```js
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]
+@="Windows Terminal here"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
+@="C:\\Users\\[你的电脑用户名！你的电脑用名！]\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+
+```
+
+- `@`后面的[]改成电脑的用户名
+- 如果第一步`USERPROFILE`没有东西打印出来，那么这里的`USERPROFILE`也改成`C:\Users\你的用户名`
+- 第5行时图标保存的地址
+
+执行`reg`文件，可以发现右键多了一个`windows termianl here`
+
+### 3.4 当前目录
+
+在配置文件中添加或修改
+
+```js
+// 打开时的目录
+"startingDirectory": ".", 
+```
+
+这样也有一个缺点，直接打开`termianl`时目录为`C:\Windows\System32`目前没有解决方法
