@@ -266,7 +266,7 @@ root用户的目录在：`/root/.ssh/`
 创建`config`文件
 `vim /root/.ssh/config`
 在文件中添加：
-`ServerAliveInterval 60`
+`ServerAliveINterval 60`(没写错，就是`INterval`，我也不知道为什么，)
 保存退出，重新从终端通过`ssh`进入服务器后不会因为长时间操作断开。
 
 加入这句之后，`ssh`客户端会每隔一段时间自动与`ssh`服务器通信一次，所以长时间操作不会断开。
