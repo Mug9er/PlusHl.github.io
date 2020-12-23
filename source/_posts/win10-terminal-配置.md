@@ -257,7 +257,7 @@ ClientAliveCountMax  10   // 客户端超过十次没响应，自动断开�
 //centos6
 service ssh restart
 //centos7
-systemctl restart sshds
+systemctl restart sshd
 ```
 
 进入所在用户的`.ssh`目录,
