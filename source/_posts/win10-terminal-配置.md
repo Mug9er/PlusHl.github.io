@@ -28,7 +28,7 @@ date: 2020-12-04 23:29:20
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -52,33 +52,66 @@ date: 2020-12-04 23:29:20
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace": "Cascadia Code",
+            "fontFace": "CaskaydiaCove NF",
             "fontSize": 16,
             "cursorShape": "filledBox",
         },
         "list":
         [
             {
-                // Make changes here to the powershell.exe profile.
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                // more
+                "name": "PowerShell 7",
+                "source": "Windows.Terminal.PowershellCore",
+                "tabTitle": "PowerShell 7",
+                
+                // morec
                 // 背景图片
-                "acrylicOpacity": 0.5, // 背景不透明度
-                "backgroundImage": "E:/pirture/terminal-background.jpg",
-                "backgroundImageOpacity": 0.5,
+                "acrylicOpacity": 0.5, 
+                "backgroundImage": "E:/picture/2020-12-18/wallhaven-o3d3w7.jpg",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImagerStretchMode": "fill",
+                "useAcrylic": true,
+                
+                "padding": "0, 0, 0, 0",
+                // 键入时窗口滚动到输入行
+                "snapOnInput": true, 
+                // 打开时的目录
+                "startingDirectory": ".", 
+                // tab标题
+                "tabTitle": "powershell", 
+                // 使用acrylic
+                "useAcrylic": false, 
+                
+                //主题
+           	 	"colorScheme": "Solarized Dark Higher Contrast",
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "PowerShell",
+                "commandline": "powershell.exe",
+                "tabTitle": "PowerShell",
+                
+                // morec
+                // 背景图片
+                "acrylicOpacity": 0.25, 
+                "backgroundImage": "E:/picture/2020-12-07/wallhaven-y87dxx.jpg",
+                "backgroundImageOpacity": 0.25,
                 "backgroundImagerStretchMode": "fill",
               
                 "padding": "0, 0, 0, 0",
-                "snapOnInput": true, // 键入时窗口滚动到输入行
-                "startingDirectory": "%USERPROFILE%", // 打开时的目录
-                "tabTitle": "powershell", // tab标题
-                "useAcrylic": false, // 使用acrylic
+                // 键入时窗口滚动到输入行
+                "snapOnInput": true, 
+                // 打开时的目录
+                "startingDirectory": ".", 
+                // tab标题
+                "tabTitle": "powershell", 
+                // 使用acrylic
+                "useAcrylic": false, 
                 
                 //主题
-           	 	"colorScheme": "Thanatos Dark",
+           	 	"colorScheme": "Cobalt Neon",
             },
             {
                 // Make changes here to the cmd.exe profile.
@@ -87,9 +120,9 @@ date: 2020-12-04 23:29:20
                 "commandline": "cmd.exe",
                 "hidden": false,
                 // more 
-                "acrylicOpacity": 0.5,
-                "backgroundImage": "E:/pirture/terminal-background.jpg",
-                "backgroundImageOpacity": 0.5,
+                "acrylicOpacity": 0.25,
+                "backgroundImage": "E:/picture/wallhaven-1kjqdw.jpg",
+                "backgroundImageOpacity": 0.25,
                 "backgroundImagerStretchMode": "fill",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
@@ -98,7 +131,55 @@ date: 2020-12-04 23:29:20
                 "useAcrylic": false,
                 
                 //主题
-           	 	"colorScheme": "cyberpunk",
+           	 	"colorScheme": "Thanatos Dark",
+            },
+            {
+                // 通过terminal连接服务器
+            	"guid": "{B5F0BC97-C32E-67A0-97E1-6112A50DF336}",
+            	"name": "aliyun",
+            	"commandline": "ssh root@123.56.252.111",
+               "acrylicOpacity": 0.4,
+               "backgroundImage": "E:/picture/2020-12-18/wallhaven-6oq5lq.jpg",
+               "backgroundImageOpacity": 0.4,
+               "backgroundImagerStretchMode": "fill",
+               "padding": "0, 0, 0, 0",
+               "snapOnInput": true,
+               "startingDirectory": "%USERPROFILE%",
+               "tabTitle": "aliyun",
+               "useAcrylic": false,
+               "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png", // 图标
+                //主题
+           	 	"colorScheme": "Thanatos Dark",
+            		
+            },
+            {
+                "guid": "{db1d57fc-a9c1-4051-9677-f0232f905f60}",
+                "hidden": false,
+                "name": "Tencent Server",
+            	 "commandline": "ssh root@81.71.14.51",
+                "icon": "ms-appdata:///roaming/TencentServer.png",
+                
+                // morec
+                // 背景图片
+                "acrylicOpacity": 0.5, 
+                "backgroundImage": "E:/picture/2020-12-23/wallhaven-o3dvv9.jpg",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImagerStretchMode": "fill",
+                "useAcrylic": true,
+                
+                "padding": "0, 0, 0, 0",
+                // 键入时窗口滚动到输入行
+                "snapOnInput": true, 
+                // 打开时的目录
+                "startingDirectory": ".", 
+                // tab标题
+                "tabTitle": "powershell", 
+                // 使用acrylic
+                "useAcrylic": false, 
+                
+                //主题
+           	 	"colorScheme": "Thanatos Dark",
+           	 	"cursorColor" : "#FFFFFF",
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -106,23 +187,6 @@ date: 2020-12-04 23:29:20
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             },
-            {
-                // 通过terminal连接服务器
-            	"guid": "{B5F0BC97-C32E-67A0-97E1-6112A50DF336}",
-            	"name": "aliyun",
-            	"commandline": "ssh root@IP",
-               "acrylicOpacity": 0.5,
-               "backgroundImage": "E:/pirture/terminal-background.jpg",
-               "backgroundImageOpacity": 0.5,
-               "backgroundImagerStretchMode": "fill",
-               "padding": "0, 0, 0, 0",
-               "snapOnInput": true,
-               "startingDirectory": "%USERPROFILE%",
-               "tabTitle": "aliyun",
-               "useAcrylic": false,
-               "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png" // 图标
-            		
-            }
         ]
     },
 
@@ -151,49 +215,93 @@ date: 2020-12-04 23:29:20
             "white": "#fef8ec",
             "yellow": "#d8cb32"
         },
-        {
-            "name": "Thanatos Light",
-            "background" : "#f6f6f0",
-            "foreground" : "#3f5060",
-            "selectionBackground": "#0e639c",
-            "black": "#36475b",
-            "blue": "#0e9bd1",
-            "brightBlack": "#65737e",
-            "brightBlue": "#7899ba",
-            "brightCyan": "#008a8e",
-            "brightGreen": "#0de1b1",
-            "brightRed": "#d47186",
-            "brightWhite": "#1a2b3c",
-            "brightYellow": "#eaa221",
-            "brightPurple": "#ab43aa",
-            "purple": "#ab43aa",
-            "cyan": "#008486",
-            "green": "#008a8e",
-            "red": "#e19887",
-            "white": "#7899ba",
-            "yellow": "#eaa221"
-        },
-        {
-		    "name": "cyberpunk",
-		    "black": "#000000",
-		    "red": "#ff7092",
-		    "green": "#00fbac",
-		    "yellow": "#fffa6a",
-		    "blue": "#00bfff",
-		    "purple": "#df95ff",
-		    "cyan": "#86cbfe",
-		    "white": "#ffffff",
-		    "brightBlack": "#000000",
-		    "brightRed": "#ff8aa4",
-		    "brightGreen": "#21f6bc",
-		    "brightYellow": "#fff787",
-		    "brightBlue": "#1bccfd",
-		    "brightPurple": "#e6aefe",
-		    "brightCyan": "#99d6fc",
-		    "brightWhite": "#ffffff",
-		    "background": "#332a57",
-		    "foreground": "#e5e5e5"
-		}
+			{
+			  "name": "Cobalt Neon",
+			  "black": "#142631",
+			  "red": "#ff2320",
+			  "green": "#3ba5ff",
+			  "yellow": "#e9e75c",
+			  "blue": "#8ff586",
+			  "purple": "#781aa0",
+			  "cyan": "#8ff586",
+			  "white": "#ba46b2",
+			  "brightBlack": "#fff688",
+			  "brightRed": "#d4312e",
+			  "brightGreen": "#8ff586",
+			  "brightYellow": "#e9f06d",
+			  "brightBlue": "#3c7dd2",
+			  "brightPurple": "#8230a7",
+			  "brightCyan": "#6cbc67",
+			  "brightWhite": "#8ff586",
+			  "background": "#142838",
+			  "foreground": "#8ff586"
+			},
+			{
+			  "name": "Aurora",
+			  "black": "#23262e",
+			  "red": "#f0266f",
+			  "green": "#8fd46d",
+			  "yellow": "#ffe66d",
+			  "blue": "#0321d7",
+			  "purple": "#ee5d43",
+			  "cyan": "#03d6b8",
+			  "white": "#c74ded",
+			  "brightBlack": "#292e38",
+			  "brightRed": "#f92672",
+			  "brightGreen": "#8fd46d",
+			  "brightYellow": "#ffe66d",
+			  "brightBlue": "#03d6b8",
+			  "brightPurple": "#ee5d43",
+			  "brightCyan": "#03d6b8",
+			  "brightWhite": "#c74ded",
+			  "background": "#23262e",
+			  "foreground": "#ffca28"
+			},
+			{
+			  "name": "FunForrest",
+			  "black": "#000000",
+			  "red": "#d6262b",
+			  "green": "#919c00",
+			  "yellow": "#be8a13",
+			  "blue": "#4699a3",
+			  "purple": "#8d4331",
+			  "cyan": "#da8213",
+			  "white": "#ddc265",
+			  "brightBlack": "#7f6a55",
+			  "brightRed": "#e55a1c",
+			  "brightGreen": "#bfc65a",
+			  "brightYellow": "#ffcb1b",
+			  "brightBlue": "#7cc9cf",
+			  "brightPurple": "#d26349",
+			  "brightCyan": "#e6a96b",
+			  "brightWhite": "#ffeaa3",
+			  "background": "#251200",
+			  "foreground": "#dec165"
+			},
+			{
+			  "name": "Solarized Dark Higher Contrast",
+			  "black": "#002831",
+			  "red": "#d11c24",
+			  "green": "#6cbe6c",
+			  "yellow": "#a57706",
+			  "blue": "#2176c7",
+			  "purple": "#c61c6f",
+			  "cyan": "#259286",
+			  "white": "#eae3cb",
+			  "brightBlack": "#006488",
+			  "brightRed": "#f5163b",
+			  "brightGreen": "#51ef84",
+			  "brightYellow": "#b27e28",
+			  "brightBlue": "#178ec8",
+			  "brightPurple": "#e24d8e",
+			  "brightCyan": "#00b39e",
+			  "brightWhite": "#fcf4dc",
+			  "background": "#142838",
+			  "foreground": "#9cc2c3"
+			}
+
+
+    
     ],
 
     // Add custom actions and keybindings to this array.
@@ -219,6 +327,8 @@ date: 2020-12-04 23:29:20
 }
 
 ```
+
+![cmd](https://wx2.sinaimg.cn/mw690/0083TyOJly1glyrcq4prlj31hk0t41kx.jpg)
 
 ## 2. 连接服务器
 
@@ -325,3 +435,178 @@ Windows Registry Editor Version 5.00
 ```
 
 这样也有一个缺点，直接打开`termianl`时目录为`C:\Windows\System32`目前没有解决方法
+
+## 4 `PowerShell`主题
+
+[参考](https://www.misiyu.cn/article/134.html)
+
+### 4.1 安装`oh-my-posh`主题
+
+在terminal输入
+
+```js
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+```
+
+输入`Y`同意安装
+
+### 4.2 更新配置文件
+
+在`terminal`输入`$PROFILE`
+
+得到当前电脑的`powershell_profile`文件
+
+```js
+PS C:\Windows\System32> $PROFILE
+C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+PS C:\Windows\System32>
+```
+
+继续输入
+
+```js
+if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+notepad $PROFILE
+```
+
+在打开的文件夹中添加
+
+```js
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Honukai
+```
+
+`Set-Theme Honukai`是主题设置，其他可选主题
+
+```
+Agnoster、Avit、Darkblood、Fish、Honukai、Paradox、Sorin、tehrob
+```
+
+更新配置
+
+输入你用`$PROFILE`得到的路径
+
+```js
+C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+```
+
+有些主题的样式可能会有些小空格，这时因为字体不支持`poweline`,推荐选择`CaskaydiaCove NF`字体，支持编程连字和`poweline`字形
+
+[下载链接](https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.1.0)
+
+我的样式
+
+![poweshell5](https://wx1.sinaimg.cn/mw690/0083TyOJly1glyrcnto2jj31hk0t4hdu.jpg)
+
+![powershell7](https://wx1.sinaimg.cn/mw690/0083TyOJly1glyrcgjag7j31hk0t4qv5.jpg)
+
+
+
+## 5 `Centos-terminal` 主题
+
+[参考](https://www.jianshu.com/p/fa82d932888b)
+
+### 5.1 查看系统当前shell
+
+```js
+echo $SHELL
+```
+
+结果
+
+```js
+/bin/bash
+```
+
+查看`/bin`下是否有`zsh`包
+
+```ks
+cat /etc/shells
+**********************************************
+返回的结果是:
+/bin/sh
+/bin/bash
+/sbin/nologin
+/usr/bin/sh
+/usr/bin/bash
+/usr/sbin/nologin
+PS.默认没有安装zsh
+```
+
+### 5.2 安装`zsh`
+
+```js
+sudo yum install -y zsh
+```
+
+在/bin下查看
+
+```js
+/bin/sh
+/bin/bash
+/sbin/nologin
+/usr/bin/sh
+/usr/bin/bash
+/usr/sbin/nologin
+/bin/zsh
+```
+
+### 5.3 将`zsh`设置成默认`shell`
+
+```js
+chsh -s /bin/zsh
+```
+
+### 5.4 安装`oh-my-zsh`
+
+需要先装`git`
+
+```js
+sudo yum install git
+```
+
+修改`host`
+
+```jsp
+vim /etc/hosts
+```
+
+添加
+
+```js
+199.232.28.133 raw.githubusercontent.com  
+```
+
+下载
+
+```js
+sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+```
+
+### 5.5 配置主题
+
+[主题](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
+
+选择一款主题，修改`~/.zshrc`
+
+```js
+vim ~/.zshrc
+```
+
+将`ZSH_THEME`更改为选择的主题 `jonathan`
+
+更新配置
+
+`source ~/.zshrc`
+
+重启
+
+`reboot`
+
+我的样式
+
+![阿里云](https://wx2.sinaimg.cn/mw690/0083TyOJly1glyrclljeyj31hk0t4u0x.jpg)
+
+![腾讯云](https://wx4.sinaimg.cn/mw690/0083TyOJly1glyrcizjn6j31hk0t44qq.jpg)
