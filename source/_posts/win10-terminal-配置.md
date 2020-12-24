@@ -332,7 +332,7 @@ date: 2020-12-04 23:29:20
 
 ![cmd](https://wx2.sinaimg.cn/mw690/0083TyOJly1glyrcq4prlj31hk0t41kx.jpg)
 
-## 2. 连接服务器
+## 连接服务器
 
 ### 2.1 客户端生成ssh公私钥
 
@@ -383,7 +383,7 @@ root用户的目录在：`/root/.ssh/`
 
 加入这句之后，`ssh`客户端会每隔一段时间自动与`ssh`服务器通信一次，所以长时间操作不会断开。
 
-## 3`terminal` 添加右键
+## `terminal` 添加右键
 
 ### 3.1 检查常量
 
@@ -438,7 +438,7 @@ Windows Registry Editor Version 5.00
 
 这样也有一个缺点，直接打开`termianl`时目录为`C:\Windows\System32`目前没有解决方法
 
-## 4 `PowerShell`主题
+##  `PowerShell`主题
 
 [参考](https://www.misiyu.cn/article/134.html)
 
@@ -510,7 +510,7 @@ C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 
 
-## 5 `Centos-terminal` 主题
+##  `Centos-terminal` 主题
 
 [参考](https://www.jianshu.com/p/fa82d932888b)
 
