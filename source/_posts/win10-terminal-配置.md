@@ -565,6 +565,8 @@ sudo yum install -y zsh
 chsh -s /bin/zsh
 ```
 
+修改`zsh`为默认shell需要将以前在`~/.bashrc`中的设置，复制到`~/.zshrc`中
+
 ### 安装`oh-my-zsh`
 
 需要先装`git`
