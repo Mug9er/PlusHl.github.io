@@ -1,11 +1,12 @@
 ---
 title: Django+Vue+Nginx+uWSGI部署
 mathjax: true
-date: 2020-12-24 16:02:06
 categories:
-	- 配置
+  - 配置
 tags:
-	- 服务器
+  - 服务器
+abbrlink: 1ae14b31
+date: 2020-12-24 16:02:06
 ---
 
 <meta name = "referrer" content = "no-referrer" />
