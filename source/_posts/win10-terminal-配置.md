@@ -328,6 +328,8 @@ date: 2020-12-04 23:29:20
 
 ```
 
+`cmd`
+
 ![cmd](https://wx2.sinaimg.cn/mw690/0083TyOJly1glyrcq4prlj31hk0t41kx.jpg)
 
 ## 2. 连接服务器
@@ -498,7 +500,11 @@ C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 我的样式
 
+`powershell 5`
+
 ![poweshell5](https://wx1.sinaimg.cn/mw690/0083TyOJly1glyrcnto2jj31hk0t4hdu.jpg)
+
+`power shell 7`
 
 ![powershell7](https://wx1.sinaimg.cn/mw690/0083TyOJly1glyrcgjag7j31hk0t4qv5.jpg)
 
@@ -607,6 +613,10 @@ vim ~/.zshrc
 
 我的样式
 
+`aliyun Centos7`
+
 ![阿里云](https://wx2.sinaimg.cn/mw690/0083TyOJly1glyrclljeyj31hk0t4u0x.jpg)
+
+`tencent Centos7`
 
 ![腾讯云](https://wx4.sinaimg.cn/mw690/0083TyOJly1glyrcizjn6j31hk0t44qq.jpg)
