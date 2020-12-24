@@ -334,11 +334,11 @@ date: 2020-12-04 23:29:20
 
 ## 连接服务器
 
-### 2.1 客户端生成ssh公私钥
+###  客户端生成ssh公私钥
 
 `ssh-keygen`
 
-### 2.2 本地ssh公钥追加到服务器
+###  本地ssh公钥追加到服务器
 
 将`id_rsa.pub`的内容复制到`tmp.pub`
 
@@ -351,11 +351,11 @@ cat tmp.pub >> .ssh/authorized_keys
 rm tmp.pub
 ```
 
-### 2.3重启terminal
+### 重启terminal
 
 成功！
 
-### 2.4 解决终端链接服务器长时间不操作卡死
+### 解决终端链接服务器长时间不操作卡死
 
 在服务器中执行
 
@@ -385,7 +385,7 @@ root用户的目录在：`/root/.ssh/`
 
 ## `terminal` 添加右键
 
-### 3.1 检查常量
+### 检查常量
 
 ```
 echo %USERPROFILE%
@@ -393,7 +393,7 @@ echo %USERPROFILE%
 echo %LOCALAPPDATA%
 ```
 
-### 3.2 获取图标
+### 获取图标
 
 创建`Terminal`文件夹
 
@@ -405,7 +405,7 @@ mkdir "%USERPROFILE%\AppData\Local\Terminal"
 
 ![](https://gitee.com/Jioho/img/raw/master/wsl/terminal.ico)
 
-### 3.3 添加注册表文件
+### 添加注册表文件
 
 新建一个文件 `new.reg`
 
@@ -427,7 +427,7 @@ Windows Registry Editor Version 5.00
 
 执行`reg`文件，可以发现右键多了一个`windows termianl here`
 
-### 3.4 当前目录
+### 当前目录
 
 在配置文件中添加或修改
 
@@ -442,7 +442,7 @@ Windows Registry Editor Version 5.00
 
 [参考](https://www.misiyu.cn/article/134.html)
 
-### 4.1 安装`oh-my-posh`主题
+### 安装`oh-my-posh`主题
 
 在terminal输入
 
@@ -453,7 +453,7 @@ Install-Module oh-my-posh -Scope CurrentUser
 
 输入`Y`同意安装
 
-### 4.2 更新配置文件
+### 更新配置文件
 
 在`terminal`输入`$PROFILE`
 
@@ -514,7 +514,7 @@ C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 [参考](https://www.jianshu.com/p/fa82d932888b)
 
-### 5.1 查看系统当前shell
+### 查看系统当前shell
 
 ```js
 echo $SHELL
@@ -541,7 +541,7 @@ cat /etc/shells
 PS.默认没有安装zsh
 ```
 
-### 5.2 安装`zsh`
+### 安装`zsh`
 
 ```js
 sudo yum install -y zsh
@@ -559,13 +559,13 @@ sudo yum install -y zsh
 /bin/zsh
 ```
 
-### 5.3 将`zsh`设置成默认`shell`
+### 将`zsh`设置成默认`shell`
 
 ```js
 chsh -s /bin/zsh
 ```
 
-### 5.4 安装`oh-my-zsh`
+### 安装`oh-my-zsh`
 
 需要先装`git`
 
@@ -591,7 +591,7 @@ vim /etc/hosts
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 ```
 
-### 5.5 配置主题
+### 配置主题
 
 [主题](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
 
