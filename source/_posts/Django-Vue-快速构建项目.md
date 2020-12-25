@@ -1,11 +1,12 @@
 ---
 title: Django + Vue 快速构建项目
 mathjax: true
-date: 2020-12-24 20:14:26
 categories:
-	- 配置
+  - 配置
 tags:
-	- 小项目
+  - 小项目
+abbrlink: b2788495
+date: 2020-12-24 20:14:26
 ---
 
 <meta name = "referrer" content = "no-referrer" />

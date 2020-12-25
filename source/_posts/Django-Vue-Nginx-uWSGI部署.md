@@ -25,6 +25,55 @@ date: 2020-12-24 16:02:06
 ip:123.56.252.111
 vue: dist
 django: django_server
+
+├── backend
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-39.pyc
+│   │   ├── urls.cpython-39.pyc
+│   │   └── views.cpython-39.pyc
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── element-test
+│   └── dist
+│       ├── header.ico
+│       ├── index.html
+│       └── static
+│           ├── css
+│           ├── fonts
+│           ├── img
+│           └── js
+├── manage.py
+├── media
+├── mysite
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-39.pyc
+│   │   ├── settings.cpython-39.pyc
+│   │   ├── urls.cpython-39.pyc
+│   │   └── wsgi.cpython-39.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static
+│   ├── admin
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   └── js
+├── test.py
+├── uwsgi.ini
+├── uwsgi.log
+├── uwsgi_nginx.sock
+└── uwsgi.pid
 ```
 
 ### 虚拟环境
@@ -95,7 +144,7 @@ python manage.py runserver 0.0.0.0:8000
 #### 测试`uWSGI`
 
 ```
-uwsgi --http :8000 --module server.wsgi
+uwsgi --http :8000 --module mysite.wsgi
 ```
 
 在浏览器输入`123.56.255.111:8000`出现`Internal Server Error`属于正常现象，因为没有资源
@@ -132,40 +181,38 @@ systemctl start nginx
 创建`/etc/nginx/sites-available`的目录，在目录里创建`support_center_nginx.conf`配置文件进行配置：
 
 ```js
-# support_center_nginx.conf
+ # support_center_nginx.conf
+ # the upstream component nginx needs to connect to
+ upstream django {
+   server 127.0.0.1:8001; # for a web port socket (we'll use this first)
+ }
 
-# the upstream component nginx needs to connect to
-upstream django {
-    # server unix:///home/webs/support-center-env/server/support_center_sock.sock; # for a file socket
-    server 127.0.0.1:8001; # for a web port socket (we'll use this first)
-}
+ # configuration of the server
+ server {
+       # the port your site will be served on
+       listen      8000;
+       # the domain name it will serve for
+       server_name 123.56.252.111; # substitute your machine's IP address or FQDN
+       charset     utf-8;
 
-# configuration of the server
-server {
-    # the port your site will be served on
-    listen      8000;
-    # the domain name it will serve for
-    server_name 123.56.252.111; # substitute your machine's IP address or FQDN
-    charset     utf-8;
+       # max upload size
+       client_max_body_size 75M;   # adjust to taste
 
-    # max upload size
-    client_max_body_size 75M;   # adjust to taste
 
-    # Django media
-    location /media  {
-        alias /root/WebServer/server/media; # your Django project's media files - amend as required
-    }
+      # Django media
+       location /media  {
+         alias /root/mysite/media; # your Django project's media files - amend as required
+       }
 
-    location /static {
-        alias /root/WebServer/server/static; # your Django project's static files - amend as required
-    }
+       location /static {
+        alias /root/mysite/static; # your Django project's static files - amend as required
+       }
 
-    # Finally, send all non-media requests to the Django server.
-    location / {
+        # Finally, send all non-media requests to the Django server.
+       location / {
         uwsgi_pass  django;
-        include     /etc/nginx/uwsgi_params; # the uwsgi_params file you installed
-    }
-}
+        include     /etc/nginx/uwsgi_params; # the uwsgi_params file you installed   
+      }
 ```
 
 创建一个软链接(`/etc/nginx/sites-enabled`)指向它：
@@ -179,37 +226,36 @@ ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
 
 注意，这个语句添加在`http`中，`server`外
 
-```
-http {
-    //...
-    server {
-        listen    80;
-       # listen       [::]:80 default_server;
-        server_name  123.56.252.111;
-       # root         /usr/share/nginx/html;
-        #root         /root/dist;
+```js
+ http {
+	server {
+         listen    8888;
+        # listen       [::]:80 default_server;
+         server_name  _;
+        # root         /usr/share/nginx/html;
 
          # Load configuration files for the default server block.
          include /etc/nginx/default.d/*.conf;
 
          location / {
-           root /root/django_server/WebProject/dist;
+           root /root/mysite/element-test/dist;
            try_files $uri $uri/ @router;
            index index.html index.htm;
          }
 
          location @router{
            rewrite ^.*$ /index.html last;
-        }
+         }
 
          error_page 404 /404.html;
-        location = /404.html {
+         location = /404.html {
          }
 
          error_page 500 502 503 504 /50x.html;
          location = /50x.html {
          }
-         }                                                                                  include /etc/nginx/sites-enabled/*.conf;
+     }
+     include /etc/nginx/sites-enabled/*.conf;
 }
 ```
 
@@ -219,7 +265,7 @@ http {
 先向`settings.py`中添加：
 
 ```python
-STATIC_ROOT = '/home/webs/support-center-env/support-center/static'
+STATIC_ROOT = '/root/mysite/static'
 ```
 
 然后，将静态资源集中：
@@ -247,58 +293,50 @@ Nginx --uwsgi--> uWSGI
 uWSGI --> Python
 ```
 
-#### 用`Unix`套接字替换端口
-
-之前，我们使用的是TCP端口，但是更好的做法是用Unix套接字，开销更小。
-编辑`/etc/nginx/sites-abailable/support_center_nginx.conf`：
-
-```js
- upstream django {
-       # server unix:///home/webs/support-center-env/server/support_center_sock.sock; # for a file socket
-       #server 127.0.0.1:8001; # for a web port socket (we'll use this first)
-   server unix:///root/WebServer/server/server/support_center_sock.sock;
- }
-```
-
-运行`uWSGI`
-
-```js
-uwsgi --socket support_center_sock.sock --wsgi-file test.py
-```
-
-### 使用 `Nginx` 和` uWSGI` 运行` Django`
-
-```js
-uwsgi --socket uwsgi_nginx.sock --module server.wsgi --chmod-socket=666
-```
-
 #### 使用`.ini`对`uWSGI`进行设置
 
 创建`uwsgi.ini`
 
 ```js
-# uwsgi.ini file
 [uwsgi]
+#  项目路径 
+chdir = /root/mysite
 
-# Django-related settings
-# the base directory (full path)
-chdir           = /root/WebServer/server
-# Django's wsgi file
-module          = server.wsgi
-# the virtualenv (full path)
-home            = /root/Envs/Django
+#django的wsgi文件路径
+wsgi-file = /root/mysite/wsgi.py
 
-# process-related settings
-# master
-master          = true
-# maximum number of worker processes
-processes       = 10
-# the socket (use the full path to be safe
-socket          = /root/WebServer/server/uwsgi_nginx.sock
-# ... with appropriate permissions - may be needed
-chmod-socket    = 666
-# clear environment on exit
-vacuum          = true
+# 使用mmcsite.wsgi模块
+module = mysite.wsgi
+
+# 虚拟环境的路径
+home = /root/Envs/Django
+
+# 启用master
+master = true
+
+# 启动五个进程
+processes = 10
+
+# 每个进程启动30个线程
+threads = 30
+
+# 指定socket监听的地址和端口
+socket = 0.0.0.0:8001
+
+# socket权限
+chmod-socket = 666
+
+# 结束后清理环境
+vacuum = true
+
+# 日志文件
+daemonize = /root/mysite/uwsgi.log
+
+# pid文件
+pidfile = /root/mysite/uwsgi.pid
+
+# 允许用内嵌的语言启动线程，这将允许你在app程序中产生一个子线程
+enable-threads = true     
 ```
 
 然后，启动 `uWSGI`
