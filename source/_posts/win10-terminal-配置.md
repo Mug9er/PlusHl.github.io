@@ -494,7 +494,7 @@ Agnoster、Avit、Darkblood、Fish、Honukai、Paradox、Sorin、tehrob
 C:\Users\64371\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-有些主题的样式可能会有些小空格，这时因为字体不支持`poweline`,推荐选择`AurulentSansMono`字体，支持编程连字和`poweline`字形
+有些主题的样式可能会有些小空格，这时因为字体不支持`poweline`,推荐选择`Hack NF`字体，支持编程连字和`poweline`字形
 
 [下载链接](https://www.nerdfonts.com/font-downloads)
 
