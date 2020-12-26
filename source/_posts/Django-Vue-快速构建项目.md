@@ -3,6 +3,7 @@ title: Django + Vue 快速构建项目
 mathjax: true
 categories:
   - 配置
+  - Django + Vue
 tags:
   - 小项目
 abbrlink: b2788495

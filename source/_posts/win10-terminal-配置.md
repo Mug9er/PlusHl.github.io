@@ -3,6 +3,7 @@ title: win10 terminal 配置
 mathjax: true
 categories:
   - 配置
+  - terminal
 tags:
   - terminal
 abbrlink: e96d644

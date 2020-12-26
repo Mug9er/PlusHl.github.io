@@ -3,6 +3,7 @@ title: 码云和github同步更新
 mathjax: true
 categories:
   - 配置
+  - github + gitee
 tags:
   - 服务器
 abbrlink: 2d45259f

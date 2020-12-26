@@ -3,8 +3,7 @@ title: Django+Vue+Nginx+uWSGI部署
 mathjax: true
 categories:
   - 配置
-  - Django
-  - nginx
+  - Django + nginx
 tags:
   - 服务器
   - Django

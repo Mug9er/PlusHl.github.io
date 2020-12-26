@@ -2,6 +2,8 @@
 title: vscode 配置Vue
 mathjax: true
 categories:
+  - 配置
+  - Vscode
   - Vue
 tags:
   - html
