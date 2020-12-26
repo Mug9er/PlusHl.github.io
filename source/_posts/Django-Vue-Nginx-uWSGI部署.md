@@ -3,8 +3,12 @@ title: Django+Vue+Nginx+uWSGI部署
 mathjax: true
 categories:
   - 配置
+  - Django
+  - nginx
 tags:
   - 服务器
+  - Django
+  - nginx
 abbrlink: 1ae14b31
 date: 2020-12-24 16:02:06
 ---
