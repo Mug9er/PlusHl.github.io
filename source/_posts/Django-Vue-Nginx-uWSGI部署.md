@@ -344,3 +344,108 @@ enable-threads = true
 ```bash
 uwsgi --ini uwsgi.ini
 ```
+
+### 转发80端口
+
+将`/etc/nginx/sites-available/support_center_nginx.conf`重命名`/etc/nginx/sites-available/nginx_backend.conf`
+
+```ls
+cd /etc/nginx/sites-available/
+mv support_center_nginx.conf nginx_backend.conf`
+```
+
+新建一个文件`/etc/nginx/sites-available/nginx_fonter.conf`
+
+```js
+vim nginx_fonter.conf
+```
+
+在文件中加入
+
+```js
+server {
+    # 监听端口
+   listen 8888;
+
+    #ip
+   server_name 123.56.252.111;
+
+    # 编码规则
+   charset utf-8;
+
+   client_max_body_size 75M;
+    
+# 主页面内容，
+# root：指向vue的dist文件
+# try_files：使用vue内部的路由转发
+# index：
+   location / {
+     root /root/mysite/element-test/dist;
+     try_files $uri $uri/ @router;   
+     index index.html index.htm;
+   }
+
+   location @router {
+     rewrite ^.*$ /index.html last;
+   }
+
+   error_page 404 /404.html;
+   location = /404.html{
+   }
+
+   error_page 500 502 503 504 /50x.html;
+   location = /50x.html{
+   }
+
+ }
+          
+```
+
+修改`/etc/nginx/nginx.conf`
+
+```js
+ http {
+	server {
+         listen    8888;
+        # listen       [::]:80 default_server;
+         server_name  _;
+        # root         /usr/share/nginx/html;
+
+         # Load configuration files for the default server block.
+         include /etc/nginx/default.d/*.conf;
+
+         location / {
+           proxy_set_header Host $host:$server_port;
+           proxy_set_header Host $http_host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header REMOTE-HOST $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header Connection "";
+           proxy_set_header X-Nginx-Proxy true;
+           proxy_pass http://123.56.252.111:8888/;
+         }
+
+         location @router{
+           rewrite ^.*$ /index.html last;
+         }
+
+         error_page 404 /404.html;
+         location = /404.html {
+         }
+
+         error_page 500 502 503 504 /50x.html;
+         location = /50x.html {
+         }
+     }
+     include /etc/nginx/sites-enabled/*.conf;
+}
+```
+
+简单说下这样做的目的：
+
+客户的所有请求都是通`80`端口，与默认端口通信是不需要加`:80`的，`nginx`从`80`端口接收到浏览器的请求，转发到`8888`端口，`8888`接收到在`/etc/nginx/sites-available/fonter.conf`文件处理
+
+后端界面客户不会主动访问所以不用转发来隐藏端口，
+
+`/etc/nginx/sites-available/fonter.conf` 和 `/etc/nginx/sites-available/nginx_backend.conf`，都在 `/etc/nginx/sites-available`中，通过软连接` /etc/nginx/sites-enabled `在`/etc/nginx/nginx.conf`中的`include /etc/nginx/sites-enabled/*.conf;`导入`nginx.conf`文件,与主配置文件分离
+
