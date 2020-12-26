@@ -147,8 +147,6 @@ TEMPLATES = [
 
 打开 `settings.py (ulb_manager/settings.py`)，找到` STATICFILES_DIRS` 配置项，配置如下:
 
-
-
 ```text
 # Add for vuejs
 STATICFILES_DIRS = [
@@ -158,5 +156,101 @@ STATICFILES_DIRS = [
 
 这样`Django`不仅可以将`/` 映射到`index.html`，而且还可以顺利找到静态文件
 
-此时访问` / `我们可以看到使用`Django`作为后端的`VueJS`前端
+### `backend` 配置
 
+在`backend`中创建`urls`
+
+```py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('books/', view = views.books, name="books")
+]
+```
+
+在`backend/views.py`中
+
+```py
+from django.shortcuts import render
+from django.http.response import  JsonResponse
+
+# Create your views here.
+
+def books(request):
+    books = [
+        {'id': 1, 'title': "python", "price": 89}
+    ]
+    return JsonResponse(books, safe=False)
+
+```
+
+此时访问` / `我们可以看到使用`Django`作为后端的`VueJS`前端,访问`/api/books`我们可以看到`json`数据
+
+### 解决开发时的跨域问题
+
+使用`corsheaders`
+
+```js
+pip install corsheaders
+```
+
+在`setting.py`中加入
+
+```js
+INSTALLED_APPS = [
+    //...
+    'corsheaders',
+]
+MIDDLEWARE = [
+    //......
+    'corsheaders.middleware.CorsMiddleware',  # 添加cors，在第三行，位置不能改
+    'django.middleware.common.CommonMiddleware',
+]
+CORS_ORIGIN_ALLOW_ALL = True
+```
+
+以上是从网上找的解决方法，但是并没有解决问题，
+
+先看一下同源的定义
+
+```
+同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+```
+
+`vue`启动`server`是的`ip`是`192.168.0.100:8080`，`django`启动服务时的`ip`是`127.0.0.1:8000`，
+
+试着修改了一下`django`的启动`ip`
+
+在`setting.py`中加入
+
+```js
+ALLOWED_HOSTS = [
+    '192.168.0.100',
+    '127.0.0.1',
+    '0.0.0.0',
+    'localhost',
+]
+```
+
+然后启动
+
+```js
+django ./manage.py runserver 192.168.0.100:8888
+```
+
+然后启动`vue`
+
+```js
+npm run serve
+```
+
+这时不在出现跨域问题 
+
+成功！
+
+
+
+#### 开发模式
+
+利用`vscode` 写前端`vue`，`pycharm`写`django`后端 ，调试时`pycharm`打开`django`服务，`vscode` 打开`vue`，
