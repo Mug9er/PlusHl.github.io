@@ -1,13 +1,14 @@
 ---
 title: axios与django通信
 mathjax: true
-date: 2020-12-26 23:37:50
 categories:
-	- 小项目
-	- django + vue
+  - 小项目
+  - django + vue
 tags:
-	- django
-	- vue
+  - django
+  - vue
+abbrlink: '5218864'
+date: 2020-12-26 23:37:50
 ---
 
 <meta name = "referrer" content = "no-referrer" />
@@ -121,5 +122,14 @@ export default {
 <style>
 </style>
 
+```
+
+### django配置
+
+```
+MIDDLEWARE = [
+     #'django.middleware.csrf.CsrfViewMiddleware', # 注释掉csrf
+]
+APPEND_SLASH=False
 ```
 
