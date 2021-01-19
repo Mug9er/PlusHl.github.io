@@ -1,13 +1,14 @@
 ---
 title: Django与mysql相连
 mathjax: true
-date: 2020-12-27 16:55:14
 categories:
-	- 配置
-	- django+mysql
+  - 配置
+  - django+mysql
 tags:
-	- django	
-	- mysql
+  - django
+  - mysql
+abbrlink: 3a7fd0d4
+date: 2020-12-27 16:55:14
 ---
 
 <meta name = "referrer" content = "no-referrer" />

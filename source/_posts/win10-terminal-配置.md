@@ -623,3 +623,48 @@ vim ~/.zshrc
 `tencent Centos7`
 
 ![腾讯云](https://wx4.sinaimg.cn/mw690/0083TyOJly1glyrcizjn6j31hk0t44qq.jpg)
+
+## 管理员
+
+在`powershell`中执行
+
+```
+PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"
+```
+
+安装过程会询问你是否打算使用`sudo`作为`gsudo`的别名，这里可以根据个人需要进行选择。
+运行结尾显示`Done`即表明安装完成
+
+安装完成后，在`setting.json`中添加`list`
+
+```js
+{
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "PowerShell Administra",
+                "commandline": "sudo.exe powershell.exe",
+                "tabTitle": "PowerShell Administra",
+                
+                // morec
+                // 背景图片
+                "acrylicOpacity": 0.25, 
+                "backgroundImage": "E:/picture/2020-12-07/wallhaven-y87dxx.jpg",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImagerStretchMode": "fill",
+              
+                "padding": "0, 0, 0, 0",
+                // 键入时窗口滚动到输入行
+                "snapOnInput": true, 
+                // 打开时的目录
+                "startingDirectory": ".", 
+                // tab标题
+                "tabTitle": "powershell", 
+                // 使用acrylic
+                "useAcrylic": false, 
+                
+                //主题
+           	 	"colorScheme": "Cobalt Neon",
+            },
+```
+
+在普通的`powershell`中执行`sudo`，也可以升级成管理员

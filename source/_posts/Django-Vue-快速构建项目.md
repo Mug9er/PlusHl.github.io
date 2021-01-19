@@ -208,6 +208,8 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+# 允许请求携带cookies
+CORS_ALLOW_CREDENTIALS= True 
 ```
 
 以上是从网上找的解决方法，但是并没有解决问题，

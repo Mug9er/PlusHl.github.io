@@ -27,6 +27,7 @@ export function request (config) {
   const instance = axios.create({ //实例，配置一些基础信息
     baseURL: 'http://192.168.0.100:8888/api/',
     timeout: 5000,
+    withCredentials: true
   })
 
   instance.interceptors.request.use(config => { //请求拦截器
@@ -128,7 +129,7 @@ export default {
 
 ```
 MIDDLEWARE = [
-     #'django.middleware.csrf.CsrfViewMiddleware', # 注释掉csrf
+     'django.middleware.csrf.CsrfViewMiddleware', # 注释掉csrf
 ]
 APPEND_SLASH=False
 ```
