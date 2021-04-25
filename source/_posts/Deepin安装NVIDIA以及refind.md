@@ -7,6 +7,7 @@ categories:
 tags:
   - NVIDIA显卡
   - refind引导
+abbrlink: 81fa645f
 ---
 
 <meta name = "referrer" content = "no-referrer" />
