@@ -14,6 +14,8 @@ abbrlink: 81fa645f
 
 ![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gpw3tka7pkj31hc0u01kb.jpg)
 
+<!-- less -->
+
 # Deepin安装NVIDIA驱动
 
 ## 安装驱动
