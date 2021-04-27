@@ -1,11 +1,12 @@
 ---
 title: Linux 命令
 mathjax: true
-date: 2021-04-27 16:24:09
 categories:
-	- Linux
+  - Linux
 tags:
-	- 命令
+  - 命令
+abbrlink: 9da1ef6b
+date: 2021-04-27 16:24:09
 ---
 
 <meta name = "referrer" content = "no-referrer" />
