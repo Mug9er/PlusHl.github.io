@@ -1,11 +1,12 @@
 ---
 title: Linux用户权限
 mathjax: true
-date: 2021-04-27 21:53:40
 categories:
-	- Linux
+  - Linux
 tags:
-	- 用户权限
+  - 用户权限
+abbrlink: e7492e71
+date: 2021-04-27 21:53:40
 ---
 
 <meta name = "referrer" content = "no-referrer" />
