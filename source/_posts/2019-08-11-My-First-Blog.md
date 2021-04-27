@@ -15,17 +15,17 @@ date: 2019-08-11 14:57:09
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
-# 一. Hexo + Github 搭建博客：
+# Hexo + Github 搭建博客：
 
 [跟着这篇博客走即可](https://blog.csdn.net/ainuser/article/details/77609180)
 
-# 二：Hexo 主题配置
+# Hexo 主题配置
 
 Hexo目录下的_config.yml称为站点配置文件
 
 Hexo/themes/next/目录下的_config.yml称为主题配置文件
 
-## 1. next主题
+##  next主题
 
 下载next主题
 
@@ -62,7 +62,7 @@ theme: next
 scheme: Gemini
 ```
 
-## 2. 基本信息配置
+##  基本信息配置
 
 配置站点配置文件`_config.yml`
 
@@ -75,7 +75,7 @@ language: 语言（简体中文是zh-Hans）
 timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）
 ```
 
-## 3. 菜单信息配置：
+##  菜单信息配置：
 
 配置主题配置文件`_config.yml`
 
@@ -97,7 +97,7 @@ menu_icons:
 
 
 
-## 4. 设置标签，分类页面
+## 设置标签，分类页面
 
 在Git-Bash中输入：
 
@@ -147,7 +147,7 @@ comments: false
 
 `comments: false`是关闭评论功能
 
-## 5. 搜索功能
+## 搜索功能
 
 在Hexo的根目录下执行
 
@@ -177,7 +177,7 @@ local_search:
   top_n_per_article: 1
 ```
 
-## 6. 头像设置
+##  头像设置
 
 把你要作为头像的图片放到：`Hexo/themes/next/source/images`
 
@@ -187,7 +187,7 @@ local_search:
 avatar: /images/header.jpg
 ```
 
-## 7. 网站缩略图图标
+##  网站缩略图图标
 
 把你要作为缩略图的图片放到：`Hexo/themes/next/source/images`
 
@@ -204,7 +204,7 @@ favicon:
 
 ```
 
-## 8. 修改链接文本样式
+## 修改链接文本样式
 
 打开`Hexo/themes/next/source/css/_common/components/post.styl`，添加
 
@@ -221,7 +221,7 @@ favicon:
 }
 ```
 
-## 9. 添加评论系统
+##  添加评论系统
 
 注册登录[来必力](https://www.livere.com/), 安装City，获得安装代码中的`data-uid="xxx"`
 
@@ -231,7 +231,7 @@ favicon:
 livere_uid: #你的LiveRe UID
 ```
 
-## 10. 添加访问计数
+##  添加访问计数
 
 next已经集成了busuanzi计数，编辑`Hexo/themes/next/layout/_third-party/analytics/busuanzi-counter.swig` 
 
@@ -271,7 +271,7 @@ busuanzi_count:
   page_pv_footer: 次
 ```
 
-## 11. 文章版权信息
+## 文章版权信息
 
 编辑主题配置文件`_config.yml`，修改
 
@@ -280,7 +280,7 @@ post_copyright:
   enable: true
 ```
 
-## 12. 打赏
+## 打赏
 
 编辑主题配置文件`_config.yml`,修改
 
@@ -292,7 +292,7 @@ alipay: /images/alipay.png        # 支付宝收款二维码 图片路径
 #bitcoin: /images/bitcoin.png     # 比特币
 ```
 
-## 13. 添加更新时间
+##  添加更新时间
 
 编辑主题配置文件`_config.yml`,修改
 
@@ -308,7 +308,7 @@ post_meta:
   categories: true
 ```
 
-## 14. 修改文章底部的标签
+## 修改文章底部的标签
 
 编辑`Hexo/themes/next/layout/_macro/post.swig`
 
@@ -316,7 +316,7 @@ post_meta:
 
 将`#`改为`<i class="fa fa-tag"></i>`
 
-## 15. 文章底部添加"本文结束"
+##  文章底部添加"本文结束"
 
 编辑`Hexo/themes/next/laayout/_macro/post.swig`，在文章结束的地方加上
 
@@ -328,7 +328,7 @@ post_meta:
 {% endif %}
 ```
 
-## 16. 在页脚添加运行时间
+##  在页脚添加运行时间
 
 编辑`themes/next/layout/_partials/footer.swig`
 
@@ -376,7 +376,7 @@ post_meta:
 </script>
 ```
 
-## 17. Latex公式
+##  Latex公式
 
 更换Hexo的Markdown渲染引擎
 
@@ -417,7 +417,7 @@ han: false
 
 在写文章时要在文章的配置中加上`mathjax: true`
 
-## 18. 短链接
+## 短链接
 
 在根目录执行
 
@@ -435,7 +435,7 @@ abbrlink:
 permalink: /:abbrlink/
 ```
 
-## 19. 文章封面图片
+##  文章封面图片
 
 在根目录执行
 
@@ -443,7 +443,7 @@ permalink: /:abbrlink/
 
 在写文章时手动设置文章摘要`<!-- less -->`为分界线
 
-## 20. social 
+##  social
 
 修改主题配置文件`_config.yml`
 
@@ -467,7 +467,7 @@ social_icons:
   微博: weibo
 ```
 
-## 21. 友链
+##  友链
 
 修改主题配置文件`_config.yml`
 
@@ -481,7 +481,7 @@ links:
   github: http://github.com/
 ```
 
-## 22. 字数统计和阅读时长
+##  字数统计和阅读时长
 
 在根目录执行
 
@@ -516,7 +516,7 @@ symbols_count_time:
   wpm: 275
 ```
 
-## 23. 隐藏网页底部信息
+## 隐藏网页底部信息
 
 修改主题配置文件`_config.yml`
 
@@ -562,7 +562,7 @@ seo: false
 index_with_subtitle: false
 ```
 
-## 24. 设置RSS
+##  设置RSS
 
 在根目录执行
 
@@ -586,7 +586,7 @@ feed:
 
 `rss: /atom.xml`
 
-## 25. 修改字体
+## 修改字体
 
 在GItHub上[下载](https://github.com/crozynski/comicneue)后，解压后将所有Web文件夹下的所有内容放入`Hexo/theme/next/source/fonts`
 
@@ -772,7 +772,7 @@ font:
 
 修改 font size和code font  为18px就很好
 
-## 26. 设置新建文件配置
+##  设置新建文件配置
 
 进入`Hexo/scaffolds`修改`post.md`
 
@@ -786,7 +786,7 @@ tags:
 ---
 ```
 
-## 27. 新建带日期的博文
+##  新建带日期的博文
 
 修改站点配置文件`-config.yml`
 
@@ -808,7 +808,7 @@ highlight: # Hexo自带代码高亮插件
   tab_replace:
 ```
 
-## 28. 背景图片
+##  背景图片
 
 把背景图片存放到`Hexo/themes/next/source/images`
 
