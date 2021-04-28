@@ -1,11 +1,12 @@
 ---
 title: Linux系统管理
 mathjax: true
-date: 2021-04-27 22:51:51
 categories:
-	- Linux
+  - Linux
 tags:
-	- 系统管理
+  - 系统管理
+abbrlink: 6c72ecbc
+date: 2021-04-27 22:51:51
 ---
 
 <meta name = "referrer" content = "no-referrer" />
