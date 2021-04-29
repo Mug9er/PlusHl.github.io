@@ -1,11 +1,13 @@
 ---
 title: VI和VIM基本操作
 mathjax: true
-date: 2021-04-29 00:21:54
 categories:
-	- Linux
-tags:
+  - Linux
 	- VI和VIM基本操作
+tags:
+  - VI和VIM基本操作
+abbrlink: a67e3062
+date: 2021-04-29 00:21:54
 ---
 
 <meta name = "referrer" content = "no-referrer" />

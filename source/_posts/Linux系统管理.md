@@ -3,6 +3,7 @@ title: Linux系统管理
 mathjax: true
 categories:
   - Linux
+	- Linux系统管理
 tags:
   - 系统管理
 abbrlink: 6c72ecbc

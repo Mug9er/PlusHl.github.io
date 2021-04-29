@@ -3,6 +3,7 @@ title: Linux 命令
 mathjax: true
 categories:
   - Linux
+	- Linux 命令
 tags:
   - 命令
 abbrlink: 9da1ef6b

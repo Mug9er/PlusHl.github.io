@@ -3,6 +3,7 @@ title: Linux 目录和文件
 mathjax: true
 categories:
   - Linux
+	- Linux 目录和文件
 tags:
   - 目录文件
 abbrlink: 920965dc

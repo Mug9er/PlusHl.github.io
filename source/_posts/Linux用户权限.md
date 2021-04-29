@@ -3,6 +3,7 @@ title: Linux用户权限
 mathjax: true
 categories:
   - Linux
+	- Linux用户权限
 tags:
   - 用户权限
 abbrlink: e7492e71
