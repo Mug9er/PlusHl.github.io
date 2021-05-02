@@ -1,12 +1,13 @@
 ---
 title: Qt无法输入中文
 mathjax: true
-date: 2021-04-29 14:13:29
 categories:
-	- Linux
-	- QT 输入中文
+  - Linux
+  - QT 输入中文
 tags:
-	- QT	
+  - QT
+abbrlink: 20641ee8
+date: 2021-04-29 14:13:29
 ---
 
 <meta name = "referrer" content = "no-referrer" />
