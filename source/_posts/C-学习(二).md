@@ -4,7 +4,7 @@ mathjax: true
 date: 2021-05-04 14:21:25
 categories:
 	- C++ 学习
-	- 基础只是
+	- 基础知识
 tags:
 	- C++
 	- 基础
