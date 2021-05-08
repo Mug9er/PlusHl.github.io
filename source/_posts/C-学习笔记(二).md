@@ -1,13 +1,14 @@
 ---
-title: C++学习(二)
+title: C++学习笔记(二)
 mathjax: true
-date: 2021-05-04 14:21:25
 categories:
-	- C++ 学习
-	- 基础知识
+  - C++ 学习
+  - 基础知识
 tags:
-	- C++
-	- 基础
+  - C++
+  - 基础
+abbrlink: 5287e3ee
+date: 2021-05-04 14:21:25
 ---
 
 <meta name = "referrer" content = "no-referrer" />
