@@ -1,13 +1,13 @@
 ---
 title: C++学习笔记(四)
 mathjax: true
-date: 2021-05-08 18:29:45
 categories:
   - C++ 学习
   - 基础知识
 tags:
- - C++
-  - 基础
+  - C++ - 基础
+abbrlink: 2acaf4fa
+date: 2021-05-08 18:29:45
 ---
 
 <meta name = "referrer" content = "no-referrer" />
@@ -220,3 +220,228 @@ virtual int abc() = 0; // 告诉编译器在vtable中保留一个位置
   ```
 
 - 如果发生了多态，总是安全的
+
+## 模板
+
+```cpp
+int swap(int &a, int &b) {
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+double swap(double &a, double &b) {
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+```
+
+对于逻辑相似类型不同的函数，可以使用泛型编程--模板技术
+
+```cpp
+template<class T> // 告诉编译器下面如果出现T，不要报错， T是一个通用类型
+    //template <typename T> class与typename 作用相同
+void swap(T &a, T &b) {
+    T tmp = a;
+    a = b;
+    b = tmp;
+}
+```
+
+模板特点：
+
+- 自动类型推导，自动推导传参的数据类型到模板
+
+```cpp
+swap(a, b) // 自动类型推导，按照a，b的类型来替换T
+```
+
+- 显示指定类型
+
+```cpp
+swap<int> (a, b)
+```
+
+- 模板必须指定出`T`才可以使用
+- 函数模板必须紧跟着`template<class T>`
+
+### 函数模板与普通函数的区别以及调用规则
+
+- 普通函数可以进行隐式类型转换，函数模板不可以进行隐式类型转换
+- 如果函数模板与普通函数出现了重载，那么优先使用普通函数，如果没有实现，出现错误。如果想强制调用模板，可以使用空参数列表
+
+```cpp
+swap<>(a, b);
+```
+
+- 函数模板可以发生重载
+
+```cpp
+template<class T>
+swap(T a, T b, T c);
+```
+
+
+
+- 如果函数模板可以产生更好的匹配，那么调用函数模板
+
+```cpp
+char a, b;
+swap(a, b);
+//调用函数模板
+```
+
+### 模板机制
+
+- 编译器并不是把函数模板处理成能够处理任何类型的函数
+- 函数模板通过具体类型产生不同的函数
+- 编译器会对函数模板进行两次编译，在声明的地方对模板代码本身进行编译，在调用的地方对参数替换后的代码进行编译
+
+### 模板局限性
+
+对于自定义的数据类型，使用具体化自定义数据类型解决
+
+```cpp
+class Person{
+    int m_age;
+    int m_name;
+};
+template<class T>
+bool Compare(T &a, T &b) {
+    if(a == b) return true;
+    return false;
+}
+template<> bool Compare<Person>(Person &a, Person&b) {
+    if(a.m_age == b.m_age) return true;
+    return false;
+}
+```
+
+如果具体化能够优先匹配，那么就选择具体化
+
+```cpp
+template<> 返回值 函数名<具体类型> (参数)
+```
+
+### 类模板
+
+```cpp
+template<class NameType, class AgeType=int>
+class Person{
+    public:
+    	Person(NameType name, AgeType age) {
+            this->m_name = name;
+            this->m_age = age;
+        }
+    	NameType m_name;
+    	AgeType m_age;
+}
+```
+
+- 类模板不支持自动类型推导
+
+- 类模板参数可以设默认值
+
+- 需要指点显示类型
+
+  ```cpp
+  Person<string, int> p('abc', 18);
+  ```
+
+- 成员函数一开始不会创建出来，而是运行时才去创建
+
+### 类模板做函数的参数
+
+```cpp
+//指定传入类型
+void dowork(Person<string, int> &p);
+template<class T1, class T2>
+// 参数模板化
+void dowork2(Person<T1, T2> &p);
+void test() {
+    Person<string, int> p('ab', 18);
+    dowork2(p);
+}
+// 整体类型化
+template<class T>
+void dowork3(T &p);
+void test() {
+    Person<string, int> p('aa', 18);
+    dowork3(p);
+}
+```
+
+### 类模板和继承
+
+```cpp
+template <class T>
+class Base{
+    public: 
+    	T m_a;
+}
+// child 继承与base必须告诉base中的T的类型，否则T无法分配内存
+class Child : public Base<int>{
+    
+}
+// childr2 也是模板类
+template<class T1, class T2>
+class Child2 : public Base<T2>{
+    public:
+    T1 m_b;
+}
+```
+
+- 基类如果是模板类，必须让子类告诉编译器基类中的T是什么类型，如果不告诉，那么就无法分配内存
+- 利用参数列表`class Child : public Base<int>`
+
+### 类模板类外实现成员函数
+
+```cpp
+template<class T1, class T2>
+class Person{
+    public:
+    	Person(T1 name, T2 age);
+    	T1 m_name;
+    	T2 m_age;
+}
+template<class T1, class T2>
+Person<T1,T2>::Person(T1 name, T2 age) {
+    this->m_name = name;
+    this->m_age = age;
+}
+```
+
+### 类模板分文件编写问题以及解决
+
+```cpp
+--- Person.h
+--- Person.cpp
+--- main.cpp
+```
+
+`Person.h`写`Person`模板类的声明，`Person.cpp`写`Person`模板类的实现，在`main.cpp`中导入`Person.h`时，由于类模板的成员函数运行阶段才会去创建，所以编译器在编译时不会对`Person.cpp`中的方法进行创建，导致在链接时无法链接到方法。无法解析外部命令
+
+解决方法：将类的声明和实现写到同一文件，后缀为`.hpp`
+
+### 类模板和友元函数
+
+- 友元函数类内实现跟普通类实现相同
+- 声明时需要加上`<>`代表声明的是模板函数
+
+```cpp
+template<class T1, class T2> class Person; // 让编译器看到Person声明
+template<class T1, class T2> void printPerson(Person<T1, T2> &p); // 让编译器提前看到printPerson声明
+template<class T1, class T2>
+class Person{
+    friend void printPerson<>(Person<T1, T2> &p); // 加上<>代表模板函数
+    public:
+    	Person(T1 name, T2 age);
+    	T1 m_name;
+    	T2 m_age;
+}
+template<class T1, class T2> // 友元函数类外实现
+void printPerson<>(Person<T1, T2> &p) {
+// ...
+}
+```
+
