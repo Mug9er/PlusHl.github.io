@@ -13,7 +13,7 @@ date: 2021-05-10 11:03:12
 
 <meta name = "referrer" content = "no-referrer" />
 
-![](https://wx4.sinaimg.cn/mw690/0083TyOJly1gqd3zdkobvj31hc0u0u10.jpg)
+![wallhaven-m93r98](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/C++学习笔记(五)/wallhaven-m93r98.6vl2qlnvuq00.png)
 
 <!-- less -->
 
@@ -85,7 +85,7 @@ catch() {
 
 ### 跳级
 
-![image-20210510100605400](https://wx4.sinaimg.cn/mw690/0083TyOJly1gqd3vb0ulnj30im0ex3zy.jpg)
+![image-20210510100605400](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/C++学习笔记(五)/image-20210510100605400.yk0d79bbqjk.png)
 
 ### 异常基本处理
 
