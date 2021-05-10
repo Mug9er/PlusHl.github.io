@@ -12,7 +12,7 @@ date: 2021-05-08 18:29:45
 
 <meta name = "referrer" content = "no-referrer" />
 
-![wallhaven-28y5mg](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/20210510/wallhaven-28y5mg.5txisorlr8o0.jpg)
+![wallhaven-28y5mg](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/20210510/wallhaven-28y5mg.6ao4dwmx19s0.jpg)
 
 <!-- less -->
 
