@@ -13,7 +13,7 @@ date: 2021-05-10 11:03:12
 
 <meta name = "referrer" content = "no-referrer" />
 
-![wallhaven-m93r98](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnC++(5)/wallhaven-m93r98.65dhu7f1l1c0.png)
+![wallhaven-m93r98](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnCFive/wallhaven-m93r98.3s5ukx9os600.png)
 
 <!-- less -->
 
@@ -85,7 +85,7 @@ catch() {
 
 ### 跳级
 
-![image-20210510100605400](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnC++(5)/image-20210510100605400.2qxupacnwjc0.png)
+![image-20210510100605400](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnCFive/image-20210510100605400.1wh5scq2w1c0.png)
 
 ### 异常基本处理
 
