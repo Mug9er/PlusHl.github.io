@@ -1,5 +1,5 @@
 ---
-title: C++学习（一）
+title: C++学习笔记(一)
 mathjax: true
 categories:
   - C++ 学习
