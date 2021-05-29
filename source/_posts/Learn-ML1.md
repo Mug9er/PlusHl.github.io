@@ -94,9 +94,47 @@ $r = b + Wx$
 
 使用线性代数表达方式: $y = b + c^T a$
 
-## 拟合
+使用$\theta $ 来包含所有的未知参数$\theta = \begin{bmatrix} \theta_1\\ \theta_2 \\ \theta_3 \\ \dots \\ \end{bmatrix}$
 
-对于训练数据设计一个函数，并使用grading descent找到最好的函数。
+#### $Loss$ 使用$\theta $参数
+
+**$Loss$现在使用写成$L(\theta)$**
+
+新的$Loss$表示为：$Loss: \ L = \frac{1}{N}\sum\limits_ne_n$
+
+#### 迭代最好的$model$
+
+$\theta^* = arg \ \min\limits_{\theta}L$
+
+随机选择一个初始的$\theta^0$， 对$\theta$的每一项进行微分得到一个向量$g$ ,
+
+$g = \begin{bmatrix} \frac{\partial L}{\partial \theta_1}|_{\theta = \theta^0} \\ \frac{\partial L}{\partial \theta_2}|_{\theta = \theta^0} \\ \frac{\partial L}{\partial \theta_3}|_{\theta = \theta^0} \\ \dots \end{bmatrix}=  \nabla L (\theta ^0)$
+
+在$\theta = \theta^0$的位置把所有的参数都对$L$做微分
+
+更新$\theta$的值
+
+$\begin{bmatrix} \theta_1^1 \\ \theta_2^1\\ \dots \end{bmatrix} \longleftarrow \begin{bmatrix} \theta_1^0 \\ \theta_2^0\\ \dots \end{bmatrix} - \begin{bmatrix} \eta \frac{\partial L}{\partial \theta_1}|_{\theta = \theta^0} \\ \eta \frac{\partial L}{\partial \theta_2}|_{\theta = \theta^0} \\ \dots \end{bmatrix}$
+
+新的$\theta$由原先的$\theta^0$ 减去 微分的向量 × $\eta$
+
+$\theta^1 \longleftarrow  \theta^0 - \eta g$
+
+步骤： 先随机选取$\theta^0$，通过计算$gradient$ 得到 $ g = \nabla L (\theta ^0)$,在如此迭代得到$\theta^1, \theta^2,...$直到无法在计算$gradient$时结束
+
+实际操作时，将数据集分为多组，利用每一组来计算$gradient$更新$\theta$
+
+![compute gradient](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/compute gradient.lz1l4r37lu.png)
+
+### 从 $sigmoid$到$RELU$
+
+利用$RELU$来拟合函数 $c\ max(0, b+wx_1)$
+
+$ y = b + \sum\limits_i c_i \ sigmoid(b_i + \sum\limits_jw_{ij}x_j)$
+
+$y = b + \sum\limits_{2i}c_i max(0, b_i+\sum\limits_jw_{ij}x_j)$
+
+$sigmoid$ 和 $RELU$ 统称为$activation\ function$, $RELU$更好一些
 
 ## 过拟合
 
