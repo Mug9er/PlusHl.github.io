@@ -41,7 +41,7 @@ $Loss: L = \frac{1}{N}\sum\limits_n{e_n} (e = |y - y'|)$ 每项$e$是$model$对�
 
 ### 最佳化
 
-$w^*, b^* = arg\  \min\limits_{w,b}L$
+$w^*, b^* = arg \  \min\limits_{w,b}L$
 
 #### $Gradient\ Descent$
 
@@ -66,7 +66,7 @@ $w^*, b^* = arg\  \min\limits_{w,b}L$
 
 通过一个函数来逼近蓝色线段 $y = c \frac{1}{1 + e ^{-(b+wx_1)}}$ 即 $y = c \ sigmoid (b + wx_1)$
 
-![signoid Function(1)](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/signoid Function(1).sgfodfnveyo.png)
+![signoid Function1](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/signoid Function1.71wq3fsce580.png)
 
 调整$b, w, c$就可以得到各种各样的蓝色线段，改变$w$可以改变斜率，改变$b$会改变偏移，改变$c$会改变高
 
