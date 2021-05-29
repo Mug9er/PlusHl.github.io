@@ -1,11 +1,12 @@
 ---
 title: Learn ML1
 mathjax: true
-date: 2021-05-29 12:54:19
 categories:
-	- ML 学习
+  - ML 学习
 tags:
-	- ML
+  - ML
+abbrlink: deefd94b
+date: 2021-05-29 12:54:19
 ---
 
 <meta name = "referrer" content = "no-referrer" />
