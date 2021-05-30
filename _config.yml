@@ -7,7 +7,7 @@ title: Mug-9's blog # 博客名
 subtitle: Stay Hungry, Stay Foolish # 副标题
 description: Let life be beautiful like summer flowers and death like autumn leaves. # 站点描述
 author: Mug-9 # 作者名
-language: zh-Hans # 语言设置
+language: zh-CN # 语言设置
 timezone: Asia/Shanghai
 
 # URL
@@ -38,10 +38,16 @@ post_asset_folder: false # 同时生成一个文件夹
 relative_link: false
 future: true
 highlight: # Hexo自带代码高亮插件
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
+
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Category & Tag
 default_category: uncategorized
@@ -60,28 +66,28 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 8 # 每页显示文章数
+per_page: 12 # 每页显示文章数
 pagination_dir: page
 
 # Extensions # 以下为第三方插件设置
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next # 使用的主题
+theme: matery # 使用的主题
 
-search: # 本地搜索插件
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+#search: # 本地搜索插件
+#  path: search.xml
+#  field: post
+#  format: html
+#  limit: 10000
 
-feed: # RSS订阅插件
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: " "
+#feed: # RSS订阅插件
+#  type: atom
+#  path: atom.xml
+#  limit: 20
+#  hub:
+#  content:
+#  content_limit: 140
+#  content_limit_delim: " "
 
 plugins:
 baidusitemap: # 百度站点地图
@@ -110,7 +116,7 @@ social_icons:
   E-Mail: envelope
 
 index_generator:
-  per_page: 5
+  per_page: 12
 
 archive_generator:
   per_page: 20
@@ -134,5 +140,26 @@ abbrlink:
 
 deploy:
   type: git
-  repo: git@github.com:PlusHl/PlusHl.github.io.git
+  repo: git@github.com:Mug-9/Mug9er.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
