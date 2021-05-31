@@ -26,12 +26,12 @@ menu:
   欢乐时光:
     icon: fas fa-list
     children:
-      - name: 电影
-        url: /movies
-        icon: fas fa-film
       - name: 书籍
         url: /books
         icon: fas fa-book
+      - name: 电影
+        url: /movies
+        icon: fas fa-film
       - name: 画廊
         url: /galleries
         icon: fas fa-image
@@ -72,7 +72,7 @@ dream:
 # Whether to display the musics.
 # 是否在首页显示音乐.
 music:
-  enable: true
+  enable: false
   title: #非吸底模式有效
     enable: true
     show: 听听音乐
@@ -80,7 +80,7 @@ music:
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
   id: 6702948746     #require	song id / playlist id / album id / search keyword
-  fixed: true       # 开启吸底模式
+  fixed: false       # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
@@ -97,7 +97,8 @@ video:
   showTitle: true
   title: 精彩视频
   url: # url和iframeUrl其中一个必填
-  iframeUrl: #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1
+  iframeUrl: //player.bilibili.com/player.html?aid=460791652&bvid=BV1J5411g7nt&cid=345416140&page=1 
+#在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //
   pic:
   thumbnails:
   height: # 如：400
@@ -110,7 +111,7 @@ video:
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
 recommend:
-  enable: true
+  enable: false
   showTitle: true
   useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
@@ -255,7 +256,7 @@ mySkills:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: true
+  enable: false
   data:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg

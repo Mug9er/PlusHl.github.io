@@ -44,6 +44,9 @@
                 <div class="introduction center-align" data-aos="fade-up"><%= theme.profile.introduction %></div>
 
                 
+                <% if (theme.dream.enable) { %>
+                        <%- partial('_widget/dream') %>
+                <% } %>
 
                 <% if (theme.myProjects && theme.myProjects.enable) { %>
                 <%- partial('_widget/my-projects') %>
@@ -55,10 +58,6 @@
 
                 <% if (theme.myGallery && theme.myGallery.enable) { %>
                 <%- partial('_widget/my-gallery') %>
-                <% } %>
-                
-                <% if (theme.artitalk && theme.artitalk.enable) { %>
-                <%- partial('_widget/artitalk') %>
                 <% } %>
                 
             </div>

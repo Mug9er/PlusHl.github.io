@@ -17,7 +17,6 @@
         if (!str && str.length === 0) {
             return 0;
         }
-
         var hash = 0;
         for (var i = 0, len = str.length; i < len; i++) {
             hash = ((hash << 5) - hash) + str.charCodeAt(i);
@@ -25,11 +24,9 @@
         }
         return hash;
     };
-
     // init year and month variable.
     var year = '1970';
     var month = '1970-01';
-
     // post feature image.
     var featureimg = '/medias/featureimages/0.jpg';
     var featureImages = theme.featureImages;
@@ -38,7 +35,6 @@
     <div id="cd-timeline" class="container">
         <% page.posts.each(function(post) { %>
         <div class="cd-timeline-block">
-
             <%# year. %>
             <% if (date(post.date, 'YYYY') != year) { %>
             <% year = date(post.date, 'YYYY'); %>
@@ -46,7 +42,6 @@
                 <a href="<%- url_for('/archives/' + year) %>"><%- year %></a>
             </div>
             <% } %>
-
             <%# month. %>
             <% if (date(post.date, 'YYYY-MM') != month) { %>
             <%
@@ -57,7 +52,6 @@
                 <a href="<%- url_for('/archives/' + year + '/' + m) %>"><%- m %></a>
             </div>
             <% } %>
-
             <%# every day posts. %>
             <div class="cd-timeline-img day" data-aos="zoom-in-up">
                 <span><%- date(post.date, 'YYYY-MM-DD').substring(8, 10) %></span>
@@ -108,7 +102,6 @@
                                 </span>
                             </div>
                         </div>
-
                         <% if (post.tags && post.tags.length) { %>
                         <div class="card-action article-tags">
                             <% post.tags.forEach(tag => { %>

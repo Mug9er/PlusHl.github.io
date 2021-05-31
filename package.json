@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.9.0"
+    "version": "5.4.0"
   },
   "dependencies": {
     "acorn": "^7.1.1",
@@ -34,6 +34,7 @@
     "hexo-renderer-swig": "^1.1.0",
     "hexo-server": "^0.3.3",
     "hexo-symbols-count-time": "^0.6.3",
+    "hexo-tag-aplayer": "^3.0.4",
     "hexo-wordcount": "^6.0.1",
     "justifiedGallery": "^3.8.1",
     "peer": "^0.6.1"
