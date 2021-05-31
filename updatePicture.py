@@ -24,8 +24,12 @@ postsPath = curPath + "/source/_posts/"
 
 paths = get_img_url(postsPath)
 
+newPaths = []
+
 for path in paths:
-	
+	newPaths.append(path[54:])
+
+paths = newPaths
 
 jsonPath = curPath + "/source/_data/galleries.json"
 
