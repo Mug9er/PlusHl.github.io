@@ -18,8 +18,6 @@ def get_img_url(path):
 						paths.append(p[4,-1])
 	return paths
 
-print(len(
-
 curPath = os.getcwd()
 
 postsPath = curPath + "/source/_posts/"
