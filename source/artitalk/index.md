@@ -18,4 +18,3 @@ new Artitalk({
     appKey: 'uf5JWphxgdEGy1JaJTPbvdu8' // Your LeanCloud appKey
 })
 </script>
-
