@@ -8,14 +8,9 @@ tags:
   - C++
   - 基础
 abbrlink: a8ec0156
-date: 2021-05-07 10:54:05
+date: 2021-05-07 10:54:05<
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e78z9l.2889dr1kmq80.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gq9ob4y7xvj31o00u07wh.jpg)
-
-<!-- less -->
 
 # C++ 学习笔记(三)
 

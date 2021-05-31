@@ -8,13 +8,8 @@ tags:
   - 命令
 abbrlink: 9da1ef6b
 date: 2021-04-27 16:24:09
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3xm5w.5ksr13d1i900.png
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gpye56swdmj30rs13aajy.jpg)<
-
-<!-- less -->
 
 # Linux命令
 

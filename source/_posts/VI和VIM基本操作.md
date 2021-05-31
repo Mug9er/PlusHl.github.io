@@ -8,17 +8,10 @@ tags:
   - VI和VIM基本操作
 abbrlink: a67e3062
 date: 2021-04-29 00:21:54
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-o3gmw9.2q0klcmfizw0.png
 ---
 
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gpzx3vz6lzj31ae0u0x1y.jpg)
-
-<!-- less -->
-
 # Vi和Vim 基本操作
-
-
 
 ## Vi的插入
 

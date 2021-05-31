@@ -9,13 +9,8 @@ tags:
   - 基础
 abbrlink: b34cf332
 date: 2021-05-02 14:54:52
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-28y7gg.2g6w0kfeplhc.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gq438qcpmcj31400u01cn.jpg)
-
-<!-- less -->
 
 # C++ 学习笔记（一）
 

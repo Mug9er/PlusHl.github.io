@@ -8,13 +8,8 @@ tags:
   - 目录文件
 abbrlink: 920965dc
 date: 2021-04-27 16:23:54
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3e31w.2qk9j7xtb2a0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gpyefbh65uj30u0130x6w.jpg)
-
-<!-- less -->
 
 # Linux 目录与文件
 

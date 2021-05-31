@@ -8,13 +8,8 @@ tags:
   - NVIDIA显卡
   - refind引导
 abbrlink: 81fa645f
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rdqvpq.hh78g37f4pc.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gpw3tka7pkj31hc0u01kb.jpg)
-
-<!-- less -->
 
 # Deepin安装NVIDIA驱动
 

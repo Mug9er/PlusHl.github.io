@@ -8,13 +8,8 @@ tags:
   - 系统管理
 abbrlink: 6c72ecbc
 date: 2021-04-27 22:51:51
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k7838q.3out18s1n7y0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx3.sinaimg.cn/mw690/0083TyOJly1gpyovwtz8ij30c006rmxb.jpg)
-
-<!-- less -->
 
 # Linux系统管理
 

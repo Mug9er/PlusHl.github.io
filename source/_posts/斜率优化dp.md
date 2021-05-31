@@ -8,13 +8,8 @@ tags:
   - dp优化
 abbrlink: f1b7e3b7
 date: 2019-08-20 16:48:50
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e78rrw.4sx0bdv61jc0.jpg
 ---
-
-<meta name="referrer" content="no-referrer" />
-
-![](https://wx4.sinaimg.cn/mw690/0083TyOJly1gblx0dys6pj31hc0u04qw.jpg)
-
-<!-- less -->
 
 具体可以参考这篇博客https://www.cnblogs.com/Judge/p/9551035.html
 

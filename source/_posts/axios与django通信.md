@@ -9,13 +9,8 @@ tags:
   - vue
 abbrlink: '5218864'
 date: 2020-12-26 23:37:50
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3eqo5.56v9uocyvrc0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gm1p4h5rt8j31hc0r4n68.jpg)
-
-<!-- less -->
 
 ### axios实例
 

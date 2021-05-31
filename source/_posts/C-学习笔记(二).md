@@ -9,13 +9,8 @@ tags:
   - 基础
 abbrlink: 5287e3ee
 date: 2021-05-04 14:21:25
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-1kqj9g.32bye91jnew0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx2.sinaimg.cn/mw690/0083TyOJly1gq6dk1fj56j31zn0u01l1.jpg)
-
-<!-- less -->
 
 # C++学习笔记（二）
 

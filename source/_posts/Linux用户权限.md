@@ -8,13 +8,8 @@ tags:
   - 用户权限
 abbrlink: e7492e71
 date: 2021-04-27 21:53:40
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2z19q.6fc3nh9zxeo0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx2.sinaimg.cn/mw690/0083TyOJly1gpyn9tfvhsj31hc0u0b2b.jpg)
-
-<!-- less -->
 
 # Linux 用户权限
 

@@ -8,13 +8,8 @@ tags:
   - 小项目
 abbrlink: 2514ad2c
 date: 2020-12-07 14:21:42
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-9mo7kw.558akock3100.jpg
 ---
-
-<meta name="referrer" content="no-referrer" />
-
-![封面](https://wx3.sinaimg.cn/mw690/0083TyOJly1glf9ttrqe4j30qx12w49p.jpg)
-
-<!-- less -->
 
 ## 1. user_agent_list
 

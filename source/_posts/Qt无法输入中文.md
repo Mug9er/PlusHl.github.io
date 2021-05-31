@@ -8,13 +8,8 @@ tags:
   - QT
 abbrlink: 20641ee8
 date: 2021-04-29 14:13:29
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2z7yl.6bta2mynomk0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![](https://wx2.sinaimg.cn/mw690/0083TyOJly1gq0laqy6alj30u017hb2d.jpg)
-
-<!-- less -->
 
 ## 安装`fcitx-frontend-qt5`
 

@@ -5,13 +5,8 @@ categories: 杂谈
 tags: Hexo
 abbrlink: 81cc
 date: 2019-08-11 14:57:09
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-wq1lg6.6zv2nnb63n80.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblviaaj7aj31hc0tpgwa.jpg)
-
-<!-- less -->
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
