@@ -38,11 +38,9 @@ jsonStr = ""
 with open(jsonPath) as f:
 	jsonObj = json.load(f)
 	jsonStr = str(jsonObj).replace("'", "\"").replace(r"\n", "")
-	print(jsonStr)
 
 with open(jsonPath, "w") as f:
 	jsonObj = json.loads(jsonStr)
-	print(jsonObj)	
 	jsonObj[0]["photos"] = paths
 	f.write(json.dumps(jsonObj, indent=4, ensure_ascii=False))
 
