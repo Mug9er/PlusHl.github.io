@@ -244,7 +244,9 @@
 </div>
 
 <script src="<%- theme.jsDelivr.url %><%- url_for('/libs/valine/av-min.js') %>"></script>
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>"></script>
+<script src="https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/libs/valine/Valine.min.js"></script>
+
+<!-- script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>"></script> -->
 <script>
     new Valine({
         el: '#vcomments',

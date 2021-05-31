@@ -314,17 +314,38 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
-  notify: false
-  verify: false
+  enable: true
+  appId: lYvj0vvsy1nV0HqNetqHw8du-MdYXbMMI
+  appKey: shRaAIWcC3jPacxoETvJwIdt
+  notify: true
+  verify: true
   visitor: true
-  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  avatar: monsterid # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
-  coolpushkey: 
+  count: true
+  recordIP: true
+  requiredFields: 
+    - nick
+    - mail
+  guest_info: 
+    - nick
+    - mail
+    - link
+  metaPlaceholder:  # 输入框的背景文字
+    nick: 昵称/QQ号(必填)
+    mail: 邮箱(必填)
+    link: 网址(https://)
+  lang: zh-CN
+  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
+    - 博主
+    - 小伙伴
+    - 访客
+  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    - c08508165c8eba9a77f8c2853xxxx09e
+    - 901345d4c91ddfd8db0f175bbcfff0c8
+    - 1512958e18378c98b498d5effe3e76ff
 
 # The configuration of the MiniValine comment module is not activated by default.
 # To use it, activate the configuration item.
