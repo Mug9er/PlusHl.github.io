@@ -1,16 +1,16 @@
 ---
 title: C++学习笔记（三）
 mathjax: true
-categories:
-  - C++ 学习
-  - 基础知识
-tags:
-  - C++
-  - 基础
+categories: [C++ 学习]
+tags: [C++ 学习笔记]
 abbrlink: a8ec0156
 date: 2021-05-07 10:54:05<
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e78z9l.2889dr1kmq80.jpg
 ---
+
+C++学习笔记（三）
+
+<!-- less-->
 
 # C++ 学习笔记(三)
 

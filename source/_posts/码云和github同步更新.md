@@ -1,15 +1,16 @@
 ---
-title: 码云和github同步更新
+title: gitee和github同步更新
 mathjax: true
-categories:
-  - 配置
-  - github + gitee
-tags:
-  - 服务器
+categories: [配置]
+tags: [github, gitee]
 abbrlink: 2d45259f
 date: 2020-12-06 00:44:13
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-y8x6gk.2f9lwlv4eev4.jpg
 ---
+
+gitee和github同步更新
+
+<!-- less-->
 
 ## 码云
 

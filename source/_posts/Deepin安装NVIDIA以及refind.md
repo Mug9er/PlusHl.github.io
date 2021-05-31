@@ -1,15 +1,14 @@
 ---
 title: Deepin安装NVIDIA以及refind
-mathjax: true
-categories:
-  - 配置
-  - Deepin
-tags:
-  - NVIDIA显卡
-  - refind引导
+categories: [配置]
+tags: [Deepin, NVIDA驱动, refind]
 abbrlink: 81fa645f
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rdqvpq.hh78g37f4pc.jpg
 ---
+
+Deepin安装NVIDIA以及refind
+
+<!-- less-->
 
 # Deepin安装NVIDIA驱动
 

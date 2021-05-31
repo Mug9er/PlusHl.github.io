@@ -1,14 +1,15 @@
 ---
 title: wallpaper 模拟登录
-mathjax: true
-categories:
-  - spider
-tags:
-  - python
+categories: [Spider]
+tags: [模拟登录]
 abbrlink: 72810b67
 date: 2020-02-11 15:26:29
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-o3dvv9.4qz014yinx20.jpg
 ---
+
+wallpaper 模拟登录
+
+<!--less-->
 
 在模拟登录wallhaven是，发现了一些问题，用request.session登录并保存cookie并不奏效
 

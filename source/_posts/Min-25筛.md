@@ -1,15 +1,16 @@
 ---
 title: Min_25筛
 mathjax: true
-categories:
-  - ACM
-  - 算法学习笔记
-tags:
-  - Min_25筛
+categories: [算法]
+tags: [Min_25筛]
 abbrlink: ecec6bcc
 date: 2019-09-02 20:39:13
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-8oxgj1.3th7l1lm6ja0.jpg
 ---
+
+Min_25筛
+
+<!--less-->
 
 ## 使用条件
 

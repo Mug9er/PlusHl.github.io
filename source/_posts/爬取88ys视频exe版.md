@@ -1,14 +1,16 @@
 ---
 title: 爬取88ys视频exe版
 mathjax: true
-categories:
-  - spider
-tags:
-  - python
+categories: [Spider, 小项目]
+tags: [爬视频]
 abbrlink: 581490d4
 date: 2020-03-01 14:57:56
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-6omkp7.w68xhbzwt1c.png
 ---
+
+爬取88ys视频exe版
+
+<!-- less-->
 
 ## 爬取88ys视频
 

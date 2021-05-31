@@ -1,15 +1,15 @@
 ---
 title: Qt无法输入中文
-mathjax: true
-categories:
-  - Linux
-  - QT 输入中文
-tags:
-  - QT
+categories: [报错处理]
+tags: [QT]
 abbrlink: 20641ee8
 date: 2021-04-29 14:13:29
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2z7yl.6bta2mynomk0.jpg
 ---
+
+Qt无法输入中文
+
+<!-- less-->
 
 ## 安装`fcitx-frontend-qt5`
 

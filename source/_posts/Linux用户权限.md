@@ -1,15 +1,15 @@
 ---
 title: Linux用户权限
-mathjax: true
-categories:
-  - Linux
-	- Linux用户权限
-tags:
-  - 用户权限
+categories: [Linux 学习笔记]
+tags: [用户权限]
 abbrlink: e7492e71
 date: 2021-04-27 21:53:40
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2z19q.6fc3nh9zxeo0.jpg
 ---
+
+Linux用户权限
+
+<!-- less-->
 
 # Linux 用户权限
 

@@ -1,15 +1,16 @@
 ---
 title: CodeForces EduRound 74
 mathjax: true
-categories:
-  - ACM
-  - Codeforces
-tags:
-  - 题解
+categories: [ACM]
+tags: [CodeForces, 题解]
 abbrlink: b223976b
 date: 2019-10-10 20:12:20
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l396w2.s85x6ulrkog.png
 ---
+
+CodeForces EduRound 74
+
+<!-- less -->
 
 ### E: Keyboard Purchase
 

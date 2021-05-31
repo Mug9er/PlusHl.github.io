@@ -1,17 +1,15 @@
 ---
 title: Django+Vue+Nginx+uWSGI部署
-mathjax: true
-categories:
-  - 配置
-  - Django + nginx
-tags:
-  - 服务器
-  - Django
-  - nginx
+categories: [配置]
+tags: [Django, Vue, Nginx]
 abbrlink: 1ae14b31
 date: 2020-12-24 16:02:06
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rd3egq.4s1p3m19hl60.jpg
 ---
+
+使用Django+Vue+Nginx+uWSGI部署网页的前端和后台服务器
+
+<!-- less-->
 
 ## `Django+Vue+Nginx+uWSGI`部署
 

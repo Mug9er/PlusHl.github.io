@@ -1,15 +1,15 @@
 ---
 title: vultr+cloudflare
-mathjax: true
-categories:
-  - 配置
-  - 服务器
-tags:
-  - 科学上网
+categories: [配置]
+tags: [飞机]
 abbrlink: 4e01c297
 date: 2021-03-03 23:42:11
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3qqwq.52mr3slkonw0.jpg
 ---
+
+vultr+cloudflare 
+
+<!-- less-->
 
 ## 申请免费域名+ `cloudflare` 托管域名：
 

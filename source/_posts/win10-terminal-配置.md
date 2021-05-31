@@ -1,15 +1,15 @@
 ---
 title: win10 terminal 配置
-mathjax: true
-categories:
-  - 配置
-  - terminal
-tags:
-  - terminal
+categories: [配置]
+tags: [win Terminal]
 abbrlink: e96d644
 date: 2020-12-04 23:29:20
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-z8xggo.519wxk2031s0.jpg
 ---
+
+win10 terminal 配置
+
+<!-- less -->
 
 ## 主题配置
 

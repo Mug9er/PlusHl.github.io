@@ -1,15 +1,15 @@
 ---
 title: Linux 目录和文件
-mathjax: true
-categories:
-  - Linux
-	- Linux 目录和文件
-tags:
-  - 目录文件
+categories: [Linux 学习笔记]
+tags: [Linux目录文件]
 abbrlink: 920965dc
 date: 2021-04-27 16:23:54
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3e31w.2qk9j7xtb2a0.jpg
 ---
+
+Linux 目录和文件
+
+<!-- less-->
 
 # Linux 目录与文件
 

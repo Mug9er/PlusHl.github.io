@@ -1,14 +1,16 @@
 ---
-title: Learn ML1
+title: 机器学习笔记(一)
 mathjax: true
-categories:
-  - ML 学习
-tags:
-  - ML
+categories: [ML 学习]
+tags: [ML 学习笔记]
 abbrlink: deefd94b
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/wallhaven-rdqw1m.6e249wt5bss0.jpg
 date: 2021-05-29 12:54:19
 ---
+
+机器学习笔记(一)
+
+<!-- less-->
 
 ### 机器学习三大步骤
 

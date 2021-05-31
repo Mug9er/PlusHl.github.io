@@ -1,16 +1,15 @@
 ---
 title: Django与mysql相连
-mathjax: true
-categories:
-  - 配置
-  - django+mysql
-tags:
-  - django
-  - mysql
+categories: [配置]
+tags: [Django, 连接MySQL]
 abbrlink: 3a7fd0d4
 date: 2020-12-27 16:55:14
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rd35yq.w241vzya18w.jpg
 ---
+
+Django与mysql相连
+
+<!--less-->
 
 ## Django与mysql相连
 

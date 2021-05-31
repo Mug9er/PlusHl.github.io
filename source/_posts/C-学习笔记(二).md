@@ -1,16 +1,15 @@
 ---
 title: C++学习笔记(二)
-mathjax: true
-categories:
-  - C++ 学习
-  - 基础知识
-tags:
-  - C++
-  - 基础
+categories: [C++ 学习]
+tags: [C++ 学习笔记]
 abbrlink: 5287e3ee
 date: 2021-05-04 14:21:25
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-1kqj9g.32bye91jnew0.jpg
 ---
+
+C++学习笔记(二)
+
+<!-- less-->
 
 # C++学习笔记（二）
 

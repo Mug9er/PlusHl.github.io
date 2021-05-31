@@ -1,16 +1,15 @@
 ---
 title: C++学习笔记(一)
-mathjax: true
-categories:
-  - C++ 学习
-  - 基础知识
-tags:
-  - C++
-  - 基础
+categories: [C++ 学习]
+tags: [C++ 学习笔记]
 abbrlink: b34cf332
 date: 2021-05-02 14:54:52
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-28y7gg.2g6w0kfeplhc.jpg
 ---
+
+C++学习笔记(一)
+
+<!-- less-->
 
 # C++ 学习笔记（一）
 

@@ -1,14 +1,15 @@
 ---
 title: python 生成requirements.txt
-mathjax: true
-categories:
-  - spider
-tags:
-  - python
+categories: [Python]
+tags: [requirements]
 abbrlink: 3d982a67
 date: 2020-12-06 10:49:16
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e7o6e8.2bhc19mziuv4.jpg
 ---
+
+python 生成requirements.txt
+
+<!-- less -->
 
 ## 生成requirements
 

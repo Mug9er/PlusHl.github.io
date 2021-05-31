@@ -4,4 +4,5 @@ date: {{ date }}
 img:
 categories:
 tags:
+mathjax: false
 ---

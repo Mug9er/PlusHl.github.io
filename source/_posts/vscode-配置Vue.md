@@ -1,17 +1,15 @@
 ---
 title: vscode 配置Vue
-mathjax: true
-categories:
-  - 配置
-  - Vscode
-  - Vue
-tags:
-  - html
-  - vscode 配置
+categories: [配置]
+tags: [VSCode, Vue]
 abbrlink: 9c6f56ad
 date: 2020-11-29 11:20:30
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e7ozz8.1jregieez3q8.png
 ---
+
+vscode 配置Vue
+
+<!-- less -->
 
 ## 插件
 

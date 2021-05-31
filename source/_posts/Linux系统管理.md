@@ -1,15 +1,15 @@
 ---
 title: Linux系统管理
-mathjax: true
-categories:
-  - Linux
-	- Linux系统管理
-tags:
-  - 系统管理
+categories: [Linux 学习笔记]
+tags: [Linux 系统管理]
 abbrlink: 6c72ecbc
 date: 2021-04-27 22:51:51
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k7838q.3out18s1n7y0.jpg
 ---
+
+Linux系统管理
+
+<!-- less-->
 
 # Linux系统管理
 

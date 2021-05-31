@@ -1,15 +1,15 @@
 ---
 title: 记录一下利用tcp使得服务器与android客户端相连
-mathjax: true
-categories:
-  - 小项目
-tags:
-  - 服务器
-  - android
+categories: [配置]
+tags: [连接服务器, android]
 abbrlink: b4b2d023
 date: 2020-10-21 22:11:20
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-m93gem.1794iyf42hb4.png
 ---
+
+记录一下利用tcp使得服务器与android客户端相连
+
+<!-- less-->
 
 # 云服务器
 

@@ -1,15 +1,16 @@
 ---
 title: Django + Vue 快速构建项目
 mathjax: true
-categories:
-  - 配置
-  - Django + Vue
-tags:
-  - 小项目
+categories: [配置]
+tags: [Vue, Django]
 abbrlink: b2788495
 date: 2020-12-24 20:14:26
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3917p.150hewd0j7k0.png
 ---
+
+Django + Vue 快速构建项目
+
+<!-- less -->
 
 ## 使用`Vue+Django`搭建项目
 

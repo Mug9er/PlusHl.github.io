@@ -1,15 +1,16 @@
 ---
 title: 斜率优化dp
 mathjax: true
-categories:
-  - ACM
-  - 算法学习笔记
-tags:
-  - dp优化
+categories: [算法]
+tags: [斜率优化dp]
 abbrlink: f1b7e3b7
 date: 2019-08-20 16:48:50
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e78rrw.4sx0bdv61jc0.jpg
 ---
+
+斜率优化dp
+
+<!-- less-->
 
 具体可以参考这篇博客https://www.cnblogs.com/Judge/p/9551035.html
 

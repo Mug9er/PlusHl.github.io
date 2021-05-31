@@ -1,15 +1,15 @@
 ---
 title: Linux 命令
-mathjax: true
-categories:
-  - Linux
-	- Linux 命令
-tags:
-  - 命令
+categories: [Linux 学习笔记]
+tags: [Linux 命令]
 abbrlink: 9da1ef6b
 date: 2021-04-27 16:24:09
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3xm5w.5ksr13d1i900.png
 ---
+
+Linux 命令
+
+<!-- less-->
 
 # Linux命令
 

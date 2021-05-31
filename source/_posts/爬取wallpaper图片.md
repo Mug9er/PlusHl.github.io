@@ -1,15 +1,16 @@
 ---
 title: 爬取wallpaper图片
 mathjax: true
-categories:
-  - spider
-tags:
-  - python
-  - 小项目
+categories: [Spider, 小项目]
+tags: [爬图片]
 abbrlink: 2514ad2c
 date: 2020-12-07 14:21:42
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-9mo7kw.558akock3100.jpg
 ---
+
+爬取wallpaper图片
+
+<!-- less-->
 
 ## 1. user_agent_list
 

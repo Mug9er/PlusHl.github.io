@@ -1,16 +1,16 @@
 ---
 title: 2019ACM-ICPC南昌网络赛
 mathjax: true
-categories:
-  - ACM
-  - ICPC
-  - 南昌网络赛
-tags:
-  - 题解
+categories: [ACM]
+tags: [南昌, 题解, 网络赛]
 abbrlink: 4e0518cb
 date: 2019-09-10 14:13:02
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-g7z167.1t1zd2wdsjcw.jpg
 ---
+
+2019ACM-ICPC南昌网络赛
+
+<!-- less -->
 
 ## H: The Nth Item
 

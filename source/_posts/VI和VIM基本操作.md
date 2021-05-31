@@ -1,15 +1,15 @@
 ---
 title: VI和VIM基本操作
-mathjax: true
-categories:
-  - Linux
-	- VI和VIM基本操作
-tags:
-  - VI和VIM基本操作
+categories: [Linux 学习笔记]
+tags: [Vim]
 abbrlink: a67e3062
 date: 2021-04-29 00:21:54
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-o3gmw9.2q0klcmfizw0.png
 ---
+
+VI和VIM基本操作
+
+<!-- less-->
 
 # Vi和Vim 基本操作
 

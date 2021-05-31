@@ -1,16 +1,15 @@
 ---
 title: C++学习笔记(五)
-mathjax: true
-categories:
-  - C++ 学习
-  - 基础知识
-tags:
-  - C++
-  - 基础
+categories: [C++ 学习]
+tags: [C++ 学习笔记]
 abbrlink: 2c61a387
 date: 2021-05-10 11:03:12
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-281d5y.3h3nsqkoyka0.png
 ---
+
+C++学习笔记(五)
+
+<!-- less-->
 
 # C++ 学习笔记（五）
 

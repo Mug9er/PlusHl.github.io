@@ -1,16 +1,16 @@
 ---
 title: axios与django通信
 mathjax: true
-categories:
-  - 小项目
-  - django + vue
-tags:
-  - django
-  - vue
+categories: [配置]
+tags: [Axios通信, Django]
 abbrlink: '5218864'
 date: 2020-12-26 23:37:50
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3eqo5.56v9uocyvrc0.jpg
 ---
+
+axios与django通信
+
+<!-- less-->
 
 ### axios实例
 

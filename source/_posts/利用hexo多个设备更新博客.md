@@ -1,12 +1,15 @@
 ---
 title: 利用hexo多个设备更新博客
-mathjax: true
 abbrlink: 1351aa80
 date: 2020-12-04 22:30:57
-categories: 配置
-tags: Hexo
+categories: [配置]
+tags: [Hexo]
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-z8pm7y.h1g2y8j5ckg.png
 ---
+
+利用hexo多个设备更新博客
+
+<!-- less-->
 
 ## 多台电脑控制一个hexo博客
 

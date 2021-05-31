@@ -1,15 +1,16 @@
 ---
 title: C++学习笔记(四)
 mathjax: true
-categories:
-  - C++ 学习
-  - 基础知识
-tags:
-  - C++ - 基础
+categories: [C++ 学习]
+tags: [C++ 学习笔记]
 abbrlink: 2acaf4fa
 date: 2021-05-08 18:29:45
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-72j9j9.4g0jy30nmqe0.jpg
 ---
+
+C++学习笔记(四)
+
+<!-- less-->
 
 # C++学习笔记（四）
 

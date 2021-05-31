@@ -1,12 +1,15 @@
 ---
 title: My First Blog
-mathjax: true
-categories: 杂谈
-tags: Hexo
+categories: [配置]
+tags: [Hexo]
 abbrlink: 81cc
 date: 2019-08-11 14:57:09
 img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-wq1lg6.6zv2nnb63n80.jpg
 ---
+
+My First Blog
+
+<!-- less-->
 
 这是我的第一篇博客，主要写一些Hexo的配置
 
