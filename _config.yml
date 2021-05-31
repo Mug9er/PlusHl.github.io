@@ -163,3 +163,8 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+lazyload:
+  enable: true 
+  onlypost: false  # 是否只对文章的图片做懒加载
+  loadingImg: # eg ./images/loading.gif
