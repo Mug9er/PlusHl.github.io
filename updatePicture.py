@@ -8,7 +8,7 @@ def get_img_url(path):
 			last = len(file.split('.'))
 			if(last <= 0 or file.split('.')[last-1] != "md"):
 				pass
-			with open(path+file) as f:
+			with open(path+file, encoding='utf-8') as f:
 				lines = f.readlines();
 			for p in lines:
 				if(p[0:3] == "img"):
