@@ -8,13 +8,8 @@ tags:
   - 题解
 abbrlink: b223976b
 date: 2019-10-10 20:12:20
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l396w2.s85x6ulrkog.png
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![wallhaven-wyvrj6.png](https://wx2.sinaimg.cn/mw690/0083TyOJly1gblvj9ccz7j31hc0u0wg4.jpg)
-
-<!-- less -->
 
 ### E: Keyboard Purchase
 

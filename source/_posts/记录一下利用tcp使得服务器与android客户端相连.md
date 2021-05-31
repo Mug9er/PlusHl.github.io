@@ -8,12 +8,8 @@ tags:
   - android
 abbrlink: b4b2d023
 date: 2020-10-21 22:11:20
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-m93gem.1794iyf42hb4.png
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gjxbd3rshij31c00u0qv5.jpg)
-
-<!-- less -->
 
 # 云服务器
 

@@ -9,13 +9,8 @@ tags:
   - mysql
 abbrlink: 3a7fd0d4
 date: 2020-12-27 16:55:14
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rd35yq.w241vzya18w.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gm2jvvrewqj31hc0u0u0x.jpg)
-
-<!--less-->
 
 ## Django与mysql相连
 

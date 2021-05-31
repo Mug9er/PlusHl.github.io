@@ -8,13 +8,8 @@ tags:
   - terminal
 abbrlink: e96d644
 date: 2020-12-04 23:29:20
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-z8xggo.519wxk2031s0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx3.sinaimg.cn/mw690/0083TyOJly1glc8u380kcj31r60u0hdt.jpg)
-
-<!-- less -->
 
 ## 主题配置
 

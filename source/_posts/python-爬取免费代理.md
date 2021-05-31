@@ -7,12 +7,8 @@ tags:
   - python
 abbrlink: 28d5d8e8
 date: 2020-02-06 10:37:03
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-8oxr11.cbedlri8z9s.png
 ---
-
-<meta name="referrer" content="no-referrer" />
-![](https://wx1.sinaimg.cn/mw690/0083TyOJly1gbmhdj616xj31c00u0diq.jpg)
-
-<!--less-->
 
 使用python爬取网站，可以用handler来隐藏user-agent，和使用高匿的代理ip，下面就是用不同的user-agent来爬取免费代理
 

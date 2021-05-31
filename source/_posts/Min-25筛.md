@@ -8,13 +8,8 @@ tags:
   - Min_25筛
 abbrlink: ecec6bcc
 date: 2019-09-02 20:39:13
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-8oxgj1.3th7l1lm6ja0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx1.sinaimg.cn/mw690/0083TyOJly1gblvk9hifxj31hc0u0kjn.jpg)
-
-<!-- less -->
 
 ## 使用条件
 

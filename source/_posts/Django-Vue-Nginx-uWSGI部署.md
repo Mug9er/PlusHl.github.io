@@ -10,13 +10,8 @@ tags:
   - nginx
 abbrlink: 1ae14b31
 date: 2020-12-24 16:02:06
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rd3egq.4s1p3m19hl60.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx3.sinaimg.cn/mw690/0083TyOJly1glz0791xozj30u016shdt.jpg)
-
-<!--less-->
 
 ## `Django+Vue+Nginx+uWSGI`部署
 

@@ -5,15 +5,10 @@ abbrlink: 1351aa80
 date: 2020-12-04 22:30:57
 categories: 配置
 tags: Hexo
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-z8pm7y.h1g2y8j5ckg.png
 ---
 
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx3.sinaimg.cn/mw690/0083TyOJly1glc75xmvwqj31cc0u0x53.jpg)
-
-<!--less-->
-
-多台电脑控制一个hexo博客
+## 多台电脑控制一个hexo博客
 
 ## 1.下载Git
 

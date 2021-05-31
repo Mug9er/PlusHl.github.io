@@ -8,13 +8,8 @@ tags:
   - 科学上网
 abbrlink: 4e01c297
 date: 2021-03-03 23:42:11
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3qqwq.52mr3slkonw0.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx3.sinaimg.cn/mw690/0083TyOJly1go75jv9es8j31hc0u04qq.jpg)
-
-<!-- less-->
 
 ## 申请免费域名+ `cloudflare` 托管域名：
 

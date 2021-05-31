@@ -10,12 +10,8 @@ tags:
   - vscode 配置
 abbrlink: 9c6f56ad
 date: 2020-11-29 11:20:30
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e7ozz8.1jregieez3q8.png
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gl5vrpaevzj318g0p0tqv.jpg)
-
-<!-- less -->
 
 ## 插件
 

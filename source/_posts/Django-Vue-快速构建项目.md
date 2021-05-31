@@ -8,13 +8,8 @@ tags:
   - 小项目
 abbrlink: b2788495
 date: 2020-12-24 20:14:26
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3917p.150hewd0j7k0.png
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1glz7wduo4kj30u011itlf.jpg)
-
-<!--less-->
 
 ## 使用`Vue+Django`搭建项目
 

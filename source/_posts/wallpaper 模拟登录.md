@@ -7,12 +7,8 @@ tags:
   - python
 abbrlink: 72810b67
 date: 2020-02-11 15:26:29
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-o3dvv9.4qz014yinx20.jpg
 ---
-
-<meta name="referrer" content="no-referrer" />
-![](https://wx2.sinaimg.cn/mw690/0083TyOJly1gf4so3ls98j30u016ge82.jpg)
-
-<!--less-->
 
 在模拟登录wallhaven是，发现了一些问题，用request.session登录并保存cookie并不奏效
 

@@ -7,13 +7,8 @@ tags:
   - python
 abbrlink: 3d982a67
 date: 2020-12-06 10:49:16
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e7o6e8.2bhc19mziuv4.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx4.sinaimg.cn/mw690/0083TyOJly1gldy5ckgjfj31410u0q8j.jpg)
-
-<!-- less-->
 
 ## 生成requirements
 

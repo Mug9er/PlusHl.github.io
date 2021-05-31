@@ -8,13 +8,8 @@ tags:
   - 服务器
 abbrlink: 2d45259f
 date: 2020-12-06 00:44:13
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-y8x6gk.2f9lwlv4eev4.jpg
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![封面](https://wx1.sinaimg.cn/mw690/0083TyOJly1gldgkuredvj31hc0tqae8.jpg)
-
-<!--less-->
 
 ## 码云
 
