@@ -6,14 +6,9 @@ categories:
 tags:
   - ML
 abbrlink: deefd94b
+img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/wallhaven-rdqw1m.6e249wt5bss0.jpg
 date: 2021-05-29 12:54:19
 ---
-
-<meta name = "referrer" content = "no-referrer" />
-
-![wallhaven-rdqw1m](https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/wallhaven-rdqw1m.6e249wt5bss0.jpg)
-
-<!-- less -->
 
 ### 机器学习三大步骤
 
