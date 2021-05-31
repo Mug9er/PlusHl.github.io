@@ -35,7 +35,7 @@ jsonPath = curPath + "/source/_data/galleries.json"
 
 jsonStr = ""
 
-with open(jsonPath) as f:
+with open(jsonPath, encoding='utf-8') as f:
 	jsonObj = json.load(f)
 	jsonStr = str(jsonObj).replace("'", "\"").replace(r"\n", "")
 
