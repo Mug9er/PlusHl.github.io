@@ -1,0 +1,22 @@
+<%- partial('_partial/bg-cover')%>
+
+<style>
+	.black{
+		background: black;
+		color: #FFF;
+	}
+
+</style>
+
+<main class="content">
+
+<div class="black">	
+	<% var leetcodes = site.data.leetcodes;%>
+	<% console.log(leetcodes); %>
+	<% for (var i = 0, len = leetcodes.length; i < len; i ++) { %>
+		<% var leetcode = leetcodes[i]; %>
+		<% console.log(leetcode.title); %>
+		<p><%- leetcode.title %></p>
+	<% } %>
+</div>
+</main>
