@@ -32,7 +32,7 @@ menu:
       - name: 瞎BB
         url: /artitalk
         icon: fas fa-comments 
-      - name: LeetCode
+      - name: 力扣
         url: /leetcode
         icon: fas fa-code
 
