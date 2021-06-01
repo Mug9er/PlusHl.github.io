@@ -26,15 +26,15 @@ menu:
   欢乐时光:
     icon: fas fa-list
     children:
+      - name: 力扣
+        url: /leetcode
+        icon: fas fa-code
       - name: 画廊
         url: /galleries
         icon: fas fa-image
       - name: 瞎BB
         url: /artitalk
         icon: fas fa-comments 
-      - name: 力扣
-        url: /leetcode
-        icon: fas fa-code
 
 # Website start time.
 # 站点运行开始时间.
