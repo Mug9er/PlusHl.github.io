@@ -607,6 +607,7 @@ artitalk:
   appKey: uf5JWphxgdEGy1JaJTPbvdu8
   lang: zh
   pageSize: 10
+  avatarPla: medias/avatar.jpg
   color1: linear-gradient(45deg, rgb(109, 208, 242) 15%, rgb(245, 154, 190) 85%)  #说说背景颜色1&按钮颜色1
   color2:  linear-gradient(45deg, rgb(109, 208, 242) 15%, rgb(245, 154, 190) 85%)  #说说背景颜色2&按钮颜色2
   color3: black #说说字体颜色
