@@ -6,6 +6,6 @@ git commit -m "update"
 git push
 hexo cl 
 cd source/leetcode
-python source/leetcode/display.py 
+python display.py 
 cd ../../
 hexo d
