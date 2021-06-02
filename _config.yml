@@ -5,7 +5,7 @@
 # Site
 title: Mug-9's blog # 博客名
 subtitle: Stay Hungry, Stay Foolish # 副标题
-description: Let life be beautiful like summer flowers and death like autumn leaves. # 站点描述
+description: # 站点描述
 author: Mug-9 # 作者名
 language: zh-CN # 语言设置
 timezone: Asia/Shanghai

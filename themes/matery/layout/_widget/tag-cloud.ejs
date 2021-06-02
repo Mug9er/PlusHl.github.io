@@ -18,6 +18,13 @@ var i = 0;
 var isTag = is_tag();
 %>
 
+<style>
+    .card .card-content{
+        margin-top: 80px;
+    }
+
+</style>
+
 <div id="tags" class="container chip-container">
     <div class="card">
         <div class="card-content">
@@ -35,7 +42,7 @@ var isTag = is_tag();
                     <span class="chip center-align waves-effect waves-light
                             <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
                             data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
-                        <span class="tag-length"><%- tag.length %></span>
+                        <span class="tag-length">(<%- tag.length %>)</span>
                     </span>
                 </a>
                 <% }); %>

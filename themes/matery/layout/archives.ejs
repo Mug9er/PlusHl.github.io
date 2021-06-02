@@ -1,9 +1,11 @@
 <%- partial('_partial/bg-cover') %>
 
+<%- partial('_widget/post-calendar') %>
 <main class="content">
 
+    <% console.log(theme); %>
     <% if (theme.postCalendar) { %>
-    <%- partial('_widget/post-calendar') %>
+    <% console.log(theme); %>
     <% } %>
 
     <%
@@ -27,6 +29,7 @@
     // init year and month variable.
     var year = '1970';
     var month = '1970-01';
+    console.log(year);
     // post feature image.
     var featureimg = '/medias/featureimages/0.jpg';
     var featureImages = theme.featureImages;

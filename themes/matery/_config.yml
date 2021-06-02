@@ -24,7 +24,7 @@ menu:
     icon: fas fa-address-book
   # 二级菜单写法如下
   欢乐时光:
-    icon: fas fa-list
+    icon: fas fa-coffee
     children:
       - name: 力扣
         url: /leetcode
@@ -34,7 +34,7 @@ menu:
         icon: fas fa-image
       - name: 瞎BB
         url: /artitalk
-        icon: fas fa-comments 
+        icon: fas fa-rocket
 
 # Website start time.
 # 站点运行开始时间.
@@ -64,7 +64,7 @@ dream:
   enable: true
   showTitle: true
   title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  text: 做一个自由的而非奴隶的、进步的而非保守的、进取的而非退隐的、世界的而非锁国的、实利的而非虚文的、科学的而非想象的新青年
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -161,7 +161,7 @@ code:
 reward:
   enable: true
   title: 你的赏识是我前进的动力
-  wechat: /medias/reward/wechat.png
+  wechat: /medias/reward/wechat.jpg
   alipay: /medias/reward/alipay.jpg
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
@@ -204,7 +204,7 @@ clicklove:
 profile:
   avatar: /medias/avatar.jpg
   career: Student
-  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+  introduction: good good study, day day up!
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
@@ -557,16 +557,15 @@ addthis:
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle:
-  enable: true
+  enable: false
   loop: true # 是否循环
   showCursor: true # 是否显示光标
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
   sub:
-    - 生如夏花般绚烂，死如秋叶般静美
-    - Let life be beautiful like summer flowers and death like autumn leaves.
-
+    - 自由的而非奴隶的、进步的而非保守的、进取的而非退隐的、世界的而非锁国的、实利的而非虚文的、科学的而非想象的
+   
 # 手机二级菜单.
 navMenu:
   mleft: false # 二级侧栏子菜单是否对齐左边
@@ -637,4 +636,4 @@ bbtime:
 
 
 jsDelivr:
-  url: https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master
+  url:#  https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master
