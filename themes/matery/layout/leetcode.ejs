@@ -1,20 +1,64 @@
 <%- partial('_partial/bg-cover')%>
 
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
 <style>
-	.black{
-		background: black;
-		color: #FFF;
+	.leetcode_div{
+		display: flex;
+		font-Size: 1.3em;
+		justify-content: center;
+		margin: 10px;
+	}
+	.title_list{
+		margin: 10px auto;
+	}
+
+	.ui_style{
+		list-style: none;
+	}
+	.clear{
+        clear: both;
+    }
+	
+	.ui_style a{
+		color: #FF7F50;	
+	}
+	
+	.ui_style li{
+		float: left;
+		margin-left: 30px;
 	}
 
 </style>
 
 <main class="content">
 
-<div class="black">	
-	<% var leetcodes = site.data.leetcodes;%>
-	<% for (var i = 0, len = leetcodes.length; i < len; i ++) { %>
-		<% var leetcode = leetcodes[i]; %>
-		<p><%- leetcode.title %></p>
-	<% } %>
-</div>
+<article id="articles11" class="container  chip-container">
+  <div class="row ">
+      <div class=" card">
+        <div class="card-content" >
+          <div class="tag-title center-align">
+                <i class="fas fa-pen-alt"></i> LeetCode
+           </div>
+          <div class="leetcode_div">	
+			<% var leetcodes = site.data.leetcodes;%>
+			<div class="title_list">
+				<ui class="ui_style">
+					<% for (var i = 0, len = leetcodes.length; i < len; i ++) { %>
+						<% var leetcode = leetcodes[i]; %>
+						<li><i class="fa fa-file-text"></i> <a href="<%- url_for(leetcode.abbrlink) %>">
+						<%- leetcode.title %>
+						</a>	
+ 						</li>
+					<% } %>
+				</ui>
+			</div>
+		</div>
+        </div>  
+      </div>
+  </div>
+
+</article>
+
+
 </main>

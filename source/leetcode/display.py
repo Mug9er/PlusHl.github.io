@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, shutil, json
 
 def get_md_list(path):
 	mds = []
@@ -9,32 +9,50 @@ def get_md_list(path):
 				continue
 			mds.append(file)
 	return mds
-
-
-def write_index(mds):
-	with open("index.md", "w", encoding="utf-8") as f:
-		f.write("---\n");
-		f.write("title: LeetCode\n");
-		f.write("date: 2019-08-10 00:08:44\n");
-		f.write("type: \"LeetCode\"\n");
-		f.write("layout: \"LeetCode\"\n");
-		f.write("---\n");
-		f.write("\n");
-	for md in mds:
-		print(md)
-		with open(md, encoding='utf-8') as f:
-			lines = f.readlines()
-			with open("index.md", "a+", encoding="utf-8") as f:
-				f.write("## %s\n" % md.split('.')[0])
-				f.write("<details> <summary>%s</summary>\n\n" % "详解")
-				for line in lines:
-					f.write(line)
-				f.write("</details>\n")
 			
 
-curPath = os.getcwd()
+def move_mds(mds):
+	for md in mds:
+		shutil.move(md, "../_posts/%s" % md)
 
-mds = get_md_list(curPath)
+
+def move_back_mds(mds):
+	for md in mds:
+		shutil.move("../_posts/%s" % md, md)
 
 
-write_index(mds)
+def get_json_info(mds):
+	json_list = []
+	for md in mds:
+		with open(md, encoding='utf-8') as f:
+			lines = f.readlines()
+			dict = {}
+			for line in lines:
+				l = len(line.split(":"))
+				arr = line.split(":")
+				if(l <= 0 or (arr[0] != "title" and arr[0] != "abbrlink")):
+					continue	
+				dict[arr[0]] = arr[1][1:-1]
+			json_list.append(dict)
+	return json_list
+
+
+def write_json(content):
+	with open("../_data/leetcodes.json", "w", encoding='utf-8') as f:
+		f.write(json.dumps(content, indent=4, ensure_ascii=False))
+
+if __name__ == "__main__":
+	
+	curPath = os.getcwd()
+
+	mds = get_md_list(curPath)
+
+	move_mds(mds)
+
+	os.system("hexo g")
+
+	move_back_mds(mds)
+
+	jsonObj = get_json_info(mds)
+	
+	write_json(jsonObj)
