@@ -1,0 +1,2184 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="斜率优化dp, Mug-9&#39;s blog">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+    <title>斜率优化dp | Mug-9&#39;s blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Mug-9&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-coffee" style="zoom: 0.6;"></i>
+      
+      <span>欢乐时光</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/leetcode">
+          
+          <i class="fas fa-code" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>力扣</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>画廊</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/artitalk">
+          
+          <i class="fas fa-rocket" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>瞎BB</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Mug-9&#39;s blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-coffee"></i>
+			
+			欢乐时光
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/leetcode " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-code" style="position: absolute;left:50px" ></i>
+			      
+		          <span>力扣</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>画廊</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/artitalk " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-rocket" style="position: absolute;left:50px" ></i>
+			      
+		          <span>瞎BB</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Mug-9" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Mug-9" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-e78rrw.4sx0bdv61jc0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">斜率优化dp</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/斜率优化dp/">
+                                <span class="chip bg-color">斜率优化dp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/算法/" class="post-category">
+                                算法
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-20
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-05-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    20 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>具体可以参考这篇博客<a href="https://www.cnblogs.com/Judge/p/9551035.html" target="_blank" rel="noopener">https://www.cnblogs.com/Judge/p/9551035.html</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="斜率"><a href="#斜率" class="headerlink" title="斜率"></a>斜率</h3><p>斜率优化$dp$，听名字就知道是用来优化$dp$的</p>
+<p>当我们在推导$dp$公式的时候，如果我们推出来的$dp$转移方程类似为：</p>
+<p>$dp[i] = \min\limits<em>{x=1}^{x&lt;i}$  $or$  $\max\limits</em>{x=1}^{x&lt;i}$ ${dp[x] + f(x,i)}$  $f(x,i)是一个关于x与i的函数$</p>
+<p>拿去最小值来说</p>
+<p>我们考虑两个决策点$k&lt;j&lt;i$并且$j$比$k$要优</p>
+<p>我们我们可以列一个不等式 $dp[j]+f(j,i)\leq dp[k]+f(k,i)$</p>
+<p>展开如果可以把式子化成类似$\frac{y_j-y_k}{x_j-x_k}\leq k_i$，那么我们如果如果把每个点$(x_i,y_i)$看成一个坐标，那么</p>
+<p>就表示$(x_j,y_j)$与$(x_k,y_k)$的斜率$\leq k_i$, 这样我们可以得到真正有用的点组成了一个凸包的形状</p>
+<h3 id="为什么是个凸包？"><a href="#为什么是个凸包？" class="headerlink" title="为什么是个凸包？"></a>为什么是个凸包？</h3><p>当我们去最小值是，我们有一下这么几个点</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/0083TyOJly1gblx1fca58j307v06d0sp.jpg" alt="img1"></p>
+<p>我们维护一个下凸壳，那么我们找的最小值的直线一定是沿着下凸壳的边缘</p>
+<p><img src="https://wx1.sinaimg.cn/mw690/0083TyOJly1gblx1htpwyj30bs08jq32.jpg" alt="img2"></p>
+<p>所以说不处于凸壳上的点是没有意义的</p>
+<p>另外：最小值维护下凸壳，最大值维护上凸壳</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="求斜率"><a href="#求斜率" class="headerlink" title="求斜率"></a>求斜率</h3><p>一般来说能推出斜率表达式的都可以用斜率优化$dp$</p>
+<p>我们已经把式子化成这么一个形式$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ ,那么我们求斜率可以这么写</p>
+<p>如果斜率单调就用移指针，不单调就二分答案</p>
+<p>以HDU 3507为例：</p>
+<pre><code class="lang-c">ll getUp(ll j) {
+    return dp[j] + sum[j] * sum[j];
+}
+
+ll getDown(ll j) {
+    return 2 * sum[j];
+}
+
+double Calc(ll x, ll y) {
+    if(getDown(x) == getDown(y)) return -1e9; //加一下防止除零的情况
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+</code></pre>
+<h3 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h3><p>当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$是单调的，那么我们可以用单调队列来维护这个凸壳，并且队首是最优解</p>
+<p>因为我们维护一个单调的队列，所以当我们在队列里面加点时，根据凸壳的单调性我们可以这么写</p>
+<pre><code class="lang-c">while(head &lt; tail &amp;&amp; Calc(i, q[tail]) &lt;= Calc(q[tail], q[tail-1])) tail --;
+            q[++tail] = i;
+</code></pre>
+<p>而如果存在$k&lt;j&lt;i$并且$j$比$k$优，的情况，也就是$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ </p>
+<p>我们在队首把$k$踢出去,因为$k$已经不是最优的</p>
+<pre><code class="lang-c">while(head &lt; tail &amp;&amp; Calc(q[head+1], q[head]) &lt;= sum[i])
+                head ++;
+</code></pre>
+<p>这样我们就可以用单调队列去维护一个单调的凸壳，并且单调队列里面的队首就是最优情况</p>
+<h3 id="二分单调栈"><a href="#二分单调栈" class="headerlink" title="二分单调栈"></a>二分单调栈</h3><p>当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$不是单调的，那么我们可以用单调栈来维护这个凸壳</p>
+<p>因为凸壳是单调的，所以我们要找的这个$k_i$可以用二分来查找</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="HDU-3507-Print-Article"><a href="#HDU-3507-Print-Article" class="headerlink" title="HDU 3507 Print Article"></a>HDU 3507 Print Article</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一个$C<em>i$序列，你可以把序列分为几段，每段的权值为$(\sum\limits</em>{i=1}^{k}C_i)^2+M$，</p>
+<p>求出最小的权值和</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很容易想到转移方程$dp[i] = \min\limits_{x=1}^{x&lt;i}{dp[x] + m + (sum[i] - sum[x])^2}$</p>
+<p>我们假设存在一个$k&lt;j&lt;i$并且$j$比$k$要优</p>
+<p>那么$dp[j]+m+(sum[i]-sum[j]^2)\leq dp[k]+m+(sum[i]-sum[k])^2$</p>
+<p>移项并合并同类项后：</p>
+<p>$\frac{dp[j]+sum[j] \times sum[j] - (dp[k]+sum[k]\times sum[k])}{2(sum[j]-sum[k])}\le sum[i]]$</p>
+<p>我们设$Y=dp[x]-sum[x],X=2\times sum[x]$</p>
+<p>那么式子可以化成:$\frac{Y(j)-Y(k)}{X(j)-X(k)}\le sum[i]$</p>
+<p>因为是$sum[i]$是递增的，所以我们可以用单调队列维护一个下凸壳</p>
+<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define ll long long
+const ll maxn = 5e5 + 7;
+const ll inf = 0x3f3f3f3f;
+const ll mod = 1e9 + 7;
+const double eps = 0.0000000001;
+typedef pair&lt;ll, ll&gt; pis;
+
+ll dp[maxn], q[maxn];
+ll sum[maxn];
+
+ll head, tail, n, m;
+
+ll getDp(ll i, ll j) {
+    return dp[j] + m + (sum[i] - sum[j]) * (sum[i] - sum[j]);
+}
+
+ll getUp(ll j) {
+    return dp[j] + sum[j] * sum[j];
+}
+
+ll getDown(ll j) {
+    return 2 * sum[j];
+}
+
+double Calc(ll x, ll y) {
+    if(getDown(x) == getDown(y)) return -1e9;
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() { 
+    while(~scanf(&quot;%lld %lld&quot;, &amp;n, &amp;m)) {
+        for (ll i = 1; i &lt;= n; i ++)
+            scanf(&quot;%lld&quot;, &amp;sum[i]);
+        sum[0] = dp[0] = 0;
+        for (ll i = 1; i &lt;= n; i ++)
+            sum[i] += sum[i-1];
+        head = tail = 1;
+        for (ll i = 1; i &lt;= n; i ++) {
+            while(head &lt; tail &amp;&amp; Calc(q[head+1], q[head]) &lt;= 1.0 * sum[i])
+                head ++;
+            dp[i] = getDp(i, q[head]);
+            while(head &lt; tail &amp;&amp; Calc(i, q[tail]) &lt;= Calc(q[tail], q[tail-1])) tail --;
+            q[++tail] = i;
+        }
+        printf(&quot;%lld\n&quot;, dp[n]);
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="洛谷-P4072-征途"><a href="#洛谷-P4072-征途" class="headerlink" title="洛谷 P4072 征途"></a>洛谷 P4072 征途</h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><p>序列分割，给你n个数字，你把序列分割成m个段，每一段的的方差为$v$</p>
+<p>输出最小的每一段的之和$\times m^2$</p>
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>提前声明一下， 下面的$c_i$都是一段路的距离之和，而不是单条路的距离，所以是$m$段而不是$n$段</p>
+<p>$s^2=\frac{(\frac{\sum\limits<em>{i=1}^{m}c_i}{n}-c_1)^2+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}-c_2)^2+…+(\frac{\sum\limits</em>{i=1}^{m}c_i}{m}-c_n)^2}{m}$</p>
+<p>$s^2=\frac{(\frac{\sum\limits<em>{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}\times c_1+c_1^2+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}\times c_2+c_2^2+…+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c_i}{m}\times c_n+c_n^2}{m}$</p>
+<p>$s^2=\frac{m\times (\frac{\sum\limits<em>{i=1}^{m}c_i}{m})^2-2\times \frac{(\sum\limits</em>{i=1}^{m}c<em>i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2=\frac{\frac{(\sum\limits<em>{i=1}^{m}c_i)^2}{m}-2\times \frac{(\sum\limits</em>{i=1}^{m}c<em>i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2=\frac{-\frac{(\sum\limits<em>{i=1}^{m}c_i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2\times m^2=-(\sum\limits<em>{i=1}^{n}c_i)^2+m\times (\sum\limits</em>{i=1}^{n}c_i^2)$</p>
+<p>我们发现前面一项是一个常数，而$s^2\times m^2$最小是在$\sum\limits_{i=1}^{m}c_i^2$最小时</p>
+<p>这样我们在进行$dp$转移的时候,我们用$sum[x] = \sum\limits_{i=1}^{x}val[i]$    $val[x]$时每一条路的长度</p>
+<p>$dp[i] = \min{dp[x] + (sum[i]-sum[x])^2}$</p>
+<p>按照以往的套路，存在$k&lt;j&lt;i$并且$j$比$k$要优</p>
+<p>$dp[j]+(sum[i]-sum[j])^2\le dp[k]+(sum[i]+sum[k])^2$</p>
+<p>$dp[j]+sum[j]^2-(dp[k]+sum[k]^2)\le2\times sum[i]sum[j]-2\times sum[i]sum[k]$</p>
+<p>$\frac{dp[j]+sum[j]^2-(dp[k]+sum[k]^2)}{2\times(sum[j]]-sum[k])}\le sum[i]$</p>
+<p>这样斜率就推出来了，因为$sum[i]$是个递增的值，所以我们可以用单调队列来维护凸壳</p>
+<p>然后用一个滚动数组来记录最优值</p>
+<h4 id="AC代码-1"><a href="#AC代码-1" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const int maxn = 1e5 + 5;
+const int inf = 0x3f3f3f3f;
+const int mod = 1e9+7;
+
+ll sum[maxn], g[maxn], val[maxn];
+ll q[maxn], dp[maxn];
+
+ll getDp(ll i, int j) {
+    return g[j] + (val[i] - val[j]) * (val[i] - val[j]);
+}
+
+ll getUp(int j) {
+    return g[j] + val[j] * val[j];
+}
+
+ll getDown(int j) {
+    return 2 * val[j];
+}
+
+double Calc(int x, int y) {
+    if(getDown(x) == getDown(y)) return -1e9;
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() {
+    int n, m;
+    scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
+    for (int i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld&quot;, &amp;val[i]);
+        val[i] += val[i-1];
+        g[i] = val[i] * val[i]; 
+   }
+    for (int t = 1; t &lt; m; t ++) {
+        int head, tail;
+        head = tail = 1;
+        for (int i = 1; i &lt;= n; i ++) {
+            while(head &lt; tail &amp;&amp; Calc(q[head+1], q[head]) &lt;= val[i])
+                head ++;
+            dp[i] = getDp(i, q[head]);
+            while(head &lt; tail &amp;&amp; Calc(i, q[tail]) &lt;= Calc(q[tail], q[tail-1]))
+                tail --;
+            q[++tail] = i;
+        }
+        for (int i = 1; i &lt;= n; i ++)  g[i] = dp[i];   
+    }
+    printf(&quot;%lld\n&quot;, m * dp[n] - val[n] * val[n]);
+
+    return 0;
+}
+</code></pre>
+<p>这道题貌似可以用WQS加斜率dp来写，下次来补一下</p>
+<h3 id="洛谷P2365-任务安排"><a href="#洛谷P2365-任务安排" class="headerlink" title="洛谷P2365 任务安排"></a>洛谷P2365 任务安排</h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><p>N个任务排成一个序列，你把任务分组完成，每个任务的费用是完成时间乘一个费用系数</p>
+<h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>我们先设计dp转移方程,因为我们在转移的时候还要考虑前面用了几组,所以我们在转移的时候直接把后面的</p>
+<p>费时S加上,</p>
+<p>dp转移的时候时间和花费用前缀和维护</p>
+<p>$dp[i] = min{dp[x] + time[i] \times (cost[i] - cost[x])+S\times (cost[n] - cost[x])}$</p>
+<p>按照以往套路,</p>
+<p>$dp[j]+time[i]\times(cost[i]-cost[j])+S\times(cost[n] - cost[j])\le dp[k]+time[i]\times(cost[i]-cost[k])+S\times(cost[n] - cost[k])$</p>
+<p>$dp[j]-dp[k]-S\times cost[j]+S\times cost[k]\le time[i]\times (cost[j]-cost[k])$</p>
+<p>$\frac{dp[j]-S\times cost[j]-(dp[k]-S\times cost[k])}{cost[j]-cost[k]}\le time[i]$</p>
+<p>然后用斜率$dp$就直接写了</p>
+<pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const ll maxn = 1e5 + 5;
+const ll inf = 0x3f3f3f3f;
+const ll mod = 1e9+7;
+
+ll t[maxn], c[maxn];
+ll dp[maxn], q[maxn];
+ll n, S;
+
+ll getDp(ll i, ll j) {
+    return dp[j] + t[i] * (c[i] - c[j]) + S * (c[n] - c[j]);
+}
+
+ll getUp(ll i) {
+    return dp[i]-S*c[i];
+}
+
+ll getDown(ll i) {
+    return c[i];
+}
+
+double Clac(int x, int y) {
+    return 1.0 * (getUp(x) - getUp(y))/(getDown(x) - getDown(y));
+}
+
+int main() {
+    scanf(&quot;%lld %lld&quot;, &amp;n, &amp;S);
+    for (ll i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld %lld&quot;, &amp;t[i], &amp;c[i]);
+        t[i] += t[i-1];
+        c[i] += c[i-1];
+    }
+    ll head, tail;
+    head = tail = 1;
+    for (int i = 1; i &lt;= n; i ++) {
+        while(head &lt; tail &amp;&amp; Clac(q[head+1], q[head]) &lt;= t[i])
+            head ++;
+        dp[i] = getDp(i, q[head]);
+        while(head &lt; tail &amp;&amp; Clac(i, q[tail]) &lt;= Clac(q[tail], q[tail-1]))
+            tail --;
+        q[++tail] = i;
+    }
+    printf(&quot;%lld\n&quot;, dp[n]);
+    return 0;
+}
+</code></pre>
+<h3 id="洛谷-P4360-锯木厂选址"><a href="#洛谷-P4360-锯木厂选址" class="headerlink" title="洛谷 P4360 锯木厂选址"></a>洛谷 P4360 锯木厂选址</h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><p>从山顶到山底运n棵老树，运一颗树的费用是树的重量乘上距离，为了不浪费决定在山腰上见两个锯木厂，问最小的运输费用</p>
+<h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>我们把树的重量求一个前缀和 $sum[]$，到山底的距离求一个后缀和$dis[]$,所有树运到山底的花费$totsum$</p>
+<p>因为只有两个锯木厂，所以我们可以直接写一下$dp$转移</p>
+<p>$dp[i] = min{totsum-dis[x]\times sum[x]-(sum[i]-sum[x])\times dis[i])}$</p>
+<p>套路：</p>
+<p>$totsum-dis[j]\times sum[j]-(sum[i]-sum[j])\times dis[i])\leq totsum-dis[k]\times sum[k]-(sum[i]-sum[k])\times dis[i])$</p>
+<p>$-dis[j]\times sum[j]+dis[k]\times sum[k]\le dis[i]\times (-sum[j]+sum[k])$</p>
+<p>$\frac{dis[j]\times sum[j]-dis[k]\times sum[k]}{sum[j]-sum[k]}\ge dis[i]$  $(因为sum[j]大于sum[k]所以要变号)$</p>
+<p>直接套</p>
+<pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const int maxn = 1e5 + 5;
+const ll inf = 0x7ffffffffffll;
+const int mod = 1e9+7;
+
+ll dis[maxn], sum[maxn];
+ll dp[maxn], g[maxn];
+ll q[maxn], totsum=0;
+
+ll getDp(int i, int j) {
+    return totsum - dis[j] * sum[j] - dis[i] * (sum[i] - sum[j]);
+}
+
+ll getUp(int i) {
+    return dis[i] * sum[i];
+}
+
+ll getDown(int i) {
+    return sum[i];
+}
+
+double Clac(int x, int y) {
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld %lld&quot;, &amp;sum[i], &amp;dis[i]);
+        sum[i] += sum[i-1];
+        totsum += sum[i] * dis[i];
+    }
+    for (int i = n; i &gt;= 1; i --) dis[i] += dis[i+1]; 
+    int head, tail;
+    ll ans = inf;
+    head = tail = 1;
+    for (int i = 1; i &lt;= n; i ++) {
+        while(head &lt; tail &amp;&amp; Clac(q[head+1], q[head]) &gt; dis[i])
+            head ++;
+        dp[i] = getDp(i, q[head]);
+        while(head &lt; tail &amp;&amp; Clac(i, q[tail]) &gt;= Clac(q[tail], q[tail-1])) 
+            tail --;
+        q[++tail] = i;
+    }
+    for (int i = 1; i &lt;= n; i ++) ans = min(ans, dp[i]);
+    printf(&quot;%lld\n&quot;, ans);
+    return 0; 
+}
+</code></pre>
+<h3 id="洛谷-P5504-柠檬"><a href="#洛谷-P5504-柠檬" class="headerlink" title="洛谷 P5504 柠檬"></a>洛谷 P5504 柠檬</h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><p>一串贝壳，每个贝壳都有一个值$s_0$你可以选择连续的一段把他变成柠檬，柠檬的个数是$s_0t^2$,$t$是区间柠檬值为$s_0$的个数</p>
+<h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><p>首先，我们要变的贝壳区间肯定是首尾值相同，然后我们可以对每个相同值得柠檬求一个前缀和</p>
+<p>$dp[i] = max{dp[x-1] + val<a href="sum[i]-sum[x]+1">i</a>^2}$</p>
+<p>套：</p>
+<p>$dp[j-1]+val<a href="sum[i]-sum[j]+1">i</a>^2\le dp[k-1]+val<a href="sum[i]-sum[k]+1">i</a>^2$</p>
+<p>$\frac{dp[j-1]-dp[k-1] + val[j]sum[j]^2-val[k]sum[k]^2-2val[i]sum[j]+2val[i]sum[k]}{sum[j]-sum[k]}\le 2val[i]sum[i]$</p>
+<p>我们发现$2val[i]sum[i]$对于每一类柠檬都是单调的，所以可以直接移指针如果斜率不单调就要在凸壳上二分了</p>
+<h4 id="AC代码（移指针）"><a href="#AC代码（移指针）" class="headerlink" title="AC代码（移指针）"></a>AC代码（移指针）</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const ll maxn = 1e5 + 5;
+const ll inf = 0x3f3f3f3f;
+const ll mod = 1e9+7;
+
+ll last[maxn];
+ll c[maxn], s[maxn];
+vector&lt;ll&gt; q[maxn];
+ll top[maxn];
+ll dp[maxn];
+
+ll getUp(ll i) {
+    return dp[i-1] - 2 * s[i] * c[i] + c[i] * s[i] * s[i];
+}
+
+ll getDown(ll i) {
+    return s[i];
+}
+
+double Calc(ll x, ll y) {
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+int main() {
+    ll n;
+    scanf(&quot;%lld&quot;, &amp;n);
+
+    for (ll i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld&quot;, &amp;c[i]);
+        s[i] = s[last[c[i]]] + 1;
+        last[c[i]] = i;
+    }
+
+    for (ll i = 1; i &lt;= n; i ++) {
+        if(last[c[i]]) q[c[i]].push_back(i);
+        last[c[i]] = 0;
+    }
+
+    for (ll i = 1; i &lt;= n; i ++) {
+        ll p = c[i];
+        while(top[p] &gt; 1 &amp;&amp; Calc(q[p][top[p]-1], q[p][top[p]]) &lt;= Calc(q[p][top[p]], i)) {
+            --top[p];
+            q[p].pop_back();
+        }
+        ++top[p]; q[p].push_back(i);
+        while(top[p] &gt; 1 &amp;&amp; Calc(q[p][top[p]-1], q[p][top[p]]) &lt;= 2*p*s[i]) {
+            --top[p];
+            q[p].pop_back();
+        }
+        dp[i] = dp[q[p][top[p]]-1] + (s[i] - s[q[p][top[p]]]+1) * (s[i]-s[q[p][top[p]]]+1) * p;
+
+    }
+    printf(&quot;%lld\n&quot;, dp[n]);
+    return 0;
+}
+</code></pre>
+<h4 id="AC代码（二分）"><a href="#AC代码（二分）" class="headerlink" title="AC代码（二分）"></a>AC代码（二分）</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const ll maxn = 1e5 + 5;
+const ll inf = 0x3f3f3f3f;
+const ll mod = 1e9+7;
+
+ll last[maxn];
+ll c[maxn], s[maxn];
+vector&lt;ll&gt; q[maxn];
+ll top[maxn];
+ll dp[maxn];
+
+ll getUp(ll i) {
+    return dp[i-1] - 2 * s[i] * c[i] + c[i] * s[i] * s[i];
+}
+
+ll getDown(ll i) {
+    return s[i];
+}
+
+double Calc(ll x, ll y) {
+    if(getDown(x) == getDown(y)) return -1e9;
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+ll find(ll x) {
+    ll p = c[x];
+    ll l = 2, r = top[p];
+    ll ans = 1;
+    while(l &lt;= r) {
+        ll m = (l + r) &gt;&gt; 1;
+        if(Calc(q[p][m], q[p][m-1]) &gt; 2*p*s[x]) {
+            ans = m;
+            l = m + 1;
+        }else r = m - 1;
+    }
+    return ans;
+}
+
+int main() {
+    ll n;
+    scanf(&quot;%lld&quot;, &amp;n);
+    for (ll i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld&quot;, &amp;c[i]);
+        s[i] = s[last[c[i]]] + 1;
+        last[c[i]] = i;
+    }
+    for (ll i = 1; i &lt;= n; i ++) {
+        if(last[c[i]]) q[c[i]].push_back(i);
+        last[c[i]] = 0;
+    }
+    for (ll i = 1; i &lt;= n; i ++) {
+        ll p = c[i];
+        while(top[p] &gt; 1 &amp;&amp; Calc(q[p][top[p]-1], q[p][top[p]]) &lt;= Calc(q[p][top[p]], i)) {
+            --top[p];
+            q[p].pop_back();
+        }
+        ++top[p]; q[p].push_back(i);
+        int ans = find(i);
+        dp[i] = dp[q[p][ans]-1] + (s[i] - s[q[p][ans]] + 1) * (s[i]-s[q[p][ans]] + 1) * p;
+    }
+    printf(&quot;%lld\n&quot;, dp[n]);
+    return 0;
+}
+</code></pre>
+<h3 id="2019牛客多校第十场-J-Wood-Processing"><a href="#2019牛客多校第十场-J-Wood-Processing" class="headerlink" title="2019牛客多校第十场 J.Wood Processing"></a>2019牛客多校第十场 J.Wood Processing</h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><p>把n块木板求成高度相同的k块，求浪费的最小</p>
+<h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><p>可以说是斜率dp的模板题</p>
+<p>我们把高度从高到低排序，那么$dp$转移式就是</p>
+<p>$dp[i]=max{dp[x]+(sum[i]-sum[x])\times h[i]}$ $sum$是宽的前缀和</p>
+<p>我们假设$j&gt;k$并且$j$比$k$优</p>
+<p>$dp[j]+(sum[i]-sum[j])\times h[i] &gt;= dp[k]+(sum[i]-sum[k])\times h[i]$</p>
+<p>$\frac{dp[j]-dp[k]}{sum[j]-sum[k]}\ge h[i]$</p>
+<h4 id="AC代码-2"><a href="#AC代码-2" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+const int maxn = 5005;
+const int inf = 0x3f3f3f3f;
+const int mod = 1e9+7;
+typedef pair&lt;int, int&gt; pis;
+
+struct Node{
+    ll p, h, w;
+}node[maxn][2];
+struct Plan{
+    ll h, w;
+}plan[maxn];
+int n, k;
+ll ans = 0;
+ll dp[maxn], q[maxn], g[maxn];
+
+bool cmp(Plan a, Plan b) {
+    return a.h &gt; b.h;
+}
+
+ll getUp(int j) {
+    return g[j]; 
+}
+
+ll getDown(int i) {
+    return plan[i].w;
+}
+
+double Cal(int x, int y) {
+    return 1.0 * (getUp(x) - getUp(y)) / (getDown(x) - getDown(y));
+}
+
+ll getDp(int x, int i) {
+    return g[x] + (plan[i].w - plan[x].w) * plan[i].h; 
+}
+
+void solve() {
+    int head, tail;
+    head = tail = 1;
+    for (int i = 1; i &lt;= n; i ++) {
+        while(head &lt; tail &amp;&amp; Cal(q[head+1], q[head]) &gt;= plan[i].h) head ++;
+        dp[i] = getDp(q[head], i);
+        while(head &lt; tail &amp;&amp; Cal(i, q[tail]) &gt;= Cal(q[tail], q[tail-1])) tail --;
+        q[++tail] = i;
+    }
+    for (int i = 1; i &lt;= n; i ++) g[i] = dp[i];
+}
+
+int main() {
+    scanf(&quot;%d %d&quot;, &amp;n, &amp;k);
+    ll sum = 0;
+    for (int i = 1; i &lt;= n; i ++) {
+        scanf(&quot;%lld %lld&quot;, &amp;plan[i].w, &amp;plan[i].h);
+        sum += plan[i].w * plan[i].h;
+    }
+    sort(plan + 1, plan + 1 + n, cmp);
+    for (int i = 1; i &lt;= n; i ++) plan[i].w += plan[i-1].w;
+    for (int i = 1; i &lt;= k; i ++) solve();
+    printf(&quot;%lld\n&quot;, sum-dp[n]);
+    return 0;
+}
+</code></pre>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Mug-9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://orzff.cn/f1b7e3b7/">http://orzff.cn/f1b7e3b7/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Mug-9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/斜率优化dp/">
+                                    <span class="chip bg-color">斜率优化dp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/libs/valine/Valine.min.js"></script>
+
+<!-- script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/valine/Valine.min.js"></script> -->
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'lYvj0vvsy1nV0HqNetqHw8du-MdYXbMMI',
+        appKey: 'shRaAIWcC3jPacxoETvJwIdt',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/db92c5b8/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-28yj9x.4xoxdb4v52g0.jpg" class="responsive-img" alt="牛客多校第四场">
+                        
+                        <span class="card-title">牛客多校第四场</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            牛客多校第四场
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-08-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ACM/" class="post-category">
+                                    ACM
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/题解/">
+                        <span class="chip bg-color">题解</span>
+                    </a>
+                    
+                    <a href="/tags/多校/">
+                        <span class="chip bg-color">多校</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/ea46ca8a/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2rwer.2c5cxy5uq38k.png" class="responsive-img" alt="全排列与逆序对">
+                        
+                        <span class="card-title">全排列与逆序对</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            全排列与逆序对
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/逆序对/">
+                        <span class="chip bg-color">逆序对</span>
+                    </a>
+                    
+                    <a href="/tags/全排列/">
+                        <span class="chip bg-color">全排列</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Mug-9&#39;s blog<br />'
+            + '文章作者: Mug-9<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Mug-9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">62.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Mug-9" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:643719884@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=643719884" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 643719884" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
