@@ -1,13 +1,20 @@
 [{
     "avatar": "/medias/Tony5t4rk.png",
     "name": "Tony5t4rk",
-    "introduction": "",
+    "introduction": "--",
     "url": "https://www.wolai.com/tony5t4rk/sVs2rsw8GcpU8NQzv9LAmL",
     "title": "前去学习"
 }, {
     "avatar": "/medias/Sanzo.jpg",
     "name": "Sanzo",
-    "introduction": "",
+    "introduction": "白马会所一哥",
     "url": "https://sanzo.top/#/",
     "title": "前去学习"
+},{
+    "avatar": "/medias/kirito.jpg",
+    "name": "kirito",
+    "introduction": "被带歪也不能怨我",
+    "url": "https://www.kirito41dd.cn/",
+    "title": "前去学习"
+
 }]

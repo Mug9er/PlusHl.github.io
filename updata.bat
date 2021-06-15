@@ -5,4 +5,7 @@ git add .
 git commit -m "updata"
 git push
 call hexo clean
-call hexo d -g
+cd source/leetcode
+python display.py
+cd ../../
+call hexo d
