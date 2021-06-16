@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="axios与django通信, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -514,7 +516,7 @@
                                 <span class="chip bg-color">Django</span>
                             </a>
                         
-                            <a href="/tags/Axios通信/">
+                            <a href="/tags/Axios%E9%80%9A%E4%BF%A1/">
                                 <span class="chip bg-color">Axios通信</span>
                             </a>
                         
@@ -526,7 +528,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -553,14 +555,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    352
+                    294
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -588,75 +590,74 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="axios实例"><a href="#axios实例" class="headerlink" title="axios实例"></a>axios实例</h3><pre><code class="lang-js">import axios from &#39;axios&#39;
-import qs from &#39;qs&#39;
+                <h3 id="axios实例"><a href="#axios实例" class="headerlink" title="axios实例"></a>axios实例</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> qs <span class="token keyword">from</span> <span class="token string">'qs'</span>
 
-export function request (config) {
-  const instance = axios.create({ //实例，配置一些基础信息
-    baseURL: &#39;http://192.168.0.100:8888/api/&#39;,
-    timeout: 5000,
-    withCredentials: true
-  })
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">request</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> instance <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">//实例，配置一些基础信息</span>
+    baseURL<span class="token operator">:</span> <span class="token string">'http://192.168.0.100:8888/api/'</span><span class="token punctuation">,</span>
+    timeout<span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+    withCredentials<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  instance.interceptors.request.use(config =&gt; { //请求拦截器
-    console.log(config)
-    if (config.method == &quot;POST&quot;) {
-      config.data = qs.stringify(config.data) // post的数据要经过处理
-    }
-    return config
-  }, err =&gt; {
-    console.log(err)
-  })
+  instance<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">//请求拦截器</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">"POST"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>data <span class="token operator">=</span> qs<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token comment">// post的数据要经过处理</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  instance.interceptors.response.use(res =&gt; {//接收拦截器
-    return res.data
-  }, err =&gt; {
-    console.log(err)
-  })
+  instance<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token comment">//接收拦截器</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span>data
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  return instance(config)
-}
-</code></pre>
-<h3 id="具体get与post"><a href="#具体get与post" class="headerlink" title="具体get与post"></a>具体get与post</h3><pre><code class="lang-js">import { request } from &#39;./request&#39;
+  <span class="token keyword">return</span> <span class="token function">instance</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="具体get与post"><a href="#具体get与post" class="headerlink" title="具体get与post"></a>具体get与post</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./request'</span>
 
-export function getBooks () {
-  return request({
-    url: &#39;books&#39;
-  })
-}
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getBooks</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'books'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-export function postLogin (config) {
-  return request({
-    method: &#39;post&#39;,
-    url: &#39;books&#39;,
-    data: config,
-    headers: {
-      &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39; // 发送数据的类型
-    }
-  })
-}
-</code></pre>
-<h3 id="表单数据"><a href="#表单数据" class="headerlink" title="表单数据"></a>表单数据</h3><pre><code class="lang-vue">&lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">postLogin</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    url<span class="token operator">:</span> <span class="token string">'books'</span><span class="token punctuation">,</span>
+    data<span class="token operator">:</span> config<span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/x-www-form-urlencoded'</span> <span class="token comment">// 发送数据的类型</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="表单数据"><a href="#表单数据" class="headerlink" title="表单数据"></a>表单数据</h3><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div id="app"&gt;
     &lt;form&gt;
-      &lt;input type=&quot;text&quot; placeholder=&quot;login&quot; v-model=&quot;name&quot; /&gt;
-      &lt;input type=&quot;text&quot; placeholder=&quot;pwd&quot; v-model=&quot;pwd&quot; /&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;登录&quot; @click=&quot;submitForm&quot; /&gt;
+      &lt;input type="text" placeholder="login" v-model="name" /&gt;
+      &lt;input type="text" placeholder="pwd" v-model="pwd" /&gt;
+      &lt;input type="submit" value="登录" @click="submitForm" /&gt;
     &lt;/form&gt;
-    &lt;!-- &lt;button @click=&quot;submitForm&quot;&gt;submit&lt;/button&gt; --&gt;
+    &lt;!-- &lt;button @click="submitForm"&gt;submit&lt;/button&gt; --&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
-import { getBooks } from &#39;network/home&#39;
-import { postLogin } from &#39;network/home&#39;
+import { getBooks } from 'network/home'
+import { postLogin } from 'network/home'
 
 export default {
-  el: &#39;#app&#39;,
+  el: '#app',
   data () {
     return {
-      name: &quot;1234&quot;,
-      pwd: &#39;1234&#39;,
+      name: "1234",
+      pwd: '1234',
     }
   },
   created () {
@@ -669,8 +670,8 @@ export default {
     submitForm (event) {
       console.log(this.name)
       let formData = new FormData()
-      formData.append(&#39;name&#39;, this.name)
-      formData.append(&#39;pwd&#39;, this.pwd)
+      formData.append('name', this.name)
+      formData.append('pwd', this.pwd)
       postLogin(formData).then(res =&gt; {
         console.log(res)
       })
@@ -681,12 +682,11 @@ export default {
 
 &lt;style&gt;
 &lt;/style&gt;
-</code></pre>
-<h3 id="django配置"><a href="#django配置" class="headerlink" title="django配置"></a>django配置</h3><pre><code>MIDDLEWARE = [
-     &#39;django.middleware.csrf.CsrfViewMiddleware&#39;, # 注释掉csrf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="django配置"><a href="#django配置" class="headerlink" title="django配置"></a>django配置</h3><pre class="line-numbers language-none"><code class="language-none">MIDDLEWARE = [
+     'django.middleware.csrf.CsrfViewMiddleware', # 注释掉csrf
 ]
-APPEND_SLASH=False
-</code></pre>
+APPEND_SLASH=False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -754,7 +754,7 @@ APPEND_SLASH=False
                                     <span class="chip bg-color">Django</span>
                                 </a>
                             
-                                <a href="/tags/Axios通信/">
+                                <a href="/tags/Axios%E9%80%9A%E4%BF%A1/">
                                     <span class="chip bg-color">Axios通信</span>
                                 </a>
                             
@@ -1221,7 +1221,7 @@ APPEND_SLASH=False
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1236,7 +1236,7 @@ APPEND_SLASH=False
                         <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/连接MySQL/">
+                    <a href="/tags/%E8%BF%9E%E6%8E%A5MySQL/">
                         <span class="chip bg-color">连接MySQL</span>
                     </a>
                     
@@ -1273,7 +1273,7 @@ APPEND_SLASH=False
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1484,7 +1484,7 @@ APPEND_SLASH=False
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1785,7 +1785,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

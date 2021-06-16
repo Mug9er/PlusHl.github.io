@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Linux用户权限, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/用户权限/">
+                            <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
                                 <span class="chip bg-color">用户权限</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                 Linux 学习笔记
                             </a>
                         
@@ -617,8 +619,7 @@
 </table>
 </div>
 <h3 id="查看登录用户-w"><a href="#查看登录用户-w" class="headerlink" title="查看登录用户 w"></a>查看登录用户 <code>w</code></h3><p><code>w</code>命令也可以查看登录当前系统的用户信息，与<code>who</code>命令相比，<code>w</code>命令的功能更强大，它不但可以显示当前有哪些用户登录到系统，还可以显示这些用户正在进行的操作，并给出更加详细和科学的统计数据。</p>
-<pre><code class="lang-shell">w [选项] [用户名]
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">w <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token punctuation">[</span>用户名<span class="token punctuation">]</span>	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果<code>w</code>命令携带用户名，则只显示指定用户的信息，否则显示当前所有登录用户的信息。</p>
 <p>常用选项</p>
 <div class="table-container">
@@ -661,19 +662,15 @@
 <li><p><code>groupdel</code>删除组帐号</p>
 </li>
 <li><p><code>cat /etc/group</code> 查看用户组</p>
-<pre><code class="lang-shell">创建工作组： groupadd 组名
-删除工作组： groupdel 组名
-注意： 需要切换到 root用户
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">创建工作组： <span class="token function">groupadd</span> 组名
+删除工作组： <span class="token function">groupdel</span> 组名
+注意： 需要切换到 root用户<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h3 id="修改组-usermod"><a href="#修改组-usermod" class="headerlink" title="修改组 usermod"></a>修改组 <code>usermod</code></h3><pre><code class="lang-shell">usermod -g 用户组 用户名
-</code></pre>
-<pre><code class="lang-shell">修改用户所在组：usermod -g 组名 用户名
-</code></pre>
+<h3 id="修改组-usermod"><a href="#修改组-usermod" class="headerlink" title="修改组 usermod"></a>修改组 <code>usermod</code></h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">usermod</span> -g 用户组 用户名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">修改用户所在组：usermod -g 组名 用户名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="添加用户帐号-useradd"><a href="#添加用户帐号-useradd" class="headerlink" title="添加用户帐号 useradd"></a>添加用户帐号 <code>useradd</code></h3><p>在<code>Unix/Linux</code>中添加用户帐号可以使用<code>adduser</code>或<code>useradd</code>命令，因为<code>adduser</code>命令是指向<code>useradd</code>命令的一个链接，因此，这两个命令的使用格式完全一样。</p>
-<pre><code class="lang-shell">useradd [参数] 新建用户帐号
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">useradd</span> <span class="token punctuation">[</span>参数<span class="token punctuation">]</span> 新建用户帐号  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="table-container">
 <table>
 <thead>
@@ -699,8 +696,7 @@
 </table>
 </div>
 <h3 id="修改文件权限-chmod"><a href="#修改文件权限-chmod" class="headerlink" title="修改文件权限 chmod"></a>修改文件权限 <code>chmod</code></h3><p><code>chmod</code>修改文件权限有两种使用格式：字母法和数字法</p>
-<pre><code class="lang-shell">字母法：chmod u/g/o/a +/-/= rwx 文件
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">字母法：chmod u/g/o/a +/-/<span class="token operator">=</span> rwx 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="table-container">
 <table>
 <thead>
@@ -777,16 +773,13 @@
 </tbody>
 </table>
 </div>
-<pre><code class="lang-shell">数字法： rwx 这些权限可以用数字代替
-r: 读取权限，数字代号为 4
-w：写入权限，数字代号为 2
-x：执行权限，数字代号为 1
-chmod 741 file -R （-R 代表递归给目录加上相同的权限）
-</code></pre>
-<h3 id="修改文件所有者-chown"><a href="#修改文件所有者-chown" class="headerlink" title="修改文件所有者 chown"></a>修改文件所有者 <code>chown</code></h3><pre><code class="lang-shell">chown 用户名 文件或目录名
-</code></pre>
-<h3 id="修改文件所属组-chgrp"><a href="#修改文件所属组-chgrp" class="headerlink" title="修改文件所属组 chgrp"></a>修改文件所属组 <code>chgrp</code></h3><pre><code class="lang-shell">chgrp 用户组名 文件或目录名
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">数字法： rwx 这些权限可以用数字代替
+r: 读取权限，数字代号为 <span class="token number">4</span>
+w：写入权限，数字代号为 <span class="token number">2</span>
+x：执行权限，数字代号为 <span class="token number">1</span>
+<span class="token function">chmod</span> <span class="token number">741</span> <span class="token function">file</span> -R （-R 代表递归给目录加上相同的权限）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="修改文件所有者-chown"><a href="#修改文件所有者-chown" class="headerlink" title="修改文件所有者 chown"></a>修改文件所有者 <code>chown</code></h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">chown</span> 用户名 文件或目录名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="修改文件所属组-chgrp"><a href="#修改文件所属组-chgrp" class="headerlink" title="修改文件所属组 chgrp"></a>修改文件所属组 <code>chgrp</code></h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">chgrp</span> 用户组名 文件或目录名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -850,7 +843,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/用户权限/">
+                                <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
                                     <span class="chip bg-color">用户权限</span>
                                 </a>
                             
@@ -1317,7 +1310,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                     Linux 学习笔记
                                 </a>
                             
@@ -1328,7 +1321,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux-系统管理/">
+                    <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
                         <span class="chip bg-color">Linux 系统管理</span>
                     </a>
                     
@@ -1365,7 +1358,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                     Linux 学习笔记
                                 </a>
                             
@@ -1376,7 +1369,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux-命令/">
+                    <a href="/tags/Linux-%E5%91%BD%E4%BB%A4/">
                         <span class="chip bg-color">Linux 命令</span>
                     </a>
                     
@@ -1565,7 +1558,7 @@ chmod 741 file -R （-R 代表递归给目录加上相同的权限）
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1866,7 +1859,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="爬虫爬取免费代理, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/爬代理/">
+                            <a href="/tags/%E7%88%AC%E4%BB%A3%E7%90%86/">
                                 <span class="chip bg-color">爬代理</span>
                             </a>
                         
@@ -553,7 +555,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    343
+                    311
                 </div>
                 
 
@@ -590,59 +592,61 @@
             <div id="articleContent">
                 <p>使用python爬取网站，可以用handler来隐藏user-agent，和使用高匿的代理ip，下面就是用不同的user-agent来爬取免费代理</p>
 <p>首先要有一个user-agent的列表，我把它放在同一目录下然后import导入</p>
-<pre><code class="lang-py">import requests
-import user_agent_list
-import re
-import random
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> user_agent_list
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> random
 
 
-class SpiderProxy():
-    def __init__(self):
-        self.url = [&quot;https://www.kuaidaili.com/free/inha/1/&quot;, &quot;https://www.7yip.cn/free/?action=china&amp;page=2&quot;,
-                    &quot;https://www.7yip.cn/free/?action=china&amp;page=3&quot;, ]
-        self.header = user_agent_list.getheaders()
-        self.proxy = {}
-        self.proxies_list = []
-        self.run()
+<span class="token keyword">class</span> <span class="token class-name">SpiderProxy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>url <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"https://www.kuaidaili.com/free/inha/1/"</span><span class="token punctuation">,</span> <span class="token string">"https://www.7yip.cn/free/?action=china&amp;page=2"</span><span class="token punctuation">,</span>
+                    <span class="token string">"https://www.7yip.cn/free/?action=china&amp;page=3"</span><span class="token punctuation">,</span> <span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>header <span class="token operator">=</span> user_agent_list<span class="token punctuation">.</span>getheaders<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>proxy <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>proxies_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    def get_proxies_list(self, url):
-        try:
-            response = requests.get(url, headers=self.header, timeout=3)
-            response_data = response.content.decode(&#39;utf-8&#39;)
+    <span class="token keyword">def</span> <span class="token function">get_proxies_list</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>header<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+            response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 
-            ip_list = re.findall(r&#39;&lt;td data-title=&quot;IP&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
-            port_list = re.findall(r&#39;&lt;td data-title=&quot;PORT&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
-            type_list = re.findall(r&#39;&lt;td data-title=&quot;类型&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
+            ip_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="IP"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+            port_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="PORT"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+            type_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="类型"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
 
-            self.proxies_list = []
+            self<span class="token punctuation">.</span>proxies_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-            for index in range(len(ip_list)):
-                self.proxies_list.append(&quot;{\&#39;%s\&#39;:\&#39;%s:%s\&#39;}&quot; % (type_list[index], ip_list[index], port_list[index]))
+            <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>ip_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>proxies_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"{\'%s\':\'%s:%s\'}"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>type_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> ip_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> port_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-        except Exception as e:
-            print(e)
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
 
-        # for tmp_proxy in tmp_list:
-        #     proxy = eval(tmp_proxy)
-        #     response = requests.get(&quot;www.baidu.com&quot;, headers=self.header, proxies=proxy)
-        #     if response.status_code == 200:
-        #         self.proxies_list.append(tmp_proxy)
+        <span class="token comment"># for tmp_proxy in tmp_list:</span>
+        <span class="token comment">#     proxy = eval(tmp_proxy)</span>
+        <span class="token comment">#     response = requests.get("www.baidu.com", headers=self.header, proxies=proxy)</span>
+        <span class="token comment">#     if response.status_code == 200:</span>
+        <span class="token comment">#         self.proxies_list.append(tmp_proxy)</span>
 
-    def get_proxy(self):
-        while 1:
-            self.proxy = eval(random.choice(self.proxies_list))
-            try:
-                response = requests.get(&quot;http://www.baidu.com&quot;, headers=self.header, proxies=self.proxy, timeout=3)
-                if response.status_code == 200:
-                    return
-            except Exception as e:
-                print(&quot;getProxy ------&gt; ERROR&quot;, e)
+    <span class="token keyword">def</span> <span class="token function">get_proxy</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>proxy <span class="token operator">=</span> <span class="token builtin">eval</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>proxies_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>header<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxy<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span>
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"getProxy ------&gt; ERROR"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
 
-    def run(self):
-        for url in self.url:
-            self.get_proxies_list(url)
-</code></pre>
-<p>项目地址：<a href="https://github.com/Mug-9/Python-Spider/tree/master/爬取代理" target="_blank" rel="noopener">Python-Spider/爬取代理 at master · Mug-9/Python-Spider (github.com)</a></p>
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> url <span class="token keyword">in</span> self<span class="token punctuation">.</span>url<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>get_proxies_list<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Mug-9/Python-Spider/tree/master/爬取代理">Python-Spider/爬取代理 at master · Mug-9/Python-Spider (github.com)</a></p>
                 
             </div>
             <hr/>
@@ -706,7 +710,7 @@ class SpiderProxy():
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/爬代理/">
+                                <a href="/tags/%E7%88%AC%E4%BB%A3%E7%90%86/">
                                     <span class="chip bg-color">爬代理</span>
                                 </a>
                             
@@ -1184,7 +1188,7 @@ class SpiderProxy():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/爬虫报错处理/">
+                    <a href="/tags/%E7%88%AC%E8%99%AB%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/">
                         <span class="chip bg-color">爬虫报错处理</span>
                     </a>
                     
@@ -1232,11 +1236,11 @@ class SpiderProxy():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/题解/">
+                    <a href="/tags/%E9%A2%98%E8%A7%A3/">
                         <span class="chip bg-color">题解</span>
                     </a>
                     
-                    <a href="/tags/多校/">
+                    <a href="/tags/%E5%A4%9A%E6%A0%A1/">
                         <span class="chip bg-color">多校</span>
                     </a>
                     
@@ -1425,7 +1429,7 @@ class SpiderProxy():
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1726,7 +1730,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

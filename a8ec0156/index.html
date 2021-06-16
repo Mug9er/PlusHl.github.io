@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="C++学习笔记（三）, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-学习笔记/">
+                            <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">C++ 学习笔记</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-学习/" class="post-category">
+                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
                                 C++ 学习
                             </a>
                         
@@ -549,7 +551,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
@@ -605,142 +607,127 @@
 <li>每一个非内联成员函数只会诞生一份函数实例</li>
 </ul>
 <p>空类的大小为1,每一个实例的对象，都有独一无二的地址，<code>char</code>维护这个地址</p>
-<pre><code class="lang-cpp">class Person{
-public:
-    int m_A; // 非静态成员变量，属于对象身上
-    void func() {}; //非静态成员函数，不属于对象身上
-       static int m_B; // 静态成员变量，不属于对象身上
-    static void func2() {}; //静态成员函数，不属于对象身上
-}
-// 结论： 非静态成员变量，才属于对象身上
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> m_A<span class="token punctuation">;</span> <span class="token comment">// 非静态成员变量，属于对象身上</span>
+    <span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">//非静态成员函数，不属于对象身上</span>
+   	<span class="token keyword">static</span> <span class="token keyword">int</span> m_B<span class="token punctuation">;</span> <span class="token comment">// 静态成员变量，不属于对象身上</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">func2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">//静态成员函数，不属于对象身上</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 结论： 非静态成员变量，才属于对象身上</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a><code>this</code>指针</h3><p><code>this</code>指针称为“永远指向本对象的指针”，<code>this</code>指针并不是对象的一部分,<code>*this</code>是对象本体</p>
 <p><code>this</code>指针是一种隐含指针，它隐含于每个类的非静态成员函数中，静态成员函数不能访问<code>this</code>指针</p>
 <p><code>this</code>指针指向被调用的成员函数所属的对象</p>
-<pre><code class="lang-cpp">Person p1;
-p1.func(Person*this);// 编译器会偷偷加上一个p1的this指针
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">Person p1<span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span>Person<span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 编译器会偷偷加上一个p1的this指针</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="空指针访问成员函数"><a href="#空指针访问成员函数" class="headerlink" title="空指针访问成员函数"></a>空指针访问成员函数</h4><p>空指针可以访问成员函数，但是如果成员函数中用到了<code>this</code>指针，那么就会执行失败</p>
 <h4 id="const-修饰成员函数"><a href="#const-修饰成员函数" class="headerlink" title="const 修饰成员函数"></a><code>const</code> 修饰成员函数</h4><p><code>this</code>永远指向本体，类似<code>Person * const this</code>,<code>this</code>的指向不能修改，但指针指向的值可以修改</p>
-<pre><code class="lang-cpp">void showInfo() const { // const加后面代表常函数，意味着不允许修改指针指向的值
-    this-&gt;m_B = 100; // 如果在常函数中修改，那么就在成员变量前面加mutable
-}
-mutable int m_B;
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token comment">// const加后面代表常函数，意味着不允许修改指针指向的值</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>m_B <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment">// 如果在常函数中修改，那么就在成员变量前面加mutable</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">mutable</span> <span class="token keyword">int</span> m_B<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="常对象"><a href="#常对象" class="headerlink" title="常对象"></a>常对象</h4><p>常对象不允许修改属性</p>
-<pre><code class="lang-cpp">const Person p2;
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">const</span> Person p2<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>常对象不可以调用普通的成员函数，可以调用常函数</p>
 <h2 id="友元"><a href="#友元" class="headerlink" title="友元"></a>友元</h2><p>友元函数可以访问类的私有成员属性</p>
 <h3 id="全局函数做友元"><a href="#全局函数做友元" class="headerlink" title="全局函数做友元"></a>全局函数做友元</h3><p>全局函数可以作为类的友元函数，在类中声明全局函数，并加上<code>friend</code>关键字</p>
-<pre><code class="lang-cpp">class A{
-    public:
-    friend void test();
-};
-void test() {
-    // ...
-}
-</code></pre>
-<h3 id="类做友元"><a href="#类做友元" class="headerlink" title="类做友元"></a>类做友元</h3><pre><code class="lang-cpp">class A{
-    friend class B;
-    // B作为A的友元类，可以访问A的私有成员属性
-}
-</code></pre>
-<h3 id="成员函数做友元"><a href="#成员函数做友元" class="headerlink" title="成员函数做友元"></a>成员函数做友元</h3><pre><code class="lang-cpp">class A{
-    firend void B::test();
-    // B的成员函数作为A的友元，可以访问A的私有成员属性
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">friend</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="类做友元"><a href="#类做友元" class="headerlink" title="类做友元"></a>类做友元</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+	<span class="token keyword">friend</span> <span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">;</span>
+    <span class="token comment">// B作为A的友元类，可以访问A的私有成员属性</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="成员函数做友元"><a href="#成员函数做友元" class="headerlink" title="成员函数做友元"></a>成员函数做友元</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+    firend <span class="token keyword">void</span> <span class="token class-name">B</span><span class="token operator">::</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// B的成员函数作为A的友元，可以访问A的私有成员属性</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h2><p>如果想让自定义数据类型进行运算符运算，那么就需要重载运算符。</p>
 <p>在成员函数或者在全局函数中，重写一个运算符重载，运算符重载也可以进行重载</p>
 <p><strong>对于内置数据类型的表达式运算符是不可以改变的（例如int类型的+号）</strong></p>
-<h3 id="号重载"><a href="#号重载" class="headerlink" title="+号重载"></a><code>+</code>号重载</h3><pre><code class="lang-cpp">class A {
-    // 类内重载
-    A operator + (A &amp; b) {
-        A tmp;
-        // ...
-        return tmp;
-    }
-}
-// 全局重载
-A operator + (A &amp;a, A &amp;b) {
-    A tmp;
-    // ...
-    return tmp;
-}
-</code></pre>
-<h3 id="lt-左移运算符"><a href="#lt-左移运算符" class="headerlink" title="&lt;左移运算符"></a><code>&lt;</code>左移运算符</h3><p>不要随意使用符号重载，<code>cout &lt;&lt;</code>可以对自定义数据类型进行输出</p>
-<pre><code class="lang-cpp">ostream&amp; operator &lt;&lt; (ostream &amp;cout, A &amp;a) { // 第一个参数cout，第一个参数A    
-    cout &lt;&lt; &quot;A: &quot; &lt;&lt; a &lt;&lt; endl;
-}//全局重载可以在类中添加friend，访问类的私有成员属性
-</code></pre>
-<h3 id="前置后置递增运算符重载"><a href="#前置后置递增运算符重载" class="headerlink" title="前置后置递增运算符重载"></a>前置后置递增运算符重载</h3><pre><code class="lang-cpp">class MyInt{  // 前置++重载
-    MyInt&amp; operator++(){    this-&gt;num ++;    return *this;}// 后置++重载，使用int来区分
-    MyInt operator++(int) {    MyInt tmp = *this;    this-&gt;num ++;    return tmp;}private:   int  num;}
-</code></pre>
+<h3 id="号重载"><a href="#号重载" class="headerlink" title="+号重载"></a><code>+</code>号重载</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 类内重载</span>
+    A <span class="token keyword">operator</span> <span class="token operator">+</span> <span class="token punctuation">(</span>A <span class="token operator">&amp;</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        A tmp<span class="token punctuation">;</span>
+        <span class="token comment">// ...</span>
+        <span class="token keyword">return</span> tmp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 全局重载</span>
+A <span class="token keyword">operator</span> <span class="token operator">+</span> <span class="token punctuation">(</span>A <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> A <span class="token operator">&amp;</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    A tmp<span class="token punctuation">;</span>
+    <span class="token comment">// ...</span>
+    <span class="token keyword">return</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="lt-左移运算符"><a href="#lt-左移运算符" class="headerlink" title="<左移运算符"></a><code>&lt;</code>左移运算符</h3><p>不要随意使用符号重载，<code>cout &lt;&lt;</code>可以对自定义数据类型进行输出</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ostream<span class="token operator">&amp;</span> <span class="token keyword">operator</span> <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>cout<span class="token punctuation">,</span> A <span class="token operator">&amp;</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 第一个参数cout，第一个参数A    </span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"A: "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment">//全局重载可以在类中添加friend，访问类的私有成员属性</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="前置后置递增运算符重载"><a href="#前置后置递增运算符重载" class="headerlink" title="前置后置递增运算符重载"></a>前置后置递增运算符重载</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyInt</span><span class="token punctuation">{</span>  <span class="token comment">// 前置++重载</span>
+    MyInt<span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token operator">++</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">this</span><span class="token operator">-&gt;</span>num <span class="token operator">++</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// 后置++重载，使用int来区分</span>
+    MyInt <span class="token keyword">operator</span><span class="token operator">++</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    MyInt tmp <span class="token operator">=</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>    <span class="token keyword">this</span><span class="token operator">-&gt;</span>num <span class="token operator">++</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> tmp<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">private</span><span class="token operator">:</span>   <span class="token keyword">int</span>  num<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="指针运算符重载"><a href="#指针运算符重载" class="headerlink" title="指针运算符重载"></a>指针运算符重载</h3><p>智能指针，用来托管自定义类型对象，让对象进行自动的释放</p>
 <p>智能指针就是一个包含对象类型的类，重载<code>-&gt;</code>可以使得智能指针调用类内指针的成员函数以及成员变量</p>
-<pre><code class="lang-cpp">A * operator -&gt; () { // 加上*代表返回指针    
-    return this-&gt;a;
-}
-A &amp; operator * () {    
-    return *this-&gt;a;
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">A <span class="token operator">*</span> <span class="token keyword">operator</span> <span class="token operator">-&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 加上*代表返回指针    </span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+A <span class="token operator">&amp;</span> <span class="token keyword">operator</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="赋值运算符重载"><a href="#赋值运算符重载" class="headerlink" title="赋值运算符重载"></a>赋值运算符重载</h3><p>一个类默认创建，默认构造、析构、拷贝构造 、<code>operator=</code>赋值元算符</p>
-<pre><code class="lang-cpp">class Person {    // 重载=    
-    Person&amp; operator = (const Person&amp; p) {       
-        //先判断堆区是否有内容       
-        if (this-&gt;pName != NULL) {            
-            delete[] this-&gt;pName;            
-            this-&gt;pName = NULL;        
-        }        
-        this-&gt;pName = new char[strlen(p.pName)+1];        
-        strcpy(this-&gt;pName, p.pName);        
-        return *this;   
-    }    
-    private:    char* pName;
-}
-</code></pre>
-<h3 id="重载"><a href="#重载" class="headerlink" title="[]重载"></a>[]重载</h3><pre><code class="lang-cpp">class MyArray{ 
-    public:    
-              // []重载    
-              int&amp; operator[] (int   idx) {        
-                  return *this-&gt;pAddress[idx];   
-              }   private:    
-    int *pAddress;    
-    int m_Size;   
-    int m_Capacity;
-};
-</code></pre>
-<h3 id="关系运算符重载"><a href="#关系运算符重载" class="headerlink" title="关系运算符重载"></a>关系运算符重载</h3><pre><code class="lang-cpp">class Person{    
-    bool operator == (Person &amp;p) {        
-        if(this-&gt;name == p.name &amp;&amp; this-&gt;age == p.age) {     
-            return true;     
-        }       
-        return false;   
-    }   
-    bool operator != (Person &amp;p) {    
-        if(this-&gt;name == p.name &amp;&amp; this-&gt;age == p.age) {   
-            return false; 
-        }      
-        return true;   
-    }public:      
-    string name; 
-    int age;   
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>    <span class="token comment">// 重载=    </span>
+    Person<span class="token operator">&amp;</span> <span class="token keyword">operator</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Person<span class="token operator">&amp;</span> p<span class="token punctuation">)</span> <span class="token punctuation">{</span>       
+        <span class="token comment">//先判断堆区是否有内容       </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>pName <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            
+            <span class="token keyword">delete</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>pName<span class="token punctuation">;</span>            
+            <span class="token keyword">this</span><span class="token operator">-&gt;</span>pName <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>        
+        <span class="token punctuation">}</span>        
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>pName <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token function">strlen</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>pName<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        
+        <span class="token function">strcpy</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>pName<span class="token punctuation">,</span> p<span class="token punctuation">.</span>pName<span class="token punctuation">)</span><span class="token punctuation">;</span>        
+        <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>    
+    <span class="token keyword">private</span><span class="token operator">:</span>    <span class="token keyword">char</span><span class="token operator">*</span> pName<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="重载"><a href="#重载" class="headerlink" title="[]重载"></a>[]重载</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyArray</span><span class="token punctuation">{</span> 
+    <span class="token keyword">public</span><span class="token operator">:</span>    
+              <span class="token comment">// []重载	</span>
+              <span class="token keyword">int</span><span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">int</span>   idx<span class="token punctuation">)</span> <span class="token punctuation">{</span>		
+                  <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>pAddress<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">;</span>   
+              <span class="token punctuation">}</span>   <span class="token keyword">private</span><span class="token operator">:</span>    
+    <span class="token keyword">int</span> <span class="token operator">*</span>pAddress<span class="token punctuation">;</span>    
+    <span class="token keyword">int</span> m_Size<span class="token punctuation">;</span>   
+    <span class="token keyword">int</span> m_Capacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="关系运算符重载"><a href="#关系运算符重载" class="headerlink" title="关系运算符重载"></a>关系运算符重载</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>    
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">==</span> <span class="token punctuation">(</span>Person <span class="token operator">&amp;</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span>		
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>name <span class="token operator">==</span> p<span class="token punctuation">.</span>name <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>age <span class="token operator">==</span> p<span class="token punctuation">.</span>age<span class="token punctuation">)</span> <span class="token punctuation">{</span>     
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>     
+        <span class="token punctuation">}</span>       
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>   
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">!=</span> <span class="token punctuation">(</span>Person <span class="token operator">&amp;</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span>	
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>name <span class="token operator">==</span> p<span class="token punctuation">.</span>name <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>age <span class="token operator">==</span> p<span class="token punctuation">.</span>age<span class="token punctuation">)</span> <span class="token punctuation">{</span>   
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>      
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span><span class="token keyword">public</span><span class="token operator">:</span>      
+    string name<span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>   
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="函数调用运算符"><a href="#函数调用运算符" class="headerlink" title="函数调用运算符"></a>函数调用运算符</h3><p>()重载</p>
-<pre><code class="lang-cpp">class MyPrint{
-    public: 
-    void operator() (string s) {   
-        cout &lt;&lt; s &lt;&lt; endl; 
-    }
-}
-MyPrint mp;//仿函数
-MyPrint()(&quot;你好&quot;) 
-mp(&quot;你好&quot;);// 匿名对象
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyPrint</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span><span class="token operator">:</span> 
+    <span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>   
+        cout <span class="token operator">&lt;&lt;</span> s <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+MyPrint mp<span class="token punctuation">;</span><span class="token comment">//仿函数</span>
+<span class="token function">MyPrint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">"你好"</span><span class="token punctuation">)</span> 
+<span class="token function">mp</span><span class="token punctuation">(</span><span class="token string">"你好"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 匿名对象</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>=， []，-&gt; 操作符只能通过成员函数进行重载</li>
 <li>&lt;&lt;，&gt;&gt;只能通过全局函数配合友元函数重载</li>
@@ -809,7 +796,7 @@ mp(&quot;你好&quot;);// 匿名对象
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C-学习笔记/">
+                                <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">C++ 学习笔记</span>
                                 </a>
                             
@@ -1276,7 +1263,7 @@ mp(&quot;你好&quot;);// 匿名对象
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1291,7 +1278,7 @@ mp(&quot;你好&quot;);// 匿名对象
                         <span class="chip bg-color">Deepin</span>
                     </a>
                     
-                    <a href="/tags/NVIDA驱动/">
+                    <a href="/tags/NVIDA%E9%A9%B1%E5%8A%A8/">
                         <span class="chip bg-color">NVIDA驱动</span>
                     </a>
                     
@@ -1332,11 +1319,11 @@ mp(&quot;你好&quot;);// 匿名对象
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/机器学习/" class="post-category">
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
                                     机器学习
                                 </a>
                             
-                            <a href="/categories/机器学习/学习笔记/" class="post-category">
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                     学习笔记
                                 </a>
                             
@@ -1347,11 +1334,11 @@ mp(&quot;你好&quot;);// 匿名对象
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/机器学习/">
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/学习笔记/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">学习笔记</span>
                     </a>
                     
@@ -1547,7 +1534,7 @@ mp(&quot;你好&quot;);// 匿名对象
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1848,7 +1835,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

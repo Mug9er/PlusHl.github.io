@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="爬取wallpaper图片, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/爬图片/">
+                            <a href="/tags/%E7%88%AC%E5%9B%BE%E7%89%87/">
                                 <span class="chip bg-color">爬图片</span>
                             </a>
                         
@@ -526,7 +528,7 @@
                                 Spider
                             </a>
                         
-                            <a href="/categories/Spider/小项目/" class="post-category">
+                            <a href="/categories/Spider/%E5%B0%8F%E9%A1%B9%E7%9B%AE/" class="post-category">
                                 小项目
                             </a>
                         
@@ -553,14 +555,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    15 分
                 </div>
                 
 
@@ -589,377 +591,371 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="1-user-agent-list"><a href="#1-user-agent-list" class="headerlink" title="1. user_agent_list"></a>1. user_agent_list</h2><p>这里是从网上获得的user_agent列表， 稍加修改就可以了</p>
-<pre><code class="lang-py">import random
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> random
 
 
-# 返回一个随机的请求头 headers
-def getheaders():
-    # 各种PC端
-    user_agent_list_2 = [
-        # Opera
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 OPR/26.0.1656.60&quot;,
-        &quot;Opera/8.0 (Windows NT 5.1; U; en)&quot;,
-        &quot;Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50&quot;,
-        &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.50&quot;,
-        # Firefox
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0&quot;,
-        &quot;Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10&quot;,
-        # Safari
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2&quot;,
-        # chrome
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36&quot;,
-        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11&quot;,
-        &quot;Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16&quot;,
-        # 360
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko&quot;,
-        # 淘宝浏览器
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11&quot;,
-        # 猎豹浏览器
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER&quot;,
-        &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; LBBROWSER)&quot;,
-        &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)&quot;,
-        # QQ浏览器
-        &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)&quot;,
-        &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)&quot;,
-        # sogou浏览器
-        &quot;Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0&quot;,
-        &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)&quot;,
-        # maxthon浏览器
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.3.4000 Chrome/30.0.1599.101 Safari/537.36&quot;,
-        # UC浏览器
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 UBrowser/4.0.3214.0 Safari/537.36&quot;,
-    ]
-    # 各种移动端
-    user_agent_list_3 = [
-        # IPhone
-        &quot;Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5&quot;,
-        # IPod
-        &quot;Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5&quot;,
-        # IPAD
-        &quot;Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5&quot;,
-        &quot;Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5&quot;,
-        # Android
-        &quot;Mozilla/5.0 (Linux; U; Android 2.2.1; zh-cn; HTC_Wildfire_A3333 Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&quot;,
-        &quot;Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&quot;,
-        # QQ浏览器 Android版本
-        &quot;MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&quot;,
-        # Android Opera Mobile
-        &quot;Opera/9.80 (Android 2.3.4; Linux; Opera Mobi/build-1107180945; U; en-GB) Presto/2.8.149 Version/11.10&quot;,
-        # Android Pad Moto Xoom
-        &quot;Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13&quot;,
-        # BlackBerry
-        &quot;Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.337 Mobile Safari/534.1+&quot;,
-        # WebOS HP Touchpad
-        &quot;Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0&quot;,
-        # Nokia N97
-        &quot;Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-1/20.0.019; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebKit/525 (KHTML, like Gecko) BrowserNG/7.1.18124&quot;,
-        # Windows Phone Mango
-        &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; HTC; Titan)&quot;,
-        # UC浏览器
-        &quot;UCWEB7.0.2.37/28/999&quot;,
-        &quot;NOKIA5700/ UCWEB7.0.2.37/28/999&quot;,
-        # UCOpenwave
-        &quot;Openwave/ UCWEB7.0.2.37/28/999&quot;,
-        # UC Opera
-        &quot;Mozilla/4.0 (compatible; MSIE 6.0; ) Opera/UCWEB7.0.2.37/28/999&quot;
-    ]
-    # 一部分 PC端的
-    user_agent_list_1 = [
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&quot;,
-        &quot;Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1&quot;,
-        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3&quot;,
-        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;
-    ]
-    user_agent_list = user_agent_list_1 + user_agent_list_2 + user_agent_list_3;
-    UserAgent = random.choice(user_agent_list)
-    header = {&quot;User-Agent&quot;: UserAgent}
-    return header
-</code></pre>
+<span class="token comment"># 返回一个随机的请求头 headers</span>
+<span class="token keyword">def</span> <span class="token function">getheaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 各种PC端</span>
+    user_agent_list_2 <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token comment"># Opera</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 OPR/26.0.1656.60"</span><span class="token punctuation">,</span>
+        <span class="token string">"Opera/8.0 (Windows NT 5.1; U; en)"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.50"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Firefox</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Safari</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"</span><span class="token punctuation">,</span>
+        <span class="token comment"># chrome</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16"</span><span class="token punctuation">,</span>
+        <span class="token comment"># 360</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"</span><span class="token punctuation">,</span>
+        <span class="token comment"># 淘宝浏览器</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11"</span><span class="token punctuation">,</span>
+        <span class="token comment"># 猎豹浏览器</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; LBBROWSER)"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)"</span><span class="token punctuation">,</span>
+        <span class="token comment"># QQ浏览器</span>
+        <span class="token string">"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)"</span><span class="token punctuation">,</span>
+        <span class="token comment"># sogou浏览器</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)"</span><span class="token punctuation">,</span>
+        <span class="token comment"># maxthon浏览器</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.3.4000 Chrome/30.0.1599.101 Safari/537.36"</span><span class="token punctuation">,</span>
+        <span class="token comment"># UC浏览器</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 UBrowser/4.0.3214.0 Safari/537.36"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+    <span class="token comment"># 各种移动端</span>
+    user_agent_list_3 <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token comment"># IPhone</span>
+        <span class="token string">"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"</span><span class="token punctuation">,</span>
+        <span class="token comment"># IPod</span>
+        <span class="token string">"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"</span><span class="token punctuation">,</span>
+        <span class="token comment"># IPAD</span>
+        <span class="token string">"Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Android</span>
+        <span class="token string">"Mozilla/5.0 (Linux; U; Android 2.2.1; zh-cn; HTC_Wildfire_A3333 Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"</span><span class="token punctuation">,</span>
+        <span class="token comment"># QQ浏览器 Android版本</span>
+        <span class="token string">"MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Android Opera Mobile</span>
+        <span class="token string">"Opera/9.80 (Android 2.3.4; Linux; Opera Mobi/build-1107180945; U; en-GB) Presto/2.8.149 Version/11.10"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Android Pad Moto Xoom</span>
+        <span class="token string">"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13"</span><span class="token punctuation">,</span>
+        <span class="token comment"># BlackBerry</span>
+        <span class="token string">"Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.337 Mobile Safari/534.1+"</span><span class="token punctuation">,</span>
+        <span class="token comment"># WebOS HP Touchpad</span>
+        <span class="token string">"Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Nokia N97</span>
+        <span class="token string">"Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-1/20.0.019; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebKit/525 (KHTML, like Gecko) BrowserNG/7.1.18124"</span><span class="token punctuation">,</span>
+        <span class="token comment"># Windows Phone Mango</span>
+        <span class="token string">"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; HTC; Titan)"</span><span class="token punctuation">,</span>
+        <span class="token comment"># UC浏览器</span>
+        <span class="token string">"UCWEB7.0.2.37/28/999"</span><span class="token punctuation">,</span>
+        <span class="token string">"NOKIA5700/ UCWEB7.0.2.37/28/999"</span><span class="token punctuation">,</span>
+        <span class="token comment"># UCOpenwave</span>
+        <span class="token string">"Openwave/ UCWEB7.0.2.37/28/999"</span><span class="token punctuation">,</span>
+        <span class="token comment"># UC Opera</span>
+        <span class="token string">"Mozilla/4.0 (compatible; MSIE 6.0; ) Opera/UCWEB7.0.2.37/28/999"</span>
+    <span class="token punctuation">]</span>
+    <span class="token comment"># 一部分 PC端的</span>
+    user_agent_list_1 <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"</span><span class="token punctuation">,</span>
+        <span class="token string">"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"</span>
+    <span class="token punctuation">]</span>
+    user_agent_list <span class="token operator">=</span> user_agent_list_1 <span class="token operator">+</span> user_agent_list_2 <span class="token operator">+</span> user_agent_list_3<span class="token punctuation">;</span>
+    UserAgent <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>user_agent_list<span class="token punctuation">)</span>
+    header <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"User-Agent"</span><span class="token punctuation">:</span> UserAgent<span class="token punctuation">}</span>
+    <span class="token keyword">return</span> header<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="2-免费代理"><a href="#2-免费代理" class="headerlink" title="2.免费代理"></a>2.免费代理</h2><p>这里只是列举了几个免费代理的网站，从上面爬取ip:port 和类型组装成字典输出即可</p>
-<pre><code class="lang-py">import requests
-import user_agent_list
-import re
-import random
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> user_agent_list
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> random
 
 
-class SpiderProxy():
-    def __init__(self):
-        self.url = [&quot;https://www.kuaidaili.com/free/inha/1/&quot;, &quot;https://www.7yip.cn/free/?action=china&amp;page=2&quot;,
-                    &quot;https://www.7yip.cn/free/?action=china&amp;page=3&quot;, ]
-        self.header = user_agent_list.getheaders()
-        self.proxy = {}
-        self.proxies_list = []
-        self.run()
+<span class="token keyword">class</span> <span class="token class-name">SpiderProxy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>url <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"https://www.kuaidaili.com/free/inha/1/"</span><span class="token punctuation">,</span> <span class="token string">"https://www.7yip.cn/free/?action=china&amp;page=2"</span><span class="token punctuation">,</span>
+                    <span class="token string">"https://www.7yip.cn/free/?action=china&amp;page=3"</span><span class="token punctuation">,</span> <span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>header <span class="token operator">=</span> user_agent_list<span class="token punctuation">.</span>getheaders<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>proxy <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>proxies_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    def get_proxies_list(self, url):
-        try:
-            response = requests.get(url, headers=self.header, timeout=3)
-            response_data = response.content.decode(&#39;utf-8&#39;)
+    <span class="token keyword">def</span> <span class="token function">get_proxies_list</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>header<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+            response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 
-            ip_list = re.findall(r&#39;&lt;td data-title=&quot;IP&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
-            port_list = re.findall(r&#39;&lt;td data-title=&quot;PORT&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
-            type_list = re.findall(r&#39;&lt;td data-title=&quot;类型&quot;&gt;(.*?)&lt;/td&gt;&#39;, response_data, re.S)
+            ip_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="IP"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+            port_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="PORT"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+            type_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;td data-title="类型"&gt;(.*?)&lt;/td&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
 
-            for index in range(len(ip_list)):
-                self.proxies_list.append(&quot;{\&#39;%s\&#39;:\&#39;%s:%s\&#39;}&quot; % (type_list[index], ip_list[index], port_list[index]))
+            <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>ip_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>proxies_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"{\'%s\':\'%s:%s\'}"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>type_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> ip_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> port_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-        except Exception as e:
-            print(e)
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
 
-        # for tmp_proxy in tmp_list:
-        #     proxy = eval(tmp_proxy)
-        #     response = requests.get(&quot;www.baidu.com&quot;, headers=self.header, proxies=proxy)
-        #     if response.status_code == 200:
-        #         self.proxies_list.append(tmp_proxy)
+        <span class="token comment"># for tmp_proxy in tmp_list:</span>
+        <span class="token comment">#     proxy = eval(tmp_proxy)</span>
+        <span class="token comment">#     response = requests.get("www.baidu.com", headers=self.header, proxies=proxy)</span>
+        <span class="token comment">#     if response.status_code == 200:</span>
+        <span class="token comment">#         self.proxies_list.append(tmp_proxy)</span>
 
-    def get_proxy(self):
-        while 1:
-            try:
-                self.proxy = eval(random.choice(self.proxies_list))
-                response = requests.get(&quot;http://www.baidu.com&quot;, headers=self.header, proxies=self.proxy, timeout=3)
-                if response.status_code == 200:
-                    return
-            except Exception as e:
-                print(&quot;getProxy ------&gt; ERROR&quot;, e)
+    <span class="token keyword">def</span> <span class="token function">get_proxy</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>proxy <span class="token operator">=</span> <span class="token builtin">eval</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>proxies_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>header<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxy<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span>
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"getProxy ------&gt; ERROR"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
 
-    def run(self):
-        for url in self.url:
-            self.get_proxies_list(url)
-</code></pre>
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> url <span class="token keyword">in</span> self<span class="token punctuation">.</span>url<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>get_proxies_list<span class="token punctuation">(</span>url<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-loopRequests"><a href="#3-loopRequests" class="headerlink" title="3. loopRequests"></a>3. loopRequests</h2><p>自己封装的循环访问的方法，可以解决部分网络延迟问题</p>
 <p>在使用代理方面，每50次访问就更换代理，避免被封IP</p>
-<pre><code class="lang-py">import requests
-import spider_proxy
-import time
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> spider_proxy
+<span class="token keyword">import</span> time
 
 
-class LoopRequest():
-    def __init__(self):
-        self.proxies = spider_proxy.SpiderProxy()
-        self.count = 50
+<span class="token keyword">class</span> <span class="token class-name">LoopRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>proxies <span class="token operator">=</span> spider_proxy<span class="token punctuation">.</span>SpiderProxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">50</span>
 
-    def get(self, url, **args):
-        return self.request(&#39;GET&#39;, url, **args)
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>request<span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span>
 
-    def post(self, url, **args):
-        return self.request(&#39;POST&#39;, url, **args)
+    <span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>request<span class="token punctuation">(</span><span class="token string">'POST'</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span>
 
-    def get_proxy(self):
-        if self.count &lt;= 0:
-            self.proxies.get_proxy()
-            self.count = 50
-        self.count -= 1
+    <span class="token keyword">def</span> <span class="token function">get_proxy</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>count <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">50</span>
+        self<span class="token punctuation">.</span>count <span class="token operator">-=</span> <span class="token number">1</span>
 
-    def request(self, method, url, **args):
-        self.get_proxy()
+    <span class="token keyword">def</span> <span class="token function">request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> method<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-        args[&#39;headers&#39;] = self.proxies.header
-        args[&#39;proxies&#39;] = self.proxies.proxy
-        args[&#39;timeout&#39;] = 5
-        args[&#39;verify&#39;] = False
-        loop = 50
-        while loop:
-            try:
-                print(&quot;loopRequest: %s 第 %s 次尝试&quot; % (url, 51-loop))
-                requests.packages.urllib3.disable_warnings()
-                response = requests.request(method, url, **args)
-                print(&quot;loopRequest: %s 链接成功&quot; % url)
-                return response
-            except Exception as e:
-                print(&quot;loopRequest: &quot; + e)
-                time.sleep(5)
-                if loop == 0:
-                    return &quot;get error&quot;
-            loop -= 1
+        args<span class="token punctuation">[</span><span class="token string">'headers'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header
+        args<span class="token punctuation">[</span><span class="token string">'proxies'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>proxy
+        args<span class="token punctuation">[</span><span class="token string">'timeout'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5</span>
+        args<span class="token punctuation">[</span><span class="token string">'verify'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
+        loop <span class="token operator">=</span> <span class="token number">50</span>
+        <span class="token keyword">while</span> loop<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"loopRequest: %s 第 %s 次尝试"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token number">51</span><span class="token operator">-</span>loop<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                requests<span class="token punctuation">.</span>packages<span class="token punctuation">.</span>urllib3<span class="token punctuation">.</span>disable_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                response <span class="token operator">=</span> requests<span class="token punctuation">.</span>request<span class="token punctuation">(</span>method<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token operator">**</span>args<span class="token punctuation">)</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"loopRequest: %s 链接成功"</span> <span class="token operator">%</span> url<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> response
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"loopRequest: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span>
+                time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> loop <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token string">"get error"</span>
+            loop <span class="token operator">-=</span> <span class="token number">1</span>
 
 
-request = LoopRequest()
-</code></pre>
+request <span class="token operator">=</span> LoopRequest<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="4-cookie"><a href="#4-cookie" class="headerlink" title="4.  cookie"></a>4.  cookie</h2><p>由于<code>wallpaper</code>登录以后可以看到更多图片，所以这里要模仿登录来拿到<code>cookie</code></p>
 <p><code>session</code>在这里并不能起到很好的效果，所以直接使用<code>cookie</code>来模拟登录</p>
-<p>详细信息挫这里: <a href="http://www.orzff.cn/72810b67/" target="_blank" rel="noopener">wallpaper 模拟登录 | Mug-9’s blog (orzff.cn)</a></p>
-<pre><code class="lang-py">import requests
-import re
-import loopRequest
+<p>详细信息挫这里: <a target="_blank" rel="noopener" href="http://www.orzff.cn/72810b67/">wallpaper 模拟登录 | Mug-9’s blog (orzff.cn)</a></p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> loopRequest
 
 
-class SpiderCookies():
-    def __init__(self):
-        self.get_url = &quot;https://wallhaven.cc/login&quot;
-        self.post_url = &quot;https://wallhaven.cc/auth/login&quot;
-        self.request = loopRequest.request
-        self.data = {}
-        self._token = &quot;&quot;
-        self.cookies = {}
-        self.Is = False
-        self.update()
+<span class="token keyword">class</span> <span class="token class-name">SpiderCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>get_url <span class="token operator">=</span> <span class="token string">"https://wallhaven.cc/login"</span>
+        self<span class="token punctuation">.</span>post_url <span class="token operator">=</span> <span class="token string">"https://wallhaven.cc/auth/login"</span>
+        self<span class="token punctuation">.</span>request <span class="token operator">=</span> loopRequest<span class="token punctuation">.</span>request
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>_token <span class="token operator">=</span> <span class="token string">""</span>
+        self<span class="token punctuation">.</span>cookies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>Is <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    # 1. 请求页面获得_token 和 cookie
-    def get_html(self):
-        response = self.request.get(self.get_url)
-        response_data = response.content.decode(&#39;utf-8&#39;)
+    <span class="token comment"># 1. 请求页面获得_token 和 cookie</span>
+    <span class="token keyword">def</span> <span class="token function">get_html</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>get<span class="token punctuation">(</span>self<span class="token punctuation">.</span>get_url<span class="token punctuation">)</span>
+        response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 
-        self._token = re.findall(r&#39;&lt;meta name=&quot;csrf-token&quot; content=&quot;(.*?)&quot;&gt;&#39;, response_data, re.S)
+        self<span class="token punctuation">.</span>_token <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;meta name="csrf-token" content="(.*?)"&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
 
-        cookies = &quot;&quot;
-        for cookie in response.cookies:
-            cookies += cookie.name + &quot;=&quot; + cookie.value + &quot;;&quot;
+        cookies <span class="token operator">=</span> <span class="token string">""</span>
+        <span class="token keyword">for</span> cookie <span class="token keyword">in</span> response<span class="token punctuation">.</span>cookies<span class="token punctuation">:</span>
+            cookies <span class="token operator">+=</span> cookie<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">"="</span> <span class="token operator">+</span> cookie<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">";"</span>
 
-        # 用header来携带cookie
-        self.request.proxies.header[&#39;Cookie&#39;] = cookies
+        <span class="token comment"># 用header来携带cookie</span>
+        self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span> <span class="token operator">=</span> cookies
 
-    # 2.装填data
-    def combined_data(self):
-        self.data = {
-            &#39;_token&#39;: self._token,
-            &#39;username&#39;: &#39;643719884@qq.com&#39;,
-            &#39;password&#39;: &#39;dhl643719884&#39;
-        }
+    <span class="token comment"># 2.装填data</span>
+    <span class="token keyword">def</span> <span class="token function">combined_data</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">'_token'</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>_token<span class="token punctuation">,</span>
+            <span class="token string">'username'</span><span class="token punctuation">:</span> <span class="token string">'643719884@qq.com'</span><span class="token punctuation">,</span>
+            <span class="token string">'password'</span><span class="token punctuation">:</span> <span class="token string">'dhl643719884'</span>
+        <span class="token punctuation">}</span>
 
-    # 3. 组装cookie
-    def combined_cookie(self):
-        response = self.request.post(self.post_url, data=self.data)
+    <span class="token comment"># 3. 组装cookie</span>
+    <span class="token keyword">def</span> <span class="token function">combined_cookie</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>post<span class="token punctuation">(</span>self<span class="token punctuation">.</span>post_url<span class="token punctuation">,</span> data<span class="token operator">=</span>self<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
 
-        # 这里拿到的cookie是相对比较齐全的cookie，主要用这个cookie来组装
-        post_cookies = response.request.headers[&#39;Cookie&#39;]
-        post_cookies_list = post_cookies.split(&quot;; &quot;)
+        <span class="token comment"># 这里拿到的cookie是相对比较齐全的cookie，主要用这个cookie来组装</span>
+        post_cookies <span class="token operator">=</span> response<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span>
+        post_cookies_list <span class="token operator">=</span> post_cookies<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"; "</span><span class="token punctuation">)</span>
 
-        # 这里cookie只要__cfduid
-        temp_cookie = self.request.proxies.header[&#39;Cookie&#39;]
-        temp_cookie_list = temp_cookie.split(&quot;;&quot;)
+        <span class="token comment"># 这里cookie只要__cfduid</span>
+        temp_cookie <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span>
+        temp_cookie_list <span class="token operator">=</span> temp_cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span>
 
-        # 组装
-        self.cookies.update(__cfduid = temp_cookie_list[0].split(&#39;=&#39;)[1])
-        for cookie in post_cookies_list:
-            self.cookies[cookie.split(&#39;=&#39;)[0]] = cookie.split(&#39;=&#39;)[1]
+        <span class="token comment"># 组装</span>
+        self<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>update<span class="token punctuation">(</span>__cfduid <span class="token operator">=</span> temp_cookie_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> cookie <span class="token keyword">in</span> post_cookies_list<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>cookies<span class="token punctuation">[</span>cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
 
-        # header pop掉Cookie
-        self.request.proxies.header.pop(&#39;Cookie&#39;)
+        <span class="token comment"># header pop掉Cookie</span>
+        self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'Cookie'</span><span class="token punctuation">)</span>
 
-    # 4.登录
-    def post_html(self):
-        response = self.request.get(self.post_url, cookies=self.cookies)
-        response_data = response.content.decode(&#39;utf-8&#39;)
-        if response.status_code == 200:
-            print(&quot;WallPaper: Cookies获取成功&quot;)
-            self.Is = True
-        else:
-            print(&quot;WallPaper: Cookies获取失败&quot;)
+    <span class="token comment"># 4.登录</span>
+    <span class="token keyword">def</span> <span class="token function">post_html</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>get<span class="token punctuation">(</span>self<span class="token punctuation">.</span>post_url<span class="token punctuation">,</span> cookies<span class="token operator">=</span>self<span class="token punctuation">.</span>cookies<span class="token punctuation">)</span>
+        response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"WallPaper: Cookies获取成功"</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>Is <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"WallPaper: Cookies获取失败"</span><span class="token punctuation">)</span>
 
-    def update(self):
-        self.get_html()
-        self.combined_data()
-        self.combined_cookie()
-        self.post_html()
-</code></pre>
-<h2 id="5-spider-图片"><a href="#5-spider-图片" class="headerlink" title="5. spider 图片"></a>5. spider 图片</h2><h3 id="5-1-先获取页面上所有图片二级页面的url"><a href="#5-1-先获取页面上所有图片二级页面的url" class="headerlink" title="5.1 先获取页面上所有图片二级页面的url"></a>5.1 先获取页面上所有图片二级页面的url</h3><pre><code class="lang-py"># 1. 获取页面信息,获取每张战片所在页面的url
-    def get_html(self, url):
-        response = self.request.get(url, cookies=self.cookies.cookies)
-        response_data = response.content.decode(&#39;utf-8&#39;)
-        href_list = re.findall(r&#39;&lt;a class=&quot;preview&quot; href=&quot;(.*?)&quot;  target=&quot;_blank&quot;  &gt;&lt;/a&gt;&#39;, response_data, re.S)
-        return href_list
-</code></pre>
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>get_html<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>combined_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>combined_cookie<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>post_html<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="5-spider-图片"><a href="#5-spider-图片" class="headerlink" title="5. spider 图片"></a>5. spider 图片</h2><h3 id="5-1-先获取页面上所有图片二级页面的url"><a href="#5-1-先获取页面上所有图片二级页面的url" class="headerlink" title="5.1 先获取页面上所有图片二级页面的url"></a>5.1 先获取页面上所有图片二级页面的url</h3><pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 1. 获取页面信息,获取每张战片所在页面的url</span>
+    <span class="token keyword">def</span> <span class="token function">get_html</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> cookies<span class="token operator">=</span>self<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>cookies<span class="token punctuation">)</span>
+        response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+        href_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;a class="preview" href="(.*?)"  target="_blank"  &gt;&lt;/a&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> href_list
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="5-2-对于每张图片页面，获取每张图片的页面"><a href="#5-2-对于每张图片页面，获取每张图片的页面" class="headerlink" title="5.2 对于每张图片页面，获取每张图片的页面"></a>5.2 对于每张图片页面，获取每张图片的页面</h3><p>使用<code>etree+xpath</code>即可拿到每张图片的url</p>
 <p>为防止网络问题，这里进行了5次重复</p>
-<pre><code class="lang-py"># 2. 进入页面 获取图片的url
-    def get_img_url(self, url):
-        loop = 5
-        img_url = []
-        while loop:
-            response = self.request.get(url)
-            response_data = response.content.decode(&#39;utf-8&#39;)
-            response_html = etree.HTML(response_data)
-            img_url = response_html.xpath(&#39;//*[@id=&quot;wallpaper&quot;]/@src&#39;)
-            if len(img_url):
-                return img_url
-            loop -= 1
-        self.error_log.write(url)
-        print(url, &quot;ERROR&quot;)
-        return img_url
-</code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 2. 进入页面 获取图片的url</span>
+    <span class="token keyword">def</span> <span class="token function">get_img_url</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        loop <span class="token operator">=</span> <span class="token number">5</span>
+        img_url <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">while</span> loop<span class="token punctuation">:</span>
+            response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+            response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+            response_html <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>response_data<span class="token punctuation">)</span>
+            img_url <span class="token operator">=</span> response_html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="wallpaper"]/@src'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>img_url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> img_url
+            loop <span class="token operator">-=</span> <span class="token number">1</span>
+        self<span class="token punctuation">.</span>error_log<span class="token punctuation">.</span>write<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">"ERROR"</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> img_url<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="5-3-下载"><a href="#5-3-下载" class="headerlink" title="5.3  下载"></a>5.3  下载</h3><p>下载到本地<code>E:\picture\当天日期</code></p>
 <p>检查本地log看是否已存在相同图片</p>
-<pre><code class="lang-py"># 3. 下载
-    def img_download(self, url):
-        with self.sem:
-            img_name = url.split(&#39;/&#39;)[-1]
-            if self.file_check(img_name):
-                print(&quot;---%s 已存在&quot; % img_name)
-                return
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 3. 下载</span>
+    <span class="token keyword">def</span> <span class="token function">img_download</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> self<span class="token punctuation">.</span>sem<span class="token punctuation">:</span>
+            img_name <span class="token operator">=</span> url<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>file_check<span class="token punctuation">(</span>img_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---%s 已存在"</span> <span class="token operator">%</span> img_name<span class="token punctuation">)</span>
+                <span class="token keyword">return</span>
 
-            picture_mkdir = &quot;E:\\picture&quot;
-            if not os.path.exists(picture_mkdir):
-                os.mkdir(picture_mkdir)
-            os.chdir(picture_mkdir)
-            data_mkdir = &quot;%s\\%s&quot; % (picture_mkdir, datetime.date.today())
-            if not os.path.exists(data_mkdir):
-                os.mkdir(data_mkdir)
-            os.chdir(data_mkdir)
+            picture_mkdir <span class="token operator">=</span> <span class="token string">"E:\\picture"</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>picture_mkdir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>picture_mkdir<span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span>picture_mkdir<span class="token punctuation">)</span>
+            data_mkdir <span class="token operator">=</span> <span class="token string">"%s\\%s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>picture_mkdir<span class="token punctuation">,</span> datetime<span class="token punctuation">.</span>date<span class="token punctuation">.</span>today<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>data_mkdir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>data_mkdir<span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span>data_mkdir<span class="token punctuation">)</span>
 
-            response = self.request.get(url)
-            response_data = response.content
-            print(&quot;---%s 开始写入&quot; % img_name)
-            threadLock.acquire()
-            with open(&quot;%s&quot; % img_name, &quot;wb&quot;) as f:
-                f.write(response_data)
-            threadLock.release()
-            print(&quot;---%s 写入完毕 -- count: %s&quot; % (img_name, self.count))
+            response <span class="token operator">=</span> self<span class="token punctuation">.</span>request<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+            response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---%s 开始写入"</span> <span class="token operator">%</span> img_name<span class="token punctuation">)</span>
+            threadLock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"%s"</span> <span class="token operator">%</span> img_name<span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response_data<span class="token punctuation">)</span>
+            threadLock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---%s 写入完毕 -- count: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>img_name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-            threadLock.acquire()
-            self.download_log.write(img_name)
-            self.count -= 1
-            threadLock.release()
-</code></pre>
+            threadLock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>download_log<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img_name<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>count <span class="token operator">-=</span> <span class="token number">1</span>
+            threadLock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="5-4-检查本地log"><a href="#5-4-检查本地log" class="headerlink" title="5.4 检查本地log"></a>5.4 检查本地log</h3><p>检查看是否已存在图片</p>
-<pre><code class="lang-py"> # 4. 本地log
-    def file_check(self, img_name):
-        threadLock.acquire()
-        self.download_log.seek(0, 0)
-        file_content = self.download_log.read()
-        threadLock.release()
-        if img_name in file_content:
-            return True
-        else:
-            return False
-</code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 4. 本地log</span>
+   <span class="token keyword">def</span> <span class="token function">file_check</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> img_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+       threadLock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span>
+       self<span class="token punctuation">.</span>download_log<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+       file_content <span class="token operator">=</span> self<span class="token punctuation">.</span>download_log<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+       threadLock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token keyword">if</span> img_name <span class="token keyword">in</span> file_content<span class="token punctuation">:</span>
+           <span class="token keyword">return</span> <span class="token boolean">True</span>
+       <span class="token keyword">else</span><span class="token punctuation">:</span>
+           <span class="token keyword">return</span> <span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="5-5-run"><a href="#5-5-run" class="headerlink" title="5.5 run"></a>5.5 run</h3><p>计划每次下载100张图片，网页页数从2-100</p>
-<pre><code class="lang-py"># 6.run
-    def run(self):
-        loop = 50
-        while loop:
-            if self.cookies.Is:
-                break
-            else:
-                self.cookies.update()
-            time.sleep(2)
-            loop -= 1
-        if loop &lt;= 0:
-            self.error_log.write(&quot;Cookies 获得失败&quot;)
-            return
-        for i in range(2, 100):
-            url = &quot;%s%s&quot; % (self.url, i)
-            href_list = self.get_html(url)
-            for html_url in href_list:
-                img_url = self.get_img_url(html_url)
-                if len(img_url) and self.count &gt; 0:
-                    threading.Thread(target=self.img_download, args=(img_url[0],)).start()
-</code></pre>
-<h2 id="6-github地址"><a href="#6-github地址" class="headerlink" title="6. github地址"></a>6. github地址</h2><p><a href="https://github.com/Mug-9/Python-Spider/tree/master/爬取WallHaven 图片" target="_blank" rel="noopener">Mug-9/Python-Spider: Spider (github.com)</a></p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 6.run</span>
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        loop <span class="token operator">=</span> <span class="token number">50</span>
+        <span class="token keyword">while</span> loop<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>Is<span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+            loop <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">if</span> loop <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>error_log<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Cookies 获得失败"</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            url <span class="token operator">=</span> <span class="token string">"%s%s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>url<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+            href_list <span class="token operator">=</span> self<span class="token punctuation">.</span>get_html<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> html_url <span class="token keyword">in</span> href_list<span class="token punctuation">:</span>
+                img_url <span class="token operator">=</span> self<span class="token punctuation">.</span>get_img_url<span class="token punctuation">(</span>html_url<span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>img_url<span class="token punctuation">)</span> <span class="token keyword">and</span> self<span class="token punctuation">.</span>count <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>self<span class="token punctuation">.</span>img_download<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>img_url<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="6-github地址"><a href="#6-github地址" class="headerlink" title="6. github地址"></a>6. github地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/Mug-9/Python-Spider/tree/master/爬取WallHaven 图片">Mug-9/Python-Spider: Spider (github.com)</a></p>
                 
             </div>
             <hr/>
@@ -1023,7 +1019,7 @@ class SpiderCookies():
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/爬图片/">
+                                <a href="/tags/%E7%88%AC%E5%9B%BE%E7%89%87/">
                                     <span class="chip bg-color">爬图片</span>
                                 </a>
                             
@@ -1490,7 +1486,7 @@ class SpiderCookies():
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1501,7 +1497,7 @@ class SpiderCookies():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/服务器/">
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
                     </a>
                     
@@ -1745,7 +1741,7 @@ class SpiderCookies():
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -2046,7 +2042,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

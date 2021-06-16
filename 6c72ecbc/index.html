@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Linux系统管理, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux-系统管理/">
+                            <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
                                 <span class="chip bg-color">Linux 系统管理</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                 Linux 学习笔记
                             </a>
                         
@@ -586,8 +588,7 @@
             <div id="articleContent">
                 <h1 id="Linux系统管理"><a href="#Linux系统管理" class="headerlink" title="Linux系统管理"></a>Linux系统管理</h1><h2 id="日历-cal"><a href="#日历-cal" class="headerlink" title="日历 cal"></a>日历 <code>cal</code></h2><p><code>cal</code>命令用户查看当前日历，<code>-y</code>显示整年日历</p>
 <h2 id="显示或设置时间date"><a href="#显示或设置时间date" class="headerlink" title="显示或设置时间date"></a>显示或设置时间<code>date</code></h2><p>设置时间格式</p>
-<pre><code class="lang-shell"> date [MMDDhhmm[CC]YY][.ss] + format
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">date</span> <span class="token punctuation">[</span>MMDDhhmm<span class="token punctuation">[</span>CC<span class="token punctuation">]</span>YY<span class="token punctuation">]</span><span class="token punctuation">[</span>.ss<span class="token punctuation">]</span> + <span class="token function">format</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>CC</code>为年的前两位<code>yy</code>为年的后两位，前两为的<code>mm</code>为月，后两位的<code>mm</code>为分钟，<code>dd</code>为天，<code>hh</code>为小时，<code>ss</code>为秒</p>
 <h2 id="查看进程信息-ps"><a href="#查看进程信息-ps" class="headerlink" title="查看进程信息 ps"></a>查看进程信息 <code>ps</code></h2><p>进程是一个具有一定独立功能的程序，它是操作系统动态执行的基本单元，</p>
 <p><code>ps</code>命令可以查看进程的详细状况，常用选项（选项可以不加<code>-</code>）</p>
@@ -658,8 +659,7 @@
 </table>
 </div>
 <h2 id="结束进程-KILL"><a href="#结束进程-KILL" class="headerlink" title="结束进程 KILL"></a>结束进程 <code>KILL</code></h2><p><code>kill</code>命令指定进程号的进程，需要配合<code>ps</code>使用</p>
-<pre><code class="lang-shell">kill [-signal] pid
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-signal<span class="token punctuation">]</span> pid<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>信号值从0到15，其中9为绝对终止，可以处理一般信号无法终止的进程。</p>
 <h2 id="后台程序-amp-、jobs、fg"><a href="#后台程序-amp-、jobs、fg" class="headerlink" title="后台程序 &amp;、jobs、fg"></a>后台程序 <code>&amp;、jobs、fg</code></h2><ul>
 <li>用户可以将一个前台执行的程序调入后台执行，方法为：<code>命令 &amp;</code></li>
@@ -708,13 +708,11 @@
 </table>
 </div>
 <h2 id="字符界面和图形界面切换"><a href="#字符界面和图形界面切换" class="headerlink" title="字符界面和图形界面切换"></a>字符界面和图形界面切换</h2><p>在<code>redhat</code>平台下，可通过命令进行切换</p>
-<pre><code class="lang-shell">init 3 ： 切换到字符界面
-init 5 ： 切换到图形界面
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">init <span class="token number">3</span> ： 切换到字符界面
+init <span class="token number">5</span> ： 切换到图形界面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>通过快捷键切换（适用于大部分平台）</p>
-<pre><code class="lang-shell">Ctrl+Alt+F2 切换到字符界面
-Ctrl+Alt+F7 切换到图形界面
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Ctrl+Alt+F2 切换到字符界面
+Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="检测磁盘空间-df"><a href="#检测磁盘空间-df" class="headerlink" title="检测磁盘空间 df"></a>检测磁盘空间 <code>df</code></h2><p><code>df</code>命令用户检测文件系统的磁盘空间占用和空余情况，可以显示所有文件系统对节点和磁盘块的使用情况。</p>
 <div class="table-container">
 <table>
@@ -746,8 +744,7 @@ Ctrl+Alt+F7 切换到图形界面
 </div>
 <pre><code>## 格式化 `mkfs`
 </code></pre><p><code>mkfs</code>命令相当于<code>DOS/WINDOWS</code>系统中的格式化命令，用户创建指定的文件系统</p>
-<pre><code class="lang-shell">mkfs [选项] 设备文件名 [blocks]
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">mkfs</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> 设备文件名 <span class="token punctuation">[</span>blocks<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="table-container">
 <table>
 <thead>
@@ -777,8 +774,7 @@ Ctrl+Alt+F7 切换到图形界面
 </table>
 </div>
 <h2 id="应用软件安装和卸载"><a href="#应用软件安装和卸载" class="headerlink" title="应用软件安装和卸载"></a>应用软件安装和卸载</h2><p>在<code>Linux</code>系统中，几乎所有的软件均通过<code>RPM</code>进行安装、卸载及关机等操作。</p>
-<pre><code class="lang-shell">rpm [选项] [软件包名]
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token punctuation">[</span>软件包名<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <div class="table-container">
 <table>
 <thead>
@@ -893,8 +889,8 @@ Ctrl+Alt+F7 切换到图形界面
 <li>通过<code>ping</code>命令可以检查是否与远程主机建立了<code>TCP/IP</code>连接</li>
 </ul>
 <h2 id="网络路由设置-route"><a href="#网络路由设置-route" class="headerlink" title="网络路由设置 route"></a>网络路由设置 <code>route</code></h2><p><code>route</code>可以增加、修改、显示路由信息</p>
-<pre><code>route [-v] [-A family] add default [gw 默认网关地址] [[dev interface]]
-</code></pre><h2 id="监控网络状态-netstat"><a href="#监控网络状态-netstat" class="headerlink" title="监控网络状态 netstat"></a>监控网络状态 <code>netstat</code></h2><p><code>netstat</code>命令监控网络状态，包括接口设置、<code>`IP</code>路由、各种网络协议的统计</p>
+<pre class="line-numbers language-none"><code class="language-none">route [-v] [-A family] add default [gw 默认网关地址] [[dev interface]]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="监控网络状态-netstat"><a href="#监控网络状态-netstat" class="headerlink" title="监控网络状态 netstat"></a>监控网络状态 <code>netstat</code></h2><p><code>netstat</code>命令监控网络状态，包括接口设置、<code>`IP</code>路由、各种网络协议的统计</p>
                 
             </div>
             <hr/>
@@ -958,7 +954,7 @@ Ctrl+Alt+F7 切换到图形界面
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux-系统管理/">
+                                <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
                                     <span class="chip bg-color">Linux 系统管理</span>
                                 </a>
                             
@@ -1425,7 +1421,7 @@ Ctrl+Alt+F7 切换到图形界面
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                     Linux 学习笔记
                                 </a>
                             
@@ -1473,7 +1469,7 @@ Ctrl+Alt+F7 切换到图形界面
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-学习笔记/" class="post-category">
+                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
                                     Linux 学习笔记
                                 </a>
                             
@@ -1484,7 +1480,7 @@ Ctrl+Alt+F7 切换到图形界面
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/用户权限/">
+                    <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
                         <span class="chip bg-color">用户权限</span>
                     </a>
                     
@@ -1673,7 +1669,7 @@ Ctrl+Alt+F7 切换到图形界面
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1974,7 +1970,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

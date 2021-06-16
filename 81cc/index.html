@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="My First Blog, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -549,14 +551,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    17 分
                 </div>
                 
 
@@ -585,599 +587,562 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>这是我的第一篇博客，主要写一些Hexo的配置</p>
-<h1 id="Hexo-Github-搭建博客："><a href="#Hexo-Github-搭建博客：" class="headerlink" title="Hexo + Github 搭建博客："></a>Hexo + Github 搭建博客：</h1><p><a href="https://blog.csdn.net/ainuser/article/details/77609180" target="_blank" rel="noopener">跟着这篇博客走即可</a></p>
+<h1 id="Hexo-Github-搭建博客："><a href="#Hexo-Github-搭建博客：" class="headerlink" title="Hexo + Github 搭建博客："></a>Hexo + Github 搭建博客：</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ainuser/article/details/77609180">跟着这篇博客走即可</a></p>
 <h1 id="Hexo-主题配置"><a href="#Hexo-主题配置" class="headerlink" title="Hexo 主题配置"></a>Hexo 主题配置</h1><p>Hexo目录下的_config.yml称为站点配置文件</p>
 <p>Hexo/themes/next/目录下的_config.yml称为主题配置文件</p>
 <h2 id="next主题"><a href="#next主题" class="headerlink" title="next主题"></a>next主题</h2><p>下载next主题</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv57b6g3j30om01v74a.jpg" alt="img1"></p>
-<pre><code class="lang-stylus"> git clone https://github.com/theme-next/hexo-theme-next themes/next
-</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv57b6g3j30om01v74a.jpg" alt="img1"></p>
+<pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token property-declaration"><span class="token property">git</span> clone https<span class="token punctuation">:</span><span class="token comment">//github.com/theme-next/hexo-theme-next themes/next</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在站点配置文件 <code>_config.yml</code></p>
-<p><img src="https://wx2.sinaimg.cn/mw690/0083TyOJly1gblv59sp7bj30el03i0t4.jpg" alt="img2"></p>
-<pre><code class="lang-yaml"># Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: next
-</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx2.sinaimg.cn/mw690/0083TyOJly1gblv59sp7bj30el03i0t4.jpg" alt="img2"></p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Extensions</span>
+<span class="token comment">## Plugins: https://hexo.io/plugins/</span>
+<span class="token comment">## Themes: https://hexo.io/themes/</span>
+<span class="token key atrule">theme</span><span class="token punctuation">:</span> next<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在主题配置文件<code>_config.yml</code>中可以选择四种scheme，我选择的是<code>Gemini</code></p>
-<p><img src="https://wx1.sinaimg.cn/mw690/0083TyOJly1gblv5clsagj309q07raa7.jpg" alt="img3"></p>
-<pre><code class="lang-yaml"># ---------------------------------------------------------------
-# Scheme Settings
-# ---------------------------------------------------------------
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx1.sinaimg.cn/mw690/0083TyOJly1gblv5clsagj309q07raa7.jpg" alt="img3"></p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># ---------------------------------------------------------------</span>
+<span class="token comment"># Scheme Settings</span>
+<span class="token comment"># ---------------------------------------------------------------</span>
 
-# Schemes
-#scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-scheme: Gemini
-</code></pre>
+<span class="token comment"># Schemes</span>
+<span class="token comment">#scheme: Muse</span>
+<span class="token comment">#scheme: Mist</span>
+<span class="token comment">#scheme: Pisces</span>
+<span class="token key atrule">scheme</span><span class="token punctuation">:</span> Gemini<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="基本信息配置"><a href="#基本信息配置" class="headerlink" title="基本信息配置"></a>基本信息配置</h2><p>配置站点配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">title: 标题
-subtitle: 副标题
-description: 描述
-author: 作者
-language: 语言（简体中文是zh-Hans）
-timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> 标题
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> 副标题
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 描述
+<span class="token key atrule">author</span><span class="token punctuation">:</span> 作者
+<span class="token key atrule">language</span><span class="token punctuation">:</span> 语言（简体中文是zh<span class="token punctuation">-</span>Hans）
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> 网站时区（Hexo 默认使用您电脑的时区，不用写）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="菜单信息配置："><a href="#菜单信息配置：" class="headerlink" title="菜单信息配置："></a>菜单信息配置：</h2><p>配置主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">menu</span><span class="token punctuation">:</span>
+  <span class="token key atrule">home</span><span class="token punctuation">:</span> / <span class="token punctuation">|</span><span class="token punctuation">|</span> home
+  <span class="token key atrule">about</span><span class="token punctuation">:</span> /about/ <span class="token punctuation">|</span><span class="token punctuation">|</span> user
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span> /tags/ <span class="token punctuation">|</span><span class="token punctuation">|</span> tags
+  <span class="token key atrule">categories</span><span class="token punctuation">:</span> /categories/ <span class="token punctuation">|</span><span class="token punctuation">|</span> th
+  <span class="token key atrule">archives</span><span class="token punctuation">:</span> /archives/ <span class="token punctuation">|</span><span class="token punctuation">|</span> archive
+  <span class="token comment">#schedule: /schedule/ || calendar</span>
+  <span class="token comment">#sitemap: /sitemap.xml || sitemap</span>
+  <span class="token comment">#commonweal: /404/ || heartbeat</span>
 
-# Enable/Disable menu icons.
-menu_icons:
-  enable: true
-</code></pre>
+<span class="token comment"># Enable/Disable menu icons.</span>
+<span class="token key atrule">menu_icons</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="设置标签，分类页面"><a href="#设置标签，分类页面" class="headerlink" title="设置标签，分类页面"></a>设置标签，分类页面</h2><p>在Git-Bash中输入：</p>
-<pre><code class="lang-yaml">hexo new page &quot;tags&quot;
-hexo new page &quot;categories&quot;
-hexo new page &quot;about&quot;
-</code></pre>
-<p><img src="https://wx4.sinaimg.cn/mw690/0083TyOJly1gblv5ezol4j30c401kjrb.jpg" alt="img4"></p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">hexo new page "tags"
+hexo new page "categories"
+hexo new page "about"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx4.sinaimg.cn/mw690/0083TyOJly1gblv5ezol4j30c401kjrb.jpg" alt="img4"></p>
 <p>这时在<code>Hexo/source/</code>下出现一个<code>tags/index.md</code>和<code>categories/index.md</code></p>
 <p>这时你修改<code>index.md</code>的属性，新加<code>type</code>属性</p>
 <p><code>tags的index</code></p>
-<pre><code class="lang-yaml">---
-title: 标签
-data: 2019-08-10 00:11:16
-type: &quot;tags&quot;
-comments: false
----
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 标签
+<span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token datetime number">2019-08-10 00:11:16</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"tags"</span>
+<span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>categories的index</code></p>
-<pre><code class="lang-yaml">---
-title: 分类
-date: 2019-08-10 00:08:44
-type: &quot;categories&quot;
-comments: false
----
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 分类
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2019-08-10 00:08:44</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"categories"</span>
+<span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>about的index</code></p>
-<pre><code class="lang-yaml">---
-title: 这是我的自我介绍
-layout: about
-comments: false
----
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 这是我的自我介绍
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> about
+<span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>comments: false</code>是关闭评论功能</p>
 <h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p>在Hexo的根目录下执行</p>
-<pre><code class="lang-yaml">npm install hexo-generator-searchdb --save
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">npm install hexo<span class="token punctuation">-</span>generator<span class="token punctuation">-</span>searchdb <span class="token punctuation">-</span><span class="token punctuation">-</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>站点配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">search: # 本地搜索插件
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span> <span class="token comment"># 本地搜索插件</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post
+  <span class="token key atrule">format</span><span class="token punctuation">:</span> html
+  <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">10000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在主题配置文件<code>_config.yml</code>中</p>
-<pre><code class="lang-yaml">local_search:
-  enable: true
-  # if auto, trigger search by changing input
-  # if manual, trigger search by pressing enter key or search button
-  trigger: auto
-  # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">local_search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token comment"># if auto, trigger search by changing input</span>
+  <span class="token comment"># if manual, trigger search by pressing enter key or search button</span>
+  <span class="token key atrule">trigger</span><span class="token punctuation">:</span> auto
+  <span class="token comment"># show top n results per article, show all results by setting to -1</span>
+  <span class="token key atrule">top_n_per_article</span><span class="token punctuation">:</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h2><p>把你要作为头像的图片放到：<code>Hexo/themes/next/source/images</code></p>
 <p>然后更改主题配置文件<code>_config.yml</code>中的 <code>Sidebar Avaatar</code></p>
-<pre><code class="lang-yaml">avatar: /images/header.jpg
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">avatar</span><span class="token punctuation">:</span> /images/header.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="网站缩略图图标"><a href="#网站缩略图图标" class="headerlink" title="网站缩略图图标"></a>网站缩略图图标</h2><p>把你要作为缩略图的图片放到：<code>Hexo/themes/next/source/images</code></p>
 <p>然后打开主题配置文件<code>_config.yml</code>,找到 <code>favicon</code>，修改成这样</p>
-<pre><code class="lang-yaml">favicon:
-  small: /images/header.jpg
-  medium: /images/header.jpg
-  apple_touch_icon: /images/header.jpg
-  safari_pinned_tab: /images/logo.svg
-  #android_manifest: /images/manifest.json
-  #ms_browserconfig: /images/browserconfig.xml
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">favicon</span><span class="token punctuation">:</span>
+  <span class="token key atrule">small</span><span class="token punctuation">:</span> /images/header.jpg
+  <span class="token key atrule">medium</span><span class="token punctuation">:</span> /images/header.jpg
+  <span class="token key atrule">apple_touch_icon</span><span class="token punctuation">:</span> /images/header.jpg
+  <span class="token key atrule">safari_pinned_tab</span><span class="token punctuation">:</span> /images/logo.svg
+  <span class="token comment">#android_manifest: /images/manifest.json</span>
+  <span class="token comment">#ms_browserconfig: /images/browserconfig.xml</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="修改链接文本样式"><a href="#修改链接文本样式" class="headerlink" title="修改链接文本样式"></a>修改链接文本样式</h2><p>打开<code>Hexo/themes/next/source/css/_common/components/post.styl</code>，添加</p>
-<pre><code class="lang-stylus">.post-body p a {
-  color: #0593d3;
-  border-bottom: none;
-  border-bottom: 1px solid #0593d3;
-  &amp;:hover {
-    color: #fc6423;
-    border-bottom: none;
-    border-bottom: 1px solid #fc6423;
-  }
-}
-</code></pre>
-<h2 id="添加评论系统"><a href="#添加评论系统" class="headerlink" title="添加评论系统"></a>添加评论系统</h2><p>注册登录<a href="https://www.livere.com/" target="_blank" rel="noopener">来必力</a>, 安装City，获得安装代码中的<code>data-uid=&quot;xxx&quot;</code></p>
+<pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token selector">.post-body p a <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#0593d3</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">border-bottom</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid <span class="token hexcode">#0593d3</span><span class="token punctuation">;</span></span>
+  <span class="token selector">&amp;:hover <span class="token punctuation">{</span></span>
+    <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#fc6423</span><span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">border-bottom</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid <span class="token hexcode">#fc6423</span><span class="token punctuation">;</span></span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="添加评论系统"><a href="#添加评论系统" class="headerlink" title="添加评论系统"></a>添加评论系统</h2><p>注册登录<a target="_blank" rel="noopener" href="https://www.livere.com/">来必力</a>, 安装City，获得安装代码中的<code>data-uid="xxx"</code></p>
 <p>配置主题配置文件<code>_config.yml</code>,添加<code>LiveRe Uid</code>:</p>
-<pre><code class="lang-yaml">livere_uid: #你的LiveRe UID
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">livere_uid</span><span class="token punctuation">:</span> <span class="token comment">#你的LiveRe UID</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="添加访问计数"><a href="#添加访问计数" class="headerlink" title="添加访问计数"></a>添加访问计数</h2><p>next已经集成了busuanzi计数，编辑<code>Hexo/themes/next/layout/_third-party/analytics/busuanzi-counter.swig</code> </p>
 <p>将</p>
-<p><code>&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code></p>
+<p><code>&lt;script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</code></p>
 <p>改为</p>
-<p><code>&lt;script async src=&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code></p>
+<p><code>&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</code></p>
 <p>主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml"># Show PV/UV of the website/page with busuanzi.
-# Get more information on http://ibruce.info/2015/04/04/busuanzi/
-busuanzi_count:
-  # count values only if the other configs are false
-  enable: true
-  # custom uv span for the whole site
-  site_uv: true
-  total_visitors: true
-  total_visitors_icon: user
-  total_view: true
-  total_views_icon: eye
-  post_views: false
-  post_view_icon: eye
-  site_uv_header: &lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; 访客数
-  site_uv_footer: 人
-  # custom pv span for the whole site
-  site_pv: true
-  site_pv_header: &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; 总访问量
-  site_pv_footer: 次
-  # custom pv span for one page only
-  page_pv: true
-  page_pv_header: &lt;i class=&quot;fa fa-file-o&quot;&gt;&lt;/i&gt;  阅读数
-  page_pv_footer: 次
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Show PV/UV of the website/page with busuanzi.</span>
+<span class="token comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span>
+<span class="token key atrule">busuanzi_count</span><span class="token punctuation">:</span>
+  <span class="token comment"># count values only if the other configs are false</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token comment"># custom uv span for the whole site</span>
+  <span class="token key atrule">site_uv</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_visitors</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_visitors_icon</span><span class="token punctuation">:</span> user
+  <span class="token key atrule">total_view</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_views_icon</span><span class="token punctuation">:</span> eye
+  <span class="token key atrule">post_views</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">post_view_icon</span><span class="token punctuation">:</span> eye
+  <span class="token key atrule">site_uv_header</span><span class="token punctuation">:</span> &lt;i class="fa fa<span class="token punctuation">-</span>user"<span class="token punctuation">&gt;</span>&lt;/i<span class="token punctuation">&gt;</span> 访客数
+  <span class="token key atrule">site_uv_footer</span><span class="token punctuation">:</span> 人
+  <span class="token comment"># custom pv span for the whole site</span>
+  <span class="token key atrule">site_pv</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">site_pv_header</span><span class="token punctuation">:</span> &lt;i class="fa fa<span class="token punctuation">-</span>eye"<span class="token punctuation">&gt;</span>&lt;/i<span class="token punctuation">&gt;</span> 总访问量
+  <span class="token key atrule">site_pv_footer</span><span class="token punctuation">:</span> 次
+  <span class="token comment"># custom pv span for one page only</span>
+  <span class="token key atrule">page_pv</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">page_pv_header</span><span class="token punctuation">:</span> &lt;i class="fa fa<span class="token punctuation">-</span>file<span class="token punctuation">-</span>o"<span class="token punctuation">&gt;</span>&lt;/i<span class="token punctuation">&gt;</span>  阅读数
+  <span class="token key atrule">page_pv_footer</span><span class="token punctuation">:</span> 次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="文章版权信息"><a href="#文章版权信息" class="headerlink" title="文章版权信息"></a>文章版权信息</h2><p>编辑主题配置文件<code>_config.yml</code>，修改</p>
-<pre><code class="lang-yaml">post_copyright:
-  enable: true
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">post_copyright</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h2><p>编辑主题配置文件<code>_config.yml</code>,修改</p>
-<pre><code class="lang-yaml"># Reward
-reward_comment: 求打赏文本
-wechatpay: /images/wechatpay.png  # 微信收款二维码 图片路径
-alipay: /images/alipay.png        # 支付宝收款二维码 图片路径
-#bitcoin: /images/bitcoin.png     # 比特币
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Reward</span>
+<span class="token key atrule">reward_comment</span><span class="token punctuation">:</span> 求打赏文本
+<span class="token key atrule">wechatpay</span><span class="token punctuation">:</span> /images/wechatpay.png  <span class="token comment"># 微信收款二维码 图片路径</span>
+<span class="token key atrule">alipay</span><span class="token punctuation">:</span> /images/alipay.png        <span class="token comment"># 支付宝收款二维码 图片路径</span>
+<span class="token comment">#bitcoin: /images/bitcoin.png     # 比特币</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="添加更新时间"><a href="#添加更新时间" class="headerlink" title="添加更新时间"></a>添加更新时间</h2><p>编辑主题配置文件<code>_config.yml</code>,修改</p>
-<pre><code class="lang-yaml">post_meta:
-  item_text: true
-  created_at: true   # 创建时间
-  updated_at: true   # 更新时间
-  # Only show &#39;updated&#39; if different from &#39;created&#39;.
-  updated_diff: false # 只使用更新时间
-  # If true, post&#39;s time format will be hexo config&#39;s date_format + &#39; &#39; + time_format.
-  date_time_merge: false
-  categories: true
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">post_meta</span><span class="token punctuation">:</span>
+  <span class="token key atrule">item_text</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">created_at</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>   <span class="token comment"># 创建时间</span>
+  <span class="token key atrule">updated_at</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>   <span class="token comment"># 更新时间</span>
+  <span class="token comment"># Only show 'updated' if different from 'created'.</span>
+  <span class="token key atrule">updated_diff</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 只使用更新时间</span>
+  <span class="token comment"># If true, post's time format will be hexo config's date_format + ' ' + time_format.</span>
+  <span class="token key atrule">date_time_merge</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">categories</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="修改文章底部的标签"><a href="#修改文章底部的标签" class="headerlink" title="修改文章底部的标签"></a>修改文章底部的标签</h2><p>编辑<code>Hexo/themes/next/layout/_macro/post.swig</code></p>
-<p>找到<code>rel=&quot;tag&quot;&gt;#</code></p>
-<p>将<code>#</code>改为<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<p>找到<code>rel="tag"&gt;#</code></p>
+<p>将<code>#</code>改为<code>&lt;i class="fa fa-tag"&gt;&lt;/i&gt;</code></p>
 <h2 id="文章底部添加”本文结束”"><a href="#文章底部添加”本文结束”" class="headerlink" title="文章底部添加”本文结束”"></a>文章底部添加”本文结束”</h2><p>编辑<code>Hexo/themes/next/laayout/_macro/post.swig</code>，在文章结束的地方加上</p>
-<pre><code class="lang-python">{% if not is_index %}
-    <div style="text-align:center;color: #ccc;font-size:14px;">
-        ---------Thanks for your attention---------
-    </div>
-{% endif %}
-</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token keyword">not</span> is_index <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">"text-align:center;color: #ccc;font-size:14px;"</span><span class="token operator">&gt;</span>
+        <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Thanks <span class="token keyword">for</span> your attention<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="在页脚添加运行时间"><a href="#在页脚添加运行时间" class="headerlink" title="在页脚添加运行时间"></a>在页脚添加运行时间</h2><p>编辑<code>themes/next/layout/_partials/footer.swig</code></p>
 <p>在所示位置加上代码：</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv5hgdmij30so0j0diq.jpg" alt="img5"></p>
-<pre><code class="lang-python">
-&lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
-&lt;script language=javascript&gt;
-    function siteTime(){
-        window.setTimeout(&quot;siteTime()&quot;, 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth()+1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2018,02,13,15,00,00); //北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-        var diff = t2-t1;
-        var diffYears = Math.floor(diff/years);
-        var diffDays = Math.floor((diff/days)-diffYears*365);
-        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-        document.getElementById(&quot;sitetime&quot;).innerHTML=&quot; 已运行&quot;+diffYears+&quot; 年 &quot;+diffDays+&quot; 天 &quot;+diffHours+&quot; 小时 &quot;+diffMinutes+&quot; 分钟 &quot;+diffSeconds+&quot; 秒&quot;;
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
-&lt;/script&gt;
-</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx3.sinaimg.cn/mw690/0083TyOJly1gblv5hgdmij30so0j0diq.jpg" alt="img5"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token comment">### 运行时间 ####}</span>
+<span class="token operator">&lt;</span>span <span class="token builtin">id</span><span class="token operator">=</span><span class="token string">"sitetime"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script language<span class="token operator">=</span>javascript<span class="token operator">&gt;</span>
+	function siteTime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		window<span class="token punctuation">.</span>setTimeout<span class="token punctuation">(</span><span class="token string">"siteTime()"</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var seconds <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+		var minutes <span class="token operator">=</span> seconds <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">;</span>
+		var hours <span class="token operator">=</span> minutes <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">;</span>
+		var days <span class="token operator">=</span> hours <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">;</span>
+		var years <span class="token operator">=</span> days <span class="token operator">*</span> <span class="token number">365</span><span class="token punctuation">;</span>
+		var today <span class="token operator">=</span> new Date<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var todayYear <span class="token operator">=</span> today<span class="token punctuation">.</span>getFullYear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var todayMonth <span class="token operator">=</span> today<span class="token punctuation">.</span>getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+		var todayDate <span class="token operator">=</span> today<span class="token punctuation">.</span>getDate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var todayHour <span class="token operator">=</span> today<span class="token punctuation">.</span>getHours<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var todayMinute <span class="token operator">=</span> today<span class="token punctuation">.</span>getMinutes<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var todaySecond <span class="token operator">=</span> today<span class="token punctuation">.</span>getSeconds<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token operator">/</span><span class="token operator">*</span> Date<span class="token punctuation">.</span>UTC<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">-</span> 返回date对象距世界标准时间<span class="token punctuation">(</span>UTC<span class="token punctuation">)</span><span class="token number">1970</span>年<span class="token number">1</span>月<span class="token number">1</span>日午夜之间的毫秒数<span class="token punctuation">(</span>时间戳<span class="token punctuation">)</span>
+		year <span class="token operator">-</span> 作为date对象的年份，为<span class="token number">4</span>位年份值
+		month <span class="token operator">-</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">11</span>之间的整数，做为date对象的月份
+		day <span class="token operator">-</span> <span class="token number">1</span><span class="token operator">-</span><span class="token number">31</span>之间的整数，做为date对象的天数
+		hours <span class="token operator">-</span> <span class="token number">0</span><span class="token punctuation">(</span>午夜<span class="token number">24</span>点<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">23</span>之间的整数，做为date对象的小时数
+		minutes <span class="token operator">-</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">59</span>之间的整数，做为date对象的分钟数
+		seconds <span class="token operator">-</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">59</span>之间的整数，做为date对象的秒数
+		microseconds <span class="token operator">-</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">999</span>之间的整数，做为date对象的毫秒数 <span class="token operator">*</span><span class="token operator">/</span>
+		var t1 <span class="token operator">=</span> Date<span class="token punctuation">.</span>UTC<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span><span class="token number">02</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">00</span><span class="token punctuation">,</span><span class="token number">00</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">//</span>北京时间<span class="token number">2018</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span><span class="token punctuation">:</span><span class="token number">00</span>
+		var t2 <span class="token operator">=</span> Date<span class="token punctuation">.</span>UTC<span class="token punctuation">(</span>todayYear<span class="token punctuation">,</span>todayMonth<span class="token punctuation">,</span>todayDate<span class="token punctuation">,</span>todayHour<span class="token punctuation">,</span>todayMinute<span class="token punctuation">,</span>todaySecond<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var diff <span class="token operator">=</span> t2<span class="token operator">-</span>t1<span class="token punctuation">;</span>
+		var diffYears <span class="token operator">=</span> Math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>diff<span class="token operator">/</span>years<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var diffDays <span class="token operator">=</span> Math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token punctuation">(</span>diff<span class="token operator">/</span>days<span class="token punctuation">)</span><span class="token operator">-</span>diffYears<span class="token operator">*</span><span class="token number">365</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var diffHours <span class="token operator">=</span> Math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token punctuation">(</span>diff<span class="token operator">-</span><span class="token punctuation">(</span>diffYears<span class="token operator">*</span><span class="token number">365</span><span class="token operator">+</span>diffDays<span class="token punctuation">)</span><span class="token operator">*</span>days<span class="token punctuation">)</span><span class="token operator">/</span>hours<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var diffMinutes <span class="token operator">=</span> Math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token punctuation">(</span>diff<span class="token operator">-</span><span class="token punctuation">(</span>diffYears<span class="token operator">*</span><span class="token number">365</span><span class="token operator">+</span>diffDays<span class="token punctuation">)</span><span class="token operator">*</span>days<span class="token operator">-</span>diffHours<span class="token operator">*</span>hours<span class="token punctuation">)</span><span class="token operator">/</span>minutes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		var diffSeconds <span class="token operator">=</span> Math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token punctuation">(</span>diff<span class="token operator">-</span><span class="token punctuation">(</span>diffYears<span class="token operator">*</span><span class="token number">365</span><span class="token operator">+</span>diffDays<span class="token punctuation">)</span><span class="token operator">*</span>days<span class="token operator">-</span>diffHours<span class="token operator">*</span>hours<span class="token operator">-</span>diffMinutes<span class="token operator">*</span>minutes<span class="token punctuation">)</span><span class="token operator">/</span>seconds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		document<span class="token punctuation">.</span>getElementById<span class="token punctuation">(</span><span class="token string">"sitetime"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">" 已运行"</span><span class="token operator">+</span>diffYears<span class="token operator">+</span><span class="token string">" 年 "</span><span class="token operator">+</span>diffDays<span class="token operator">+</span><span class="token string">" 天 "</span><span class="token operator">+</span>diffHours<span class="token operator">+</span><span class="token string">" 小时 "</span><span class="token operator">+</span>diffMinutes<span class="token operator">+</span><span class="token string">" 分钟 "</span><span class="token operator">+</span>diffSeconds<span class="token operator">+</span><span class="token string">" 秒"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">*</span>因为建站时间还没有一年，就将之注释掉了。需要的可以取消<span class="token operator">*</span><span class="token operator">/</span>
+	siteTime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Latex公式"><a href="#Latex公式" class="headerlink" title="Latex公式"></a>Latex公式</h2><p>更换Hexo的Markdown渲染引擎</p>
-<pre><code class="lang-c">npm uninstall hexo-renderer-marked --save
-npm install hexo-renderer-kramed --save
-</code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">npm uninstall hexo<span class="token operator">-</span>renderer<span class="token operator">-</span>marked <span class="token operator">--</span>save
+npm install hexo<span class="token operator">-</span>renderer<span class="token operator">-</span>kramed <span class="token operator">--</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>然后打开<code>node_modules/kramed/lib/rules/inline.js</code></p>
 <p>替换11行的escape变量</p>
-<pre><code class="lang-c">//  escape: /^\\([\\`*{}\[\]()#$+\-.!_&gt;])/,
-  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/
-</code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//  escape: /^\\([\\`*{}\[\]()#$+\-.!_&gt;])/,</span>
+  escape<span class="token operator">:</span> <span class="token operator">/</span><span class="token operator">^</span>\\<span class="token punctuation">(</span><span class="token punctuation">[</span>`<span class="token operator">*</span>\<span class="token punctuation">[</span>\<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>#$<span class="token operator">+</span>\<span class="token operator">-</span><span class="token punctuation">.</span><span class="token operator">!</span>_<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>改变20行的em变量</p>
-<pre><code class="lang-c">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
-  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/
-</code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span>
+  em<span class="token operator">:</span> <span class="token operator">/</span><span class="token operator">^</span>\<span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token operator">:</span>\<span class="token operator">*</span>\<span class="token operator">*</span><span class="token operator">|</span><span class="token punctuation">[</span>\s\S<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token operator">?</span><span class="token punctuation">)</span>\<span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token operator">!</span>\<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>next集成了Mathjax，编辑主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml"># MathJax Support
-mathjax:
-  enable: true
-  per_page: true
-  engine: mathjax
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># MathJax Support</span>
+<span class="token key atrule">mathjax</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">per_page</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">engine</span><span class="token punctuation">:</span> mathjax
+  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> //cdn.bootcss.com/mathjax/2.7.1/latest.js<span class="token punctuation">?</span>config=TeX<span class="token punctuation">-</span>AMS<span class="token punctuation">-</span>MML_HTMLorMML
 
-# Han Support docs: https://hanzi.pro/
-han: false
-</code></pre>
+<span class="token comment"># Han Support docs: https://hanzi.pro/</span>
+<span class="token key atrule">han</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在写文章时要在文章的配置中加上<code>mathjax: true</code></p>
 <h2 id="短链接"><a href="#短链接" class="headerlink" title="短链接"></a>短链接</h2><p>在根目录执行</p>
 <p><code>npm install hexo-abbrlink --save</code></p>
 <p>配置站点配置文件<code>_config.yml</code>,修改</p>
-<pre><code class="lang-yaml"># abbrlink config
-abbrlink:
-  alg: crc16 #support crc16(default) and crc32
-  rep: hex    #support dec(default) and hex
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># abbrlink config</span>
+<span class="token key atrule">abbrlink</span><span class="token punctuation">:</span>
+  <span class="token key atrule">alg</span><span class="token punctuation">:</span> crc16 <span class="token comment">#support crc16(default) and crc32</span>
+  <span class="token key atrule">rep</span><span class="token punctuation">:</span> hex    <span class="token comment">#support dec(default) and hex</span>
 
-# 更改 permalink 值
-permalink: /:abbrlink/
-</code></pre>
+<span class="token comment"># 更改 permalink 值</span>
+<span class="token key atrule">permalink</span><span class="token punctuation">:</span> /<span class="token punctuation">:</span>abbrlink/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="文章封面图片"><a href="#文章封面图片" class="headerlink" title="文章封面图片"></a>文章封面图片</h2><p>在根目录执行</p>
 <p><code>npm install --save hexo-less</code></p>
 <p>在写文章时手动设置文章摘要<code>&lt;!-- less --&gt;</code>为分界线</p>
 <h2 id="social"><a href="#social" class="headerlink" title="social"></a>social</h2><p>修改主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">social:
-  #GitHub: https://github.com/yourname || github
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #VK Group: https://vk.com/yourname || vk
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">social</span><span class="token punctuation">:</span>
+  <span class="token comment">#GitHub: https://github.com/yourname || github</span>
+  <span class="token comment">#Google: https://plus.google.com/yourname || google</span>
+  <span class="token comment">#Twitter: https://twitter.com/yourname || twitter</span>
+  <span class="token comment">#E-Mail: mailto:yourname@gmail.com || envelope</span>
+  <span class="token comment">#FB Page: https://www.facebook.com/yourname || facebook</span>
+  <span class="token comment">#VK Group: https://vk.com/yourname || vk</span>
+  <span class="token comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span>
+  <span class="token comment">#YouTube: https://youtube.com/yourname || youtube</span>
+  <span class="token comment">#Instagram: https://instagram.com/yourname || instagram</span>
+  <span class="token comment">#Skype: skype:yourname?call|chat || skype</span>
 
-social_icons:
-  enable: true
-  GitHub: github
-  Twitter: twitter
-  微博: weibo
-</code></pre>
+<span class="token key atrule">social_icons</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">GitHub</span><span class="token punctuation">:</span> github
+  <span class="token key atrule">Twitter</span><span class="token punctuation">:</span> twitter
+  <span class="token key atrule">微博</span><span class="token punctuation">:</span> weibo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><p>修改主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml"># Blog rolls
-links_icon: link
-links_title: Friend Links
-links_layout: block
-#links_layout: inline
-links:
-  github: http://github.com/
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Blog rolls</span>
+<span class="token key atrule">links_icon</span><span class="token punctuation">:</span> link
+<span class="token key atrule">links_title</span><span class="token punctuation">:</span> Friend Links
+<span class="token key atrule">links_layout</span><span class="token punctuation">:</span> block
+<span class="token comment">#links_layout: inline</span>
+<span class="token key atrule">links</span><span class="token punctuation">:</span>
+  <span class="token key atrule">github</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//github.com/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h2><p>在根目录执行</p>
 <p><code>npm install hexo-symbols-count-time --save</code></p>
 <p>修改站点配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">symbols_count_time:
- #文章内是否显示
-  symbols: true
-  time: true
- # 网页底部是否显示
-  total_symbols: true
-  total_time: true
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">symbols_count_time</span><span class="token punctuation">:</span>
+ <span class="token comment">#文章内是否显示</span>
+  <span class="token key atrule">symbols</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">time</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+ <span class="token comment"># 网页底部是否显示</span>
+  <span class="token key atrule">total_symbols</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_time</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml"># Post wordcount display settings
-# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-symbols_count_time:
-  separated_meta: true
-  #文章中的显示是否显示文字（本文字数|阅读时长） 
-  item_text_post: true
-  #网页底部的显示是否显示文字（站点总字数|站点阅读时长） 
-  item_text_total: false
-  # Average Word Length (chars count in word)
-  awl: 4
-  # Words Per Minute
-  wpm: 275
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Post wordcount display settings</span>
+<span class="token comment"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span>
+<span class="token key atrule">symbols_count_time</span><span class="token punctuation">:</span>
+  <span class="token key atrule">separated_meta</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token comment">#文章中的显示是否显示文字（本文字数|阅读时长） </span>
+  <span class="token key atrule">item_text_post</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token comment">#网页底部的显示是否显示文字（站点总字数|站点阅读时长） </span>
+  <span class="token key atrule">item_text_total</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># Average Word Length (chars count in word)</span>
+  <span class="token key atrule">awl</span><span class="token punctuation">:</span> <span class="token number">4</span>
+  <span class="token comment"># Words Per Minute</span>
+  <span class="token key atrule">wpm</span><span class="token punctuation">:</span> <span class="token number">275</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="隐藏网页底部信息"><a href="#隐藏网页底部信息" class="headerlink" title="隐藏网页底部信息"></a>隐藏网页底部信息</h2><p>修改主题配置文件<code>_config.yml</code></p>
-<pre><code class="lang-yaml">footer:
-  # Specify the date when the site was setup.
-  # If not defined, current year will be used.
-  #since: 2015
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">footer</span><span class="token punctuation">:</span>
+  <span class="token comment"># Specify the date when the site was setup.</span>
+  <span class="token comment"># If not defined, current year will be used.</span>
+  <span class="token comment">#since: 2015</span>
 
-  # Icon between year and copyright info.
-  icon: user
-  counter: true
+  <span class="token comment"># Icon between year and copyright info.</span>
+  <span class="token key atrule">icon</span><span class="token punctuation">:</span> user
+  <span class="token key atrule">counter</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
 
-  # If not defined, will be used `author` from Hexo main config.
-  copyright:
-  # -------------------------------------------------------------
-  # Hexo link (Powered by Hexo).
-  powered: false
+  <span class="token comment"># If not defined, will be used `author` from Hexo main config.</span>
+  <span class="token key atrule">copyright</span><span class="token punctuation">:</span>
+  <span class="token comment"># -------------------------------------------------------------</span>
+  <span class="token comment"># Hexo link (Powered by Hexo).</span>
+  <span class="token key atrule">powered</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
 
-  theme:
-    # Theme &amp; scheme info link (Theme - NexT.scheme).
-    enable: false
-    # Version info of NexT after scheme info (vX.X.X).
-    version: false
-  # -------------------------------------------------------------
-  # Any custom text can be defined here.
-  #custom_text: Hosted by &lt;a target=&quot;_blank&quot; href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span>
+    <span class="token comment"># Theme &amp; scheme info link (Theme - NexT.scheme).</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token comment"># Version info of NexT after scheme info (vX.X.X).</span>
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># -------------------------------------------------------------</span>
+  <span class="token comment"># Any custom text can be defined here.</span>
+  <span class="token comment">#custom_text: Hosted by &lt;a target="_blank" href="https://pages.github.com"&gt;GitHub Pages&lt;/a&gt;</span>
 
-# ---------------------------------------------------------------
-# SEO Settings
-# ---------------------------------------------------------------
+<span class="token comment"># ---------------------------------------------------------------</span>
+<span class="token comment"># SEO Settings</span>
+<span class="token comment"># ---------------------------------------------------------------</span>
 
-# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
-# See: https://support.google.com/webmasters/answer/139066
-# Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
+<span class="token comment"># Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.</span>
+<span class="token comment"># See: https://support.google.com/webmasters/answer/139066</span>
+<span class="token comment"># Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )</span>
+<span class="token key atrule">canonical</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+<span class="token comment"># Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.</span>
+<span class="token key atrule">seo</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
 
-# If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitle
-index_with_subtitle: false
-</code></pre>
+<span class="token comment"># If true, will add site-subtitle to index page, added in main hexo config.</span>
+<span class="token comment"># subtitle: Subtitle</span>
+<span class="token key atrule">index_with_subtitle</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="设置RSS"><a href="#设置RSS" class="headerlink" title="设置RSS"></a>设置RSS</h2><p>在根目录执行</p>
 <p><code>npm install hexo-generator-feed --save</code></p>
 <p>修改站点配置文件<code>_config.yml</code>,在<code>Extensions</code>下添加</p>
-<pre><code class="lang-yaml"># RSS订阅
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: &#39; &#39;
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># RSS订阅</span>
+<span class="token key atrule">feed</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> atom
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> atom.xml
+  <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">20</span>
+  <span class="token key atrule">hub</span><span class="token punctuation">:</span>
+  <span class="token key atrule">content</span><span class="token punctuation">:</span>
+  <span class="token key atrule">content_limit</span><span class="token punctuation">:</span> <span class="token number">140</span>
+  <span class="token key atrule">content_limit_delim</span><span class="token punctuation">:</span> <span class="token string">' '</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改主题配置文件 <code>_config.yml</code>修改<code>rss</code>为</p>
 <p><code>rss: /atom.xml</code></p>
-<h2 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h2><p>在GItHub上<a href="https://github.com/crozynski/comicneue" target="_blank" rel="noopener">下载</a>后，解压后将所有Web文件夹下的所有内容放入<code>Hexo/theme/next/source/fonts</code></p>
+<h2 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h2><p>在GItHub上<a target="_blank" rel="noopener" href="https://github.com/crozynski/comicneue">下载</a>后，解压后将所有Web文件夹下的所有内容放入<code>Hexo/theme/next/source/fonts</code></p>
 <p>然后修改<code>Hexo/themes/next/source/css/_custom/custom.styl</code></p>
-<pre><code class="lang-stylus">//字体
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Light.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Light.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Light.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Light.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Light.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 300;
-}
+<pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token comment">//字体</span>
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Light.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Light-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Light-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Light-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Light-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Light-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 300;
-  font-style: oblique;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Light-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Light-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Regular.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Regular.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Regular.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Regular.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Regular.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 400;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Regular.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Regular-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Regular-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Regular-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Regular-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Regular-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 400;
-  font-style: oblique;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Regular-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Regular-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Bold.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Bold.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Bold.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Bold.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Bold.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 700;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Bold.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue&#39;;
-  src: url(&#39;/fonts/ComicNeue-Bold-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Bold-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Bold-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Bold-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Bold-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 700;
-  font-style: oblique;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Bold-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Bold-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Light.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Light.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 300;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Light.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Light-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Light-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Light-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 300;
-  font-style: oblique;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Light-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Light-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Regular.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Regular.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 400;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Regular.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Regular-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Regular-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Regular-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 400;
-  font-style: oblique;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Regular-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Regular-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Bold.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Bold.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 700;
-}
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Bold.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
 
-@font-face {
-  font-family: &#39;Comic Neue Angular&#39;;
-  src: url(&#39;/fonts/ComicNeue-Angular-Bold-Oblique.eot&#39;);
-  src: url(&#39;/fonts/ComicNeue-Angular-Bold-Oblique.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold-Oblique.woff2&#39;) format(&#39;woff2&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold-Oblique.woff&#39;) format(&#39;woff&#39;),
-       url(&#39;/fonts/ComicNeue-Angular-Bold-Oblique.ttf&#39;)  format(&#39;truetype&#39;);
-  font-weight: 700;
-  font-style: oblique;
-}
-</code></pre>
+<span class="token atrule-declaration"><span class="token atrule">@font-face</span> <span class="token punctuation">{</span></span>
+  <span class="token property-declaration"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue Angular'</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('/fonts/ComicNeue-Angular-Bold-Oblique.eot')</span><span class="token punctuation">;</span></span>
+  src<span class="token punctuation">:</span> <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold-Oblique.eot?#iefix'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold-Oblique.woff2'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold-Oblique.woff'</span><span class="token punctuation">)</span> format<span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>
+       <span class="token func"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'/fonts/ComicNeue-Angular-Bold-Oblique.ttf'</span><span class="token punctuation">)</span>  format<span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span></span>
+  <span class="token property-declaration"><span class="token property">font-style</span><span class="token punctuation">:</span> oblique<span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改主题配置文件 <code>_config.yml</code>修改<code>font</code>为</p>
-<pre><code class="lang-yaml">font:
-  enable: true
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">font</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-  host:
+  <span class="token comment"># Uri of fonts host. E.g. //fonts.googleapis.com (Default).</span>
+  <span class="token key atrule">host</span><span class="token punctuation">:</span>
 
-  # Font options:
-  # `external: true` will load this font family from `host` above.
-  # `family: Times New Roman`. Without any quotes.
-  # `size: xx`. Use `px` as unit.
+  <span class="token comment"># Font options:</span>
+  <span class="token comment"># `external: true` will load this font family from `host` above.</span>
+  <span class="token comment"># `family: Times New Roman`. Without any quotes.</span>
+  <span class="token comment"># `size: xx`. Use `px` as unit.</span>
 
-  # Global font settings used on &lt;body&gt; element.
-  global:
-    external: true
-    family: &#39;Comic Neue&#39;
-    size:
+  <span class="token comment"># Global font settings used on &lt;body&gt; element.</span>
+  <span class="token key atrule">global</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span>
+    <span class="token key atrule">size</span><span class="token punctuation">:</span>
 
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
-  # Fallback to `global` font settings.
-  headings:
-    external: true
-    family: &#39;Comic Neue&#39;
-    size:
+  <span class="token comment"># Font settings for Headlines (h1, h2, h3, h4, h5, h6).</span>
+  <span class="token comment"># Fallback to `global` font settings.</span>
+  <span class="token key atrule">headings</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span>
+    <span class="token key atrule">size</span><span class="token punctuation">:</span>
 
-  # Font settings for posts.
-  # Fallback to `global` font settings.
-  posts:
-    external: true
-    family: &#39;Comic Neue&#39;
+  <span class="token comment"># Font settings for posts.</span>
+  <span class="token comment"># Fallback to `global` font settings.</span>
+  <span class="token key atrule">posts</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span>
 
-  # Font settings for Logo.
-  # Fallback to `global` font settings.
-  logo:
-    external: true
-    family: &#39;Comic Neue&#39;
-    size:
+  <span class="token comment"># Font settings for Logo.</span>
+  <span class="token comment"># Fallback to `global` font settings.</span>
+  <span class="token key atrule">logo</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span>
+    <span class="token key atrule">size</span><span class="token punctuation">:</span>
 
-  # Font settings for &lt;code&gt; and code blocks.
-  codes:
-    external: true
-    family: &#39;Comic Neue&#39;
-    size:
-</code></pre>
+  <span class="token comment"># Font settings for &lt;code&gt; and code blocks.</span>
+  <span class="token key atrule">codes</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">family</span><span class="token punctuation">:</span> <span class="token string">'Comic Neue'</span>
+    size<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>刚开始的字体是默认14px，在代码部分会很小，所以可以在<code>themes/next/source/css/_variables/base.styl</code></p>
 <p>修改 font size和code font  为18px就很好</p>
 <h2 id="设置新建文件配置"><a href="#设置新建文件配置" class="headerlink" title="设置新建文件配置"></a>设置新建文件配置</h2><p>进入<code>Hexo/scaffolds</code>修改<code>post.md</code></p>
-<pre><code class="lang-yaml">---
-title: {{ title }}
-date: {{ date }}
-mathjax: true
-categories:
-tags:
----
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> date <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token key atrule">mathjax</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="新建带日期的博文"><a href="#新建带日期的博文" class="headerlink" title="新建带日期的博文"></a>新建带日期的博文</h2><p>修改站点配置文件<code>-config.yml</code></p>
-<pre><code class="lang-yaml"># Writing
-new_post_name: :year-:month-:day-:title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: true # 同时生成一个文件夹
-relative_link: false
-future: true
-highlight: # Hexo自带代码高亮插件
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
-</code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Writing</span>
+<span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>year<span class="token punctuation">-</span><span class="token punctuation">:</span>month<span class="token punctuation">-</span><span class="token punctuation">:</span>day<span class="token punctuation">-</span><span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span>
+<span class="token key atrule">default_layout</span><span class="token punctuation">:</span> post
+<span class="token key atrule">titlecase</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Transform title into titlecase</span>
+<span class="token key atrule">external_link</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Open external links in new tab</span>
+<span class="token key atrule">filename_case</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token key atrule">render_drafts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">post_asset_folder</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 同时生成一个文件夹</span>
+<span class="token key atrule">relative_link</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">future</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">highlight</span><span class="token punctuation">:</span> <span class="token comment"># Hexo自带代码高亮插件</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  tab_replace<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p>把背景图片存放到<code>Hexo/themes/next/source/images</code></p>
 <p>再在<code>Hexo/themes/next/source/css/_custom/custom/styl</code>修改一下</p>
-<pre><code class="lang-stylus">body { background:url(/images/music.png);}
-</code></pre>
+<pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token selector">body <span class="token punctuation">{</span></span> <span class="token property-declaration"><span class="token property">background</span><span class="token punctuation">:</span><span class="token url">url(/images/music.png)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>参考博客：</p>
-<p><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">https://www.jianshu.com/p/3a05351a37dc</a></p>
-<p><a href="https://www.cnblogs.com/liziczh/p/9318656.html" target="_blank" rel="noopener">https://www.cnblogs.com/liziczh/p/9318656.html</a></p>
-<p><a href="https://xian6ge.netlify.com/posts/82ce1911/" target="_blank" rel="noopener">https://xian6ge.netlify.com/posts/82ce1911/</a></p>
-<p><a href="https://www.jianshu.com/p/805bd0b65d98https://www.jianshu.com/p/805bd0b65d98" target="_blank" rel="noopener">https://www.jianshu.com/p/805bd0b65d98https://www.jianshu.com/p/805bd0b65d98</a></p>
-<p><a href="https://www.jianshu.com/p/3a01cc514ce7?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/3a01cc514ce7?utm_source=oschina-app</a></p>
-<p><a href="https://leflacon.github.io/7167e0bc/" target="_blank" rel="noopener">https://leflacon.github.io/7167e0bc/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a05351a37dc">https://www.jianshu.com/p/3a05351a37dc</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liziczh/p/9318656.html">https://www.cnblogs.com/liziczh/p/9318656.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://xian6ge.netlify.com/posts/82ce1911/">https://xian6ge.netlify.com/posts/82ce1911/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/805bd0b65d98https://www.jianshu.com/p/805bd0b65d98">https://www.jianshu.com/p/805bd0b65d98https://www.jianshu.com/p/805bd0b65d98</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a01cc514ce7?utm_source=oschina-app">https://www.jianshu.com/p/3a01cc514ce7?utm_source=oschina-app</a></p>
+<p><a target="_blank" rel="noopener" href="https://leflacon.github.io/7167e0bc/">https://leflacon.github.io/7167e0bc/</a></p>
                 
             </div>
             <hr/>
@@ -1719,11 +1684,11 @@ highlight: # Hexo自带代码高亮插件
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/题解/">
+                    <a href="/tags/%E9%A2%98%E8%A7%A3/">
                         <span class="chip bg-color">题解</span>
                     </a>
                     
-                    <a href="/tags/多校/">
+                    <a href="/tags/%E5%A4%9A%E6%A0%A1/">
                         <span class="chip bg-color">多校</span>
                     </a>
                     
@@ -1760,7 +1725,7 @@ highlight: # Hexo自带代码高亮插件
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1961,7 +1926,7 @@ highlight: # Hexo自带代码高亮插件
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -2262,7 +2227,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

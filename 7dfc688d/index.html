@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="服务器配置, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/服务器/">
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                                 <span class="chip bg-color">服务器</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -584,257 +586,215 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="centos安装python3"><a href="#centos安装python3" class="headerlink" title="centos安装python3"></a><code>centos</code>安装<code>python3</code></h2><h2 id="参考-centos下安装python3详细教程"><a href="#参考-centos下安装python3详细教程" class="headerlink" title="参考 centos下安装python3详细教程"></a>参考 <a href="https://blog.csdn.net/t8116189520/article/details/81976755" target="_blank" rel="noopener">centos下安装python3详细教程</a></h2><h3 id="1-python位置"><a href="#1-python位置" class="headerlink" title="1.python位置"></a>1.python位置</h3><p>使用<code>whereis python</code>得到<code>python</code>位置</p>
-<pre><code class="lang-js">[root@iz2ze3g6pyat2fqpma7zdvz django_test]# whereis python
-python: /usr/bin/python /usr/bin/python.config /usr/bin/python2.7 /usr/bin/python.bak /usr/bin/python2.7-config /usr/lib/python2.7 /usr/lib64/python2.7 /etc/python /usr/include/python2.7 /usr/share/man/man1/python.1.gz
-</code></pre>
+                <h2 id="centos安装python3"><a href="#centos安装python3" class="headerlink" title="centos安装python3"></a><code>centos</code>安装<code>python3</code></h2><h2 id="参考-centos下安装python3详细教程"><a href="#参考-centos下安装python3详细教程" class="headerlink" title="参考 centos下安装python3详细教程"></a>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/t8116189520/article/details/81976755">centos下安装python3详细教程</a></h2><h3 id="1-python位置"><a href="#1-python位置" class="headerlink" title="1.python位置"></a>1.python位置</h3><p>使用<code>whereis python</code>得到<code>python</code>位置</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>root@iz2ze3g6pyat2fqpma7zdvz django_test<span class="token punctuation">]</span># whereis python
+python<span class="token operator">:</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python<span class="token punctuation">.</span>config <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python2<span class="token punctuation">.</span><span class="token number">7</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python<span class="token punctuation">.</span>bak <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python2<span class="token punctuation">.</span><span class="token number">7</span><span class="token operator">-</span>config <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>python2<span class="token punctuation">.</span><span class="token number">7</span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib64<span class="token operator">/</span>python2<span class="token punctuation">.</span><span class="token number">7</span> <span class="token operator">/</span>etc<span class="token operator">/</span>python <span class="token operator">/</span>usr<span class="token operator">/</span>include<span class="token operator">/</span>python2<span class="token punctuation">.</span><span class="token number">7</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>man<span class="token operator">/</span>man1<span class="token operator">/</span>python<span class="token punctuation">.</span><span class="token number">1.</span>gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>得到<code>python</code>的位置在 <code>/usr/bin</code>目录</p>
-<pre><code class="lang-js">[root@iz2ze3g6pyat2fqpma7zdvz ~]# cd /usr/bin
-[root@iz2ze3g6pyat2fqpma7zdvz bin]# ll python*
-lrwxrwxrwx 1 root root   32 Dec 22 19:40 python -&gt; /usr/local/python3/bin/python3.9
-lrwxrwxrwx 1 root root    9 Dec 22 18:30 python2 -&gt; python2.7
--rwxr-xr-x 1 root root 7144 Nov 17 06:23 python2.7
--rwxr-xr-x 1 root root 1835 Nov 17 06:23 python2.7-config
-lrwxrwxrwx 1 root root   16 Dec 22 18:30 python2-config -&gt; python2.7-config
-lrwxrwxrwx 1 root root   32 Dec 23 18:43 python3 -&gt; /usr/local/python3/bin/python3.9
-lrwxrwxrwx 1 root root    7 Dec 22 18:30 python.bak -&gt; python2
-lrwxrwxrwx 1 root root   39 Dec 22 19:36 python.config -&gt; /usr/local/python3/bin/python3.9-config
-lrwxrwxrwx 1 root root   14 Dec 22 18:30 python-config.bak -&gt; python2-config
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>root@iz2ze3g6pyat2fqpma7zdvz <span class="token operator">~</span><span class="token punctuation">]</span># cd <span class="token operator">/</span>usr<span class="token operator">/</span>bin
+<span class="token punctuation">[</span>root@iz2ze3g6pyat2fqpma7zdvz bin<span class="token punctuation">]</span># ll python<span class="token operator">*</span>
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">32</span> Dec <span class="token number">22</span> <span class="token number">19</span><span class="token operator">:</span><span class="token number">40</span> python <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span class="token punctuation">.</span><span class="token number">9</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">9</span> Dec <span class="token number">22</span> <span class="token number">18</span><span class="token operator">:</span><span class="token number">30</span> python2 <span class="token operator">-</span><span class="token operator">&gt;</span> python2<span class="token punctuation">.</span><span class="token number">7</span>
+<span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">7144</span> Nov <span class="token number">17</span> <span class="token number">06</span><span class="token operator">:</span><span class="token number">23</span> python2<span class="token punctuation">.</span><span class="token number">7</span>
+<span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">1835</span> Nov <span class="token number">17</span> <span class="token number">06</span><span class="token operator">:</span><span class="token number">23</span> python2<span class="token punctuation">.</span><span class="token number">7</span><span class="token operator">-</span>config
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">16</span> Dec <span class="token number">22</span> <span class="token number">18</span><span class="token operator">:</span><span class="token number">30</span> python2<span class="token operator">-</span>config <span class="token operator">-</span><span class="token operator">&gt;</span> python2<span class="token punctuation">.</span><span class="token number">7</span><span class="token operator">-</span>config
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">32</span> Dec <span class="token number">23</span> <span class="token number">18</span><span class="token operator">:</span><span class="token number">43</span> python3 <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span class="token punctuation">.</span><span class="token number">9</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">7</span> Dec <span class="token number">22</span> <span class="token number">18</span><span class="token operator">:</span><span class="token number">30</span> python<span class="token punctuation">.</span>bak <span class="token operator">-</span><span class="token operator">&gt;</span> python2
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">39</span> Dec <span class="token number">22</span> <span class="token number">19</span><span class="token operator">:</span><span class="token number">36</span> python<span class="token punctuation">.</span>config <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span class="token punctuation">.</span><span class="token number">9</span><span class="token operator">-</span>config
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">14</span> Dec <span class="token number">22</span> <span class="token number">18</span><span class="token operator">:</span><span class="token number">30</span> python<span class="token operator">-</span>config<span class="token punctuation">.</span>bak <span class="token operator">-</span><span class="token operator">&gt;</span> python2<span class="token operator">-</span>config
 
-python_django:
-total 20
-drwxr-xr-x 2 root root 4096 Dec 23 15:33 bin
-drwxr-xr-x 2 root root 4096 Dec 23 15:33 include
-drwxr-xr-x 3 root root 4096 Dec 23 15:33 lib
-drwxr-xr-x 3 root root 4096 Dec 23 15:33 lib64
--rw-r--r-- 1 root root  201 Dec 23 15:33 pyvenv.cfg
-</code></pre>
+python_django<span class="token operator">:</span>
+total <span class="token number">20</span>
+drwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">2</span> root root <span class="token number">4096</span> Dec <span class="token number">23</span> <span class="token number">15</span><span class="token operator">:</span><span class="token number">33</span> bin
+drwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">2</span> root root <span class="token number">4096</span> Dec <span class="token number">23</span> <span class="token number">15</span><span class="token operator">:</span><span class="token number">33</span> include
+drwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">3</span> root root <span class="token number">4096</span> Dec <span class="token number">23</span> <span class="token number">15</span><span class="token operator">:</span><span class="token number">33</span> lib
+drwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">3</span> root root <span class="token number">4096</span> Dec <span class="token number">23</span> <span class="token number">15</span><span class="token operator">:</span><span class="token number">33</span> lib64
+<span class="token operator">-</span>rw<span class="token operator">-</span>r<span class="token operator">--</span>r<span class="token operator">--</span> <span class="token number">1</span> root root  <span class="token number">201</span> Dec <span class="token number">23</span> <span class="token number">15</span><span class="token operator">:</span><span class="token number">33</span> pyvenv<span class="token punctuation">.</span>cfg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>进入<code>/usr/bin</code>目录使用<code>ll python*</code>我们可以得到<code>python</code>的各种版本</p>
 <p><code>-&gt;</code>是软连接，意味这个文件是后面文件的软链接，这个<code>python</code>也可以看成命令</p>
-<h3 id="2-python3的依赖"><a href="#2-python3的依赖" class="headerlink" title="2 python3的依赖"></a>2 <code>python3</code>的依赖</h3><pre><code class="lang-js">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
-</code></pre>
+<h3 id="2-python3的依赖"><a href="#2-python3的依赖" class="headerlink" title="2 python3的依赖"></a>2 <code>python3</code>的依赖</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">yum install zlib<span class="token operator">-</span>devel bzip2<span class="token operator">-</span>devel openssl<span class="token operator">-</span>devel ncurses<span class="token operator">-</span>devel sqlite<span class="token operator">-</span>devel readline<span class="token operator">-</span>devel tk<span class="token operator">-</span>devel gcc make <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="3-安装pip"><a href="#3-安装pip" class="headerlink" title="3 安装pip"></a>3 安装<code>pip</code></h3><p>centos7没有安装pip</p>
-<pre><code class="lang-js">#运行这个命令添加epel扩展源
-yum -y install epel-release
-
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">#运行这个命令添加epel扩展源
+yum <span class="token operator">-</span>y install epel<span class="token operator">-</span>release
+ 
 #安装pip
-yum install python-pip
-</code></pre>
-<h3 id="4-用pip安装wget"><a href="#4-用pip安装wget" class="headerlink" title="4 用pip安装wget"></a>4 用<code>pip</code>安装<code>wget</code></h3><pre><code class="lang-js">pip install wget
-</code></pre>
-<h3 id="5-用wget下载python3"><a href="#5-用wget下载python3" class="headerlink" title="5 用wget下载python3"></a>5 用<code>wget</code>下载<code>python3</code></h3><p>在<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">官网</a>找到想要的版本链接</p>
-<pre><code class="lang-js">wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
-</code></pre>
-<h3 id="6-编译python3源码包"><a href="#6-编译python3源码包" class="headerlink" title="6 编译python3源码包"></a>6 编译<code>python3</code>源码包</h3><pre><code class="lang-js">#解压
-xz -d Python-3.6.4.tar.xz
-tar -xf Python-3.6.4.tar
+yum install python<span class="token operator">-</span>pip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-用pip安装wget"><a href="#4-用pip安装wget" class="headerlink" title="4 用pip安装wget"></a>4 用<code>pip</code>安装<code>wget</code></h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">pip install wget<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="5-用wget下载python3"><a href="#5-用wget下载python3" class="headerlink" title="5 用wget下载python3"></a>5 用<code>wget</code>下载<code>python3</code></h3><p>在<a target="_blank" rel="noopener" href="https://www.python.org/downloads/source/">官网</a>找到想要的版本链接</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">wget https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>python<span class="token punctuation">.</span>org<span class="token operator">/</span>ftp<span class="token operator">/</span>python<span class="token operator">/</span><span class="token number">3.6</span><span class="token number">.4</span><span class="token operator">/</span>Python<span class="token operator">-</span><span class="token number">3.6</span><span class="token number">.4</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>xz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="6-编译python3源码包"><a href="#6-编译python3源码包" class="headerlink" title="6 编译python3源码包"></a>6 编译<code>python3</code>源码包</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">#解压
+xz <span class="token operator">-</span>d Python<span class="token operator">-</span><span class="token number">3.6</span><span class="token number">.4</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>xz
+tar <span class="token operator">-</span>xf Python<span class="token operator">-</span><span class="token number">3.6</span><span class="token number">.4</span><span class="token punctuation">.</span>tar
 #进入解压后的目录，依次执行下面命令进行手动编译
-cd Python-3.6.4
-./configure prefix=/usr/local/python3
-make &amp;&amp; make install
-# 如果出现can&#39;t decompress data; zlib not available这个错误，则需要安装相关库
-#安装依赖zlib、zlib-devel
+cd Python<span class="token operator">-</span><span class="token number">3.6</span><span class="token number">.4</span>
+<span class="token punctuation">.</span><span class="token operator">/</span>configure prefix<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3
+make <span class="token operator">&amp;&amp;</span> make install
+# 如果出现can't decompress data<span class="token punctuation">;</span> zlib not available这个错误，则需要安装相关库
+#安装依赖zlib、zlib<span class="token operator">-</span>devel
 yum install zlib zlib
-yum install zlib zlib-devel
-</code></pre>
-<h3 id="7-添加软连接"><a href="#7-添加软连接" class="headerlink" title="7 添加软连接"></a>7 添加软连接</h3><pre><code class="lang-js">#将原来的链接备份
-mv /usr/bin/python /usr/bin/python.bak
-
+yum install zlib zlib<span class="token operator">-</span>devel<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-添加软连接"><a href="#7-添加软连接" class="headerlink" title="7 添加软连接"></a>7 添加软连接</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">#将原来的链接备份
+mv <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python<span class="token punctuation">.</span>bak
+ 
 #添加python3的软链接
-ln -s /usr/local/python3/bin/python3.6 /usr/bin/python
-
+ln <span class="token operator">-</span>s <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span class="token punctuation">.</span><span class="token number">6</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python
+ 
 #测试是否安装成功了
-python -V
-</code></pre>
+python <span class="token operator">-</span><span class="token constant">V</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>如果本身没有python3的软链接，可以再</p>
-<pre><code class="lang-js">ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">ln <span class="token operator">-</span>s <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>python3<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span class="token punctuation">.</span><span class="token number">6</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="8-更改yum配置"><a href="#8-更改yum配置" class="headerlink" title="8 更改yum配置"></a>8 更改<code>yum</code>配置</h3><p>因为<code>yum</code>使用<code>python2</code>，所以需要更改一个<code>yum</code>的配置</p>
-<pre><code class="lang-js">vi /usr/bin/yum
-把#! /usr/bin/python修改为#! /usr/bin/python2
-
-vi /usr/libexec/urlgrabber-ext-down
-把#! /usr/bin/python 修改为#! /usr/bin/python2
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">vi <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>yum
+把#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python修改为#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python2
+ 
+vi <span class="token operator">/</span>usr<span class="token operator">/</span>libexec<span class="token operator">/</span>urlgrabber<span class="token operator">-</span>ext<span class="token operator">-</span>down
+把#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python 修改为#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="virtualenv和virtualenvwrapper"><a href="#virtualenv和virtualenvwrapper" class="headerlink" title="virtualenv和virtualenvwrapper"></a><code>virtualenv</code>和<code>virtualenvwrapper</code></h2><p><code>python</code>虚拟环境</p>
 <p>简单点说<code>python</code>的虚拟环境就是给每个项目一个独立的<code>python</code>配置，各个项目之间的配置不影响，</p>
-<h3 id="1-下载virtualenv"><a href="#1-下载virtualenv" class="headerlink" title="1 下载virtualenv"></a>1 下载<code>virtualenv</code></h3><pre><code class="lang-js">pip install virtualenv
-</code></pre>
-<h3 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2 创建新项目"></a>2 创建新项目</h3><pre><code class="lang-js">virtualenv env
-</code></pre>
-<h3 id="3-使用虚拟环境"><a href="#3-使用虚拟环境" class="headerlink" title="3 使用虚拟环境"></a>3 使用虚拟环境</h3><pre><code class="lang-js">source env/bin/activate
-</code></pre>
-<h3 id="4-退出虚拟环境"><a href="#4-退出虚拟环境" class="headerlink" title="4 退出虚拟环境"></a>4 退出虚拟环境</h3><pre><code class="lang-js">deactivate
-</code></pre>
+<h3 id="1-下载virtualenv"><a href="#1-下载virtualenv" class="headerlink" title="1 下载virtualenv"></a>1 下载<code>virtualenv</code></h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">pip install virtualenv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2 创建新项目"></a>2 创建新项目</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">virtualenv env<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-使用虚拟环境"><a href="#3-使用虚拟环境" class="headerlink" title="3 使用虚拟环境"></a>3 使用虚拟环境</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">source env<span class="token operator">/</span>bin<span class="token operator">/</span>activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-退出虚拟环境"><a href="#4-退出虚拟环境" class="headerlink" title="4 退出虚拟环境"></a>4 退出虚拟环境</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="5-virtualenvwrapper安装"><a href="#5-virtualenvwrapper安装" class="headerlink" title="5 virtualenvwrapper安装"></a>5 <code>virtualenvwrapper</code>安装</h3><p><code>virtualenvwrapper</code> 可以对虚拟环境进行集中管理</p>
-<pre><code class="lang-js">pip install virtualenvwrapper
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">pip install virtualenvwrapper<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="6-添加-bashrc"><a href="#6-添加-bashrc" class="headerlink" title="6 添加~/.bashrc"></a>6 添加<code>~/.bashrc</code></h3><p>在<code>~/.bashrc</code>添加</p>
-<pre><code class="lang-js">export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token constant">WORKON_HOME</span><span class="token operator">=</span><span class="token operator">~</span><span class="token operator">/</span>Envs
+source <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh　　<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>读入配置文件</p>
-<pre><code class="lang-js">source ~/.bashrc　　　　#读入配置文件，立即生效
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">source <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>bashrc　　　　#读入配置文件，立即生效<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="7-virtualenvwrapper基本使用"><a href="#7-virtualenvwrapper基本使用" class="headerlink" title="7 virtualenvwrapper基本使用"></a>7 <code>virtualenvwrapper</code>基本使用</h3><ul>
 <li>创建虚拟环境 <code>mkvirtualenv</code></li>
 </ul>
-<pre><code class="lang-js">mkvirtualenv venv
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">mkvirtualenv venv　　<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>　这样会在<code>WORKON_HOME</code>变量指定的目录下新建名为<code>venv</code>的虚拟环境。</p>
 <ul>
 <li><p>指定python版本</p>
 <p><code>--python</code>指定<code>python</code>解释器</p>
 </li>
 </ul>
-<pre><code>mkvirtualenv --python=/usr/local/python3.5.3/bin/python venv
-</code></pre><ul>
+<pre class="line-numbers language-none"><code class="language-none">mkvirtualenv --python=/usr/local/python3.5.3/bin/python venv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
 <li>查看当前虚拟环境目录</li>
 </ul>
-<pre><code class="lang-js">workon
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">workon<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>切换到虚拟环境</li>
 </ul>
-<pre><code class="lang-js">workon xxx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">workon xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>退出虚拟环境</li>
 </ul>
-<pre><code class="lang-js">deactivate
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>删除虚拟环境</li>
 </ul>
-<pre><code class="lang-js">rmvirtualenv xxx
-</code></pre>
-<h3 id="8-出错处理"><a href="#8-出错处理" class="headerlink" title="8 出错处理"></a>8 出错处理</h3><p>出现 <code>ModuleNotFoundError: No module named &#39;_ctypes&#39;</code></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">rmvirtualenv xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="8-出错处理"><a href="#8-出错处理" class="headerlink" title="8 出错处理"></a>8 出错处理</h3><p>出现 <code>ModuleNotFoundError: No module named '_ctypes'</code></p>
 <ul>
 <li>安装<code>libffi-devel</code></li>
 </ul>
-<pre><code class="lang-js">yum install libffi-devel -y
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">yum install libffi<span class="token operator">-</span>devel <span class="token operator">-</span>y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>重装<code>python</code></li>
 <li>使用<code>make &amp;&amp; make install</code></li>
 </ul>
 <h2 id="django"><a href="#django" class="headerlink" title="django"></a><code>django</code></h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1 下载"></a>1 下载</h3><p>使用<code>pip install django</code></p>
 <h3 id="2-创建django项目"><a href="#2-创建django项目" class="headerlink" title="2 创建django项目"></a>2 创建django项目</h3><p><code>django-admin startproject xxx</code></p>
-<h3 id="3-启动django"><a href="#3-启动django" class="headerlink" title="3 启动django"></a>3 启动django</h3><pre><code class="lang-js">python manage.py runserver 0.0.0.0:80
-</code></pre>
+<h3 id="3-启动django"><a href="#3-启动django" class="headerlink" title="3 启动django"></a>3 启动django</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py runserver <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token operator">:</span><span class="token number">80</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="4-配置文件"><a href="#4-配置文件" class="headerlink" title="4 配置文件"></a>4 配置文件</h3><p>进入setting.py文件</p>
 <p>在allowHost中添加自己的ip</p>
-<pre><code class="lang-js"> ALLOWED_HOSTS = [
-    &#39;123.56.252.111&#39;,
-    &#39;localhost&#39;,
-   &#39;0.0.0.0:8000&#39;,                                                                           &#39;127.0.0.1&#39;
-      ]
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">ALLOWED_HOSTS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+   <span class="token string">'123.56.252.111'</span><span class="token punctuation">,</span>
+   <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+  <span class="token string">'0.0.0.0:8000'</span><span class="token punctuation">,</span>                                                                   		<span class="token string">'127.0.0.1'</span>
+     <span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样在运行后就可以用<code>http://123.56.252.111:8000/</code>来访问</p>
-<h3 id="5-报错处理"><a href="#5-报错处理" class="headerlink" title="5 报错处理"></a>5 报错处理</h3><p><a href="https://blog.csdn.net/weixin_44110998/article/details/103499213" target="_blank" rel="noopener">参考</a></p>
+<h3 id="5-报错处理"><a href="#5-报错处理" class="headerlink" title="5 报错处理"></a>5 报错处理</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44110998/article/details/103499213">参考</a></p>
 <p>出现</p>
-<pre><code class="lang-js">django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">django<span class="token punctuation">.</span>core<span class="token punctuation">.</span>exceptions<span class="token punctuation">.</span>ImproperlyConfigured<span class="token operator">:</span> SQLite <span class="token number">3.8</span><span class="token number">.3</span> or later is <span class="token function">required</span> <span class="token punctuation">(</span>found <span class="token number">3.7</span><span class="token number">.17</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li><p>在<a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener">官网</a>找到想要版本的链接</p>
+<li><p>在<a target="_blank" rel="noopener" href="https://www.sqlite.org/download.html">官网</a>找到想要版本的链接</p>
 </li>
 <li><p>使用<code>wget</code>下载</p>
 </li>
 </ul>
-<pre><code class="lang-js">#链接最好重新获取，否则可能不是最新版本
-wget https://www.sqlite.org/2019/sqlite-autoconf-3300100.tar.gz
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">#链接最好重新获取，否则可能不是最新版本
+wget https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>sqlite<span class="token punctuation">.</span>org<span class="token operator">/</span><span class="token number">2019</span><span class="token operator">/</span>sqlite<span class="token operator">-</span>autoconf<span class="token operator">-</span><span class="token number">3300100.</span>tar<span class="token punctuation">.</span>gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>解压安装</li>
 </ul>
-<pre><code class="lang-js">[root@localhost home]# tar zxvf sqlite-autoconf-3300100.tar.gz
-[root@localhost home]# cd sqlite-autoconf-3300100/
-[root@localhost sqlite-autoconf-3300100]# ./configure
-[root@localhost sqlite-autoconf-3300100]# make &amp; make install
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># tar zxvf sqlite<span class="token operator">-</span>autoconf<span class="token operator">-</span><span class="token number">3300100.</span>tar<span class="token punctuation">.</span>gz
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># cd sqlite<span class="token operator">-</span>autoconf<span class="token operator">-</span><span class="token number">3300100</span><span class="token operator">/</span>
+<span class="token punctuation">[</span>root@localhost sqlite<span class="token operator">-</span>autoconf<span class="token operator">-</span><span class="token number">3300100</span><span class="token punctuation">]</span># <span class="token punctuation">.</span><span class="token operator">/</span>configure
+<span class="token punctuation">[</span>root@localhost sqlite<span class="token operator">-</span>autoconf<span class="token operator">-</span><span class="token number">3300100</span><span class="token punctuation">]</span># make <span class="token operator">&amp;</span> make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>查看版本</li>
 </ul>
-<pre><code class="lang-js">#检查新安装的sqlite3版本
-[root@localhost home]# /usr/local/bin/sqlite3 --version
-3.30.1 2019-10-10 20:19:45 18db032d058f1436ce3dea84081f4ee5a0f2259ad97301d43c426bc7f3df1b0b
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">#检查新安装的sqlite3版本
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3 <span class="token operator">--</span>version
+<span class="token number">3.30</span><span class="token number">.1</span> <span class="token number">2019</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">10</span> <span class="token number">20</span><span class="token operator">:</span><span class="token number">19</span><span class="token operator">:</span><span class="token number">45</span> <span class="token number">18</span>db032d058f1436ce3dea84081f4ee5a0f2259ad97301d43c426bc7f3df1b0b
 
 #检查旧的sqlite3版本
-[root@localhost home]# /usr/bin/sqlite3 --version
-3.7.17 2013-05-20 00:56:22 118a3b35693b134d56ebd780123b7fd6f1497668
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3 <span class="token operator">--</span>version
+<span class="token number">3.7</span><span class="token number">.17</span> <span class="token number">2013</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">20</span> <span class="token number">00</span><span class="token operator">:</span><span class="token number">56</span><span class="token operator">:</span><span class="token number">22</span> <span class="token number">118</span>a3b35693b134d56ebd780123b7fd6f1497668
 
 # 把旧的sqlite3改个名字
-[root@localhost home]# mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># mv <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3  <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3_old
 
 # 设置软链接
-[root@localhost home]# ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># ln <span class="token operator">-</span>s <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>sqlite3
 
 #查看sqlite3版本
-[root@localhost home]# sqlite3 --version
-3.30.1 2019-10-10 20:19:45 18db032d058f1436ce3dea84081f4ee5a0f2259ad97301d43c426bc7f3df1b0b
-</code></pre>
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># sqlite3 <span class="token operator">--</span>version
+<span class="token number">3.30</span><span class="token number">.1</span> <span class="token number">2019</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">10</span> <span class="token number">20</span><span class="token operator">:</span><span class="token number">19</span><span class="token operator">:</span><span class="token number">45</span> <span class="token number">18</span>db032d058f1436ce3dea84081f4ee5a0f2259ad97301d43c426bc7f3df1b0b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>添加到<code>bashrc</code>文件</li>
 </ul>
 <p>在<code>~/.bashrc</code>中添加</p>
-<pre><code class="lang-js">export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token constant">LD_LIBRARY_PATH</span><span class="token operator">=</span><span class="token string">"/usr/local/lib"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>检查<code>sqlite3</code>版本</li>
 </ul>
-<pre><code class="lang-js">[root@localhost home]# python3
-Python 3.6.5 (default, Jul  9 2019, 20:03:55) 
-[GCC 4.8.5 20150623 (Red Hat 4.8.5-36)] on linux
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt; import sqlite3
-&gt;&gt;&gt; sqlite3.sqlite_version
-&#39;3.30.1&#39;
-&gt;&gt;&gt; exit()  
-[root@localhost home]#
-</code></pre>
-<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a><code>nginx</code></h2><p><a href="https://www.cnblogs.com/huiyi0521/p/10253341.html" target="_blank" rel="noopener">参考</a></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># python3
+Python <span class="token number">3.6</span><span class="token number">.5</span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">,</span> Jul  <span class="token number">9</span> <span class="token number">2019</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token operator">:</span><span class="token number">03</span><span class="token operator">:</span><span class="token number">55</span><span class="token punctuation">)</span> 
+<span class="token punctuation">[</span><span class="token constant">GCC</span> <span class="token number">4.8</span><span class="token number">.5</span> <span class="token number">20150623</span> <span class="token punctuation">(</span>Red Hat <span class="token number">4.8</span><span class="token number">.5</span><span class="token operator">-</span><span class="token number">36</span><span class="token punctuation">)</span><span class="token punctuation">]</span> on linux
+Type <span class="token string">"help"</span><span class="token punctuation">,</span> <span class="token string">"copyright"</span><span class="token punctuation">,</span> <span class="token string">"credits"</span> or <span class="token string">"license"</span> <span class="token keyword">for</span> more information<span class="token punctuation">.</span>
+<span class="token operator">&gt;&gt;&gt;</span> <span class="token keyword">import</span> sqlite3
+<span class="token operator">&gt;&gt;&gt;</span> sqlite3<span class="token punctuation">.</span>sqlite_version
+<span class="token string">'3.30.1'</span>
+<span class="token operator">&gt;&gt;&gt;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
+<span class="token punctuation">[</span>root@localhost home<span class="token punctuation">]</span># <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a><code>nginx</code></h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huiyi0521/p/10253341.html">参考</a></p>
 <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1 安装"></a>1 安装</h3><p>添加Nginx 存储库</p>
-<pre><code class="lang-js">sudo yum -y install epel-release
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo yum <span class="token operator">-</span>y install epel<span class="token operator">-</span>release<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装<code>nginx</code></p>
-<pre><code class="lang-js">sudo yum -y install nginx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo yum <span class="token operator">-</span>y install nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="2-启动"><a href="#2-启动" class="headerlink" title="2 启动"></a>2 启动</h3><p>启动nginx</p>
-<pre><code class="lang-js">sudo systemctl start nginx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo systemctl start nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="3-防火墙"><a href="#3-防火墙" class="headerlink" title="3 防火墙"></a>3 防火墙</h3><p>允许http通信</p>
-<pre><code class="lang-js">sudo firewall-cmd --permanent --zone=public --add-service=http
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>permanent <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>add<span class="token operator">-</span>service<span class="token operator">=</span>http<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>允许https通信</p>
-<pre><code class="lang-js">sudo firewall-cmd --permanent --zone=public --add-service=https
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>permanent <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>add<span class="token operator">-</span>service<span class="token operator">=</span>https<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>重启防火墙 </p>
-<pre><code class="lang-js">sudo firewall-cmd --reload
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">sudo firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="4-测试"><a href="#4-测试" class="headerlink" title="4 测试"></a>4 测试</h3><p>在浏览器输入地址</p>
 <h3 id="5-卸载"><a href="#5-卸载" class="headerlink" title="5 卸载"></a>5 卸载</h3><p>停止nginx</p>
-<pre><code class="lang-js">service nginx stop
-// centos 7
-sysyemcyl stop nginx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">service nginx stop
+<span class="token comment">// centos 7</span>
+sysyemcyl stop nginx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>删除自启动</p>
-<pre><code class="lang-js">chkconfig nginx off
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">chkconfig nginx off<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>从源头删除nginx</p>
-<pre><code class="lang-js">rm -rf /usr/sbin/nginx
-rm -rf /etc/nginx
-rm -rf /etc/init.d/nginx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">rm <span class="token operator">-</span>rf <span class="token operator">/</span>usr<span class="token operator">/</span>sbin<span class="token operator">/</span>nginx
+rm <span class="token operator">-</span>rf <span class="token operator">/</span>etc<span class="token operator">/</span>nginx
+rm <span class="token operator">-</span>rf <span class="token operator">/</span>etc<span class="token operator">/</span>init<span class="token punctuation">.</span>d<span class="token operator">/</span>nginx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>使用yum清理</p>
-<pre><code class="lang-js">yum remove nginx
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">yum remove nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="修改root-后面的名字"><a href="#修改root-后面的名字" class="headerlink" title="修改root@后面的名字"></a>修改<code>root@</code>后面的名字</h2><p><code>centos7</code></p>
-<pre><code class="lang-js">hostnamectl set-hostname dhl #
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">hostnamectl set<span class="token operator">-</span>hostname dhl #
 hostname #查看
-vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
+vim <span class="token operator">/</span>etc<span class="token operator">/</span>hosts # 编辑hosts文件，给<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>添加hostname
 
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 dhl
-</code></pre>
+<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>   localhost localhost<span class="token punctuation">.</span>localdomain localhost4 localhost4<span class="token punctuation">.</span>localdomain4 dhl  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>重启shell生效</p>
                 
             </div>
@@ -899,7 +859,7 @@ vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/服务器/">
+                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                                     <span class="chip bg-color">服务器</span>
                                 </a>
                             
@@ -1366,7 +1326,7 @@ vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1422,7 +1382,7 @@ vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1433,7 +1393,7 @@ vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/服务器/">
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
                     </a>
                     
@@ -1622,7 +1582,7 @@ vim /etc/hosts # 编辑hosts文件，给127.0.0.1添加hostname
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1923,7 +1883,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

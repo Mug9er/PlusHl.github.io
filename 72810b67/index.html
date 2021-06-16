@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="wallpaper 模拟登录, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/模拟登录/">
+                            <a href="/tags/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
                                 <span class="chip bg-color">模拟登录</span>
                             </a>
                         
@@ -549,7 +551,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    758
+                    696
                 </div>
                 
 
@@ -587,126 +589,123 @@
                 <p>在模拟登录wallhaven是，发现了一些问题，用request.session登录并保存cookie并不奏效</p>
 <p>所以决定自己手动保存cookie</p>
 <h3 id="先是登录"><a href="#先是登录" class="headerlink" title="先是登录"></a>先是登录</h3><p>因为登录信息中有<code>_token</code>，所以要先get一下获取网页的<code>_token</code> ，并且用get到的cookie来请求登录</p>
-<pre><code class="lang-py">    def __init__(self):
-        self.get_url = &quot;https://wallhaven.cc/login&quot;
-        self.post_url = &quot;https://wallhaven.cc/auth/login&quot;
-        self.proxies = spider_proxy.SpiderProxy()
-        self.data = {}
-        self._token = &quot;&quot;
-        self.cookies = {}
-        self.Is = False
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>get_url <span class="token operator">=</span> <span class="token string">"https://wallhaven.cc/login"</span>
+    self<span class="token punctuation">.</span>post_url <span class="token operator">=</span> <span class="token string">"https://wallhaven.cc/auth/login"</span>
+    self<span class="token punctuation">.</span>proxies <span class="token operator">=</span> spider_proxy<span class="token punctuation">.</span>SpiderProxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    self<span class="token punctuation">.</span>_token <span class="token operator">=</span> <span class="token string">""</span>
+    self<span class="token punctuation">.</span>cookies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    self<span class="token punctuation">.</span>Is <span class="token operator">=</span> <span class="token boolean">False</span>
 
-    # 1. 请求页面获得_token 和 cookie
-    def get_html(self):
-        response = requests.get(self.get_url, headers=self.proxies.header, proxies=self.proxies.proxy)
-        response_data = response.content.decode(&#39;utf-8&#39;)
+<span class="token comment"># 1. 请求页面获得_token 和 cookie</span>
+<span class="token keyword">def</span> <span class="token function">get_html</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>self<span class="token punctuation">.</span>get_url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>proxy<span class="token punctuation">)</span>
+    response_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 
-        self._token = re.findall(r&#39;&lt;meta name=&quot;csrf-token&quot; content=&quot;(.*?)&quot;&gt;&#39;, response_data, re.S)
+    self<span class="token punctuation">.</span>_token <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;meta name="csrf-token" content="(.*?)"&gt;'</span><span class="token punctuation">,</span> response_data<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token punctuation">)</span>
 
-        cookies = &quot;&quot;
-        for cookie in response.cookies:
-            cookies += cookie.name + &quot;=&quot; + cookie.value + &quot;;&quot;
+    cookies <span class="token operator">=</span> <span class="token string">""</span>
+    <span class="token keyword">for</span> cookie <span class="token keyword">in</span> response<span class="token punctuation">.</span>cookies<span class="token punctuation">:</span>
+        cookies <span class="token operator">+=</span> cookie<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">"="</span> <span class="token operator">+</span> cookie<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">";"</span>
 
-        # 用header来携带cookie
-        self.proxies.header[&#39;Cookie&#39;] = cookies
+    <span class="token comment"># 用header来携带cookie</span>
+    self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span> <span class="token operator">=</span> cookies
 
-    # 2.装填data
-    def combined_data(self):
-        self.data = {
-            &#39;_token&#39;: self._token,
-            &#39;username&#39;: &#39;643719884@qq.com&#39;,
-            &#39;password&#39;: &#39;dhl643719884&#39;
-        }
-</code></pre>
+<span class="token comment"># 2.装填data</span>
+<span class="token keyword">def</span> <span class="token function">combined_data</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'_token'</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>_token<span class="token punctuation">,</span>
+        <span class="token string">'username'</span><span class="token punctuation">:</span> <span class="token string">'643719884@qq.com'</span><span class="token punctuation">,</span>
+        <span class="token string">'password'</span><span class="token punctuation">:</span> <span class="token string">'dhl643719884'</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样可以登录，但是在用这个user-agent去请求数据是，不是登录后的状态，</p>
 <p>抓包后发线登录以后的cookie和未登录的cookie只有remeber_web的差别</p>
 <p>而remeber_web在请求登录的post的返回值里，那么</p>
-<pre><code class="lang-py"># login以后的cookie请求
-__cfduid=d7e60a37935c5d9c6f53f05ab1064e1681580787848; 
-remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6ImROQ29VNGRicnZsOW0wQW5BTzZVa1E9PSIsInZhbHVlIjoiTmNQT0h2TE03YW5yaUdhbWZDZnlQYlZzanN3UTV4aUdiMHh1bUl5cjVJMXdQbzIxYnF6bElYcFpmMERPY0ZcL3FnZ21xcU5WdXlvMlBBK21CeEs2K2FWV1pUK05sTmdDdFlHSWl4TlBwUHpuaEprV1dXYmZRbkZzWU1STjV6S3JONWsxNjBsekttbXFqd1BQTzhENlcwNzF0dVRvUit6eURxdHhrN1pZblo4U3lUMys2ekNLdTlXTllBXC82dkI3VUEiLCJtYWMiOiJkYmNiOTZiNDU3M2NjY2M3OGJjZWM4ZTBjZmJlZmIwMTBhMTM5MTcwMTA3ZDc1NjliNDM0ZmM1OWFkY2VhN2YwIn0%3D
-_pk_ref.1.01b8=%5B%22%22%2C%22%22%2C1581400207%2C%22http%3A%2F%2Flocalhost%3A63342%2FPyCharnPython%2Fday04%2Fawewall.html%3F_ijt%3Dog5l1ar0obspirlv150bfq3d1o%22%5D
-_pk_id.1.01b8=e6d2c9622d153c11.1580787918.21.1581400207.1581400207.
-XSRF-TOKEN=eyJpdiI6IjE4NzVZTlQrXC9pWFBmVlFsMUFvVFpBPT0iLCJ2YWx1ZSI6Im91OUROUEFZVHlsNWJ5bjdLa2pyQkV5R0RYZmNMNVN1TkJ5bERSTmFWaGFGRjUyaDI0K09aYzVVTUhZYzhnM0oiLCJtYWMiOiI0MTgzZmMyYzg0YmYyYmE2ZjgxNTEzMDBjYjI1NjFhOGYyMDZhNmJlZjkyYzBlMzhhYTNmNzA0MjBlZDQ3MDZhIn0%3D
-wallhaven_session=eyJpdiI6IjZQNVJcL3F0bXJhNndKUkc3QUVCTTZ3PT0iLCJ2YWx1ZSI6IjVSNHlRRjl0cU1sNEFMUGdCUkpFU0lOWXpZUjAzc1d4cHo1NnpLYlk2SU9kXC9zMldpekJKQ1NSMTI2aHIrWDJGIiwibWFjIjoiOWI3YjRlZGU0YTZiZWNkYjZmMWI4MGVlOGFhOThmNzdhOGUwZWQ2ODAxZjFjMGU4MzA1NDJiYjMwZDE3YzQ1OSJ9
-</code></pre>
-<pre><code class="lang-py"># 没有login的cookie请求
-__cfduid=d7e60a37935c5d9c6f53f05ab1064e1681580787848
-_pk_ref.1.01b8=%5B%22%22%2C%22%22%2C1581402095%2C%22http%3A%2F%2Flocalhost%3A63342%2FPyCharnPython%2Fday04%2Fawewall.html%3F_ijt%3Dog5l1ar0obspirlv150bfq3d1o%22%5D
-_pk_ses.1.01b8=1
-_pk_id.1.01b8=e6d2c9622d153c11.1580787918.22.1581402949.1581402095.
-XSRF-TOKEN=eyJpdiI6InRCSDFCT2dvZTZDeXVjR0w0NzZRNGc9PSIsInZhbHVlIjoiY1dzU1J4cHdENzN4eGVuU0I0NmxcL3NCblgyOWdVWEs2dTZ6QTNadHA4OHhISnZHWTFFamNIZGpibmZJQTRPcWUiLCJtYWMiOiJiNmMwMjhmMGYzYmY0MGViMWU2M2VhNTNjMTI1YTY0NThiYjU0MWFiYjYxMzRmODRkMGE5OWE5NmFlNTVkNTBjIn0%3D
-wallhaven_session=eyJpdiI6IkJoY1dITVJtQWJ4bzRqamJOVkxKeFE9PSIsInZhbHVlIjoiZjBXZUI3azVRWFAwY2tZeDlHakc1Nm5sSTZFUWVLT2FsT2JFVm5VUXQ0YmszYzVwMk9HcXlaV2R5YXpheG5lMCIsIm1hYyI6IjRjNzk1M2Q4NmE1ZDI4MjAwZDY2NDczNmRlZDVjYmVlN2Y2ZDA0NjYxOTI5NTZkYWM5OWY5MTY5MDQ2YTg4NWUifQ%3D%3D
-</code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># login以后的cookie请求</span>
+__cfduid<span class="token operator">=</span>d7e60a37935c5d9c6f53f05ab1064e1681580787848<span class="token punctuation">;</span> 
+remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d<span class="token operator">=</span>eyJpdiI6ImROQ29VNGRicnZsOW0wQW5BTzZVa1E9PSIsInZhbHVlIjoiTmNQT0h2TE03YW5yaUdhbWZDZnlQYlZzanN3UTV4aUdiMHh1bUl5cjVJMXdQbzIxYnF6bElYcFpmMERPY0ZcL3FnZ21xcU5WdXlvMlBBK21CeEs2K2FWV1pUK05sTmdDdFlHSWl4TlBwUHpuaEprV1dXYmZRbkZzWU1STjV6S3JONWsxNjBsekttbXFqd1BQTzhENlcwNzF0dVRvUit6eURxdHhrN1pZblo4U3lUMys2ekNLdTlXTllBXC82dkI3VUEiLCJtYWMiOiJkYmNiOTZiNDU3M2NjY2M3OGJjZWM4ZTBjZmJlZmIwMTBhMTM5MTcwMTA3ZDc1NjliNDM0ZmM1OWFkY2VhN2YwIn0<span class="token operator">%</span><span class="token number">3D</span>
+_pk_ref<span class="token punctuation">.</span><span class="token number">1.</span><span class="token number">01b8</span><span class="token operator">=</span><span class="token operator">%</span><span class="token number">5B</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">2C</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">2C1581400207</span><span class="token operator">%</span><span class="token number">2C</span><span class="token operator">%</span>22http<span class="token operator">%</span><span class="token number">3A</span><span class="token operator">%</span><span class="token number">2F</span><span class="token operator">%</span>2Flocalhost<span class="token operator">%</span><span class="token number">3A63342</span><span class="token operator">%</span>2FPyCharnPython<span class="token operator">%</span>2Fday04<span class="token operator">%</span>2Fawewall<span class="token punctuation">.</span>html<span class="token operator">%</span>3F_ijt<span class="token operator">%</span>3Dog5l1ar0obspirlv150bfq3d1o<span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">5D</span>
+_pk_id<span class="token punctuation">.</span><span class="token number">1.</span><span class="token number">01b8</span><span class="token operator">=</span>e6d2c9622d153c11<span class="token punctuation">.</span><span class="token number">1580787918.21</span><span class="token number">.1581400207</span><span class="token number">.1581400207</span><span class="token punctuation">.</span>
+XSRF<span class="token operator">-</span>TOKEN<span class="token operator">=</span>eyJpdiI6IjE4NzVZTlQrXC9pWFBmVlFsMUFvVFpBPT0iLCJ2YWx1ZSI6Im91OUROUEFZVHlsNWJ5bjdLa2pyQkV5R0RYZmNMNVN1TkJ5bERSTmFWaGFGRjUyaDI0K09aYzVVTUhZYzhnM0oiLCJtYWMiOiI0MTgzZmMyYzg0YmYyYmE2ZjgxNTEzMDBjYjI1NjFhOGYyMDZhNmJlZjkyYzBlMzhhYTNmNzA0MjBlZDQ3MDZhIn0<span class="token operator">%</span><span class="token number">3D</span>
+wallhaven_session<span class="token operator">=</span>eyJpdiI6IjZQNVJcL3F0bXJhNndKUkc3QUVCTTZ3PT0iLCJ2YWx1ZSI6IjVSNHlRRjl0cU1sNEFMUGdCUkpFU0lOWXpZUjAzc1d4cHo1NnpLYlk2SU9kXC9zMldpekJKQ1NSMTI2aHIrWDJGIiwibWFjIjoiOWI3YjRlZGU0YTZiZWNkYjZmMWI4MGVlOGFhOThmNzdhOGUwZWQ2ODAxZjFjMGU4MzA1NDJiYjMwZDE3YzQ1OSJ9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 没有login的cookie请求</span>
+__cfduid<span class="token operator">=</span>d7e60a37935c5d9c6f53f05ab1064e1681580787848
+_pk_ref<span class="token punctuation">.</span><span class="token number">1.</span><span class="token number">01b8</span><span class="token operator">=</span><span class="token operator">%</span><span class="token number">5B</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">2C</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">2C1581402095</span><span class="token operator">%</span><span class="token number">2C</span><span class="token operator">%</span>22http<span class="token operator">%</span><span class="token number">3A</span><span class="token operator">%</span><span class="token number">2F</span><span class="token operator">%</span>2Flocalhost<span class="token operator">%</span><span class="token number">3A63342</span><span class="token operator">%</span>2FPyCharnPython<span class="token operator">%</span>2Fday04<span class="token operator">%</span>2Fawewall<span class="token punctuation">.</span>html<span class="token operator">%</span>3F_ijt<span class="token operator">%</span>3Dog5l1ar0obspirlv150bfq3d1o<span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">5D</span>
+_pk_ses<span class="token punctuation">.</span><span class="token number">1.</span><span class="token number">01b8</span><span class="token operator">=</span><span class="token number">1</span>
+_pk_id<span class="token punctuation">.</span><span class="token number">1.</span><span class="token number">01b8</span><span class="token operator">=</span>e6d2c9622d153c11<span class="token punctuation">.</span><span class="token number">1580787918.22</span><span class="token number">.1581402949</span><span class="token number">.1581402095</span><span class="token punctuation">.</span>
+XSRF<span class="token operator">-</span>TOKEN<span class="token operator">=</span>eyJpdiI6InRCSDFCT2dvZTZDeXVjR0w0NzZRNGc9PSIsInZhbHVlIjoiY1dzU1J4cHdENzN4eGVuU0I0NmxcL3NCblgyOWdVWEs2dTZ6QTNadHA4OHhISnZHWTFFamNIZGpibmZJQTRPcWUiLCJtYWMiOiJiNmMwMjhmMGYzYmY0MGViMWU2M2VhNTNjMTI1YTY0NThiYjU0MWFiYjYxMzRmODRkMGE5OWE5NmFlNTVkNTBjIn0<span class="token operator">%</span><span class="token number">3D</span>
+wallhaven_session<span class="token operator">=</span>eyJpdiI6IkJoY1dITVJtQWJ4bzRqamJOVkxKeFE9PSIsInZhbHVlIjoiZjBXZUI3azVRWFAwY2tZeDlHakc1Nm5sSTZFUWVLT2FsT2JFVm5VUXQ0YmszYzVwMk9HcXlaV2R5YXpheG5lMCIsIm1hYyI6IjRjNzk1M2Q4NmE1ZDI4MjAwZDY2NDczNmRlZDVjYmVlN2Y2ZDA0NjYxOTI5NTZkYWM5OWY5MTY5MDQ2YTg4NWUifQ<span class="token operator">%</span><span class="token number">3D</span><span class="token operator">%</span><span class="token number">3D</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们就直接组装一个cookie</p>
-<pre><code class="lang-py"># 3. 组装cookie
-    def combined_cookie(self):
-        response = requests.post(self.post_url, headers=self.proxies.header, proxies=self.proxies.proxy, data=self.data)
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment"># 3. 组装cookie</span>
+    <span class="token keyword">def</span> <span class="token function">combined_cookie</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>self<span class="token punctuation">.</span>post_url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>proxy<span class="token punctuation">,</span> data<span class="token operator">=</span>self<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
 
-        # 这里拿到的cookie是相对比较齐全的cookie，主要用这个cookie来组装
-        post_cookies = response.request.headers[&#39;Cookie&#39;]
-        post_cookies_list = post_cookies.split(&quot;; &quot;)
+        <span class="token comment"># 这里拿到的cookie是相对比较齐全的cookie，主要用这个cookie来组装</span>
+        post_cookies <span class="token operator">=</span> response<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span>
+        post_cookies_list <span class="token operator">=</span> post_cookies<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"; "</span><span class="token punctuation">)</span>
 
-        # 这里cookie只要__cfduid
-        temp_cookie = self.proxies.header[&#39;Cookie&#39;]
-        temp_cookie_list = temp_cookie.split(&quot;;&quot;)
+        <span class="token comment"># 这里cookie只要__cfduid</span>
+        temp_cookie <span class="token operator">=</span> self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">[</span><span class="token string">'Cookie'</span><span class="token punctuation">]</span>
+        temp_cookie_list <span class="token operator">=</span> temp_cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span>
 
-        # 组装
-        self.cookies.update(__cfduid = temp_cookie_list[0].split(&#39;=&#39;)[1])
-        for cookie in post_cookies_list:
-            self.cookies[cookie.split(&#39;=&#39;)[0]] = cookie.split(&#39;=&#39;)[1]
+        <span class="token comment"># 组装</span>
+        self<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>update<span class="token punctuation">(</span>__cfduid <span class="token operator">=</span> temp_cookie_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> cookie <span class="token keyword">in</span> post_cookies_list<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>cookies<span class="token punctuation">[</span>cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> cookie<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
 
-        # header pop掉Cookie
-        self.proxies.header.pop(&#39;Cookie&#39;)
+        <span class="token comment"># header pop掉Cookie</span>
+        self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'Cookie'</span><span class="token punctuation">)</span>
 
-    # 4.登录
-    def post_html(self):
-        response = requests.get(self.post_url, headers=self.proxies.header, proxies=self.proxies.proxy, cookies=self.cookies)
-        print(response)
-        if response.status_code == 200:
-            print(&quot;Cookies获取成功&quot;)
-            self.Is = True
-        else:
-            print(&quot;Cookies获取失败&quot;)
+    <span class="token comment"># 4.登录</span>
+    <span class="token keyword">def</span> <span class="token function">post_html</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>self<span class="token punctuation">.</span>post_url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>header<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">.</span>proxy<span class="token punctuation">,</span> cookies<span class="token operator">=</span>self<span class="token punctuation">.</span>cookies<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Cookies获取成功"</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>Is <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Cookies获取失败"</span><span class="token punctuation">)</span>
 
-    def update(self):
-        self.__init__()
-        self.get_html()
-        self.combined_data()
-        self.combined_cookie()
-        self.post_html()
-</code></pre>
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>get_html<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>combined_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>combined_cookie<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>post_html<span class="token punctuation">(</span><span class="token punctuation">)</span>
+     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样我们就得到了登陆后访问toplist的页面</p>
-<p>完整项目地址: <a href="https://github.com/Mug-9/Python-Spider" target="_blank" rel="noopener">Mug-9/Python-Spider: Spider (github.com)</a></p>
+<p>完整项目地址: <a target="_blank" rel="noopener" href="https://github.com/Mug-9/Python-Spider">Mug-9/Python-Spider: Spider (github.com)</a></p>
 <h3 id="session-登录"><a href="#session-登录" class="headerlink" title="session 登录"></a>session 登录</h3><p>这里不可行,其他地方可行</p>
-<pre><code class="lang-py">import requests
-import sys
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> sys
 
-#登录时需要POST的数据
-data = {
-    data
-    }
+<span class="token comment">#登录时需要POST的数据</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span>
+	data
+	<span class="token punctuation">}</span>
 
-#设置请求头
-headers = {&#39;User-agent&#39;:&#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36&#39;}
+<span class="token comment">#设置请求头</span>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'</span><span class="token punctuation">}</span>
 
-#登录时表单提交到的地址（用开发者工具可以看到）
-login_url = &#39;login_url&#39;
+<span class="token comment">#登录时表单提交到的地址（用开发者工具可以看到）</span>
+login_url <span class="token operator">=</span> <span class="token string">'login_url'</span>
 
-#构造Session
-session = requests.Session()
+<span class="token comment">#构造Session</span>
+session <span class="token operator">=</span> requests<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-#在session中发送登录请求，此后这个session里就存储了cookie
-#可以用print(session.cookies.get_dict())查看
-resp = session.post(login_url, data)
+<span class="token comment">#在session中发送登录请求，此后这个session里就存储了cookie</span>
+<span class="token comment">#可以用print(session.cookies.get_dict())查看</span>
+resp <span class="token operator">=</span> session<span class="token punctuation">.</span>post<span class="token punctuation">(</span>login_url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
 
-#登录后才能访问的网页
-url = &#39;url&#39;
+<span class="token comment">#登录后才能访问的网页</span>
+url <span class="token operator">=</span> <span class="token string">'url'</span>
 
-#发送访问请求
-resp = session.get(url)
+<span class="token comment">#发送访问请求</span>
+resp <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
 
-print(resp.content.decode(&#39;utf-8&#39;))
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -770,7 +769,7 @@ print(resp.content.decode(&#39;utf-8&#39;))
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/模拟登录/">
+                                <a href="/tags/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95/">
                                     <span class="chip bg-color">模拟登录</span>
                                 </a>
                             
@@ -1241,7 +1240,7 @@ print(resp.content.decode(&#39;utf-8&#39;))
                                     Spider
                                 </a>
                             
-                            <a href="/categories/Spider/小项目/" class="post-category">
+                            <a href="/categories/Spider/%E5%B0%8F%E9%A1%B9%E7%9B%AE/" class="post-category">
                                     小项目
                                 </a>
                             
@@ -1252,7 +1251,7 @@ print(resp.content.decode(&#39;utf-8&#39;))
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/爬视频/">
+                    <a href="/tags/%E7%88%AC%E8%A7%86%E9%A2%91/">
                         <span class="chip bg-color">爬视频</span>
                     </a>
                     
@@ -1300,7 +1299,7 @@ print(resp.content.decode(&#39;utf-8&#39;))
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/爬虫报错处理/">
+                    <a href="/tags/%E7%88%AC%E8%99%AB%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/">
                         <span class="chip bg-color">爬虫报错处理</span>
                     </a>
                     
@@ -1489,7 +1488,7 @@ print(resp.content.decode(&#39;utf-8&#39;))
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1790,7 +1789,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Deepin安装NVIDIA以及refind, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -514,7 +516,7 @@
                                 <span class="chip bg-color">Deepin</span>
                             </a>
                         
-                            <a href="/tags/NVIDA驱动/">
+                            <a href="/tags/NVIDA%E9%A9%B1%E5%8A%A8/">
                                 <span class="chip bg-color">NVIDA驱动</span>
                             </a>
                         
@@ -530,7 +532,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -592,70 +594,66 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Deepin安装NVIDIA驱动"><a href="#Deepin安装NVIDIA驱动" class="headerlink" title="Deepin安装NVIDIA驱动"></a>Deepin安装NVIDIA驱动</h1><h2 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h2><h3 id="下载驱动"><a href="#下载驱动" class="headerlink" title="下载驱动"></a>下载驱动</h3><p>首先根据自己电脑独显的型号去NVIDIA<a href="https://www.nvidia.cn/geforce/drivers/" target="_blank" rel="noopener">官网</a>选择对应驱动</p>
+                <h1 id="Deepin安装NVIDIA驱动"><a href="#Deepin安装NVIDIA驱动" class="headerlink" title="Deepin安装NVIDIA驱动"></a>Deepin安装NVIDIA驱动</h1><h2 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h2><h3 id="下载驱动"><a href="#下载驱动" class="headerlink" title="下载驱动"></a>下载驱动</h3><p>首先根据自己电脑独显的型号去NVIDIA<a target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/drivers/">官网</a>选择对应驱动</p>
 <p>如果不确定自己电脑显卡型号，可以用<code>sudo lshw -numeric -C display</code>来查看</p>
 <h3 id="卸载以前的驱动"><a href="#卸载以前的驱动" class="headerlink" title="卸载以前的驱动"></a>卸载以前的驱动</h3><p>如果之前在Linux中安装过NVIDIA驱动的话，请将其全部删除</p>
-<pre><code class="lang-bash">sudo apt autoremove nvidia
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> autoremove nvidia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="禁用nouveau"><a href="#禁用nouveau" class="headerlink" title="禁用nouveau"></a>禁用nouveau</h3><p>nouveau是通过逆向“Nvidia的Linux驱动”创造的一个开源第三方Nvidia显卡驱动程序，因此其效果差，性能低。在手动安装NVIDIA时需要禁用nouveau驱动。</p>
 <p>终端执行以下命令修改文件。</p>
-<pre><code>sudo vi /etc/modprobe.d/blacklist.conf
-</code></pre><p>以下内容复制到文件中</p>
-<pre><code>blacklist nouveau   
+<pre class="line-numbers language-none"><code class="language-none">sudo vi /etc/modprobe.d/blacklist.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>以下内容复制到文件中</p>
+<pre class="line-numbers language-none"><code class="language-none">blacklist nouveau   
 blacklist lbm-nouveau   
 options nouveau modeset=0 
 alias nouveau off   
-alias lbm-nouveau off
-</code></pre><p>保存退出。<br>其中，blacklist nouveau是禁用nouveau第三方驱动，之后不需要改回来<br>由于nouveau是构建在内核中的，所以要执行下面命令生效:</p>
-<pre><code>sudo update-initramfs -u
-</code></pre><h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><pre><code>reboot
-</code></pre><p>重启后查看nouveau有没有运行,没输出代表禁用生效</p>
-<pre><code>lsmod | grep nouveau
-</code></pre><h3 id="关闭图形界面"><a href="#关闭图形界面" class="headerlink" title="关闭图形界面"></a>关闭图形界面</h3><p>安装Nvidia驱动程序时，需要停止当前的图形界面。<br>使用快捷键CTRL+ALT+F2进入超级终端，登录账号，并关闭图形界面：</p>
-<pre><code>sudo service lightdm stop
-</code></pre><h3 id="给驱动文件添加执行权限"><a href="#给驱动文件添加执行权限" class="headerlink" title="给驱动文件添加执行权限"></a>给驱动文件添加执行权限</h3><p>下载好的nvidia驱动文件是.run，需要添加执行权限。<br>使用cd指令进入下载好的驱动文件路径，如果没有改浏览器的下载路径，路径一般是/home/（你的用户名）/Downloads 。</p>
-<pre><code>sudo chmod +x NVIDIA***.run  #记得文件名改成自己下载的文件。
-</code></pre><h3 id="驱动安装"><a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h3><pre><code>sudo ./NVIDI**.run  #记得文件名改成自己下载的文件。
-</code></pre><p>这个时候会出现一个页面，一系列yes，还有一个界面选择install and cover，意为安装和覆盖。然后等待几分钟。</p>
-<h3 id="重启-1"><a href="#重启-1" class="headerlink" title="重启"></a>重启</h3><pre><code>reboot
-</code></pre><p>这样NVIDIA驱动就装好了。</p>
-<h2 id="检测NVIDIA驱动是否成功安装"><a href="#检测NVIDIA驱动是否成功安装" class="headerlink" title="检测NVIDIA驱动是否成功安装"></a>检测NVIDIA驱动是否成功安装</h2><h3 id="使用nvidia-settings命令"><a href="#使用nvidia-settings命令" class="headerlink" title="使用nvidia-settings命令"></a>使用<strong>nvidia-settings</strong>命令</h3><pre><code class="lang-bash">nvidia-settings
-</code></pre>
+alias lbm-nouveau off<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>保存退出。<br>其中，blacklist nouveau是禁用nouveau第三方驱动，之后不需要改回来<br>由于nouveau是构建在内核中的，所以要执行下面命令生效:</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo update-initramfs -u<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><pre class="line-numbers language-none"><code class="language-none">reboot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>重启后查看nouveau有没有运行,没输出代表禁用生效</p>
+<pre class="line-numbers language-none"><code class="language-none">lsmod | grep nouveau  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="关闭图形界面"><a href="#关闭图形界面" class="headerlink" title="关闭图形界面"></a>关闭图形界面</h3><p>安装Nvidia驱动程序时，需要停止当前的图形界面。<br>使用快捷键CTRL+ALT+F2进入超级终端，登录账号，并关闭图形界面：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo service lightdm stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="给驱动文件添加执行权限"><a href="#给驱动文件添加执行权限" class="headerlink" title="给驱动文件添加执行权限"></a>给驱动文件添加执行权限</h3><p>下载好的nvidia驱动文件是.run，需要添加执行权限。<br>使用cd指令进入下载好的驱动文件路径，如果没有改浏览器的下载路径，路径一般是/home/（你的用户名）/Downloads 。</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo chmod +x NVIDIA***.run  #记得文件名改成自己下载的文件。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="驱动安装"><a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h3><pre class="line-numbers language-none"><code class="language-none">sudo ./NVIDI**.run  #记得文件名改成自己下载的文件。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个时候会出现一个页面，一系列yes，还有一个界面选择install and cover，意为安装和覆盖。然后等待几分钟。</p>
+<h3 id="重启-1"><a href="#重启-1" class="headerlink" title="重启"></a>重启</h3><pre class="line-numbers language-none"><code class="language-none">reboot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样NVIDIA驱动就装好了。</p>
+<h2 id="检测NVIDIA驱动是否成功安装"><a href="#检测NVIDIA驱动是否成功安装" class="headerlink" title="检测NVIDIA驱动是否成功安装"></a>检测NVIDIA驱动是否成功安装</h2><h3 id="使用nvidia-settings命令"><a href="#使用nvidia-settings命令" class="headerlink" title="使用nvidia-settings命令"></a>使用<strong>nvidia-settings</strong>命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nvidia-settings<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>可以看到显卡数据</p>
 <h3 id="使用nvidia-smi命令"><a href="#使用nvidia-smi命令" class="headerlink" title="使用nvidia-smi命令"></a>使用nvidia-smi命令</h3><p>英伟达系统管理接口（NVIDIA System Management Interface, 简称 nvidia-smi）是基于NVIDIA Management Library 的命令行管理组件,旨在帮助管理和监控NVIDIA GPU设备。</p>
-<pre><code>nvidia-smi
-</code></pre><p>执行这条命令将会打印出当前系统安装的NVIDIA驱动信息</p>
-<h3 id="命令行搜索集显和独显"><a href="#命令行搜索集显和独显" class="headerlink" title="命令行搜索集显和独显"></a>命令行搜索集显和独显</h3><pre><code class="lang-bash">lspci | grep VGA     # 查看集成显卡
-lspci | grep NVIDIA
-</code></pre>
-<h3 id="查看nouveau是否运行"><a href="#查看nouveau是否运行" class="headerlink" title="查看nouveau是否运行"></a>查看nouveau是否运行</h3><pre><code class="lang-bash">lsmod | grep nouveau
-</code></pre>
-<h2 id="集显与独显切换"><a href="#集显与独显切换" class="headerlink" title="集显与独显切换"></a>集显与独显切换</h2><p>笔记本外出时使用集显可以节省电量，增长待机时间。<br>可以使用插件：dde-dock-switch_graphics_card<br>Github：<a href="https://github.com/zty199/dde-dock-switch_graphics_card" target="_blank" rel="noopener">https://github.com/zty199/dde-dock-switch_graphics_card</a><br>安装后可以方便地在dock栏切换显卡</p>
+<pre class="line-numbers language-none"><code class="language-none">nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>执行这条命令将会打印出当前系统安装的NVIDIA驱动信息</p>
+<h3 id="命令行搜索集显和独显"><a href="#命令行搜索集显和独显" class="headerlink" title="命令行搜索集显和独显"></a>命令行搜索集显和独显</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">lspci <span class="token operator">|</span> <span class="token function">grep</span> VGA     <span class="token comment"># 查看集成显卡</span>
+lspci <span class="token operator">|</span> <span class="token function">grep</span> NVIDIA  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="查看nouveau是否运行"><a href="#查看nouveau是否运行" class="headerlink" title="查看nouveau是否运行"></a>查看nouveau是否运行</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">lsmod <span class="token operator">|</span> <span class="token function">grep</span> nouveau<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="集显与独显切换"><a href="#集显与独显切换" class="headerlink" title="集显与独显切换"></a>集显与独显切换</h2><p>笔记本外出时使用集显可以节省电量，增长待机时间。<br>可以使用插件：dde-dock-switch_graphics_card<br>Github：<a target="_blank" rel="noopener" href="https://github.com/zty199/dde-dock-switch_graphics_card">https://github.com/zty199/dde-dock-switch_graphics_card</a><br>安装后可以方便地在dock栏切换显卡</p>
 <h1 id="使用refind引导win10和deepin"><a href="#使用refind引导win10和deepin" class="headerlink" title="使用refind引导win10和deepin"></a>使用refind引导win10和deepin</h1><h2 id="安装refind"><a href="#安装refind" class="headerlink" title="安装refind"></a>安装refind</h2><p>最好在deepin环境下安装refind，因为这样比较简单。</p>
 <p>在deepin环境下安装refind有两种方法，使用终端命令行或者下载安装包。</p>
-<pre><code>sudo apt-add-repository ppa:rodsmith/refind
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-add-repository ppa:rodsmith/refind
 sudo apt-get update
-sudo apt-get install refind
-</code></pre><p>安装好refind后重启，你会发现电脑默认引导已经变成了refind，EFI 分区也出现了refind文件夹。但此时的引导界面有两个问题：</p>
+sudo apt-get install refind<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>安装好refind后重启，你会发现电脑默认引导已经变成了refind，EFI 分区也出现了refind文件夹。但此时的引导界面有两个问题：</p>
 <p>1、选项很多，而且界面很丑；<br>2、选择deepin系统后还是会进入grub引导界面，浪费时间。</p>
 <p>因此接下来我们需要修改一些东西。</p>
 <h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><h3 id="设置grub等待时间为0"><a href="#设置grub等待时间为0" class="headerlink" title="设置grub等待时间为0"></a>设置grub等待时间为0</h3><p>在deepin中，通用&gt;启动&gt;启动延时关闭</p>
 <h3 id="下载好看的refind主题"><a href="#下载好看的refind主题" class="headerlink" title="下载好看的refind主题"></a>下载好看的refind主题</h3><p>首先下载主题压缩包，特别推荐我自己使用的这款极简主题（自带凤凰系统的图标），下载地址：</p>
-<p>github：<a href="https://github.com/EvanPurkhiser/rEFInd-minimal" target="_blank" rel="noopener">https://github.com/EvanPurkhiser/rEFInd-minimal</a></p>
+<p>github：<a target="_blank" rel="noopener" href="https://github.com/EvanPurkhiser/rEFInd-minimal">https://github.com/EvanPurkhiser/rEFInd-minimal</a></p>
 <p>将解压后的文件放入refind文件夹下的themes文件夹（没有的话可以自行创建）内，可以在deepin环境下使用终端命令操作，也可以切换到win10系统用diskgenius软件进行操作。</p>
 <h3 id="修改refind配置文件"><a href="#修改refind配置文件" class="headerlink" title="修改refind配置文件"></a>修改refind配置文件</h3><p>使用deepin终端修改/EFI/refind/refind.conf文件，需要使用的基本命令如下：</p>
-<pre><code>su root    #获取root权限
+<pre class="line-numbers language-none"><code class="language-none">su root    #获取root权限
 vim 你的目录/refind.conf    #使用vim修改文件
 i    #进入修改模式
 ESC按键    #退出修改模式
-:wq    #保存并退出
-</code></pre><p>进入vim编辑模式后，可以看到配置文件有大量的注释，需要修改的命令行其实只有如下几处：</p>
-<pre><code>timeout 3
+:wq    #保存并退出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>进入vim编辑模式后，可以看到配置文件有大量的注释，需要修改的命令行其实只有如下几处：</p>
+<pre class="line-numbers language-none"><code class="language-none">timeout 3
 resolution 1920 1080
 dont_scan_files /EFI/ubuntu/grubx64.efi,/EFI/UOS/fbx64.efi,/EFI/UOS/mmx64.efi,/EFI/UOS/shimx64.efi,/EFI/boot/bootx64.efi,/EFI/boot/grubx64.efi
 scan_all_linux_kernels false
-include  themes/rEFInd-minimal/theme.conf
-</code></pre><p>这样就可以用refind引导deepin和win10了</p>
+include  themes/rEFInd-minimal/theme.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样就可以用refind引导deepin和win10了</p>
                 
             </div>
             <hr/>
@@ -723,7 +721,7 @@ include  themes/rEFInd-minimal/theme.conf
                                     <span class="chip bg-color">Deepin</span>
                                 </a>
                             
-                                <a href="/tags/NVIDA驱动/">
+                                <a href="/tags/NVIDA%E9%A9%B1%E5%8A%A8/">
                                     <span class="chip bg-color">NVIDA驱动</span>
                                 </a>
                             
@@ -1205,7 +1203,7 @@ include  themes/rEFInd-minimal/theme.conf
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/剑指offer/">
+                    <a href="/tags/%E5%89%91%E6%8C%87offer/">
                         <span class="chip bg-color">剑指offer</span>
                     </a>
                     
@@ -1242,7 +1240,7 @@ include  themes/rEFInd-minimal/theme.conf
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-学习/" class="post-category">
+                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
                                     C++ 学习
                                 </a>
                             
@@ -1253,7 +1251,7 @@ include  themes/rEFInd-minimal/theme.conf
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C-学习笔记/">
+                    <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">C++ 学习笔记</span>
                     </a>
                     
@@ -1442,7 +1440,7 @@ include  themes/rEFInd-minimal/theme.conf
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1743,7 +1741,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

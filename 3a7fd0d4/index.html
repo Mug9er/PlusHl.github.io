@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Django与mysql相连, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -514,7 +516,7 @@
                                 <span class="chip bg-color">Django</span>
                             </a>
                         
-                            <a href="/tags/连接MySQL/">
+                            <a href="/tags/%E8%BF%9E%E6%8E%A5MySQL/">
                                 <span class="chip bg-color">连接MySQL</span>
                             </a>
                         
@@ -526,7 +528,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -553,7 +555,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    914
+                    880
                 </div>
                 
 
@@ -589,23 +591,21 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Django与mysql相连"><a href="#Django与mysql相连" class="headerlink" title="Django与mysql相连"></a>Django与mysql相连</h2><h3 id="Django链接数据库"><a href="#Django链接数据库" class="headerlink" title="Django链接数据库"></a>Django链接数据库</h3><p>在项目根setting.py中更改默认配置</p>
-<pre><code class="lang-js">DATABASES = {
-    &#39;default&#39;: {
-        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
-        &#39;NAME&#39;: &#39;test&#39;,
-        &#39;USER&#39;: &#39;root&#39;,
-        &#39;PASSWORD&#39;: &#39;****&#39;,
-        &#39;HOST&#39;: &#39;****&#39;,
-        &#39;PORT&#39;: &#39;3306&#39;
-    }
-}
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">DATABASES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token operator">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
+        <span class="token string">'USER'</span><span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+        <span class="token string">'PASSWORD'</span><span class="token operator">:</span> <span class="token string">'****'</span><span class="token punctuation">,</span>
+        <span class="token string">'HOST'</span><span class="token operator">:</span> <span class="token string">'****'</span><span class="token punctuation">,</span>
+        <span class="token string">'PORT'</span><span class="token operator">:</span> <span class="token string">'3306'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>ENGINE</code> 用于特定的数据库引擎的配置，一般选项如下</p>
-<pre><code class="lang-js"> django.db.backends.sqlite3
- django.db.backends.postgresql
- django.db.backends.mysql
- django.db.backends.oracle
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>sqlite3
+django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>postgresql
+django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>mysql
+django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>oracle<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>NAME</code>:要连接的数据库名称的配置<br><code>USER</code>:配置连接数据库的用户账号<br><code>PASSWORD</code>:配置连接数据库的登录密码<br><code>HOST</code>:配置数据库所在的主机IP地址<br> <code>PORT</code>:配置连接数据库的端口号<br><code>CHARSET</code>:配置连接数据库交互数据编码格式</p>
 <h3 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h3><p><code>Django</code>项目中定义模型数据，其实就是定义class类型，通过类型创建的对象来封装管理数据，一定要在这里明确关联和对应关系</p>
 <div class="table-container">
@@ -764,93 +764,83 @@
 </table>
 </div>
 <p>项目结构</p>
-<pre><code class="lang-js">├── backend
-│   ├── __init__.py
-│   ├── admin.py
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">├── backend
+│   ├── __init__<span class="token punctuation">.</span>py
+│   ├── admin<span class="token punctuation">.</span>py
 │   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
-│   ├── tests.py
-│   └── views.py
-├── manage.py
+│   │   └── __init__<span class="token punctuation">.</span>py
+│   ├── models<span class="token punctuation">.</span>py
+│   ├── tests<span class="token punctuation">.</span>py
+│   └── views<span class="token punctuation">.</span>py
+├── manage<span class="token punctuation">.</span>py
 └── ulb_manager
-    ├── __init__.py
-    ├── settings.py
-    ├── urls.py
-    └── wsgi.py
-</code></pre>
+    ├── __init__<span class="token punctuation">.</span>py
+    ├── settings<span class="token punctuation">.</span>py
+    ├── urls<span class="token punctuation">.</span>py
+    └── wsgi<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在根目录的<code>setting.py</code>中添加</p>
-<pre><code class="lang-js">INSTALLED_APPS = [
-    ///...
-    &#39;backend&#39;,
-]
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">INSTALLED_APPS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token comment">///...</span>
+    <span class="token string">'backend'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改<code>backend/models.py</code></p>
-<pre><code class="lang-js">from django.db import models
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
 
 
-# Create your models here.
-class User(models.Model):
-    id = models.AutoField(primary_key = True)
-    account = models.CharField(max_length=20)
-    password = models.CharField(max_length=20)
+# Create your models here<span class="token punctuation">.</span>
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token operator">:</span>
+    id <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">AutoField</span><span class="token punctuation">(</span>primary_key <span class="token operator">=</span> True<span class="token punctuation">)</span>
+    account <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+    password <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
 
-    def __str__(self): # 表中每条数据显示账号
-        return u&#39;account: %s&#39; % self.account
+    def <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token operator">:</span> # 表中每条数据显示账号
+        <span class="token keyword">return</span> u<span class="token string">'account: %s'</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>account
 
 
-class Class(models.Model):
-    id = models.AutoField(primary_key = True)
-    name = models.CharField(max_length=20)
-</code></pre>
+<span class="token keyword">class</span> <span class="token class-name">Class</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token operator">:</span>
+    id <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">AutoField</span><span class="token punctuation">(</span>primary_key <span class="token operator">=</span> True<span class="token punctuation">)</span>
+    name <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>model</code>中定义两个类，代表两个表<code>User，Class</code>，</p>
 <p>创建两个表</p>
-<pre><code class="lang-js">python manage.py makemigrations
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py makemigrations<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>同步到<code>mysql</code></p>
-<pre><code class="lang-js">python manage.py migrate
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py migrate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这时在<code>mysql</code>中可以看到新增加的表</p>
-<pre><code class="lang-js">mysql&gt; show tables;
-+----------------------------+
-| Tables_in_test             |
-+----------------------------+
-| auth_group                 |
-| auth_group_permissions     |
-| auth_permission            |
-| auth_user                  |
-| auth_user_groups           |
-| auth_user_user_permissions |
-| backend_class              |
-| backend_user               |
-| django_admin_log           |
-| django_content_type        |
-| django_migrations          |
-| django_session             |
-| user                       |
-+----------------------------+
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">mysql<span class="token operator">&gt;</span> show tables<span class="token punctuation">;</span>
+<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span>
+<span class="token operator">|</span> Tables_in_test             <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span>
+<span class="token operator">|</span> auth_group                 <span class="token operator">|</span>
+<span class="token operator">|</span> auth_group_permissions     <span class="token operator">|</span>
+<span class="token operator">|</span> auth_permission            <span class="token operator">|</span>
+<span class="token operator">|</span> auth_user                  <span class="token operator">|</span>
+<span class="token operator">|</span> auth_user_groups           <span class="token operator">|</span>
+<span class="token operator">|</span> auth_user_user_permissions <span class="token operator">|</span>
+<span class="token operator">|</span> backend_class              <span class="token operator">|</span>
+<span class="token operator">|</span> backend_user               <span class="token operator">|</span>
+<span class="token operator">|</span> django_admin_log           <span class="token operator">|</span>
+<span class="token operator">|</span> django_content_type        <span class="token operator">|</span>
+<span class="token operator">|</span> django_migrations          <span class="token operator">|</span>
+<span class="token operator">|</span> django_session             <span class="token operator">|</span>
+<span class="token operator">|</span> user                       <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="后台显示数据库"><a href="#后台显示数据库" class="headerlink" title="后台显示数据库"></a>后台显示数据库</h3><p>在<code>backend/admin.py</code>中注册模型</p>
-<pre><code class="lang-py">from django.contrib import admin
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
 
-from .models import *
-# Register your models here.
-admin.site.register(User)
-admin.site.register(Class)
-</code></pre>
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token comment"># Register your models here.</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>User<span class="token punctuation">)</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Class<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>运行<code>django</code></p>
-<pre><code class="lang-js">python manage.py runserver 8888
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py runserver <span class="token number">8888</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在<code>http://127.0.0.1:8888/admin/</code>中可以看到后台登录界面</p>
-<h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><pre><code class="lang-js">python manage.py createsuperuser
-</code></pre>
+<h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>账号和密码都是<code>admin</code>，其他可以随便填</p>
 <p>这时可以通过后台登录界面进入后台看到数据库数据</p>
 <h3 id="修改-语言和时区"><a href="#修改-语言和时区" class="headerlink" title="修改 语言和时区"></a>修改 语言和时区</h3><p>在<code>根目录/setting.py</code>中修改 语言和时区</p>
-<pre><code class="lang-js">LANGUAGE_CODE = &#39;zh-Hans&#39;
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">LANGUAGE_CODE</span> <span class="token operator">=</span> <span class="token string">'zh-Hans'</span>
 
-TIME_ZONE = &#39;Asia/Shanghai&#39;
-</code></pre>
+<span class="token constant">TIME_ZONE</span> <span class="token operator">=</span> <span class="token string">'Asia/Shanghai'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>后台界面可以显示中文，通过增加可以添加数据</p>
                 
             </div>
@@ -919,7 +909,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
                                     <span class="chip bg-color">Django</span>
                                 </a>
                             
-                                <a href="/tags/连接MySQL/">
+                                <a href="/tags/%E8%BF%9E%E6%8E%A5MySQL/">
                                     <span class="chip bg-color">连接MySQL</span>
                                 </a>
                             
@@ -1386,7 +1376,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1397,7 +1387,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/飞机/">
+                    <a href="/tags/%E9%A3%9E%E6%9C%BA/">
                         <span class="chip bg-color">飞机</span>
                     </a>
                     
@@ -1434,7 +1424,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1449,7 +1439,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
                         <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/Axios通信/">
+                    <a href="/tags/Axios%E9%80%9A%E4%BF%A1/">
                         <span class="chip bg-color">Axios通信</span>
                     </a>
                     
@@ -1638,7 +1628,7 @@ TIME_ZONE = &#39;Asia/Shanghai&#39;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1939,7 +1929,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

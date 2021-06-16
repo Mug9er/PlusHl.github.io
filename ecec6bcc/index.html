@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Min_25筛, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Min-25筛/">
+                            <a href="/tags/Min-25%E7%AD%9B/">
                                 <span class="chip bg-color">Min_25筛</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法/" class="post-category">
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
                                 算法
                             </a>
                         
@@ -606,31 +608,30 @@
 <p>我们对下表进行离散化用两个数组来存储</p>
 <p>以洛谷P5325为例</p>
 <p>$g(x)=x^2,h(x)=x$</p>
-<pre><code class="lang-c">void GetW(long long n) {
-    for (long long i = 1, j; i &lt;= n; i = j + 1) {
-        j = n / (n / i);
-        w[++m] = n / i;
-        long long t = w[m] % Mod;
-        g[m] = t * (t + 1) % Mod * ((2LL * t + 1) % Mod) % Mod * inv_6 % Mod;
-        g[m] --;
-        h[m] = t * (t + 1) % Mod * inv_2 % Mod;
-        h[m] --;
-        if(w[m] &lt;= sqr) id1[w[m]] = m;
-        else id2[n/w[m]] = m;
-    }
-}
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">GetW</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        j <span class="token operator">=</span> n <span class="token operator">/</span> <span class="token punctuation">(</span>n <span class="token operator">/</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        w<span class="token punctuation">[</span><span class="token operator">++</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">/</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> t <span class="token operator">=</span> w<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> t <span class="token operator">*</span> <span class="token punctuation">(</span>t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">2LL</span> <span class="token operator">*</span> t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> inv_6 <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">--</span><span class="token punctuation">;</span>
+        h<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> t <span class="token operator">*</span> <span class="token punctuation">(</span>t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> inv_2 <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        h<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> sqr<span class="token punctuation">)</span> id1<span class="token punctuation">[</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> id2<span class="token punctuation">[</span>n<span class="token operator">/</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-void GetG(long long n) {
-    for (long long i = 1; i &lt;= tot; i ++) {
-        for (long long j = 1; j &lt;= m &amp;&amp; prim[i] * prim[i] &lt;= w[j]; j ++) {
-            long long d = w[j] / prim[i];
-            long long id = d &lt;= sqr ? id1[d] : id2[n/d];
-            g[j] = Sup(g[j], prim[i] * prim[i] % Mod * ((g[id] - sumg[i-1] + Mod) % Mod) % Mod);
-            h[j] = Sup(h[j], prim[i] * ((h[id] - sumh[i-1] + Mod) % Mod) % Mod);
-        }
-    }
-}
-</code></pre>
+<span class="token keyword">void</span> <span class="token function">GetG</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> tot<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> m <span class="token operator">&amp;&amp;</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> w<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> j <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">long</span> <span class="token keyword">long</span> d <span class="token operator">=</span> w<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">/</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">long</span> <span class="token keyword">long</span> id <span class="token operator">=</span> d <span class="token operator">&lt;=</span> sqr <span class="token operator">?</span> id1<span class="token punctuation">[</span>d<span class="token punctuation">]</span> <span class="token operator">:</span> id2<span class="token punctuation">[</span>n<span class="token operator">/</span>d<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            g<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">Sup</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> sumg<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            h<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">Sup</span><span class="token punctuation">(</span>h<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>h<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> sumh<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样我们就求出来了$[1,n]$中所有$h(i)$在质数处的和，$g(n)$</p>
 <h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><p>我们设$S(n,j)=\sum\limits_{i=1}^{n}f(i)[min(i) \ge p_j]$</p>
 <p>那么$S(n,j)=g(n)-\sum\limits<em>{i=1}^{j-1}f(p_i)+\sum\limits</em>{p_k^e\le n\&amp; k&gt; x}f(p_k^e)(S(\frac{n}{p_k^e}, k)+[e!=1])$</p>
@@ -638,104 +639,103 @@ void GetG(long long n) {
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="洛谷P5325"><a href="#洛谷P5325" class="headerlink" title="洛谷P5325"></a>洛谷P5325</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>定义$f(x)$, 且$f(p^k)=p^k(p^k-1)$，$p$是一个质数,求$\sum\limits_{i=1}^{n}f(i)$,对$1e9+7$取模</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>当$p$为质数时 $f(p)=p(p-1)=p^2-p$</p>
 <p>设$g(x)=x^2,h(x)=x,f(x)=g(x)-h(x)$</p>
-<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="lang-c">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-const int maxn = 1e6 + 5;
-const int inf = 0x3f3f3f3f;
-const int Mod = 1e9 + 7;
-const double eps = 1e-8;
-typedef pair&lt;int, int&gt; psi;
-#define inv_2 (Mod+1)/2
-#define inv_6 (Mod+1)/6
-long long sqr, m, w[maxn], g[maxn], h[maxn];
-long long sumg[maxn], sumh[maxn], id1[maxn], id2[maxn];
-long long prim[maxn], tot;
-bool mark[maxn];
+<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">1e6</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> inf <span class="token operator">=</span> <span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> Mod <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> eps <span class="token operator">=</span> <span class="token number">1e-8</span><span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> psi<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">inv_2</span> <span class="token expression"><span class="token punctuation">(</span>Mod<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">inv_6</span> <span class="token expression"><span class="token punctuation">(</span>Mod<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">6</span></span></span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> sqr<span class="token punctuation">,</span> m<span class="token punctuation">,</span> w<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> g<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> h<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> sumg<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> sumh<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> id1<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> id2<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> prim<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> tot<span class="token punctuation">;</span>
+bool mark<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-long long Add(long long a, long long b) {
-    return (a + b) % Mod;
-}
+<span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-long long Sup(long long a, long long b) {
-    return (a - b + Mod) % Mod;
-}
+<span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">Sup</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">-</span> b <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-long long Pow(long long a, long long b) {
-    long long res = 1;
-    while(b) {
-        if(b &amp; 1) res = res * a % Mod;
-        a = a * a % Mod;
-        b &gt;&gt;= 1;
-    }
-    return res;
-}
+<span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">Pow</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>b <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">=</span> res <span class="token operator">*</span> a <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        a <span class="token operator">=</span> a <span class="token operator">*</span> a <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        b <span class="token operator">&gt;&gt;=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-void init(long long n) {
-    mark[1] = 1;
-    for (long long i = 2; i &lt;= n; i ++) {
-        if(!mark[i]) {
-            prim[++tot] = i;
-            sumg[tot] = (sumg[tot-1] + i * i) % Mod;
-            sumh[tot] = (sumh[tot-1] + i) % Mod;
-        }
-        for (long long j = 1; j &lt;= tot; j ++) {
-            if(i * prim[j] &gt; n) break;
-            mark[i * prim[j]] = 1;
-            if(i % prim[j] == 0) break;
-        }
-    }
-}
+<span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    mark<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>mark<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            prim<span class="token punctuation">[</span><span class="token operator">++</span>tot<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+            sumg<span class="token punctuation">[</span>tot<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>sumg<span class="token punctuation">[</span>tot<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> i <span class="token operator">*</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+            sumh<span class="token punctuation">[</span>tot<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>sumh<span class="token punctuation">[</span>tot<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> tot<span class="token punctuation">;</span> j <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">*</span> prim<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> n<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+            mark<span class="token punctuation">[</span>i <span class="token operator">*</span> prim<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">%</span> prim<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-void GetW(long long n) {
-    for (long long i = 1, j; i &lt;= n; i = j + 1) {
-        j = n / (n / i);
-        w[++m] = n / i;
-        long long t = w[m] % Mod;
-        g[m] = t * (t + 1) % Mod * ((2LL * t + 1) % Mod) % Mod * inv_6 % Mod;
-        g[m] --;
-        h[m] = t * (t + 1) % Mod * inv_2 % Mod;
-        h[m] --;
-        if(w[m] &lt;= sqr) id1[w[m]] = m;
-        else id2[n/w[m]] = m;
-    }
-}
+<span class="token keyword">void</span> <span class="token function">GetW</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        j <span class="token operator">=</span> n <span class="token operator">/</span> <span class="token punctuation">(</span>n <span class="token operator">/</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        w<span class="token punctuation">[</span><span class="token operator">++</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">/</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> t <span class="token operator">=</span> w<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> t <span class="token operator">*</span> <span class="token punctuation">(</span>t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">2LL</span> <span class="token operator">*</span> t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> inv_6 <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">--</span><span class="token punctuation">;</span>
+        h<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> t <span class="token operator">*</span> <span class="token punctuation">(</span>t <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> inv_2 <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+        h<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> sqr<span class="token punctuation">)</span> id1<span class="token punctuation">[</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> id2<span class="token punctuation">[</span>n<span class="token operator">/</span>w<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-void GetG(long long n) {
-    for (long long i = 1; i &lt;= tot; i ++) {
-        for (long long j = 1; j &lt;= m &amp;&amp; prim[i] * prim[i] &lt;= w[j]; j ++) {
-            long long d = w[j] / prim[i];
-            long long id = d &lt;= sqr ? id1[d] : id2[n/d];
-            g[j] = Sup(g[j], prim[i] * prim[i] % Mod * ((g[id] - sumg[i-1] + Mod) % Mod) % Mod);
-            h[j] = Sup(h[j], prim[i] * ((h[id] - sumh[i-1] + Mod) % Mod) % Mod);
-        }
-    }
-}
+<span class="token keyword">void</span> <span class="token function">GetG</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> tot<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> m <span class="token operator">&amp;&amp;</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> w<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> j <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">long</span> <span class="token keyword">long</span> d <span class="token operator">=</span> w<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">/</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">long</span> <span class="token keyword">long</span> id <span class="token operator">=</span> d <span class="token operator">&lt;=</span> sqr <span class="token operator">?</span> id1<span class="token punctuation">[</span>d<span class="token punctuation">]</span> <span class="token operator">:</span> id2<span class="token punctuation">[</span>n<span class="token operator">/</span>d<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            g<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">Sup</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> sumg<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            h<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">Sup</span><span class="token punctuation">(</span>h<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>h<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> sumh<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-long long S(long long x, long long y, long long n) {
-    if(x &lt;= prim[y-1] || x &lt;= 1) return 0;
-    long long id = x &lt;= sqr ? id1[x] : id2[n/x];
-    long long res = (g[id] - h[id] + Mod - sumg[y-1] + sumh[y-1] + Mod) % Mod;
-    for (long long i = y; i &lt;= tot &amp;&amp; prim[i] * prim[i] &lt;= x; i ++) {
-        long long t = prim[i];
-        for (long long j = 1; t &lt;= x; j ++, t = t * prim[i]) {
-            long long p1 = t % Mod;
-            res = Add(res, p1 * (p1 - 1) % Mod * (S(x/t, i+1, n) + (j != 1)) % Mod);
-        }
-    }
-    return res % Mod;
-}
+<span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">S</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> x<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> y<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> prim<span class="token punctuation">[</span>y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">||</span> x <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> id <span class="token operator">=</span> x <span class="token operator">&lt;=</span> sqr <span class="token operator">?</span> id1<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">:</span> id2<span class="token punctuation">[</span>n<span class="token operator">/</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token punctuation">(</span>g<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">-</span> h<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">+</span> Mod <span class="token operator">-</span> sumg<span class="token punctuation">[</span>y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> sumh<span class="token punctuation">[</span>y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> Mod<span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> i <span class="token operator">=</span> y<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> tot <span class="token operator">&amp;&amp;</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> x<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> t <span class="token operator">=</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> t <span class="token operator">&lt;=</span> x<span class="token punctuation">;</span> j <span class="token operator">++</span><span class="token punctuation">,</span> t <span class="token operator">=</span> t <span class="token operator">*</span> prim<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">long</span> <span class="token keyword">long</span> p1 <span class="token operator">=</span> t <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+            res <span class="token operator">=</span> <span class="token function">Add</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> p1 <span class="token operator">*</span> <span class="token punctuation">(</span>p1 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token function">S</span><span class="token punctuation">(</span>x<span class="token operator">/</span>t<span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>j <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res <span class="token operator">%</span> Mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-int main(int argc, char *args[]) {
-    long long n;
-    scanf(&quot;%lld&quot;, &amp;n);
-    sqr = sqrt(n);
-    init(sqr);
-    GetW(n);
-    GetG(n);
-    printf(&quot;%lld\n&quot;, (S(n, 1, n) + 1) % Mod);
-    return 0;
-}
-</code></pre>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sqr <span class="token operator">=</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">init</span><span class="token punctuation">(</span>sqr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">GetW</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">GetG</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token function">S</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> Mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -799,7 +799,7 @@ int main(int argc, char *args[]) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Min-25筛/">
+                                <a href="/tags/Min-25%E7%AD%9B/">
                                     <span class="chip bg-color">Min_25筛</span>
                                 </a>
                             
@@ -1266,7 +1266,7 @@ int main(int argc, char *args[]) {
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category">
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
                                     算法
                                 </a>
                             
@@ -1277,7 +1277,7 @@ int main(int argc, char *args[]) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/特征方程/">
+                    <a href="/tags/%E7%89%B9%E5%BE%81%E6%96%B9%E7%A8%8B/">
                         <span class="chip bg-color">特征方程</span>
                     </a>
                     
@@ -1325,11 +1325,11 @@ int main(int argc, char *args[]) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/题解/">
+                    <a href="/tags/%E9%A2%98%E8%A7%A3/">
                         <span class="chip bg-color">题解</span>
                     </a>
                     
-                    <a href="/tags/多校/">
+                    <a href="/tags/%E5%A4%9A%E6%A0%A1/">
                         <span class="chip bg-color">多校</span>
                     </a>
                     
@@ -1525,7 +1525,7 @@ int main(int argc, char *args[]) {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1826,7 +1826,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="C++学习笔记(一), Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -510,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-学习笔记/">
+                            <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">C++ 学习笔记</span>
                             </a>
                         
@@ -522,7 +524,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-学习/" class="post-category">
+                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
                                 C++ 学习
                             </a>
                         
@@ -585,14 +587,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="C-学习笔记（一）"><a href="#C-学习笔记（一）" class="headerlink" title="C++ 学习笔记（一）"></a>C++ 学习笔记（一）</h1><h2 id="双冒号运算符"><a href="#双冒号运算符" class="headerlink" title="双冒号运算符"></a>双冒号运算符</h2><p>作用域运算符  <code>::</code>全局作用域</p>
-<pre><code class="lang-cpp">int a = 200;
-void test() {
-    int a = 100;
-    cout &lt;&lt; a &lt;&lt; endl; // 输出 100
-    cout &lt;&lt; ::a &lt;&lt; endl; //输出200
-    std::cout &lt;&lt; &quot;nihao&quot;; //::前面加std则是说明cout是std作用域下的
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> <span class="token comment">// 输出 100</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token operator">::</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> <span class="token comment">//输出200</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"nihao"</span><span class="token punctuation">;</span> <span class="token comment">//::前面加std则是说明cout是std作用域下的</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="namespace的使用"><a href="#namespace的使用" class="headerlink" title="namespace的使用"></a><code>namespace</code>的使用</h2><p><code>namespace</code>命名空间主要用于解决命名冲突</p>
 <ul>
 <li><p>命名空间下可以放函数、变量、结构体、类</p>
@@ -606,80 +607,71 @@ void test() {
 <li>命名空间可以起别名</li>
 </ul>
 <h2 id="using-声明和using-编译"><a href="#using-声明和using-编译" class="headerlink" title="using 声明和using 编译"></a><code>using</code> 声明和<code>using</code> 编译</h2><h3 id="using-声明"><a href="#using-声明" class="headerlink" title="using 声明"></a><code>using</code> 声明</h3><p>使用<code>using</code>声明时要避免二义性问题，</p>
-<pre><code class="lang-cpp">namespace KG{
-    int sunwukongId = 10;
-}
-void test() {
-    int sumwukongId = 20;
-    using KG::sunwukongId;
-    // 写了using 声明后，说明以后的所有sunwukongId都是KG下的，
-    // 但是编译器又有就近原则，这就造成了二义性
-    cout &lt;&lt; sunwukongId &lt;&lt; endl;
-}
-</code></pre>
-<h3 id="using-编译"><a href="#using-编译" class="headerlink" title="using 编译"></a><code>using</code> 编译</h3><pre><code class="lang-cpp">void test2() {
-    int sunwukongId = 20;
-    using namespace KG; //打开命名空间KG，可以执行
-    cout &lt;&lt; sunwukongId &lt;&lt; endl;
-}
-</code></pre>
-<h2 id="C-对C的增强"><a href="#C-对C的增强" class="headerlink" title="C++对C的增强"></a>C++对C的增强</h2><h3 id="全局变量检测增强"><a href="#全局变量检测增强" class="headerlink" title="全局变量检测增强"></a>全局变量检测增强</h3><pre><code class="lang-cpp">//全局变量中
-int a;
-int a = 10;
-//在C语言中可以通过编译
-//在C++中不能通过编译
-</code></pre>
-<h3 id="函数检测增强"><a href="#函数检测增强" class="headerlink" title="函数检测增强"></a>函数检测增强</h3><pre><code class="lang-cpp">// 函数 参数类型增强
-int getRecS(w, h) {
-    // 无返回值可以通过C编译不能通过C++编译
-}
-// 在C中可以通过编译
-// 在C++中不可以通过编译
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">namespace</span> KG<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sunwukongId <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sumwukongId <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> KG<span class="token operator">::</span>sunwukongId<span class="token punctuation">;</span>
+    <span class="token comment">// 写了using 声明后，说明以后的所有sunwukongId都是KG下的，</span>
+    <span class="token comment">// 但是编译器又有就近原则，这就造成了二义性</span>
+    cout <span class="token operator">&lt;&lt;</span> sunwukongId <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="using-编译"><a href="#using-编译" class="headerlink" title="using 编译"></a><code>using</code> 编译</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sunwukongId <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token keyword">namespace</span> KG<span class="token punctuation">;</span> <span class="token comment">//打开命名空间KG，可以执行</span>
+    cout <span class="token operator">&lt;&lt;</span> sunwukongId <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="C-对C的增强"><a href="#C-对C的增强" class="headerlink" title="C++对C的增强"></a>C++对C的增强</h2><h3 id="全局变量检测增强"><a href="#全局变量检测增强" class="headerlink" title="全局变量检测增强"></a>全局变量检测增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//全局变量中</span>
+<span class="token keyword">int</span> a<span class="token punctuation">;</span>
+<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment">//在C语言中可以通过编译</span>
+<span class="token comment">//在C++中不能通过编译</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="函数检测增强"><a href="#函数检测增强" class="headerlink" title="函数检测增强"></a>函数检测增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 函数 参数类型增强</span>
+<span class="token keyword">int</span> <span class="token function">getRecS</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> h<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 无返回值可以通过C编译不能通过C++编译</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 在C中可以通过编译</span>
+<span class="token comment">// 在C++中不可以通过编译</span>
 
-//参数检测增强
-void test02() {
-    getRecS(10, 10, 10)；
-}
-</code></pre>
-<h3 id="类型转换检测增强"><a href="#类型转换检测增强" class="headerlink" title="类型转换检测增强"></a>类型转换检测增强</h3><pre><code class="lang-cpp">void test03() {
-    char *p = malloc(sizeof(64)); //malloc返回值是void*
-}
-// C可以通过编译，因为C认为void*是一个万能指针，可以转换成char*，
-// 而C++不行，C++ 版本须为
-// char *p = (char*)malloc(sizeof(64));
-</code></pre>
-<h3 id="struct增强"><a href="#struct增强" class="headerlink" title="struct增强"></a><code>struct</code>增强</h3><pre><code class="lang-cpp">struct Person{
-    int m_Age;
-    void plusAge();
-    // C中struct不能加函数，C++可以
-}
-void test04() {
-    struct Person p1; 
-    // C语言必须加上struct
-}
-</code></pre>
-<h3 id="bool类型增强"><a href="#bool类型增强" class="headerlink" title="bool类型增强"></a><code>bool</code>类型增强</h3><pre><code class="lang-cpp">// C中没有bool类型，在C++中bool类型 非0的值都是1
-</code></pre>
-<h3 id="三目运算符增强"><a href="#三目运算符增强" class="headerlink" title="三目运算符增强"></a>三目运算符增强</h3><pre><code class="lang-cpp">void test05() {
-    int a = 10;
-    int b = 20;
-    printf(&quot;%d\n&quot;, a &gt; b ? a : b);
-    a &gt; b ? a : b = 100;
-    // 三目运算符，C语言中返回值，C++返回的是变量
-    // C语言模仿C++写法
-    // *(a &gt; b ? &amp;a : &amp;b) = 100
-}
-</code></pre>
-<h3 id="const增强"><a href="#const增强" class="headerlink" title="const增强"></a><code>const</code>增强</h3><pre><code class="lang-cpp">const int m_A = 10; //全局const，在C和C++中都不能修改
-void test07() {
-   const int m_B = 20; //C中伪常量，C++中真常量
-    int *p = (int*)&amp;m_B;
-    printf(&quot;%d\n&quot;, *p);
-    // 在C中const的作用仅仅是不允许修改，但是可以通过指针来修改
-    // 在C++中通过指针修改的仅仅是*p, 而m_B并没有变
-    // int arr[m_B] 在C中不能来定义数组，在C++中可以
-}
-</code></pre>
+<span class="token comment">//参数检测增强</span>
+<span class="token keyword">void</span> <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">getRecS</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>；
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="类型转换检测增强"><a href="#类型转换检测增强" class="headerlink" title="类型转换检测增强"></a>类型转换检测增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test03</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">char</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//malloc返回值是void*</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// C可以通过编译，因为C认为void*是一个万能指针，可以转换成char*，</span>
+<span class="token comment">// 而C++不行，C++ 版本须为</span>
+<span class="token comment">// char *p = (char*)malloc(sizeof(64));</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="struct增强"><a href="#struct增强" class="headerlink" title="struct增强"></a><code>struct</code>增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+	<span class="token keyword">int</span> m_Age<span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">plusAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// C中struct不能加函数，C++可以</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test04</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Person</span> p1<span class="token punctuation">;</span> 
+    <span class="token comment">// C语言必须加上struct</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="bool类型增强"><a href="#bool类型增强" class="headerlink" title="bool类型增强"></a><code>bool</code>类型增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// C中没有bool类型，在C++中bool类型 非0的值都是1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="三目运算符增强"><a href="#三目运算符增强" class="headerlink" title="三目运算符增强"></a>三目运算符增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test05</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a <span class="token operator">&gt;</span> b <span class="token operator">?</span> a <span class="token operator">:</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    a <span class="token operator">&gt;</span> b <span class="token operator">?</span> a <span class="token operator">:</span> b <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token comment">// 三目运算符，C语言中返回值，C++返回的是变量</span>
+    <span class="token comment">// C语言模仿C++写法</span>
+    <span class="token comment">// *(a &gt; b ? &amp;a : &amp;b) = 100</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="const增强"><a href="#const增强" class="headerlink" title="const增强"></a><code>const</code>增强</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">const</span> <span class="token keyword">int</span> m_A <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">//全局const，在C和C++中都不能修改</span>
+<span class="token keyword">void</span> <span class="token function">test07</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> <span class="token keyword">int</span> m_B <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment">//C中伪常量，C++中真常量</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>m_B<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 在C中const的作用仅仅是不允许修改，但是可以通过指针来修改</span>
+    <span class="token comment">// 在C++中通过指针修改的仅仅是*p, 而m_B并没有变</span>
+    <span class="token comment">// int arr[m_B] 在C中不能来定义数组，在C++中可以</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p><code>C</code>语言中，<code>const</code>修饰的变量，是伪常量，编译器是会分配内存的，只要分配内存就可以更改</p>
 </li>
@@ -690,154 +682,142 @@ void test07() {
 <li><p><code>const</code>分配内存，取地址会分配临时内存，使用<code>extern</code>时编译器也会给<code>const</code>变量分配内存，用普通变量初始化<code>const</code>变量也会给<code>const</code>分配内存</p>
 </li>
 </ul>
-<pre><code class="lang-cpp">int a = 10;
-const int b = a; //会分配内存
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment">//会分配内存</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>自定义数据类型，加<code>const</code>也会分配内存</li>
 </ul>
-<pre><code class="lang-cpp">struct Person{
-    string m_Name;
-    int m_Age;
-}
-void test() {
-    const Person p1; // 分配了内存
-    Person *p = (Person*)&amp;p1;
-    p-&gt;m_Name = &quot;abc&quot;;
-    (*p).m_Age = 18;
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    string m_Name<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> m_Age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> Person p1<span class="token punctuation">;</span> <span class="token comment">// 分配了内存</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">(</span>Person<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>p1<span class="token punctuation">;</span>
+    p<span class="token operator">-&gt;</span>m_Name <span class="token operator">=</span> <span class="token string">"abc"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>m_Age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>const</code>和<code>define</code>区别总结</p>
-<pre><code class="lang-shell">1. const 有类型，可进行编译器类型安全检查，#define五类性，不可进行检查
-2. const 有作用域，而#define 不重视作用域，默认定义处到文件结尾，如果定义在指定作用域下有效的常量，那么#define就 不能用，#define可以用undef 来结束作用周期
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">1. const 有类型，可进行编译器类型安全检查，#define五类性，不可进行检查
+2. const 有作用域，而#define 不重视作用域，默认定义处到文件结尾，如果定义在指定作用域下有效的常量，那么#define就 不能用，#define可以用undef 来结束作用周期<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>引用是<code>C++</code>对<code>C</code>的重要扩充。在<code>C/C++</code>中指针的作用基本都是一样的，但是<code>C++</code>增加了另一种给函数传递地址的途径，这就是按引用传递，他也存在与其他一些编程语言中，并不是<code>C++</code>的发明。</p>
 <ul>
 <li>变量名实质上是一段连续内存的别名，是一个标号（门牌号）</li>
 <li>程序中通过变量来申请并命名内存空间</li>
 <li>通过变量的名字可以使用存储空间</li>
 </ul>
-<pre><code class="lang-cpp">int a = 10;
-int &amp;b = a;
-b = 200;//修改b时，a也会修改
-</code></pre>
-<h3 id="引用-1"><a href="#引用-1" class="headerlink" title="引用"></a>引用</h3><pre><code class="lang-cpp">引用使用格式：type &amp;别名=原名
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">&amp;</span>b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span><span class="token comment">//修改b时，a也会修改</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="引用-1"><a href="#引用-1" class="headerlink" title="引用"></a>引用</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">引用使用格式：type <span class="token operator">&amp;</span>别名<span class="token operator">=</span>原名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>引用 就是起别名，这里<code>a</code>的<code>b</code>都指向同一片地址空间，<code>&amp;</code>写到左侧叫引用，写到右侧是取地址。</li>
 <li>引用必须初始化，引用初始化后不可以修改</li>
 </ul>
-<pre><code class="lang-cpp">void test() {
-    //int &amp;a;//编译不通过
-    int  a = 10;
-    int &amp;b = a; //引用初始化后不可以修改
-    int c = 20;
-    b = c;//这里是把c的值赋给b，而不是b引用c，初始化后不可以修改
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//int &amp;a;//编译不通过</span>
+    <span class="token keyword">int</span>  a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">&amp;</span>b <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment">//引用初始化后不可以修改</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> c<span class="token punctuation">;</span><span class="token comment">//这里是把c的值赋给b，而不是b引用c，初始化后不可以修改</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>对数组建立引用</li>
 </ul>
-<pre><code class="lang-cpp">void test() {
-    int arr[10];
-    for (int i = 0; i &lt; 10; i ++)
-        arr[i] = i;
-    int (&amp;parr[i])[10] =  arr;
-    for (int i = 0; i &lt; 10; i ++) {
-        cout &lt;&lt; parr[i];
-    }
-}
-</code></pre>
-<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><pre><code class="lang-cpp">// 值传递，直接传递a，b的值，不更改a与b的值
-void swap1(int a, int b){ 
-    int tmp = a;
-    a = b;
-    b = tmp;
-}
-// 指针传递，传递a，b的指针，更改a，b的值
-void swap2(int *a, int *b) { 
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
-//引用传递，类似传递地址，相当于int &amp;a = a，可以通过引用改变a，b的值
-void swap3(int &amp;a, int &amp;b) { 
-    int tmp = a;
-    a = b;
-    b = tmp;
-}
-void test() {
-    int a = 10, b = 20;
-    swap1(a, b);
-    swap2(&amp;a, &amp;b);
-    swap3(a, b);
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>parr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span>  arr<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> parr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 值传递，直接传递a，b的值，不更改a与b的值</span>
+<span class="token keyword">void</span> <span class="token function">swap1</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 指针传递，传递a，b的指针，更改a，b的值</span>
+<span class="token keyword">void</span> <span class="token function">swap2</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>a<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">*</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> <span class="token operator">*</span>a<span class="token punctuation">;</span>
+    <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+    <span class="token operator">*</span>b <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//引用传递，类似传递地址，相当于int &amp;a = a，可以通过引用改变a，b的值</span>
+<span class="token keyword">void</span> <span class="token function">swap3</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token function">swap1</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">swap2</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">swap3</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="引用注意事项"><a href="#引用注意事项" class="headerlink" title="引用注意事项"></a>引用注意事项</h3><ul>
 <li><p>引用必需引一块合法的内存空间</p>
-<pre><code class="lang-cpp">void test() {
-    int &amp;a = 10;//引用必需引一块合法的内存空间
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token operator">&amp;</span>a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span><span class="token comment">//引用必需引一块合法的内存空间</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>不要返回局部变量的引用</p>
-<pre><code class="lang-cpp">int &amp;dowork() {
-    int a = 10;
-    return a;
-}
-int&amp; work2() {
-    static int a = 10;
-    return a;
-}
-void test() {
-    int &amp;ret =  dowork(); // 局部引用已经销毁，数据不准确
-    dowork2() = 1000; 
-    // 如果函数的返回值引用，那么这个函数调用可以作为左值，
-    //相当于写了a=1000
-}
-</code></pre>
-<h3 id="引用的本质"><a href="#引用的本质" class="headerlink" title="引用的本质"></a>引用的本质</h3><pre><code class="lang-cpp">引用的本质在C++内部实现是一个指针常量
-</code></pre>
-<h3 id="指针的引用"><a href="#指针的引用" class="headerlink" title="指针的引用"></a>指针的引用</h3><pre><code class="lang-cpp">struct Person{
-    int m_age;
-}
-// 通过指针给对对象分配内存
-void allocat(Person **p) {
-    *p = (Person *)malloc(sizeof(Person));
-    (*p)-&gt;m_age = 100;
-}
-void test01() {
-    Person *p = NULL;
-    allocat(&amp;p);
-}
-// 利用指针引用开辟空间
-void allocat(Person* &amp;p) {
-    p = (Person*)malloc(sizeof(Person));
-    p-&gt;m_age = 100;
-}
-void test02() {
-    Person *p = NULL;
-    allocat(p);
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token operator">&amp;</span><span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span><span class="token operator">&amp;</span> <span class="token function">work2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token operator">&amp;</span>ret <span class="token operator">=</span>  <span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 局部引用已经销毁，数据不准确</span>
+	<span class="token function">dowork2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span> 
+    <span class="token comment">// 如果函数的返回值引用，那么这个函数调用可以作为左值，</span>
+    <span class="token comment">//相当于写了a=1000</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="引用的本质"><a href="#引用的本质" class="headerlink" title="引用的本质"></a>引用的本质</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">引用的本质在C<span class="token operator">++</span>内部实现是一个指针常量<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="指针的引用"><a href="#指针的引用" class="headerlink" title="指针的引用"></a>指针的引用</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> m_age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 通过指针给对对象分配内存</span>
+<span class="token keyword">void</span> <span class="token function">allocat</span><span class="token punctuation">(</span>Person <span class="token operator">*</span><span class="token operator">*</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">(</span>Person <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token operator">-&gt;</span>m_age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token function">allocat</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 利用指针引用开辟空间</span>
+<span class="token keyword">void</span> <span class="token function">allocat</span><span class="token punctuation">(</span>Person<span class="token operator">*</span> <span class="token operator">&amp;</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    p <span class="token operator">=</span> <span class="token punctuation">(</span>Person<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token operator">-&gt;</span>m_age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token function">allocat</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h3 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h3><pre><code class="lang-cpp">void test() {
-    int  &amp;ref = 10; // 引用了不合法的内存，不可以
-    const int &amp;ref = 10;
-    //加入const后，编译器处理方式为
-    // int tmp = 10; const int &amp;ref = tmp;
-    // 常量引用ref可以通过指针来修改
-    int *p = (int*)&amp;ref;
-    *p = 1000;
-
-}
-</code></pre>
+<h3 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span>  <span class="token operator">&amp;</span>ref <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">// 引用了不合法的内存，不可以</span>
+    <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">&amp;</span>ref <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">//加入const后，编译器处理方式为</span>
+    <span class="token comment">// int tmp = 10; const int &amp;ref = tmp;</span>
+    <span class="token comment">// 常量引用ref可以通过指针来修改</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>ref<span class="token punctuation">;</span>
+    <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+    
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>常量引用使用场景，通常用来修饰形参</p>
-<pre><code class="lang-cpp">void showValue(const int &amp;val) {
-    //如果只是想展示内容，而不修改内容，那么就用const来修饰这个形参
-}
-</code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">showValue</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">&amp;</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//如果只是想展示内容，而不修改内容，那么就用const来修饰这个形参</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>483</p>
                 
             </div>
@@ -902,7 +882,7 @@ void test02() {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C-学习笔记/">
+                                <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">C++ 学习笔记</span>
                                 </a>
                             
@@ -1369,7 +1349,7 @@ void test02() {
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-学习/" class="post-category">
+                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
                                     C++ 学习
                                 </a>
                             
@@ -1380,7 +1360,7 @@ void test02() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C-学习笔记/">
+                    <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">C++ 学习笔记</span>
                     </a>
                     
@@ -1417,7 +1397,7 @@ void test02() {
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/报错处理/" class="post-category">
+                            <a href="/categories/%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/" class="post-category">
                                     报错处理
                                 </a>
                             
@@ -1617,7 +1597,7 @@ void test02() {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1918,7 +1898,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

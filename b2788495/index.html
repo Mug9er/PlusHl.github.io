@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Django + Vue 快速构建项目, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -526,7 +528,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -553,7 +555,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    853
+                    789
                 </div>
                 
 
@@ -588,26 +590,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用Vue-Django搭建项目"><a href="#使用Vue-Django搭建项目" class="headerlink" title="使用Vue+Django搭建项目"></a>使用<code>Vue+Django</code>搭建项目</h2><p><a href="https://zhuanlan.zhihu.com/p/25080236" target="_blank" rel="noopener">参考</a></p>
+                <h2 id="使用Vue-Django搭建项目"><a href="#使用Vue-Django搭建项目" class="headerlink" title="使用Vue+Django搭建项目"></a>使用<code>Vue+Django</code>搭建项目</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25080236">参考</a></p>
 <h3 id="构建Django项目"><a href="#构建Django项目" class="headerlink" title="构建Django项目"></a>构建<code>Django</code>项目</h3><p><em>命令：</em></p>
-<pre><code class="lang-text">django-admin startproject ulb_manager
-</code></pre>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">django-admin startproject ulb_manager<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><em>结构：</em></p>
-<pre><code class="lang-text">.
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">.
 ├── manage.py
 └── ulb_manager
     ├── __init__.py
     ├── settings.py
     ├── urls.py
-    └── wsgi.py
-</code></pre>
+    └── wsgi.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="进入项目根目录，创建一个-app-作为项目后端"><a href="#进入项目根目录，创建一个-app-作为项目后端" class="headerlink" title="进入项目根目录，创建一个 app 作为项目后端"></a>进入项目根目录，创建一个 <code>app</code> 作为项目后端</h2><p><em>命令：</em></p>
-<pre><code class="lang-text">cd ulb_manager
-python manage.py startapp backend
-</code></pre>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">cd ulb_manager
+python manage.py startapp backend<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>即：<code>app</code> 名叫做 <code>backend</code></p>
 <p><em>结构：</em></p>
-<pre><code class="lang-text">.
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">.
 ├── backend
 │   ├── __init__.py
 │   ├── admin.py
@@ -621,9 +620,8 @@ python manage.py startapp backend
     ├── __init__.py
     ├── settings.py
     ├── urls.py
-    └── wsgi.py
-</code></pre>
-<h3 id="将Vue打包的dist文件放入url-manager"><a href="#将Vue打包的dist文件放入url-manager" class="headerlink" title="将Vue打包的dist文件放入url_manager"></a>将<code>Vue</code>打包的<code>dist</code>文件放入<code>url_manager</code></h3><pre><code class="lang-text">.
+    └── wsgi.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="将Vue打包的dist文件放入url-manager"><a href="#将Vue打包的dist文件放入url-manager" class="headerlink" title="将Vue打包的dist文件放入url_manager"></a>将<code>Vue</code>打包的<code>dist</code>文件放入<code>url_manager</code></h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">.
 ├─backend
 │  ├─migrations
 │  └─__pycache__
@@ -636,103 +634,94 @@ python manage.py startapp backend
 │          └─js
 └─ulb_manager
     └─__pycache__
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>Vue-CLI3.x</code>在打包时不会生成<code>static</code>文件</p>
 <p>使用<code>vue ui</code>，导入<code>Vue</code>项目，在配置/基础配置/ 修改资源目录 为<code>static</code></p>
 <p>这样在进行打包就会生成<code>static</code>文件</p>
-<p><img src="https://wx1.sinaimg.cn/mw690/0083TyOJly1glz7x4dxvmj31bz0ovn01.jpg" alt></p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://wx1.sinaimg.cn/mw690/0083TyOJly1glz7x4dxvmj31bz0ovn01.jpg" alt=""></p>
 <h3 id="使用Django的通用视图-TemplateView"><a href="#使用Django的通用视图-TemplateView" class="headerlink" title="使用Django的通用视图 TemplateView"></a>使用<code>Django</code>的通用视图 <code>TemplateView</code></h3><p>找到项目根<code>urls.py(ulb_manager/urls.py)</code>，使用通用视图创建最简单的模板控制器，访问 <code>『/』</code>时直接返回<code>index.html</code></p>
-<pre><code class="lang-text">urlpatterns = [
-    path(&#39;admin/&#39;, admin.site.urls),
-    path(&#39;&#39;, TemplateView.as_view(template_name=&quot;index.html&quot;)),
-    path(&#39;api/&#39;, include(&#39;backend.urls&#39;))
-]
-</code></pre>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name="index.html")),
+    path('api/', include('backend.urls'))
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="配置Django项目的模板搜索路径"><a href="#配置Django项目的模板搜索路径" class="headerlink" title="配置Django项目的模板搜索路径"></a>配置<code>Django</code>项目的模板搜索路径</h3><p>上一步使用了<code>Django</code>的模板系统，所以需要配置一下模板使<code>Django</code>知道从哪里找到<code>index.html</code></p>
 <p>打开 <code>settings.py (ulb_manager/settings.py)</code>，找到<code>TEMPLATES</code>配置项，修改如下:</p>
-<pre><code class="lang-text">TEMPLATES = [
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">TEMPLATES = [
     {
-        &#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
-        # &#39;DIRS&#39;: [],
-        **&#39;DIRS&#39;: [&#39;vue-fonter/dist&#39;]**,
-        &#39;APP_DIRS&#39;: True,
-        &#39;OPTIONS&#39;: {
-            &#39;context_processors&#39;: [
-                &#39;django.template.context_processors.debug&#39;,
-                &#39;django.template.context_processors.request&#39;,
-                &#39;django.contrib.auth.context_processors.auth&#39;,
-                &#39;django.contrib.messages.context_processors.messages&#39;,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 'DIRS': [],
+        **'DIRS': ['vue-fonter/dist']**,
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
-]
-</code></pre>
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意这里的<code>vue-fonter</code>是<code>VueJS</code>项目目录，<code>dist</code>则是运行 <code>npm run build</code>构建出的<code>index.html</code>与静态文件夹<code>static</code> 的父级目录</p>
 <p>这时启动<code>Django</code>项目，访问<code>/</code>则可以访问<code>index.html</code>，但是还有问题，静态文件都是404错误，下一步我们解决这个问题</p>
 <h3 id="配置静态文件搜索路径"><a href="#配置静态文件搜索路径" class="headerlink" title="配置静态文件搜索路径"></a>配置静态文件搜索路径</h3><p>打开 <code>settings.py (ulb_manager/settings.py</code>)，找到<code>STATICFILES_DIRS</code> 配置项，配置如下:</p>
-<pre><code class="lang-text"># Add for vuejs
+<pre class="line-numbers language-text" data-language="text"><code class="language-text"># Add for vuejs
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, &quot;vue-fonter/dist/static&quot;),
-]
-</code></pre>
+    os.path.join(BASE_DIR, "vue-fonter/dist/static"),
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样<code>Django</code>不仅可以将<code>/</code> 映射到<code>index.html</code>，而且还可以顺利找到静态文件</p>
 <h3 id="backend-配置"><a href="#backend-配置" class="headerlink" title="backend 配置"></a><code>backend</code> 配置</h3><p>在<code>backend</code>中创建<code>urls</code></p>
-<pre><code class="lang-py">from django.urls import path
-from . import views
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
 
-urlpatterns = [
-    path(&#39;books/&#39;, view = views.books, name=&quot;books&quot;)
-]
-</code></pre>
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">'books/'</span><span class="token punctuation">,</span> view <span class="token operator">=</span> views<span class="token punctuation">.</span>books<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"books"</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>backend/views.py</code>中</p>
-<pre><code class="lang-py">from django.shortcuts import render
-from django.http.response import  JsonResponse
+<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http<span class="token punctuation">.</span>response <span class="token keyword">import</span>  JsonResponse
 
-# Create your views here.
+<span class="token comment"># Create your views here.</span>
 
-def books(request):
-    books = [
-        {&#39;id&#39;: 1, &#39;title&#39;: &quot;python&quot;, &quot;price&quot;: 89}
-    ]
-    return JsonResponse(books, safe=False)
-</code></pre>
+<span class="token keyword">def</span> <span class="token function">books</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    books <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'title'</span><span class="token punctuation">:</span> <span class="token string">"python"</span><span class="token punctuation">,</span> <span class="token string">"price"</span><span class="token punctuation">:</span> <span class="token number">89</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+    <span class="token keyword">return</span> JsonResponse<span class="token punctuation">(</span>books<span class="token punctuation">,</span> safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>此时访问<code>/</code>我们可以看到使用<code>Django</code>作为后端的<code>VueJS</code>前端,访问<code>/api/books</code>我们可以看到<code>json</code>数据</p>
 <h3 id="解决开发时的跨域问题"><a href="#解决开发时的跨域问题" class="headerlink" title="解决开发时的跨域问题"></a>解决开发时的跨域问题</h3><p>使用<code>corsheaders</code></p>
-<pre><code class="lang-js">pip install corsheaders
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">pip install corsheaders<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在<code>setting.py</code>中加入</p>
-<pre><code class="lang-js">INSTALLED_APPS = [
-    //...
-    &#39;corsheaders&#39;,
-]
-MIDDLEWARE = [
-    //......
-    &#39;corsheaders.middleware.CorsMiddleware&#39;,  # 添加cors，在第三行，位置不能改
-    &#39;django.middleware.common.CommonMiddleware&#39;,
-]
-CORS_ORIGIN_ALLOW_ALL = True
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">INSTALLED_APPS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token comment">//...</span>
+    <span class="token string">'corsheaders'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token constant">MIDDLEWARE</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token comment">//......</span>
+    <span class="token string">'corsheaders.middleware.CorsMiddleware'</span><span class="token punctuation">,</span>  # 添加cors，在第三行，位置不能改
+    <span class="token string">'django.middleware.common.CommonMiddleware'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token constant">CORS_ORIGIN_ALLOW_ALL</span> <span class="token operator">=</span> True
 # 允许请求携带cookies
-CORS_ALLOW_CREDENTIALS= True
-</code></pre>
+<span class="token constant">CORS_ALLOW_CREDENTIALS</span><span class="token operator">=</span> True <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上是从网上找的解决方法，但是并没有解决问题，</p>
 <p>先看一下同源的定义</p>
-<pre><code>同源是指&quot;协议+域名+端口&quot;三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
-</code></pre><p><code>vue</code>启动<code>server</code>是的<code>ip</code>是<code>192.168.0.100:8080</code>，<code>django</code>启动服务时的<code>ip</code>是<code>127.0.0.1:8000</code>，</p>
+<pre class="line-numbers language-none"><code class="language-none">同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>vue</code>启动<code>server</code>是的<code>ip</code>是<code>192.168.0.100:8080</code>，<code>django</code>启动服务时的<code>ip</code>是<code>127.0.0.1:8000</code>，</p>
 <p>试着修改了一下<code>django</code>的启动<code>ip</code></p>
 <p>在<code>setting.py</code>中加入</p>
-<pre><code class="lang-js">ALLOWED_HOSTS = [
-    &#39;192.168.0.100&#39;,
-    &#39;127.0.0.1&#39;,
-    &#39;0.0.0.0&#39;,
-    &#39;localhost&#39;,
-]
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">ALLOWED_HOSTS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'192.168.0.100'</span><span class="token punctuation">,</span>
+    <span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span>
+    <span class="token string">'0.0.0.0'</span><span class="token punctuation">,</span>
+    <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后启动</p>
-<pre><code class="lang-js">django ./manage.py runserver 192.168.0.100:8888
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">django <span class="token punctuation">.</span><span class="token operator">/</span>manage<span class="token punctuation">.</span>py runserver <span class="token number">192.168</span><span class="token number">.0</span><span class="token number">.100</span><span class="token operator">:</span><span class="token number">8888</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后启动<code>vue</code></p>
-<pre><code class="lang-js">npm run serve
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">npm run serve<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这时不在出现跨域问题 </p>
 <p>成功！</p>
 <h4 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h4><p>利用<code>vscode</code> 写前端<code>vue</code>，<code>pycharm</code>写<code>django</code>后端 ，调试时<code>pycharm</code>打开<code>django</code>服务，<code>vscode</code> 打开<code>vue</code>，</p>
@@ -1270,7 +1259,7 @@ CORS_ALLOW_CREDENTIALS= True
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1285,7 +1274,7 @@ CORS_ALLOW_CREDENTIALS= True
                         <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/Axios通信/">
+                    <a href="/tags/Axios%E9%80%9A%E4%BF%A1/">
                         <span class="chip bg-color">Axios通信</span>
                     </a>
                     
@@ -1322,7 +1311,7 @@ CORS_ALLOW_CREDENTIALS= True
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1537,7 +1526,7 @@ CORS_ALLOW_CREDENTIALS= True
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1838,7 +1827,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Django+Vue+Nginx+uWSGI部署, Mug-9&#39;s blog">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="referrer" content="no-referrer-when-downgrade" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -42,13 +42,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -530,7 +532,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                 配置
                             </a>
                         
@@ -592,155 +594,146 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Django-Vue-Nginx-uWSGI部署"><a href="#Django-Vue-Nginx-uWSGI部署" class="headerlink" title="Django+Vue+Nginx+uWSGI部署"></a><code>Django+Vue+Nginx+uWSGI</code>部署</h2><p><a href="https://blog.csdn.net/qq_41785581/article/details/102598073" target="_blank" rel="noopener">参考</a></p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><pre><code class="lang-js">ip:123.56.252.111
-vue: dist
-django: django_server
+                <h2 id="Django-Vue-Nginx-uWSGI部署"><a href="#Django-Vue-Nginx-uWSGI部署" class="headerlink" title="Django+Vue+Nginx+uWSGI部署"></a><code>Django+Vue+Nginx+uWSGI</code>部署</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41785581/article/details/102598073">参考</a></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">ip<span class="token operator">:</span><span class="token number">123.56</span><span class="token number">.252</span><span class="token number">.111</span>
+vue<span class="token operator">:</span> dist
+django<span class="token operator">:</span> django_server
 
 ├── backend
-│   ├── admin.py
-│   ├── apps.py
-│   ├── __init__.py
+│   ├── admin<span class="token punctuation">.</span>py
+│   ├── apps<span class="token punctuation">.</span>py
+│   ├── __init__<span class="token punctuation">.</span>py
 │   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
+│   │   └── __init__<span class="token punctuation">.</span>py
+│   ├── models<span class="token punctuation">.</span>py
 │   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── views.cpython-39.pyc
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── db.sqlite3
-├── element-test
+│   │   ├── __init__<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   │   ├── urls<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   │   └── views<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   ├── tests<span class="token punctuation">.</span>py
+│   ├── urls<span class="token punctuation">.</span>py
+│   └── views<span class="token punctuation">.</span>py
+├── db<span class="token punctuation">.</span>sqlite3
+├── element<span class="token operator">-</span>test
 │   └── dist
-│       ├── header.ico
-│       ├── index.html
-│       └── static
+│       ├── header<span class="token punctuation">.</span>ico
+│       ├── index<span class="token punctuation">.</span>html
+│       └── <span class="token keyword">static</span>
 │           ├── css
 │           ├── fonts
 │           ├── img
 │           └── js
-├── manage.py
+├── manage<span class="token punctuation">.</span>py
 ├── media
 ├── mysite
-│   ├── asgi.py
-│   ├── __init__.py
+│   ├── asgi<span class="token punctuation">.</span>py
+│   ├── __init__<span class="token punctuation">.</span>py
 │   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── settings.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── wsgi.cpython-39.pyc
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── static
+│   │   ├── __init__<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   │   ├── settings<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   │   ├── urls<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   │   └── wsgi<span class="token punctuation">.</span>cpython<span class="token operator">-</span><span class="token number">39.</span>pyc
+│   ├── settings<span class="token punctuation">.</span>py
+│   ├── urls<span class="token punctuation">.</span>py
+│   └── wsgi<span class="token punctuation">.</span>py
+├── <span class="token keyword">static</span>
 │   ├── admin
 │   ├── css
 │   ├── fonts
 │   ├── img
 │   └── js
-├── test.py
-├── uwsgi.ini
-├── uwsgi.log
-├── uwsgi_nginx.sock
-└── uwsgi.pid
-</code></pre>
-<h3 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h3><p>在<a href="http://www.orzff.cn/7dfc688d/" target="_blank" rel="noopener">服务器配置</a>有详细介绍</p>
-<h3 id="Django"><a href="#Django" class="headerlink" title="Django"></a><code>Django</code></h3><p>在<a href="http://www.orzff.cn/7dfc688d/" target="_blank" rel="noopener">服务器配置</a>有详细介绍</p>
-<h3 id="uWSGI"><a href="#uWSGI" class="headerlink" title="uWSGI"></a><code>uWSGI</code></h3><h4 id="安装uWSGI"><a href="#安装uWSGI" class="headerlink" title="安装uWSGI"></a>安装<code>uWSGI</code></h4><pre><code class="lang-js">pip install uwsgi
-</code></pre>
+├── test<span class="token punctuation">.</span>py
+├── uwsgi<span class="token punctuation">.</span>ini
+├── uwsgi<span class="token punctuation">.</span>log
+├── uwsgi_nginx<span class="token punctuation">.</span>sock
+└── uwsgi<span class="token punctuation">.</span>pid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h3><p>在<a target="_blank" rel="noopener" href="http://www.orzff.cn/7dfc688d/">服务器配置</a>有详细介绍</p>
+<h3 id="Django"><a href="#Django" class="headerlink" title="Django"></a><code>Django</code></h3><p>在<a target="_blank" rel="noopener" href="http://www.orzff.cn/7dfc688d/">服务器配置</a>有详细介绍</p>
+<h3 id="uWSGI"><a href="#uWSGI" class="headerlink" title="uWSGI"></a><code>uWSGI</code></h3><h4 id="安装uWSGI"><a href="#安装uWSGI" class="headerlink" title="安装uWSGI"></a>安装<code>uWSGI</code></h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">pip install uwsgi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="简单测试一下"><a href="#简单测试一下" class="headerlink" title="简单测试一下"></a>简单测试一下</h4><p>创建<code>test.py</code></p>
-<pre><code class="lang-js"># test.py
-def application(env, start_response):
-    start_response(&#39;200 OK&#39;, [(&#39;Content-Type&#39;,&#39;text/html&#39;)])
-    return [b&quot;Hello World&quot;] # python3
-    #return [&quot;Hello World&quot;] # python2
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"># test<span class="token punctuation">.</span>py
+def <span class="token function">application</span><span class="token punctuation">(</span>env<span class="token punctuation">,</span> start_response<span class="token punctuation">)</span><span class="token operator">:</span>
+    <span class="token function">start_response</span><span class="token punctuation">(</span><span class="token string">'200 OK'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'Content-Type'</span><span class="token punctuation">,</span><span class="token string">'text/html'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>b<span class="token string">"Hello World"</span><span class="token punctuation">]</span> # python3
+    #<span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">"Hello World"</span><span class="token punctuation">]</span> # python2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>运行 <code>uWSGI</code>:</p>
-<pre><code class="lang-js">uwsgi --http :8000 --wsgi-file test.py
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">uwsgi <span class="token operator">--</span>http <span class="token operator">:</span><span class="token number">8000</span> <span class="token operator">--</span>wsgi<span class="token operator">-</span>file test<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>选项的含义：</p>
 <ul>
 <li><code>http :8000</code> 使用<code>http</code> 协议，8000端口。</li>
 <li><code>wsgi-file test.py</code> 使用<code>test.py</code> 作为与 <code>uWSGI</code>交互的文件。</li>
 </ul>
 <p>访问 <code>123.56.252.111:8000</code>，输出“Hello World”，说明该程序是这么工作的：</p>
-<pre><code class="lang-mermaid">graph LR;
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR;
 客户端 --http:8000--&gt; uWSGI
-uWSGI --&gt; Python
-</code></pre>
+uWSGI --&gt; Python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="测试Django"><a href="#测试Django" class="headerlink" title="测试Django"></a>测试<code>Django</code></h3><h4 id="测试django"><a href="#测试django" class="headerlink" title="测试django"></a>测试<code>django</code></h4><p>在创建的<code>django</code>目录，执行</p>
-<pre><code class="lang-js">python manage.py runserver 0.0.0.0:8000
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py runserver <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token operator">:</span><span class="token number">8000</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>先将<code>IP</code>设置下<code>ALLOWHOSTS</code>中</p>
-<p>在<a href="http://www.orzff.cn/7dfc688d/" target="_blank" rel="noopener">服务器配置</a>有详细介绍</p>
+<p>在<a target="_blank" rel="noopener" href="http://www.orzff.cn/7dfc688d/">服务器配置</a>有详细介绍</p>
 <p>在浏览器输入<code>123.56.255.111:8000</code>即出现<code>django</code>欢迎界面</p>
-<h4 id="测试uWSGI"><a href="#测试uWSGI" class="headerlink" title="测试uWSGI"></a>测试<code>uWSGI</code></h4><pre><code>uwsgi --http :8000 --module mysite.wsgi
-</code></pre><p>在浏览器输入<code>123.56.255.111:8000</code>出现<code>Internal Server Error</code>属于正常现象，因为没有资源</p>
-<pre><code class="lang-mermaid">graph LR;
+<h4 id="测试uWSGI"><a href="#测试uWSGI" class="headerlink" title="测试uWSGI"></a>测试<code>uWSGI</code></h4><pre class="line-numbers language-none"><code class="language-none">uwsgi --http :8000 --module mysite.wsgi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在浏览器输入<code>123.56.255.111:8000</code>出现<code>Internal Server Error</code>属于正常现象，因为没有资源</p>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR;
 客户端 --http:8000--&gt; uWSGI
-uWSGI --&gt; Djano
-</code></pre>
-<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a><code>Nginx</code></h3><p>安装<code>nginx</code>在<a href="http://www.orzff.cn/7dfc688d/" target="_blank" rel="noopener">服务器配置</a>有详细介绍</p>
-<h4 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动<code>nginx</code></h4><pre><code>#centos 7
-systemctl start nginx
-</code></pre><p>在浏览器输入<code>123.56.255.111:80</code>出现<code>CenOS</code>或<code>Nginx</code>的欢迎界面</p>
+uWSGI --&gt; Djano<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a><code>Nginx</code></h3><p>安装<code>nginx</code>在<a target="_blank" rel="noopener" href="http://www.orzff.cn/7dfc688d/">服务器配置</a>有详细介绍</p>
+<h4 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动<code>nginx</code></h4><pre class="line-numbers language-none"><code class="language-none">#centos 7
+systemctl start nginx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在浏览器输入<code>123.56.255.111:80</code>出现<code>CenOS</code>或<code>Nginx</code>的欢迎界面</p>
 <h4 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置<code>nginx</code></h4><p>开启这三个端口：</p>
 <ul>
 <li><code>80端口</code> 显示<code>Nginx</code>欢迎界面，测试<code>Nginx</code>是否能正常运行</li>
 <li><code>8000端口</code> <code>Nginx</code>接收请求的端口，自行处理静态请求，动态请求则转发给<code>uWSGI</code>的8001端口处理</li>
 <li><code>8001端口</code> <code>uWSGI</code>接收动态请求的端口，处理完毕后将处理结果发给<code>Nginx</code>的8000端口</li>
 </ul>
-<p>检查一下是否有<code>uwsgi_params</code>文件（后面的配置文件需要用到），它应该在<code>nginx</code>的目录里（<code>/etc/nginx/</code>），如果没有，可以<a href="https://github.com/nginx/nginx/blob/master/conf/uwsgi_params" target="_blank" rel="noopener">点击这里</a>下载。</p>
+<p>检查一下是否有<code>uwsgi_params</code>文件（后面的配置文件需要用到），它应该在<code>nginx</code>的目录里（<code>/etc/nginx/</code>），如果没有，可以<a target="_blank" rel="noopener" href="https://github.com/nginx/nginx/blob/master/conf/uwsgi_params">点击这里</a>下载。</p>
 <p>创建<code>/etc/nginx/sites-available</code>的目录，在目录里创建<code>support_center_nginx.conf</code>配置文件进行配置：</p>
-<pre><code class="lang-js"> # support_center_nginx.conf
- # the upstream component nginx needs to connect to
- upstream django {
-   server 127.0.0.1:8001; # for a web port socket (we&#39;ll use this first)
- }
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"># support_center_nginx<span class="token punctuation">.</span>conf
+# the upstream component nginx needs to connect to
+upstream django <span class="token punctuation">{</span>
+  server <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">8001</span><span class="token punctuation">;</span> # <span class="token keyword">for</span> a web port <span class="token function">socket</span> <span class="token punctuation">(</span>we'll use <span class="token keyword">this</span> first<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
- # configuration of the server
- server {
-       # the port your site will be served on
-       listen      8000;
-       # the domain name it will serve for
-       server_name 123.56.252.111; # substitute your machine&#39;s IP address or FQDN
-       charset     utf-8;
+# configuration <span class="token keyword">of</span> the server
+server <span class="token punctuation">{</span>
+      # the port your site will be served on
+      listen      <span class="token number">8000</span><span class="token punctuation">;</span>
+      # the domain name it will serve <span class="token keyword">for</span>
+      server_name <span class="token number">123.56</span><span class="token number">.252</span><span class="token number">.111</span><span class="token punctuation">;</span> # substitute your machine's <span class="token constant">IP</span> address or <span class="token constant">FQDN</span>
+      charset     utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">;</span>
 
-       # max upload size
-       client_max_body_size 75M;   # adjust to taste
+      # max upload size
+      client_max_body_size <span class="token number">75</span>M<span class="token punctuation">;</span>   # adjust to taste
 
 
-      # Django media
-       location /media  {
-         alias /root/mysite/media; # your Django project&#39;s media files - amend as required
-       }
+     # Django media
+      location <span class="token operator">/</span>media  <span class="token punctuation">{</span>
+        alias <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span>media<span class="token punctuation">;</span> # your Django project's media files <span class="token operator">-</span> amend <span class="token keyword">as</span> required
+      <span class="token punctuation">}</span>
 
-       location /static {
-        alias /root/mysite/static; # your Django project&#39;s static files - amend as required
-       }
+      location <span class="token operator">/</span><span class="token keyword">static</span> <span class="token punctuation">{</span>
+       alias <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span><span class="token keyword">static</span><span class="token punctuation">;</span> # your Django project's <span class="token keyword">static</span> files <span class="token operator">-</span> amend <span class="token keyword">as</span> required
+      <span class="token punctuation">}</span>
 
-        # Finally, send all non-media requests to the Django server.
-       location / {
-        uwsgi_pass  django;
-        include     /etc/nginx/uwsgi_params; # the uwsgi_params file you installed   
-      }
-</code></pre>
+       # Finally<span class="token punctuation">,</span> send all non<span class="token operator">-</span>media requests to the Django server<span class="token punctuation">.</span>
+      location <span class="token operator">/</span> <span class="token punctuation">{</span>
+       uwsgi_pass  django<span class="token punctuation">;</span>
+       include     <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>uwsgi_params<span class="token punctuation">;</span> # the uwsgi_params file you installed   
+     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>创建一个软链接(<code>/etc/nginx/sites-enabled</code>)指向它：</p>
-<pre><code class="lang-js">ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">ln <span class="token operator">-</span>s <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>sites<span class="token operator">-</span>available <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>sites<span class="token operator">-</span>enabled<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在<code>/etc/nginx/nginx.conf</code>中将该文件夹包含进去，使得<code>Nginx</code>启动时，能够将文件夹中配置的项目运行起来：<br><code>include /etc/nginx/sites-enabled/*.conf</code></p>
 <p>注意，这个语句添加在<code>http</code>中，<code>server</code>外</p>
-<pre><code class="lang-js"> http {
-    server {
-         listen    8888;
-        # listen       [::]:80 default_server;
-         server_name  _;
-        # root         /usr/share/nginx/html;
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"> http <span class="token punctuation">{</span>
+	server <span class="token punctuation">{</span>
+         listen    <span class="token number">8888</span><span class="token punctuation">;</span>
+        # listen       <span class="token punctuation">[</span><span class="token operator">:</span><span class="token operator">:</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token number">80</span> default_server<span class="token punctuation">;</span>
+         server_name  _<span class="token punctuation">;</span>
+        # root         <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html<span class="token punctuation">;</span>
 
-         # Load configuration files for the default server block.
-         include /etc/nginx/default.d/*.conf;
+         # Load configuration files <span class="token keyword">for</span> the <span class="token keyword">default</span> server block<span class="token punctuation">.</span>
+         include <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">default</span><span class="token punctuation">.</span>d<span class="token comment">/*.conf;
 
          location / {
            root /root/mysite/element-test/dist;
@@ -761,122 +754,113 @@ systemctl start nginx
          }
      }
      include /etc/nginx/sites-enabled/*.conf;
-}
-</code></pre>
+}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="处理静态文件"><a href="#处理静态文件" class="headerlink" title="处理静态文件"></a>处理静态文件</h4><p>运行<code>Nginx</code>之前，得先把<code>Django</code>的静态文件集中到一个文件夹中（该文件夹就是<code>STATIC_ROOT</code>的值）：<br>先向<code>settings.py</code>中添加：</p>
-<pre><code class="lang-python">STATIC_ROOT = &#39;/root/mysite/static&#39;
-</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">STATIC_ROOT <span class="token operator">=</span> <span class="token string">'/root/mysite/static'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后，将静态资源集中：</p>
-<pre><code class="lang-bash">python manage.py collectstatic
-</code></pre>
-<h4 id="nginx测试"><a href="#nginx测试" class="headerlink" title="nginx测试"></a><code>nginx</code>测试</h4><pre><code class="lang-js">systemctl restart nginx
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python manage.py collectstatic<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="nginx测试"><a href="#nginx测试" class="headerlink" title="nginx测试"></a><code>nginx</code>测试</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>向<code>media</code>文件夹中放一张图<code>media.jpg</code>用于测试，</p>
 <p><code>media</code>的位置在上面<code>support_center_nginx.conf</code>中的<code>location /media</code>的指定位置</p>
 <p>在浏览器输入<code>123.56.255.111:8000/media/picture.png</code>出现一张图片</p>
-<pre><code class="lang-mermaid">graph LR;
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR;
 客户端 --http--&gt; Nginx
 Nginx --uwsgi--&gt; uWSGI
-uWSGI --&gt; Python
-</code></pre>
+uWSGI --&gt; Python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="使用-ini对uWSGI进行设置"><a href="#使用-ini对uWSGI进行设置" class="headerlink" title="使用.ini对uWSGI进行设置"></a>使用<code>.ini</code>对<code>uWSGI</code>进行设置</h4><p>创建<code>uwsgi.ini</code></p>
-<pre><code class="lang-js">[uwsgi]
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>uwsgi<span class="token punctuation">]</span>
 #  项目路径 
-chdir = /root/mysite
+chdir <span class="token operator">=</span> <span class="token operator">/</span>root<span class="token operator">/</span>mysite
 
 #django的wsgi文件路径
-wsgi-file = /root/mysite/wsgi.py
+wsgi<span class="token operator">-</span>file <span class="token operator">=</span> <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span>wsgi<span class="token punctuation">.</span>py
 
-# 使用mmcsite.wsgi模块
-module = mysite.wsgi
+# 使用mmcsite<span class="token punctuation">.</span>wsgi模块
+module <span class="token operator">=</span> mysite<span class="token punctuation">.</span>wsgi
 
 # 虚拟环境的路径
-home = /root/Envs/Django
+home <span class="token operator">=</span> <span class="token operator">/</span>root<span class="token operator">/</span>Envs<span class="token operator">/</span>Django
 
 # 启用master
-master = true
+master <span class="token operator">=</span> <span class="token boolean">true</span>
 
 # 启动五个进程
-processes = 10
+processes <span class="token operator">=</span> <span class="token number">10</span>
 
-# 每个进程启动30个线程
-threads = 30
+# 每个进程启动<span class="token number">30</span>个线程
+threads <span class="token operator">=</span> <span class="token number">30</span>
 
 # 指定socket监听的地址和端口
-socket = 0.0.0.0:8001
+socket <span class="token operator">=</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token operator">:</span><span class="token number">8001</span>
 
 # socket权限
-chmod-socket = 666
+chmod<span class="token operator">-</span>socket <span class="token operator">=</span> <span class="token number">666</span>
 
 # 结束后清理环境
-vacuum = true
+vacuum <span class="token operator">=</span> <span class="token boolean">true</span>
 
 # 日志文件
-daemonize = /root/mysite/uwsgi.log
+daemonize <span class="token operator">=</span> <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span>uwsgi<span class="token punctuation">.</span>log
 
 # pid文件
-pidfile = /root/mysite/uwsgi.pid
+pidfile <span class="token operator">=</span> <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span>uwsgi<span class="token punctuation">.</span>pid
 
 # 允许用内嵌的语言启动线程，这将允许你在app程序中产生一个子线程
-enable-threads = true
-</code></pre>
+enable<span class="token operator">-</span>threads <span class="token operator">=</span> <span class="token boolean">true</span>     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后，启动 <code>uWSGI</code></p>
-<pre><code class="lang-bash">uwsgi --ini uwsgi.ini
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uwsgi --ini uwsgi.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="转发80端口"><a href="#转发80端口" class="headerlink" title="转发80端口"></a>转发80端口</h3><p>将<code>/etc/nginx/sites-available/support_center_nginx.conf</code>重命名<code>/etc/nginx/sites-available/nginx_backend.conf</code></p>
-<pre><code class="lang-ls">cd /etc/nginx/sites-available/
-mv support_center_nginx.conf nginx_backend.conf`
-</code></pre>
+<pre class="line-numbers language-ls" data-language="ls"><code class="language-ls">cd /etc/nginx/sites-available/
+mv support_center_nginx.conf nginx_backend.conf`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>新建一个文件<code>/etc/nginx/sites-available/nginx_fonter.conf</code></p>
-<pre><code class="lang-js">vim nginx_fonter.conf
-</code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">vim nginx_fonter<span class="token punctuation">.</span>conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在文件中加入</p>
-<pre><code class="lang-js">server {
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">server <span class="token punctuation">{</span>
     # 监听端口
-   listen 8888;
+   listen <span class="token number">8888</span><span class="token punctuation">;</span>
 
     #ip
-   server_name 123.56.252.111;
+   server_name <span class="token number">123.56</span><span class="token number">.252</span><span class="token number">.111</span><span class="token punctuation">;</span>
 
     # 编码规则
-   charset utf-8;
+   charset utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">;</span>
 
-   client_max_body_size 75M;
-
+   client_max_body_size <span class="token number">75</span>M<span class="token punctuation">;</span>
+    
 # 主页面内容，
 # root：指向vue的dist文件
 # try_files：使用vue内部的路由转发
 # index：
-   location / {
-     root /root/mysite/element-test/dist;
-     try_files $uri $uri/ @router;   
-     index index.html index.htm;
-   }
+   location <span class="token operator">/</span> <span class="token punctuation">{</span>
+     root <span class="token operator">/</span>root<span class="token operator">/</span>mysite<span class="token operator">/</span>element<span class="token operator">-</span>test<span class="token operator">/</span>dist<span class="token punctuation">;</span>
+     try_files $uri $uri<span class="token operator">/</span> @router<span class="token punctuation">;</span>   
+     index index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
 
-   location @router {
-     rewrite ^.*$ /index.html last;
-   }
+   location @router <span class="token punctuation">{</span>
+     rewrite <span class="token operator">^</span><span class="token punctuation">.</span><span class="token operator">*</span>$ <span class="token operator">/</span>index<span class="token punctuation">.</span>html last<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
 
-   error_page 404 /404.html;
-   location = /404.html{
-   }
+   error_page <span class="token number">404</span> <span class="token operator">/</span><span class="token number">404.</span>html<span class="token punctuation">;</span>
+   location <span class="token operator">=</span> <span class="token operator">/</span><span class="token number">404.</span>html<span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
 
-   error_page 500 502 503 504 /50x.html;
-   location = /50x.html{
-   }
+   error_page <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span> <span class="token operator">/</span><span class="token number">50</span>x<span class="token punctuation">.</span>html<span class="token punctuation">;</span>
+   location <span class="token operator">=</span> <span class="token operator">/</span><span class="token number">50</span>x<span class="token punctuation">.</span>html<span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
 
- }
-</code></pre>
+ <span class="token punctuation">}</span>
+          <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改<code>/etc/nginx/nginx.conf</code></p>
-<pre><code class="lang-js"> http {
-    server {
-         listen    8888;
-        # listen       [::]:80 default_server;
-         server_name  _;
-        # root         /usr/share/nginx/html;
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"> http <span class="token punctuation">{</span>
+	server <span class="token punctuation">{</span>
+         listen    <span class="token number">8888</span><span class="token punctuation">;</span>
+        # listen       <span class="token punctuation">[</span><span class="token operator">:</span><span class="token operator">:</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token number">80</span> default_server<span class="token punctuation">;</span>
+         server_name  _<span class="token punctuation">;</span>
+        # root         <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html<span class="token punctuation">;</span>
 
-         # Load configuration files for the default server block.
-         include /etc/nginx/default.d/*.conf;
+         # Load configuration files <span class="token keyword">for</span> the <span class="token keyword">default</span> server block<span class="token punctuation">.</span>
+         include <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">default</span><span class="token punctuation">.</span>d<span class="token comment">/*.conf;
 
          location / {
            proxy_set_header Host $host:$server_port;
@@ -884,7 +868,7 @@ mv support_center_nginx.conf nginx_backend.conf`
            proxy_set_header X-Real-IP $remote_addr;
            proxy_set_header REMOTE-HOST $remote_addr;
            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-           proxy_set_header Connection &quot;&quot;;
+           proxy_set_header Connection "";
            proxy_set_header X-Nginx-Proxy true;
            proxy_pass http://123.56.252.111:8888/;
          }
@@ -902,8 +886,7 @@ mv support_center_nginx.conf nginx_backend.conf`
          }
      }
      include /etc/nginx/sites-enabled/*.conf;
-}
-</code></pre>
+}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>简单说下这样做的目的：</p>
 <p>客户的所有请求都是通<code>80</code>端口，与默认端口通信是不需要加<code>:80</code>的，<code>nginx</code>从<code>80</code>端口接收到浏览器的请求，转发到<code>8888</code>端口，<code>8888</code>接收到在<code>/etc/nginx/sites-available/fonter.conf</code>文件处理</p>
 <p>后端界面客户不会主动访问所以不用转发来隐藏端口，</p>
@@ -1446,7 +1429,7 @@ mv support_center_nginx.conf nginx_backend.conf`
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1498,7 +1481,7 @@ mv support_center_nginx.conf nginx_backend.conf`
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/配置/" class="post-category">
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
                                     配置
                                 </a>
                             
@@ -1509,7 +1492,7 @@ mv support_center_nginx.conf nginx_backend.conf`
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/服务器/">
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
                     </a>
                     
@@ -1698,7 +1681,7 @@ mv support_center_nginx.conf nginx_backend.conf`
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">60.1k</span>
             
             
             
@@ -1999,7 +1982,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
