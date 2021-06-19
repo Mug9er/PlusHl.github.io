@@ -600,9 +600,9 @@
 <p>我们用$f(n,m)$表示逆序数为m的n元排列的个数</p>
 <h4 id="前提知识1"><a href="#前提知识1" class="headerlink" title="前提知识1"></a>前提知识1</h4><h5 id="对任意n-gt-2且0-lt-m-lt-C-n-2-时-f-n-m-gt-1；当m-gt-C-n-2-时-f-n-m-0"><a href="#对任意n-gt-2且0-lt-m-lt-C-n-2-时-f-n-m-gt-1；当m-gt-C-n-2-时-f-n-m-0" class="headerlink" title="对任意n>=2且0<=m<=$C_n^2$时$f(n,m)$>=1；当m>$C_n^2$时,$f(n,m)$=0"></a>对任意n&gt;=2且0&lt;=m&lt;=$C_n^2$时$f(n,m)$&gt;=1；当m&gt;$C_n^2$时,$f(n,m)$=0</h5><p>$f(2,0)=1,f(2,1)=1,f(2,2)=0$</p>
 <p>易证</p>
-<h4 id="前提知识2"><a href="#前提知识2" class="headerlink" title="前提知识2"></a>前提知识2</h4><h5 id="f-n-m-f-n-C-n-2-m"><a href="#f-n-m-f-n-C-n-2-m" class="headerlink" title="$f(n,m)=f(n,C_n^2-m)$"></a>$f(n,m)=f(n,C_n^2-m)$</h5><p>对于一个逆序数为m的n元排列，$a<em>1,a_2,a_3,…a_n$，那么$a_n,a</em>{n-1},a_{n-2}…a_1$的逆序数为$C_n^2-m$</p>
+<h4 id="前提知识2"><a href="#前提知识2" class="headerlink" title="前提知识2"></a>前提知识2</h4><h5 id="f-n-m-f-n-C-n-2-m"><a href="#f-n-m-f-n-C-n-2-m" class="headerlink" title="$f(n,m)=f(n,C_n^2-m)$"></a>$f(n,m)=f(n,C_n^2-m)$</h5><p>对于一个逆序数为m的n元排列，$a_1,a_2,a_3,…a_n$，那么$a_n,a_{n-1},a_{n-2}…a_1$的逆序数为$C_n^2-m$</p>
 <p>反过来同理</p>
-<h4 id="前提知识3"><a href="#前提知识3" class="headerlink" title="前提知识3"></a>前提知识3</h4><h5 id="f-n-1-m-f-n-m-f-n-m-1-…-f-n-m-n"><a href="#f-n-1-m-f-n-m-f-n-m-1-…-f-n-m-n" class="headerlink" title="$f(n+1,m)=f(n,m)+f(n,m-1)+…+f(n,m-n)$"></a>$f(n+1,m)=f(n,m)+f(n,m-1)+…+f(n,m-n)$</h5><p>考虑由$a<em>1,a_2,…a_n$组成的排列，那么我们在其中加上$a</em>{n+1}（a<em>{n+1}&gt;{a_1,a_2,…a_n}）$的话，$a</em>{n+1}$ 可以放在排列中的任意一个位置</p>
+<h4 id="前提知识3"><a href="#前提知识3" class="headerlink" title="前提知识3"></a>前提知识3</h4><h5 id="f-n-1-m-f-n-m-f-n-m-1-…-f-n-m-n"><a href="#f-n-1-m-f-n-m-f-n-m-1-…-f-n-m-n" class="headerlink" title="$f(n+1,m)=f(n,m)+f(n,m-1)+…+f(n,m-n)$"></a>$f(n+1,m)=f(n,m)+f(n,m-1)+…+f(n,m-n)$</h5><p>考虑由$a_1,a_2,…a_n$组成的排列，那么我们在其中加上$a_{n+1}（a_{n+1}&gt;\{a_1,a_2,…a_n\}）$的话，$a_{n+1}$ 可以放在排列中的任意一个位置</p>
 <p>放在末尾对逆序列没有影响，那么$f(n+1,m)+=f(n,m)$，放在首位的话逆序对增加$n$那么$f(n+1,m)+=f(n,m-n)$,以此类推，放在排列中的其他位置就是$f(n+1,m)=f(n,m-i)$</p>
 <p>那么$f(n+1,m)=f(n,m)+f(n,m-1)+f(n,m-2)+…+f(n,m-n)$</p>
 <h4 id="前提知识4"><a href="#前提知识4" class="headerlink" title="前提知识4"></a>前提知识4</h4><h5 id="f-n-0-f-n-C-n-2-1"><a href="#f-n-0-f-n-C-n-2-1" class="headerlink" title="$f(n,0)=f(n,C_n^2)=1$"></a>$f(n,0)=f(n,C_n^2)=1$</h5><h4 id="前提知识5"><a href="#前提知识5" class="headerlink" title="前提知识5"></a>前提知识5</h4><h5 id="f-n-1-f-n-C-n-2-1-n-1"><a href="#f-n-1-f-n-C-n-2-1-n-1" class="headerlink" title="$f(n,1)=f(n,C_n^2-1)=n-1$"></a>$f(n,1)=f(n,C_n^2-1)=n-1$</h5><p>$f(n,1)=f(n-1,1)+f(n-1,0)=f(n-1,1)+1$</p>
@@ -1715,13 +1715,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>

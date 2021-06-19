@@ -589,9 +589,9 @@
                 <h2 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h2><p>在$O(\frac{n^{\frac{3}{4}}}{\log n})$时间复杂度内，来求一类完全积性函数的前缀和 $\sum\limits_{i=1}^{n}f(i)$</p>
 <p>要求是$f(p)[p\in prime]$是一个关于p的简单多项式并且$f(p^e)$可以快速算出</p>
 <h2 id="如何求"><a href="#如何求" class="headerlink" title="如何求"></a>如何求</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>我们可以先对$i$按照质数非质数分类</p>
-<p>$\sum\limits<em>{i=1}^{n}f(i)=\sum\limits</em>{1\le p\le n} f(p) + \sum\limits_{i=1 ||i \notin prime}^nf(i)$</p>
+<p>$\sum\limits_{i=1}^{n}f(i)=\sum\limits_{1\le p\le n} f(p) + \sum\limits_{i=1 ||i \notin prime}^nf(i)$</p>
 <p>因为$f(i)$是完全积性函数，所以我们进一步把后面拆分，枚举每一个合数的最小质因子和最小质因子的次幂</p>
-<p>$\sum\limits<em>{i=1}^{n}f(i)=\sum\limits</em>{1\le p\le n}f(p)+\sum\limits<em>{1\le p^e\le n \&amp; 1\le p \le \sqrt n}f(p^e)(\sum\limits</em>{1\le i \le \lfloor\frac{n}{p^e}\rfloor \&amp; min(i)&gt; p} f(i))$      $min(i)$代表$i$的最小质因子,</p>
+<p>$\sum\limits_{i=1}^{n}f(i)=\sum\limits_{1\le p\le n}f(p)+\sum\limits_{1\le p^e\le n \&amp; 1\le p \le \sqrt n}f(p^e)(\sum\limits_{1\le i \le \lfloor\frac{n}{p^e}\rfloor \&amp; min(i)&gt; p} f(i))$      $min(i)$代表$i$的最小质因子,</p>
 <p>上式代表我们把合数的最小质因子以及次幂数提出来,计算那些最小质因子大于$p$的合数的值</p>
 <h3 id="G-函数"><a href="#G-函数" class="headerlink" title="$G$函数"></a>$G$函数</h3><p>上式中我们要枚举$[1,n]$的每一个质数，但是n的范围可以很大， 这样就没法用线性筛筛出所有质数</p>
 <p>但是我们可以考虑一个$DP$，我们令$g(n,j) = \sum\limits_{i=1}^{n}h(i)[i\in prime || min(i)&gt;p_j]$</p>
@@ -634,7 +634,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样我们就求出来了$[1,n]$中所有$h(i)$在质数处的和，$g(n)$</p>
 <h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><p>我们设$S(n,j)=\sum\limits_{i=1}^{n}f(i)[min(i) \ge p_j]$</p>
-<p>那么$S(n,j)=g(n)-\sum\limits<em>{i=1}^{j-1}f(p_i)+\sum\limits</em>{p_k^e\le n\&amp; k&gt; x}f(p_k^e)(S(\frac{n}{p_k^e}, k)+[e!=1])$</p>
+<p>那么$S(n,j)=g(n)-\sum\limits_{i=1}^{j-1}f(p_i)+\sum\limits_{p_k^e\le n\&amp; k&gt; x}f(p_k^e)(S(\frac{n}{p_k^e}, k)+[e!=1])$</p>
 <p>这样跟求$g(n)$的$dp$类似,答案就是$S(n,1)+f(1)$</p>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="洛谷P5325"><a href="#洛谷P5325" class="headerlink" title="洛谷P5325"></a>洛谷P5325</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>定义$f(x)$, 且$f(p^k)=p^k(p^k-1)$，$p$是一个质数,求$\sum\limits_{i=1}^{n}f(i)$,对$1e9+7$取模</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>当$p$为质数时 $f(p)=p(p-1)=p^2-p$</p>
@@ -1826,13 +1826,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>

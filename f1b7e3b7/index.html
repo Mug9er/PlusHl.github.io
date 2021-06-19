@@ -589,7 +589,7 @@
                 <p>具体可以参考这篇博客<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Judge/p/9551035.html">https://www.cnblogs.com/Judge/p/9551035.html</a></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="斜率"><a href="#斜率" class="headerlink" title="斜率"></a>斜率</h3><p>斜率优化$dp$，听名字就知道是用来优化$dp$的</p>
 <p>当我们在推导$dp$公式的时候，如果我们推出来的$dp$转移方程类似为：</p>
-<p>$dp[i] = \min\limits<em>{x=1}^{x&lt;i}$  $or$  $\max\limits</em>{x=1}^{x&lt;i}$ ${dp[x] + f(x,i)}$  $f(x,i)是一个关于x与i的函数$</p>
+<p>$dp[i] = \min\limits_{x=1}^{x&lt;i}$  $or$  $\max\limits_{x=1}^{x&lt;i}$ $\{dp[x] + f(x,i)\}$  $f(x,i)是一个关于x与i的函数$</p>
 <p>拿去最小值来说</p>
 <p>我们考虑两个决策点$k&lt;j&lt;i$并且$j$比$k$要优</p>
 <p>我们我们可以列一个不等式 $dp[j]+f(j,i)\leq dp[k]+f(k,i)$</p>
@@ -628,9 +628,9 @@ ll <span class="token function">getDown</span><span class="token punctuation">(<
 <p>这样我们就可以用单调队列去维护一个单调的凸壳，并且单调队列里面的队首就是最优情况</p>
 <h3 id="二分单调栈"><a href="#二分单调栈" class="headerlink" title="二分单调栈"></a>二分单调栈</h3><p>当我们化成的这个式子的$\frac{y_j-y_k}{x_j-x_k}\leq k_i$ 的$k_i$不是单调的，那么我们可以用单调栈来维护这个凸壳</p>
 <p>因为凸壳是单调的，所以我们要找的这个$k_i$可以用二分来查找</p>
-<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="HDU-3507-Print-Article"><a href="#HDU-3507-Print-Article" class="headerlink" title="HDU 3507 Print Article"></a>HDU 3507 Print Article</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一个$C<em>i$序列，你可以把序列分为几段，每段的权值为$(\sum\limits</em>{i=1}^{k}C_i)^2+M$，</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="HDU-3507-Print-Article"><a href="#HDU-3507-Print-Article" class="headerlink" title="HDU 3507 Print Article"></a>HDU 3507 Print Article</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一个$C_i$序列，你可以把序列分为几段，每段的权值为$(\sum\limits_{i=1}^{k}C_i)^2+M$，</p>
 <p>求出最小的权值和</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很容易想到转移方程$dp[i] = \min\limits_{x=1}^{x&lt;i}{dp[x] + m + (sum[i] - sum[x])^2}$</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>很容易想到转移方程$dp[i] = \min\limits_{x=1}^{x&lt;i}\{dp[x] + m + (sum[i] - sum[x])^2\}$</p>
 <p>我们假设存在一个$k&lt;j&lt;i$并且$j$比$k$要优</p>
 <p>那么$dp[j]+m+(sum[i]-sum[j]^2)\leq dp[k]+m+(sum[i]-sum[k])^2$</p>
 <p>移项并合并同类项后：</p>
@@ -692,15 +692,15 @@ ll <span class="token function">getDown</span><span class="token punctuation">(<
 <h3 id="洛谷-P4072-征途"><a href="#洛谷-P4072-征途" class="headerlink" title="洛谷 P4072 征途"></a>洛谷 P4072 征途</h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><p>序列分割，给你n个数字，你把序列分割成m个段，每一段的的方差为$v$</p>
 <p>输出最小的每一段的之和$\times m^2$</p>
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>提前声明一下， 下面的$c_i$都是一段路的距离之和，而不是单条路的距离，所以是$m$段而不是$n$段</p>
-<p>$s^2=\frac{(\frac{\sum\limits<em>{i=1}^{m}c_i}{n}-c_1)^2+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}-c_2)^2+…+(\frac{\sum\limits</em>{i=1}^{m}c_i}{m}-c_n)^2}{m}$</p>
-<p>$s^2=\frac{(\frac{\sum\limits<em>{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}\times c_1+c_1^2+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c<em>i}{m}\times c_2+c_2^2+…+(\frac{\sum\limits</em>{i=1}^{m}c<em>i}{m})^2-2\times \frac{\sum\limits</em>{i=1}^{m}c_i}{m}\times c_n+c_n^2}{m}$</p>
-<p>$s^2=\frac{m\times (\frac{\sum\limits<em>{i=1}^{m}c_i}{m})^2-2\times \frac{(\sum\limits</em>{i=1}^{m}c<em>i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
-<p>$s^2=\frac{\frac{(\sum\limits<em>{i=1}^{m}c_i)^2}{m}-2\times \frac{(\sum\limits</em>{i=1}^{m}c<em>i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
-<p>$s^2=\frac{-\frac{(\sum\limits<em>{i=1}^{m}c_i)^2}{m}+(\sum\limits</em>{i=1}^{m}c_i^2)}{m}$</p>
-<p>$s^2\times m^2=-(\sum\limits<em>{i=1}^{n}c_i)^2+m\times (\sum\limits</em>{i=1}^{n}c_i^2)$</p>
+<p>$s^2=\frac{(\frac{\sum\limits_{i=1}^{m}c_i}{n}-c_1)^2+(\frac{\sum\limits_{i=1}^{m}c_i}{m}-c_2)^2+…+(\frac{\sum\limits_{i=1}^{m}c_i}{m}-c_n)^2}{m}$</p>
+<p>$s^2=\frac{(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_1+c_1^2+(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_2+c_2^2+…+(\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{\sum\limits_{i=1}^{m}c_i}{m}\times c_n+c_n^2}{m}$</p>
+<p>$s^2=\frac{m\times (\frac{\sum\limits_{i=1}^{m}c_i}{m})^2-2\times \frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2=\frac{\frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}-2\times \frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2=\frac{-\frac{(\sum\limits_{i=1}^{m}c_i)^2}{m}+(\sum\limits_{i=1}^{m}c_i^2)}{m}$</p>
+<p>$s^2\times m^2=-(\sum\limits_{i=1}^{n}c_i)^2+m\times (\sum\limits_{i=1}^{n}c_i^2)$</p>
 <p>我们发现前面一项是一个常数，而$s^2\times m^2$最小是在$\sum\limits_{i=1}^{m}c_i^2$最小时</p>
 <p>这样我们在进行$dp$转移的时候,我们用$sum[x] = \sum\limits_{i=1}^{x}val[i]$    $val[x]$时每一条路的长度</p>
-<p>$dp[i] = \min{dp[x] + (sum[i]-sum[x])^2}$</p>
+<p>$dp[i] = \min\{dp[x] + (sum[i]-sum[x])^2\}$</p>
 <p>按照以往的套路，存在$k&lt;j&lt;i$并且$j$比$k$要优</p>
 <p>$dp[j]+(sum[i]-sum[j])^2\le dp[k]+(sum[i]+sum[k])^2$</p>
 <p>$dp[j]+sum[j]^2-(dp[k]+sum[k]^2)\le2\times sum[i]sum[j]-2\times sum[i]sum[k]$</p>
@@ -764,7 +764,7 @@ ll <span class="token function">getDown</span><span class="token punctuation">(<
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>我们先设计dp转移方程,因为我们在转移的时候还要考虑前面用了几组,所以我们在转移的时候直接把后面的</p>
 <p>费时S加上,</p>
 <p>dp转移的时候时间和花费用前缀和维护</p>
-<p>$dp[i] = min{dp[x] + time[i] \times (cost[i] - cost[x])+S\times (cost[n] - cost[x])}$</p>
+<p>$dp[i] = min\{dp[x] + time[i] \times (cost[i] - cost[x])+S\times (cost[n] - cost[x])\}$</p>
 <p>按照以往套路,</p>
 <p>$dp[j]+time[i]\times(cost[i]-cost[j])+S\times(cost[n] - cost[j])\le dp[k]+time[i]\times(cost[i]-cost[k])+S\times(cost[n] - cost[k])$</p>
 <p>$dp[j]-dp[k]-S\times cost[j]+S\times cost[k]\le time[i]\times (cost[j]-cost[k])$</p>
@@ -820,7 +820,7 @@ ll <span class="token function">getDown</span><span class="token punctuation">(<
 <h3 id="洛谷-P4360-锯木厂选址"><a href="#洛谷-P4360-锯木厂选址" class="headerlink" title="洛谷 P4360 锯木厂选址"></a>洛谷 P4360 锯木厂选址</h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><p>从山顶到山底运n棵老树，运一颗树的费用是树的重量乘上距离，为了不浪费决定在山腰上见两个锯木厂，问最小的运输费用</p>
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>我们把树的重量求一个前缀和 $sum[]$，到山底的距离求一个后缀和$dis[]$,所有树运到山底的花费$totsum$</p>
 <p>因为只有两个锯木厂，所以我们可以直接写一下$dp$转移</p>
-<p>$dp[i] = min{totsum-dis[x]\times sum[x]-(sum[i]-sum[x])\times dis[i])}$</p>
+<p>$dp[i] = min\{totsum-dis[x]\times sum[x]-(sum[i]-sum[x])\times dis[i])\}$</p>
 <p>套路：</p>
 <p>$totsum-dis[j]\times sum[j]-(sum[i]-sum[j])\times dis[i])\leq totsum-dis[k]\times sum[k]-(sum[i]-sum[k])\times dis[i])$</p>
 <p>$-dis[j]\times sum[j]+dis[k]\times sum[k]\le dis[i]\times (-sum[j]+sum[k])$</p>
@@ -879,7 +879,7 @@ ll <span class="token function">getDown</span><span class="token punctuation">(<
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="洛谷-P5504-柠檬"><a href="#洛谷-P5504-柠檬" class="headerlink" title="洛谷 P5504 柠檬"></a>洛谷 P5504 柠檬</h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><p>一串贝壳，每个贝壳都有一个值$s_0$你可以选择连续的一段把他变成柠檬，柠檬的个数是$s_0t^2$,$t$是区间柠檬值为$s_0$的个数</p>
 <h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><p>首先，我们要变的贝壳区间肯定是首尾值相同，然后我们可以对每个相同值得柠檬求一个前缀和</p>
-<p>$dp[i] = max{dp[x-1] + val<a href="sum[i]-sum[x]+1">i</a>^2}$</p>
+<p>$dp[i] = max\{dp[x-1] + val<a href="sum[i]-sum[x]+1">i</a>^2\}$</p>
 <p>套：</p>
 <p>$dp[j-1]+val<a href="sum[i]-sum[j]+1">i</a>^2\le dp[k-1]+val<a href="sum[i]-sum[k]+1">i</a>^2$</p>
 <p>$\frac{dp[j-1]-dp[k-1] + val[j]sum[j]^2-val[k]sum[k]^2-2val[i]sum[j]+2val[i]sum[k]}{sum[j]-sum[k]}\le 2val[i]sum[i]$</p>
@@ -1009,7 +1009,7 @@ ll <span class="token function">find</span><span class="token punctuation">(</sp
 <h3 id="2019牛客多校第十场-J-Wood-Processing"><a href="#2019牛客多校第十场-J-Wood-Processing" class="headerlink" title="2019牛客多校第十场 J.Wood Processing"></a>2019牛客多校第十场 J.Wood Processing</h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><p>把n块木板求成高度相同的k块，求浪费的最小</p>
 <h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><p>可以说是斜率dp的模板题</p>
 <p>我们把高度从高到低排序，那么$dp$转移式就是</p>
-<p>$dp[i]=max{dp[x]+(sum[i]-sum[x])\times h[i]}$ $sum$是宽的前缀和</p>
+<p>$dp[i]=max\{dp[x]+(sum[i]-sum[x])\times h[i]\}$ $sum$是宽的前缀和</p>
 <p>我们假设$j&gt;k$并且$j$比$k$优</p>
 <p>$dp[j]+(sum[i]-sum[j])\times h[i] &gt;= dp[k]+(sum[i]-sum[k])\times h[i]$</p>
 <p>$\frac{dp[j]-dp[k]}{sum[j]-sum[k]}\ge h[i]$</p>
@@ -2170,13 +2170,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>

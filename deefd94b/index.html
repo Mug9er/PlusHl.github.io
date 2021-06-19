@@ -619,23 +619,23 @@
 <p>在对每一个$r$做$sigmoid$运算 $a = \partial(r)$</p>
 <p>红色线段函数: $y = b + \sum\limits_{i}c_i \ a$</p>
 <p>使用线性代数表达方式: $y = b + c^T a$</p>
-<p>使用$\theta $ 来包含所有的未知参数$\theta = \begin{bmatrix} \theta_1\ \theta_2 \ \theta_3 \ \dots \ \end{bmatrix}$</p>
+<p>使用$\theta $ 来包含所有的未知参数$\theta = \begin{bmatrix} \theta_1\\ \theta_2 \\ \theta_3 \\ \dots \\ \end{bmatrix}$</p>
 <h4 id="Loss-使用-theta-参数"><a href="#Loss-使用-theta-参数" class="headerlink" title="$Loss$ 使用$\theta $参数"></a>$Loss$ 使用$\theta $参数</h4><p><strong>$Loss$现在使用写成$L(\theta)$</strong></p>
 <p>新的$Loss$表示为：$Loss: \ L = \frac{1}{N}\sum\limits_ne_n$</p>
 <h4 id="迭代最好的-model"><a href="#迭代最好的-model" class="headerlink" title="迭代最好的$model$"></a>迭代最好的$model$</h4><p>$\theta^* = arg \ \min\limits_{\theta}L$</p>
 <p>随机选择一个初始的$\theta^0$， 对$\theta$的每一项进行微分得到一个向量$g$ ,</p>
-<p>$g = \begin{bmatrix} \frac{\partial L}{\partial \theta<em>1}|</em>{\theta = \theta^0} \ \frac{\partial L}{\partial \theta<em>2}|</em>{\theta = \theta^0} \ \frac{\partial L}{\partial \theta<em>3}|</em>{\theta = \theta^0} \ \dots \end{bmatrix}=  \nabla L (\theta ^0)$</p>
+<p>$g = \begin{bmatrix} \frac{\partial L}{\partial \theta_1}|_{\theta = \theta^0} \\ \frac{\partial L}{\partial \theta_2}|_{\theta = \theta^0} \\ \frac{\partial L}{\partial \theta_3}|_{\theta = \theta^0} \\ \dots \end{bmatrix}=  \nabla L (\theta ^0)$</p>
 <p>在$\theta = \theta^0$的位置把所有的参数都对$L$做微分</p>
 <p>更新$\theta$的值</p>
-<p>$\begin{bmatrix} \theta<em>1^1 \ \theta_2^1\ \dots \end{bmatrix} \longleftarrow \begin{bmatrix} \theta_1^0 \ \theta_2^0\ \dots \end{bmatrix} - \begin{bmatrix} \eta \frac{\partial L}{\partial \theta_1}|</em>{\theta = \theta^0} \ \eta \frac{\partial L}{\partial \theta<em>2}|</em>{\theta = \theta^0} \ \dots \end{bmatrix}$</p>
+<p>$\begin{bmatrix} \theta_1^1 \\ \theta_2^1\\ \dots \end{bmatrix} \longleftarrow \begin{bmatrix} \theta_1^0 \\ \theta_2^0\\ \dots \end{bmatrix} - \begin{bmatrix} \eta \frac{\partial L}{\partial \theta_1}|_{\theta = \theta^0} \\ \eta \frac{\partial L}{\partial \theta_2}|_{\theta = \theta^0} \\ \dots \end{bmatrix}$</p>
 <p>新的$\theta$由原先的$\theta^0$ 减去 微分的向量 × $\eta$</p>
 <p>$\theta^1 \longleftarrow  \theta^0 - \eta g$</p>
 <p>步骤： 先随机选取$\theta^0$，通过计算$gradient$ 得到 $ g = \nabla L (\theta ^0)$,在如此迭代得到$\theta^1, \theta^2,…$直到无法在计算$gradient$时结束</p>
 <p>实际操作时，将数据集分为多组，利用每一组来计算$gradient$更新$\theta$</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/compute gradient.lz1l4r37lu.png" alt="compute gradient"></p>
 <h3 id="从-sigmoid-到-RELU"><a href="#从-sigmoid-到-RELU" class="headerlink" title="从 $sigmoid$到$RELU$"></a>从 $sigmoid$到$RELU$</h3><p>利用$RELU$来拟合函数 $c\ max(0, b+wx_1)$</p>
-<p>$ y = b + \sum\limits<em>i c_i \ sigmoid(b_i + \sum\limits_jw</em>{ij}x_j)$</p>
-<p>$y = b + \sum\limits<em>{2i}c_i max(0, b_i+\sum\limits_jw</em>{ij}x_j)$</p>
+<p>$ y = b + \sum\limits_i c_i \ sigmoid(b_i + \sum\limits_jw_{ij}x_j)$</p>
+<p>$y = b + \sum\limits_{2i}c_i max(0, b_i+\sum\limits_jw_{ij}x_j)$</p>
 <p>$sigmoid$ 和 $RELU$ 统称为$activation\ function$, $RELU$更好一些</p>
 <h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>当拟合的函数次数过多时，对于训练数据会出现拟合效果好，但是对于测试数据拟合率爆炸的情况。</p>
                 
@@ -1732,13 +1732,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>

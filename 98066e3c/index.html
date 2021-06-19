@@ -590,7 +590,7 @@
 <h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>对于$x^2\equiv n(mod p)$ 总共有$\frac{p-1}{2}$ 个n能使得方程有解</p>
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>考虑所有的$x^2$ ,如果存在两个不同的数字$1&lt; u,v &lt; p$,$u^2\equiv v^2(\mod p)$ ,那么显然$(u^2-v^2)\mod p==0$</p>
 <p>即$(u+v)(u-v)\mod p == 0$ ，那么就只能是$u+v\equiv 0(\mod p)$，两个数字相互对应，所有共有$\frac{p-1}{2}$个不同的平方</p>
-<h2 id="勒让德符号"><a href="#勒让德符号" class="headerlink" title="勒让德符号"></a>勒让德符号</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p> $(\frac{a}{p})= \begin{cases} 1, &amp; a在模p意义下是二次剩余\ -1，&amp; a在模p意义下是非二次剩余 \ 0, &amp; a\equiv 0 (mod p) \end{cases}$ </p>
+<h2 id="勒让德符号"><a href="#勒让德符号" class="headerlink" title="勒让德符号"></a>勒让德符号</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p> $(\frac{a}{p})= \begin{cases} 1, &amp; a在模p意义下是二次剩余\\ -1，&amp; a在模p意义下是非二次剩余 \\ 0, &amp; a\equiv 0 (mod p) \end{cases}$ </p>
 <h3 id="定理-1"><a href="#定理-1" class="headerlink" title="定理"></a>定理</h3><p>$(\frac{a}{p})\equiv a^{\frac{p-1}{2}}(\mod p)$</p>
 <h4 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h4><p>1.若$a$是模p下的二次剩余，那么存在$x^2\equiv a (\mod p)$ ,那么$x^{p-1}\equiv a^{\frac{p-1}{2}}\equiv (\frac{a}{p})\equiv 1(\mod p)$ 根据费马小定理</p>
 <p>在$a$是模$p$意义下的二次剩余时$x^{p-1} \equiv 1(\mod p)$显然成立</p>
@@ -1770,13 +1770,13 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
