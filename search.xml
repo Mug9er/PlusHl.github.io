@@ -684,7 +684,7 @@ MyPrint mp<span class="token punctuation">;</span><span class="token comment">//
 <p>$\begin{bmatrix} A_{11} &amp;&amp; A_{12} &amp;&amp; A_{13} \\ A_{21} &amp;&amp; A_{22} &amp;&amp; A_{23}\end{bmatrix} \times \begin{bmatrix} B_{11} &amp;&amp; B_{12} \\ B_{21} &amp;&amp; B_{22} \\  B_{31} &amp;&amp; B_{32} \end{bmatrix}$</p>
 <p>比如$2\times 3$的矩阵和$3\times 2$的矩阵相乘，新矩阵的元素为$a_{ij}=\sum\limits_{k=1}^{n}A_{ik}*B_{kj}$</p>
 <p>新矩阵为：</p>
-<p>$\begin{bmatrix} (A_{11}<em>B_{11}+A_{12}</em>B_{21}+A_{13}<em>B_{31}) &amp;&amp; (A_{11}</em>B_{12}+A_{12}<em>B_{22}+A_{13}</em>B_{32}) \\ (A_{21}<em>B_{11}+A_{22}</em>B_{21}+A_{23}<em>B_{31}) &amp;&amp; (A_{21}</em>B_{12}+A_{22}<em>B_{22}+A_{23}</em>B_{32}) \end{bmatrix}$</p>
+<p>$\begin{bmatrix} (A_{11}\times B_{11}+A_{12}\times B_{21}+A_{13}\times B_{31}) &amp;&amp; (A_{11}\times B_{12}+A_{12}\times B_{22}+A_{13}\times B_{32}) \\ (A_{21}\times B_{11}+A_{22}\times B_{21}+A_{23}\times B_{31}) &amp;&amp; (A_{21}\times B_{12}+A_{22}\times B_{22}+A_{23}\times B_{32}) \end{bmatrix}$</p>
 <h4 id="元矩阵"><a href="#元矩阵" class="headerlink" title="元矩阵"></a>元矩阵</h4><p>$\begin{bmatrix}1 &amp;&amp; 0\\0 &amp;&amp; 1\end{bmatrix}$或者 $\begin{bmatrix}1 &amp;&amp; 0 &amp;&amp; 0\\0 &amp;&amp; 1 &amp;&amp; 0 \\ 0 &amp;&amp; 0 &amp;&amp; 1\end{bmatrix}$ 或者更大</p>
 <p>元矩阵通常写作$I$，对于任意矩阵$A$</p>
 <p>$A \cdot I=I\cdot A=A$</p>
