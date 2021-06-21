@@ -552,21 +552,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-15
+                    2021-06-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    694
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -594,7 +594,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="多个特征值"><a href="#多个特征值" class="headerlink" title="多个特征值"></a>多个特征值</h2><p>对于多个特征的线性回归，我们使用</p>
+<p>$m$：代表训练集的大小</p>
+<p>$n$：代表特性的数量</p>
+<p>$x^{(i)}$：代表第$i$组数据</p>
+<p>$x^{(i)}_j$：代表第$i$组数据中的第$j$个特征</p>
+<p>对于多个特性的线性回归公式</p>
+<p>$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
+<p>我们把参数和特征值看成两个向量</p>
+<p>$\theta=\begin{bmatrix}\theta_0 \\ \theta_1 \\  \dots \\ \theta_n \end{bmatrix} ,X = \begin{bmatrix}x_0\\ x_1\\ \dots \\x_n \end{bmatrix}(x_0=1),$</p>
+<p>那么$h$就可以看成</p>
+<p>$h_{\theta}(x) = \theta^{T}X$</p>
+<h2 id="多个特征值的梯度下降"><a href="#多个特征值的梯度下降" class="headerlink" title="多个特征值的梯度下降"></a>多个特征值的梯度下降</h2><p>线性回归：$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n=\theta^TX$</p>
+<p>代价函数：$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})^2$</p>
+<p>梯度下降跟原来$n=1$的时形式相同，只不过扩展了一下</p>
+<p>梯度下降：$Repeat \{  \\ \theta_j:=\theta_j-\alpha\frac{\alpha}{\alpha\theta_j}J(\theta) \\ \}$ </p>
+<p>经过求偏导以后梯度下降变为:</p>
+<p>$Repeat \{  \\ \theta_j:=\theta_j-\alpha\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)_j} \\ \}$</p>
+<h2 id="特征放缩"><a href="#特征放缩" class="headerlink" title="特征放缩"></a>特征放缩</h2><ul>
+<li>尽量保证多个特征的值都处于一个相近的范围</li>
+<li>更一般的将特征放缩到$-1\le x_i \le 1$</li>
+<li>如果一个特征的范围再$-3\le x_i \le 3$是可以接收的</li>
+</ul>
+<h3 id="如何特征放缩"><a href="#如何特征放缩" class="headerlink" title="如何特征放缩"></a>如何特征放缩</h3><p>一般的使用：$x_i:=\frac{x_i-\mu_i}{s_i}$来进行特征缩放</p>
+<p>$\mu_i$：一般表示训练集中特征$i$的平均值</p>
+<p>$s_i$：一般表示训练集中特征$i$的范围(最大值-最小值)</p>
+<h2 id="alpha-的调整"><a href="#alpha-的调整" class="headerlink" title="$\alpha$的调整"></a>$\alpha$的调整</h2><p>画一个代价函数随着迭代次数的增加，$J(\theta)$的值的变化图，确保$J(\theta)$随着迭代次数的增加而减小，如果不是，就需要考虑是否再减小$\alpha$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/FEfS3aajEea3qApInhZCFg_6be025f7ad145eb0974b244a7f5b3f59_Screenshot-2016-11-09-09.35.59.4ikm8ukc2ju0.png" alt="代价函数迭代次数"></p>
+<p>但是如果$\alpha$太小，那么$J(\theta)$的收敛就会变得非常缓慢</p>
+<h3 id="收敛"><a href="#收敛" class="headerlink" title="收敛"></a>收敛</h3><p>如果$J(\theta)$在一次迭代中减小到小于$E$，那么证明$J(\theta)$已经收敛，$E$是某个小值，如$10^{-3}$。但在实际应用中，这个阈值的选择比较困难。</p>
+<h2 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h2><p>有时线性回归不足以拟合训练集中的数据，这时我们可以选择多项式回归。</p>
+<p>我们可以改变我们的假设函数的行为或曲线，使它成为二次，三次或平方根函数(或任何其他形式)。</p>
+<p>例如我们的假设方法是$h_{\theta}(x)=\theta_0+\theta_1x_1$,我们可以根据$x_1$创建附加的特征使其成为二次函数$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_1^2$或者三次函数$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_1^2+\theta_3x^3_1$或者我们也可以使用开平方$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2\sqrt {x_1}$</p>
+<p>值得注意的是，任何形式的参数都需要注意特征放缩使其在一个能够接受的范围</p>
                 
             </div>
             <hr/>
@@ -1383,7 +1415,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">61.5k</span>
+                        class="white-color">62.2k</span>
             
             
             
