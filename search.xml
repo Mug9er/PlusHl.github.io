@@ -35,7 +35,49 @@
 <h2 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h2><p>有时线性回归不足以拟合训练集中的数据，这时我们可以选择多项式回归。</p>
 <p>我们可以改变我们的假设函数的行为或曲线，使它成为二次，三次或平方根函数(或任何其他形式)。</p>
 <p>例如我们的假设方法是$h_{\theta}(x)=\theta_0+\theta_1x_1$,我们可以根据$x_1$创建附加的特征使其成为二次函数$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_1^2$或者三次函数$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2x_1^2+\theta_3x^3_1$或者我们也可以使用开平方$h_{\theta}(x)=\theta_0+\theta_1x_1+\theta_2\sqrt {x_1}$</p>
-<p>值得注意的是，任何形式的参数都需要注意特征放缩使其在一个能够接受的范围</p>]]></content>
+<p>值得注意的是，任何形式的参数都需要注意特征放缩使其在一个能够接受的范围</p>
+<h2 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h2><p>梯度下降是得到最小代价函数的一种方法，而正规方程也可以得到最小的代价函数，而且是借助数学推导而不是迭代。</p>
+<p>在正规方程中，我们显式的对线性回归的每个参数进行偏导，并使它们为0来最小化$J(\theta)$,这使我们在不需要迭代的情况下就能找到最优，正规方程的公式如下</p>
+<p>$\theta=(X^TX)^{-1}X^Ty$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/dykma6dwEea3qApInhZCFg_333df5f11086fee19c4fb81bc34d5125_Screenshot-2016-11-10-10.06.16.2yjdw3vx0e60.png" alt="正规方程"></p>
+<p>正规方程的特征值不需要进行缩放</p>
+<h3 id="梯度下降与正规方程的比较"><a href="#梯度下降与正规方程的比较" class="headerlink" title="梯度下降与正规方程的比较"></a>梯度下降与正规方程的比较</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">梯度下降</th>
+<th style="text-align:left">正规方程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">需要选择$\alpha$</td>
+<td style="text-align:left">不需要选择$\alpha$</td>
+</tr>
+<tr>
+<td style="text-align:left">需要很多次迭代</td>
+<td style="text-align:left">不需要跌代</td>
+</tr>
+<tr>
+<td style="text-align:left">复杂度$O(kn^2)$</td>
+<td style="text-align:left">复杂度$O(n^3)$</td>
+</tr>
+<tr>
+<td style="text-align:left">在$n$很大时也能很好的工作</td>
+<td style="text-align:left">$n$很大时会很慢</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>一般$n\gt 10000$时就不再考虑正规方程了</p>
+<p>梯度下降对于很多其他的算法也能有很好的表现，但是正规方程可能并不适合</p>
+<h3 id="当-X-TX-不可逆时"><a href="#当-X-TX-不可逆时" class="headerlink" title="当$X^TX$不可逆时"></a>当$X^TX$不可逆时</h3><p>在使用Octave时，我们使用$pinv$来求逆，即使你的矩阵不可逆，它也能够求出逆元</p>
+<p>但是当$X^TX$不可逆时，我们可能从两个方面找原因</p>
+<ul>
+<li>特征之间线性相关</li>
+<li>太多的特征值，而样本又太少</li>
+</ul>
+<p>解决上述问题的方法包括删除一个线性相关的特性，如果有太多的特性，删除一个或多个特性。</p>]]></content>
       <categories>
         <category>机器学习</category>
         <category>学习笔记</category>
