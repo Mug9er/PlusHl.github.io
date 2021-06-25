@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-06-23T13:45:43.948Z</updated>
+  <updated>2021-06-25T12:05:15.528Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>吴恩达机器学习作业</title>
+    <link href="http://orzff.cn//74ea918c/"/>
+    <id>http://orzff.cn//74ea918c/</id>
+    <published>2021-06-25T12:05:15.000Z</published>
+    <updated>2021-06-25T12:05:15.528Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>吴恩达机器学习2</title>
@@ -411,26 +433,6 @@
     
     
       <category term="Linux目录文件" scheme="http://orzff.cn/tags/Linux%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vultr+cloudflare</title>
-    <link href="http://orzff.cn//4e01c297/"/>
-    <id>http://orzff.cn//4e01c297/</id>
-    <published>2021-03-03T15:42:11.000Z</published>
-    <updated>2021-05-31T11:58:01.167Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;vultr+cloudflare &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="配置" scheme="http://orzff.cn/categories/%E9%85%8D%E7%BD%AE/"/>
-    
-    
-      <category term="飞机" scheme="http://orzff.cn/tags/%E9%A3%9E%E6%9C%BA/"/>
     
   </entry>
   
