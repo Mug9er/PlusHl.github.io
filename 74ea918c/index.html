@@ -391,7 +391,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3yko2.11toafb13xow.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -510,12 +510,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BD%9C%E4%B8%9A/">
+                                <span class="chip bg-color">作业</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
+                            </a>
+                        
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                作业
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -538,14 +559,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    425
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -573,7 +594,87 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="Part-1-Basic-Function"><a href="#Part-1-Basic-Function" class="headerlink" title="Part 1: Basic Function"></a>Part 1: Basic Function</h3><h4 id="WarmUpExercise"><a href="#WarmUpExercise" class="headerlink" title="$WarmUpExercise$"></a>$WarmUpExercise$</h4><pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function A = warmUpExercise()
+% ============= YOUR CODE HERE ==============
+A = eye(5);
+% ===========================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Part-2-Plotting"><a href="#Part-2-Plotting" class="headerlink" title="Part 2: Plotting"></a>Part 2: Plotting</h3><h4 id="PlotData"><a href="#PlotData" class="headerlink" title="$PlotData$"></a>$PlotData$</h4><pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function plotData(x, y)
+% ====================== YOUR CODE HERE ======================
+figure(1);
+plot(X, y, 'r');
+xlabel("x");
+ylabel("y");
+% ===========================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Part-3-Cost-and-Gradient-descent"><a href="#Part-3-Cost-and-Gradient-descent" class="headerlink" title="Part 3: Cost and Gradient descent"></a>Part 3: Cost and Gradient descent</h3><h4 id="computeCost"><a href="#computeCost" class="headerlink" title="$computeCost$"></a>$computeCost$</h4><p>且代价函数直接套公式</p>
+<p>$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})^2$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function J = computeCost(X, y, theta)
+m = length(y); % number of training examples
+% You need to return the following variables correctly 
+J = 0;
+% ====================== YOUR CODE HERE ======================
+J = X * theta - y;
+J = 1/(2*m) * sum(J .^ 2);
+% =========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="gradientDescent"><a href="#gradientDescent" class="headerlink" title="$gradientDescent$"></a>$gradientDescent$</h4><p>直接套公式即可</p>
+<p>$Repeat \{  \\ \theta_j:=\theta_j-\alpha\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j \\ \}$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
+m = length(y); % number of training examples
+J_history = zeros(num_iters, 1);
+for iter = 1:num_iters
+    % ====================== YOUR CODE HERE ======================
+    theta = theta - alpha/m * X' * (X*theta - y);
+    % ============================================================
+    % Save the cost J in every iteration    
+    J_history(iter) = computeCost(X, y, theta);
+end
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><h3 id="Part-1-Feature-Normalization"><a href="#Part-1-Feature-Normalization" class="headerlink" title="Part 1: Feature Normalization"></a>Part 1: Feature Normalization</h3><h4 id="featureNormalize"><a href="#featureNormalize" class="headerlink" title="$featureNormalize$"></a>$featureNormalize$</h4><p>特征放缩，每个特征减去平均值并除以方差</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [X_norm, mu, sigma] = featureNormalize(X)
+X_norm = X;
+mu = zeros(1, size(X, 2));
+sigma = zeros(1, size(X, 2));
+% ====================== YOUR CODE HERE ======================    
+mu = mean(X);
+sigma = std(X);
+for i = 1:size(X, 1)
+  for j = 1:size(mu, 2)
+    X_norm(i,j) = (X_norm(i,j) - mu(1,j)) / sigma(1, j);
+  endfor
+end
+% ============================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Part-2-Gradient-Descent"><a href="#Part-2-Gradient-Descent" class="headerlink" title="Part 2: Gradient Descent"></a>Part 2: Gradient Descent</h3><h4 id="computeCostMulti"><a href="#computeCostMulti" class="headerlink" title="$computeCostMulti$"></a>$computeCostMulti$</h4><p>套公式</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function J = computeCostMulti(X, y, theta)
+m = length(y); % number of training examples
+J = 0;
+% ====================== YOUR CODE HERE ======================
+%               You should set J to the cost.
+J = 1 / (2 * m) * sum(((X * theta) - y) .^ 2);
+% =========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="gradientDescentMulti"><a href="#gradientDescentMulti" class="headerlink" title="$gradientDescentMulti$"></a>$gradientDescentMulti$</h4><p>跟单个特征的算法类似，直接套公式即可</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
+m = length(y); % number of training examples
+J_history = zeros(num_iters, 1);
+for iter = 1:num_iters
+    % ====================== YOUR CODE HERE ======================
+  theta = theta - alpha / m * (X' * (X * theta - y));
+    % ============================================================
+    % Save the cost J in every iteration    
+    J_history(iter) = computeCostMulti(X, y, theta); 
+end
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Part-3-Normal-Equations"><a href="#Part-3-Normal-Equations" class="headerlink" title="Part 3: Normal Equations"></a>Part 3: Normal Equations</h3><h4 id="normal-Equations"><a href="#normal-Equations" class="headerlink" title="$normal Equations$"></a>$normal Equations$</h4><p>直接套公式即可</p>
+<p>$\theta=(X^TX)^{-1}X^Ty$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta] = normalEqn(X, y)
+theta = zeros(size(X, 2), 1);
+% ====================== YOUR CODE HERE ======================
+theta = pinv((X'*X))*X'*y
+% ============================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -636,7 +737,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BD%9C%E4%B8%9A/">
+                                    <span class="chip bg-color">作业</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1082,8 +1191,7 @@
                 <a href="/74ea918c/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/featureimages/17.jpg" class="responsive-img" alt="吴恩达机器学习作业">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3yko2.11toafb13xow.jpg" class="responsive-img" alt="吴恩达机器学习作业">
                         
                         <span class="card-title">吴恩达机器学习作业</span>
                     </div>
@@ -1091,7 +1199,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            吴恩达机器学习作业
                         
                     </div>
                     <div class="publish-info">
@@ -1100,13 +1208,33 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mug-9
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
+                                </a>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    作业
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BD%9C%E4%B8%9A/">
+                        <span class="chip bg-color">作业</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1347,7 +1475,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.6k</span>
+                        class="white-color">63k</span>
             
             
             
@@ -1635,24 +1763,9 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

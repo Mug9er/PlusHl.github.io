@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-06-25T12:05:15.528Z</updated>
+  <updated>2021-06-25T12:48:07.708Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -21,20 +21,22 @@
     <link href="http://orzff.cn//74ea918c/"/>
     <id>http://orzff.cn//74ea918c/</id>
     <published>2021-06-25T12:05:15.000Z</published>
-    <updated>2021-06-25T12:05:15.528Z</updated>
+    <updated>2021-06-25T12:48:07.708Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;吴恩达机器学习作业&lt;/p&gt;
     
     </summary>
     
+      <category term="机器学习" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="作业" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+      <category term="机器学习" scheme="http://orzff.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="作业" scheme="http://orzff.cn/tags/%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
