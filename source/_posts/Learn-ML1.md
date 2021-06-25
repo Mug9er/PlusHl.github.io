@@ -38,7 +38,7 @@ $Loss: L = \frac{1}{N}\sum\limits_n{e_n} (e = |y - y'|)$ 每项$e$是$model$对�
 
 ### 最佳化
 
-$w^*, b^* = arg \  \min\limits_{w,b}L$
+$w^{\star}, b^{\star} = arg \  \min\limits_{w,b}L$
 
 #### $Gradient\ Descent$
 
