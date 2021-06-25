@@ -544,7 +544,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-06-25
                 </div>
                 
 
@@ -595,7 +595,7 @@
 <h3 id="根据训练集定义-Loss"><a href="#根据训练集定义-Loss" class="headerlink" title="根据训练集定义$Loss$"></a>根据训练集定义$Loss$</h3><p>$Loss(b,w)$是一个函数，输入是$b,w$</p>
 <p>Loss代表训练出来的函数对于训练集的拟合程度</p>
 <p>$Loss: L = \frac{1}{N}\sum\limits_n{e_n} (e = |y - y’|)$ 每项$e$是$model$对于训练集的误差</p>
-<h3 id="最佳化"><a href="#最佳化" class="headerlink" title="最佳化"></a>最佳化</h3><p>$w^<em>, b^</em> = arg \  \min\limits_{w,b}L$</p>
+<h3 id="最佳化"><a href="#最佳化" class="headerlink" title="最佳化"></a>最佳化</h3><p>$w^{\star}, b^{\star} = arg \  \min\limits_{w,b}L$</p>
 <h4 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="$Gradient\ Descent$"></a>$Gradient\ Descent$</h4><ul>
 <li>随机选取一个初始点$w^0$</li>
 <li>计算微分 $\frac{\partial L}{\partial w}|_{w= w^0}$</li>
@@ -1719,9 +1719,24 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

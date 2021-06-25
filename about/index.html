@@ -741,6 +741,18 @@
             
             
             
+            <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
+                <span class="chip center-align waves-effect waves-light chip-default">用户权限</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">Linux 系统管理</span>
+            </a>
+            
+            
+            
             <a href="/tags/Min-25%E7%AD%9B/">
                 <span class="chip center-align waves-effect waves-light chip-default">Min_25筛</span>
             </a>
@@ -755,12 +767,6 @@
             
             <a href="/tags/Vim/">
                 <span class="chip center-align waves-effect waves-light chip-default">Vim</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
-                <span class="chip center-align waves-effect waves-light chip-default">用户权限</span>
             </a>
             
             
@@ -791,12 +797,6 @@
             
             <a href="/tags/VSCode/">
                 <span class="chip center-align waves-effect waves-light chip-default">VSCode</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                <span class="chip center-align waves-effect waves-light chip-default">Linux 系统管理</span>
             </a>
             
             
@@ -1247,9 +1247,24 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
