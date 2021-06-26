@@ -552,21 +552,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-25
+                    2021-06-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    304
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -608,6 +608,37 @@
 <p>在给定参数下，$h$函数判断同意数据为0的概率和为1的概率应该和是1</p>
 <p>$P(y=0|x;\theta)+P(y=1|x;\theta)=1$</p>
 <h3 id="决策界限"><a href="#决策界限" class="headerlink" title="决策界限"></a>决策界限</h3><p>根据上图所示，当$g$的参数$\ge0$时，$g$函数的值大于$0.5$，相应的当$g$的参数$\lt0$时，$g$函数的值小于$0.5$,而$g$函数的参数又是$\theta^TX$，所以我们可以得到结论当$\theta^TX\ge0$时，$h_{\theta}(x)\ge0.5$，当$\theta^TX&lt;0$时，$h_{\theta}(x)&gt;0.5$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/decision boundary.4ro0dxvzpug0.png" alt="决策界限"></p>
+<p>图上两种分类中间的直线就是决策界限</p>
+<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><p>原先的代价函数可以写成 $J(\theta)=Cost(h_{\theta}(x^{(i)}),y^{(i)})=\frac{1}{2}(h_{\theta}(x^{(i)})-y^{(i)})^2$</p>
+<p>因为$h$函数是一个复杂的函数$h_{\theta}(x)=\frac{1}{1+e^{-\theta^Tx}}$，导致代价函数$J$是一个非凹函数，这样在梯度下降的过程中不一定会找到全局最小值</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/no-convex.43lq2vuti0c0.png" alt="no-convex"></p>
+<p>很显然这个代价函数并不适合逻辑回归，这里将介绍一个新的代价函数</p>
+<p>$Cost(h_{\theta}(x),y) = \left\{ \begin{array}{<strong>lr</strong>} -\log(h_{\theta}(x)) &amp; if\ y = 1  \\ -\log(1-h_{\theta}(x)) &amp; if\ y = 0 \end{array} \right. $</p>
+<p>当$y=1,h_{\theta}(x) =1$时$Cost$为0，如果$h_{\theta}(x)\to0$ ，那么$Cost\to \infty$</p>
+<p>当$y=0,h_{\theta}(x)=0$时$Cost$为1，如果$h_{\theta}(x)\to1$，那么$Cost\to \infty$</p>
+<h3 id="简化代价函数"><a href="#简化代价函数" class="headerlink" title="简化代价函数"></a>简化代价函数</h3><p>$J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_{\theta}(x^{(i)}), y^{(i)})$</p>
+<p>$Cost(h_{\theta}(x),y) = \left\{ \begin{array}{<strong>lr</strong>} -\log(h_{\theta}(x)) &amp; if\ y = 1  \\ -\log(1-h_{\theta}(x)) &amp; if\ y = 0 \end{array} \right. $</p>
+<p>因为代价函数中包括了两种不同的状态，不利于梯度下降函数的运行，所以我们要简化代价函数</p>
+<p>$Cost(h_{\theta}(x),y) = -y \log(h_{\theta}(x)) - (1-y)\log(1-h_{\theta}(x))$</p>
+<p>这样我们就将两个式子简化成一行，新的代价函数为：</p>
+<p>$J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_{\theta}(x^{(i)}), y^{(i)}) \\ = -\frac{1}{m}[\sum\limits_{i=1}^my^{(i)}\log(h_{\theta}(x^{(i)}))+(1-y^{(i)})\log(1-h_{\theta}(x^{(i)}))] $</p>
+<p>我们利用梯度下降去寻找最小的$\min\limits_{\theta}J(\theta)$,去预测一个新的参数$x$为1的概率</p>
+<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>逻辑回归的的梯度下降公式跟线性回归的几乎一样</p>
+<p>$Repeat \{  \\ \theta_j:=\theta_j-\frac{\alpha}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j \\ \}$</p>
+<p>向量式写法：</p>
+<p>$\theta := \theta - \frac{\alpha}{m}X^T(g(X\theta)-y)$</p>
+<h3 id="高级优化"><a href="#高级优化" class="headerlink" title="高级优化"></a>高级优化</h3><p>Octave中有许多由于梯度下降的算法，但是你并不需要全部掌握，你可以使用Octave提供的库</p>
+<p>比如说<code>fminunc</code>你只需要提供所计算的代价函数，每个$\theta$的导数，初始$\theta$即可以使用</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/Advanced Optimization.13yvc5mix3cw.png" alt="Advanced Optimization"></p>
+<p>比如对于图上的代价函数$J$，你需要提供一个代价函数<code>costFunction</code>，返回[代价值<code>jVal</code>，每个参数的导数<code>gradient</code>]</p>
+<p>设置高级优化函数的参数<code>options</code>,提供初始化的参数<code>initialTheta</code>，函数经过计算会返回[最佳的参数<code>optTheta</code>, 代价函数的值<code>functionVal</code>，是否收敛<code>exitFlag</code>]</p>
+<h3 id="多类别分类"><a href="#多类别分类" class="headerlink" title="多类别分类"></a>多类别分类</h3><p>有时候需要你区分的类别可能不止2中，可能有3种，4种或更多</p>
+<p>比如，病人带着鼻塞来到诊所，你需要区分是没生病，还是着凉还是流感，这里$y=0$代表没生病，$y=1$代表着凉, $y=2$代表流感</p>
+<p>对于这种情况，我们可以将3种类型看成2种，进行3次的逻辑回归</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/cqmPjanSEeawbAp5ByfpEg_299fcfbd527b6b5a7440825628339c54_Screenshot-2016-11-13-10.52.29.ofas81igcps.png" alt="cqmPjanSEeawbAp5ByfpEg_299fcfbd527b6b5a7440825628339c54_Screenshot-2016-11-13-10"></p>
+<p>我们每次只看1类，$h_{\theta}^{(i)}(x) = P(y=1|x;\theta)$为为这种情况为1的概率</p>
+<p>当我们接收一个新的$x$时，我们对于每个逻辑回归最判断，得出最有可能的概率$\max\limits_{i}h_{\theta}^{(i)}(x)$</p>
                 
             </div>
             <hr/>
@@ -1415,7 +1446,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">63.4k</span>
+                        class="white-color">64.2k</span>
             
             
             
