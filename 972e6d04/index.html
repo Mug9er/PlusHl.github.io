@@ -605,7 +605,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/logisic.3eotdbigmhu0.png" alt="逻辑函数"></p>
 <p>逻辑函数$h$的曲线在0到1之间，也可以说逻辑曲线的值参数$x$为1的可能性</p>
 <p>$h_{\theta}(x)=p(y=1|x;\theta)$</p>
-<p>在给定参数下，$h$函数判断同意数据为0的概率和为1的概率应该和是1</p>
+<p>在给定参数下，$h$函数判断同一数据为0的概率和为1的概率应该和是1</p>
 <p>$P(y=0|x;\theta)+P(y=1|x;\theta)=1$</p>
 <h3 id="决策界限"><a href="#决策界限" class="headerlink" title="决策界限"></a>决策界限</h3><p>根据上图所示，当$g$的参数$\ge0$时，$g$函数的值大于$0.5$，相应的当$g$的参数$\lt0$时，$g$函数的值小于$0.5$,而$g$函数的参数又是$\theta^TX$，所以我们可以得到结论当$\theta^TX\ge0$时，$h_{\theta}(x)\ge0.5$，当$\theta^TX&lt;0$时，$h_{\theta}(x)&gt;0.5$</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/decision boundary.4ro0dxvzpug0.png" alt="决策界限"></p>
@@ -614,7 +614,7 @@
 <p>因为$h$函数是一个复杂的函数$h_{\theta}(x)=\frac{1}{1+e^{-\theta^Tx}}$，导致代价函数$J$是一个非凹函数，这样在梯度下降的过程中不一定会找到全局最小值</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/no-convex.43lq2vuti0c0.png" alt="no-convex"></p>
 <p>很显然这个代价函数并不适合逻辑回归，这里将介绍一个新的代价函数</p>
-<p>$Cost(h_{\theta}(x),y) = \left\{ \begin{array}{<strong>lr</strong>} -\log(h_{\theta}(x)) &amp; if\ y = 1  \\ -\log(1-h_{\theta}(x)) &amp; if\ y = 0 \end{array} \right. $</p>
+<p>$Cost(h_{\theta}(x),y) = \left\{ \begin{array}{lr} -\log(h_{\theta}(x)) &amp; if\ y = 1  \\ -\log(1-h_{\theta}(x)) &amp; if\ y = 0 \end{array} \right. $</p>
 <p>当$y=1,h_{\theta}(x) =1$时$Cost$为0，如果$h_{\theta}(x)\to0$ ，那么$Cost\to \infty$</p>
 <p>当$y=0,h_{\theta}(x)=0$时$Cost$为1，如果$h_{\theta}(x)\to1$，那么$Cost\to \infty$</p>
 <h3 id="简化代价函数"><a href="#简化代价函数" class="headerlink" title="简化代价函数"></a>简化代价函数</h3><p>$J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_{\theta}(x^{(i)}), y^{(i)})$</p>
