@@ -92,12 +92,14 @@
   <entry>
     <title>吴恩达机器学习作业</title>
     <url>//74ea918c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="Part-1-Basic-Function"><a href="#Part-1-Basic-Function" class="headerlink" title="Part 1: Basic Function"></a>Part 1: Basic Function</h3><h4 id="WarmUpExercise"><a href="#WarmUpExercise" class="headerlink" title="$WarmUpExercise$"></a>$WarmUpExercise$</h4><pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function A = warmUpExercise()
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="Warm-Up-Exercise"><a href="#Warm-Up-Exercise" class="headerlink" title="$Warm\ Up\ Exercise$"></a>$Warm\ Up\ Exercise$</h3><p>— $warmUpExercise.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function A = warmUpExercise()
 % ============= YOUR CODE HERE ==============
 A = eye(5);
 % ===========================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Part-2-Plotting"><a href="#Part-2-Plotting" class="headerlink" title="Part 2: Plotting"></a>Part 2: Plotting</h3><h4 id="PlotData"><a href="#PlotData" class="headerlink" title="$PlotData$"></a>$PlotData$</h4><pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function plotData(x, y)
+<h3 id="Plot-Data"><a href="#Plot-Data" class="headerlink" title="$Plot\ Data$"></a>$Plot\ Data$</h3><p>— $plotData.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function plotData(x, y)
 % ====================== YOUR CODE HERE ======================
 figure(1);
 plot(X, y, 'r');
@@ -105,8 +107,9 @@ xlabel("x");
 ylabel("y");
 % ===========================================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Part-3-Cost-and-Gradient-descent"><a href="#Part-3-Cost-and-Gradient-descent" class="headerlink" title="Part 3: Cost and Gradient descent"></a>Part 3: Cost and Gradient descent</h3><h4 id="computeCost"><a href="#computeCost" class="headerlink" title="$computeCost$"></a>$computeCost$</h4><p>且代价函数直接套公式</p>
+<h3 id="Compute-Cost"><a href="#Compute-Cost" class="headerlink" title="$Compute\ Cost$"></a>$Compute\ Cost$</h3><p>且代价函数直接套公式</p>
 <p>$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})^2$</p>
+<p>— $computeCost.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function J = computeCost(X, y, theta)
 m = length(y); % number of training examples
 % You need to return the following variables correctly 
@@ -116,8 +119,9 @@ J = X * theta - y;
 J = 1/(2*m) * sum(J .^ 2);
 % =========================================================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="gradientDescent"><a href="#gradientDescent" class="headerlink" title="$gradientDescent$"></a>$gradientDescent$</h4><p>直接套公式即可</p>
+<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="$Gradient\ Descent$"></a>$Gradient\ Descent$</h3><p>直接套公式即可</p>
 <p>$Repeat \{  \\ \theta_j:=\theta_j-\alpha\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j \\ \}$</p>
+<p>— $gradientDescent.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
 m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
@@ -129,7 +133,8 @@ for iter = 1:num_iters
     J_history(iter) = computeCost(X, y, theta);
 end
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><h3 id="Part-1-Feature-Normalization"><a href="#Part-1-Feature-Normalization" class="headerlink" title="Part 1: Feature Normalization"></a>Part 1: Feature Normalization</h3><h4 id="featureNormalize"><a href="#featureNormalize" class="headerlink" title="$featureNormalize$"></a>$featureNormalize$</h4><p>特征放缩，每个特征减去平均值并除以方差</p>
+<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><h3 id="Feature-Normalize"><a href="#Feature-Normalize" class="headerlink" title="$Feature\ Normalize$"></a>$Feature\ Normalize$</h3><p>特征放缩，每个特征减去平均值并除以方差</p>
+<p>— $featureNormalize.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [X_norm, mu, sigma] = featureNormalize(X)
 X_norm = X;
 mu = zeros(1, size(X, 2));
@@ -144,7 +149,8 @@ for i = 1:size(X, 1)
 end
 % ============================================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Part-2-Gradient-Descent"><a href="#Part-2-Gradient-Descent" class="headerlink" title="Part 2: Gradient Descent"></a>Part 2: Gradient Descent</h3><h4 id="computeCostMulti"><a href="#computeCostMulti" class="headerlink" title="$computeCostMulti$"></a>$computeCostMulti$</h4><p>套公式</p>
+<h3 id="Compute-CostMulti"><a href="#Compute-CostMulti" class="headerlink" title="$Compute\ CostMulti$"></a>$Compute\ CostMulti$</h3><p>套公式</p>
+<p>— $computeCostMulti.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function J = computeCostMulti(X, y, theta)
 m = length(y); % number of training examples
 J = 0;
@@ -153,7 +159,8 @@ J = 0;
 J = 1 / (2 * m) * sum(((X * theta) - y) .^ 2);
 % =========================================================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="gradientDescentMulti"><a href="#gradientDescentMulti" class="headerlink" title="$gradientDescentMulti$"></a>$gradientDescentMulti$</h4><p>跟单个特征的算法类似，直接套公式即可</p>
+<h3 id="Gradient-DescentMulti"><a href="#Gradient-DescentMulti" class="headerlink" title="$Gradient\ DescentMulti$"></a>$Gradient\ DescentMulti$</h3><p>跟单个特征的算法类似，直接套公式即可</p>
+<p>— $gradientDescentMulti.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
 m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
@@ -165,14 +172,79 @@ for iter = 1:num_iters
     J_history(iter) = computeCostMulti(X, y, theta); 
 end
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Part-3-Normal-Equations"><a href="#Part-3-Normal-Equations" class="headerlink" title="Part 3: Normal Equations"></a>Part 3: Normal Equations</h3><h4 id="normal-Equations"><a href="#normal-Equations" class="headerlink" title="$normal Equations$"></a>$normal Equations$</h4><p>直接套公式即可</p>
+<h3 id="Normal-Equations"><a href="#Normal-Equations" class="headerlink" title="$Normal\ Equations$"></a>$Normal\ Equations$</h3><p>直接套公式即可</p>
 <p>$\theta=(X^TX)^{-1}X^Ty$</p>
+<p>— $normalEqn.m$</p>
 <pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [theta] = normalEqn(X, y)
 theta = zeros(size(X, 2), 1);
 % ====================== YOUR CODE HERE ======================
 theta = pinv((X'*X))*X'*y
 % ============================================================
-end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="第二周"><a href="#第二周" class="headerlink" title="第二周"></a>第二周</h1><h2 id="基础-1"><a href="#基础-1" class="headerlink" title="基础"></a>基础</h2><h3 id="Sigmoid-function"><a href="#Sigmoid-function" class="headerlink" title="$Sigmoid\ function$"></a>$Sigmoid\ function$</h3><p>$sigmoid$函数是$\frac{1}{1+e^{-x}}$</p>
+<p>根据传进来的数据输出$sigmoid$</p>
+<p>— $sigmoid.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function g = sigmoid(z)
+%SIGMOID Compute sigmoid function
+g = zeros(size(z));
+% ====================== YOUR CODE HERE ======================
+[m, n] = size(z);
+for i = 1:m
+  for j = 1:n
+    g(i,j) = 1 / (1 + e ^ (-z(i, j)));
+  endfor
+endfor
+% =============================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Cost-function-and-gradient"><a href="#Cost-function-and-gradient" class="headerlink" title="$Cost\ function\ and\ gradient$"></a>$Cost\ function\ and\ gradient$</h3><p>使用逻辑回归的代价函数公式</p>
+<p>$J(\theta)=-\frac{1}{m}\sum\limits_{i=1}^m[y^{(i)}\log(h_{\theta}(x^{(i)}))+(1-y^{(i)})\log(1-h_{\theta}(x^{(i)}))]$ 直接求代价函数</p>
+<p>关于代价函数的导数以后再证</p>
+<p>$\frac{\partial J(\theta)}{\partial \theta_j}=\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j$</p>
+<p>— $costFunction.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [J, grad] = costFunction(theta, X, y)
+%COSTFUNCTION Compute cost and gradient for logistic regression
+m = length(y);
+J = 0;
+grad = zeros(size(theta));
+% ====================== YOUR CODE HERE ======================
+h = sigmoid(X * theta);
+J = -1 / m * (y' * log(h) + (1-y') * log(1-h));
+grad = 1 / m * (X' * (h - y));
+% =============================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="predict"><a href="#predict" class="headerlink" title="$predict$"></a>$predict$</h3><p>— $predict.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function p = predict(theta, X)
+%PREDICT Predict whether the label is 0 or 1 using learned logistic 
+m = size(X, 1); % Number of training examples
+p = zeros(m, 1);
+% ====================== YOUR CODE HERE ======================
+p =  sigmoid(X * theta);
+for i = 1:m
+  if p(i) &gt;= 0.5
+    p(i) = 1;
+  else
+    p(i) = 0;
+  endif
+end
+% =========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="附加-1"><a href="#附加-1" class="headerlink" title="附加"></a>附加</h2><h3 id="Cost-function-and-gradient-1"><a href="#Cost-function-and-gradient-1" class="headerlink" title="$Cost\ function\ and\ gradient$"></a>$Cost\ function\ and\ gradient$</h3><p>代价函数：$J(\theta)=-\frac{1}{m}\sum\limits_{i=1}^m[y^{(i)}\log(h_{\theta}(x^{(i)}))+(1-y^{(i)})\log(1-h_{\theta}(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits_{i=1}^n\theta_j^2$</p>
+<p>导数：</p>
+<p>$\frac{\partial J(\theta)}{\partial \theta_j}=\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j \ for\ j = 0$</p>
+<p>$\frac{\partial J(\theta)}{\partial \theta_j}=(\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j)+\frac{\lambda}{m}\theta_j \ for\ j \ge 1$</p>
+<p>— $costFuntionReg.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [J, grad] = costFunctionReg(theta, X, y, lambda)
+%COSTFUNCTIONREG Compute cost and gradient for logistic regression with regularization
+m = length(y); % number of training examples
+J = 0;
+grad = zeros(size(theta));
+% ====================== YOUR CODE HERE ======================
+J = costFunction(theta, X, y) + lambda / (2 * m) * (sum(theta .^ 2) - theta(1) .^ 2);
+h = sigmoid(X * theta);
+grad = 1 / m * X' * (h - y) + lambda / m * theta;
+grad(1) =  1 / m * (X' * (h - y))(1);
+% =============================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       <categories>
         <category>机器学习</category>
         <category>作业</category>
