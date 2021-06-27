@@ -47,7 +47,39 @@
 <p>对于这种情况，我们可以将3种类型看成2种，进行3次的逻辑回归</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/cqmPjanSEeawbAp5ByfpEg_299fcfbd527b6b5a7440825628339c54_Screenshot-2016-11-13-10.52.29.ofas81igcps.png" alt="多类别分类"></p>
 <p>我们每次只看1类，$h_{\theta}^{(i)}(x) = P(y=1|x;\theta)$为为这种情况为1的概率</p>
-<p>当我们接收一个新的$x$时，我们对于每个逻辑回归最判断，得出最有可能的概率$\max\limits_{i}h_{\theta}^{(i)}(x)$</p>]]></content>
+<p>当我们接收一个新的$x$时，我们对于每个逻辑回归最判断，得出最有可能的概率$\max\limits_{i}h_{\theta}^{(i)}(x)$</p>
+<h3 id="过拟合问题"><a href="#过拟合问题" class="headerlink" title="过拟合问题"></a>过拟合问题</h3><p>在拟合数据时，为了更好的拟合数据集，我们可能会选择一个很复杂的函数，它对于数据集有很好的效果，但是对于验证集的效果却很差</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/overfit.4027os0dync0.png" alt="overfit"></p>
+<h4 id="怎么解决"><a href="#怎么解决" class="headerlink" title="怎么解决"></a>怎么解决</h4><h5 id="减少特征的数量"><a href="#减少特征的数量" class="headerlink" title="减少特征的数量"></a>减少特征的数量</h5><ul>
+<li>尽量减少特征的数量</li>
+<li>通过模型选择算法</li>
+</ul>
+<h5 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h5><ul>
+<li>保持所有的特征，但是减少$\theta$的量级或是大小</li>
+<li>当你面对大量的特征时，使用正则化</li>
+</ul>
+<h3 id="正则化和代价函数"><a href="#正则化和代价函数" class="headerlink" title="正则化和代价函数"></a>正则化和代价函数</h3><p>正则化思想： 每个参数都很小</p>
+<ul>
+<li>对于很小的参数，我们可以得到更简单的假设模型</li>
+<li>更不容易出现过拟合的情况</li>
+</ul>
+<p>但是我们要怎么决定哪些参数应该去缩小呢，这就要去修改我们的代价函数</p>
+<p>这是线性回归的代价函数$J(\theta)=\frac{1}{2m}(h_{\theta}(x^{(i)})-y^{(i)})^2$</p>
+<p>我们在后面加入一个新的项用来减小每个$\theta$,$J(\theta)=\frac{1}{2m}[(h_{\theta}(x^{(i)})-y^{(i)})^2 + \lambda\sum\limits_{i=1}^n\theta_{j}^2]$</p>
+<p>$\lambda$：正则化参数，控制两个不同目标的取舍，第一个目标就是我们的代价函数，我们想让代价函数尽可能的小，同时第二个目标是$\theta$的和，我们也想让参数的和尽可能的小</p>
+<h3 id="正则化线性回归"><a href="#正则化线性回归" class="headerlink" title="正则化线性回归"></a>正则化线性回归</h3><p>代价函数发生了改变，那么相对于的，线性回归的梯度下降公式也会发生改变</p>
+<p>$Repeat\ \{ \\ \theta_{0} := \theta_{0} - \alpha \frac{1}{m}\sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{0}^{(i)} \\ \theta_{j} := \theta_{j} - \alpha [(\frac{1}{m}\sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{j}^{(i)}) + \frac{\lambda}{m}\theta_j] \\ \}$</p>
+<p>因为正则化并没有加入$\theta_0$,所以$\theta_0$需要特殊处理</p>
+<p>观察$\theta_j$，我们能可以做一个简单的合并$\theta_j := \theta_j(1-\alpha\frac{\lambda}{m})-\lambda\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)})-y^{(i)})x_{j}^{(i)}$</p>
+<h3 id="正则化正规方程"><a href="#正则化正规方程" class="headerlink" title="正则化正规方程"></a>正则化正规方程</h3><p>$X = \begin{bmatrix} (x^{(1)})^T \\ \dots \\ (x^{(m)})^T \end{bmatrix}$ $y=\begin{bmatrix} y^{(1)} \\ \dots \\ y^{(m)} \end{bmatrix}$</p>
+<p>正规方程的公式修改后成为：</p>
+<p>$\theta = (X^TX + \lambda \begin{bmatrix} 0 &amp; &amp;  &amp; \\ &amp; 1 &amp; &amp; \\ &amp; &amp; \ddots \\ &amp; &amp; &amp; 1 \end{bmatrix}_{(n\times1)\times(n\times1)})^{-1}X^Ty$</p>
+<h3 id="正则化逻辑回归"><a href="#正则化逻辑回归" class="headerlink" title="正则化逻辑回归"></a>正则化逻辑回归</h3><p>逻辑回归的代价函数</p>
+<p>$J(\theta)=-[\frac{1}{m}\sum\limits_{i=1}^{m}y^{(i)}\log h_{\theta}(x^{(i)})+(1-y^{(i)})\log (1-h_{\theta}(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits_{j=1}^n\theta_j^2$</p>
+<p>逻辑回归的梯度下降</p>
+<p>$Repeat\ \{ \\ \theta_{0} := \theta_{0} - \alpha \frac{1}{m}\sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{0}^{(i)} \\ \theta_{j} := \theta_{j} - \alpha [(\frac{1}{m}\sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})x_{j}^{(i)}) + \frac{\lambda}{m}\theta_j] \\ \}$</p>
+<p>逻辑回归的梯度下降的转换跟线性回归的类似，但是因为$h$函数的不同，它们实际上还是不同的函数</p>
+<h3 id="正则化高级优化函数"><a href="#正则化高级优化函数" class="headerlink" title="正则化高级优化函数"></a>正则化高级优化函数</h3><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/reg advanced opt.6086pgobg5s0.png" alt="reg advanced opt"></p>]]></content>
       <categories>
         <category>机器学习</category>
         <category>学习笔记</category>
