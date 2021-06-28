@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Linux系统管理, Mug-9&#39;s blog">
+    <meta name="keywords" content="吴恩达机器学习4, Mug-9&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>Linux系统管理 | Mug-9&#39;s blog</title>
+    <title>吴恩达机器学习4 | Mug-9&#39;s blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
 
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k7838q.3out18s1n7y0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-9m2561.lcx657rph1c.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux系统管理</h1>
+                    <h1 class="description center-align post-title">吴恩达机器学习4</h1>
                 </div>
             </div>
         </div>
@@ -512,8 +512,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                                <span class="chip bg-color">Linux 系统管理</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
                             </a>
                         
                     </div>
@@ -524,8 +528,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                Linux 学习笔记
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
+                            </a>
+                        
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
                             </a>
                         
                     </div>
@@ -537,28 +545,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-06-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-06-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    656
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
 
@@ -586,311 +594,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux系统管理"><a href="#Linux系统管理" class="headerlink" title="Linux系统管理"></a>Linux系统管理</h1><h2 id="日历-cal"><a href="#日历-cal" class="headerlink" title="日历 cal"></a>日历 <code>cal</code></h2><p><code>cal</code>命令用户查看当前日历，<code>-y</code>显示整年日历</p>
-<h2 id="显示或设置时间date"><a href="#显示或设置时间date" class="headerlink" title="显示或设置时间date"></a>显示或设置时间<code>date</code></h2><p>设置时间格式</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">date</span> <span class="token punctuation">[</span>MMDDhhmm<span class="token punctuation">[</span>CC<span class="token punctuation">]</span>YY<span class="token punctuation">]</span><span class="token punctuation">[</span>.ss<span class="token punctuation">]</span> + <span class="token function">format</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><code>CC</code>为年的前两位<code>yy</code>为年的后两位，前两为的<code>mm</code>为月，后两位的<code>mm</code>为分钟，<code>dd</code>为天，<code>hh</code>为小时，<code>ss</code>为秒</p>
-<h2 id="查看进程信息-ps"><a href="#查看进程信息-ps" class="headerlink" title="查看进程信息 ps"></a>查看进程信息 <code>ps</code></h2><p>进程是一个具有一定独立功能的程序，它是操作系统动态执行的基本单元，</p>
-<p><code>ps</code>命令可以查看进程的详细状况，常用选项（选项可以不加<code>-</code>）</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">进程</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-a</code></td>
-<td style="text-align:center">显示终端上所有进程，包括其他用户的进程</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-u</code></td>
-<td style="text-align:center">显示进程的详细状态</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-x</code></td>
-<td style="text-align:center">显示没有控制终端的进程</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-w</code></td>
-<td style="text-align:center">显示加宽，一边显示更多的信息</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-r</code></td>
-<td style="text-align:center">只显示正在运行的进程</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="动态显示进程-top"><a href="#动态显示进程-top" class="headerlink" title="动态显示进程 top"></a>动态显示进程 <code>top</code></h2><p><code>top</code>命令用来动态显示运行中的进程，<code>top</code>命令能够在运行后，在指定时间间隔更新显示信息，可以在使用<code>top</code>命令时加上<code>-d&lt;interval&gt;</code>来指定显示信息更新时间间隔。</p>
-<p>在<code>top</code>命令执行后，可以按下按年得到对显示结果进行排序</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">按键</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>M</code></td>
-<td style="text-align:center">根据内存使用量来排序</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>P</code></td>
-<td style="text-align:center">根据<code>CPU</code>占有率来排序</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>T</code></td>
-<td style="text-align:center">根据进程运行时间的长短来排序</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>U</code></td>
-<td style="text-align:center">可以根据后面输入的用户名来筛选进程</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>K</code></td>
-<td style="text-align:center">可以根据后面输入的<code>PID</code>来杀死进程</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="结束进程-KILL"><a href="#结束进程-KILL" class="headerlink" title="结束进程 KILL"></a>结束进程 <code>KILL</code></h2><p><code>kill</code>命令指定进程号的进程，需要配合<code>ps</code>使用</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-signal<span class="token punctuation">]</span> pid<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>信号值从0到15，其中9为绝对终止，可以处理一般信号无法终止的进程。</p>
-<h2 id="后台程序-amp-、jobs、fg"><a href="#后台程序-amp-、jobs、fg" class="headerlink" title="后台程序 &amp;、jobs、fg"></a>后台程序 <code>&amp;、jobs、fg</code></h2><ul>
-<li>用户可以将一个前台执行的程序调入后台执行，方法为：<code>命令 &amp;</code></li>
-<li>如果程序已经在执行，<code>ctrl+z</code>可以 将程序调入后台</li>
-<li><code>jobs</code>查看后台运行程序</li>
-<li><code>fg</code>编号（编号为通过<code>jobs</code>查看的编号），将后台运行程序调出到前台</li>
-</ul>
-<h2 id="关机重启-reboot、shutdown、init"><a href="#关机重启-reboot、shutdown、init" class="headerlink" title="关机重启 reboot、shutdown、init"></a>关机重启 <code>reboot、shutdown、init</code></h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>reboot</code></td>
-<td style="text-align:center">重新启动操作系统</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>shutdown -r now</code></td>
-<td style="text-align:center">重新启动操作系统，<code>shutdown</code>会给别的用户提示</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>shutdown -h now</code></td>
-<td style="text-align:center">立刻关机，其中<code>now</code>相当于时间为0的状态</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>shutdown -h 20：25</code></td>
-<td style="text-align:center">系统在今天<code>20：25</code>会关机</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>shutdown -h +10</code></td>
-<td style="text-align:center">系统再过十分钟会自动关机</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>init 0</code></td>
-<td style="text-align:center">关机</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>init 6</code></td>
-<td style="text-align:center">重启</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="字符界面和图形界面切换"><a href="#字符界面和图形界面切换" class="headerlink" title="字符界面和图形界面切换"></a>字符界面和图形界面切换</h2><p>在<code>redhat</code>平台下，可通过命令进行切换</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">init <span class="token number">3</span> ： 切换到字符界面
-init <span class="token number">5</span> ： 切换到图形界面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>通过快捷键切换（适用于大部分平台）</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Ctrl+Alt+F2 切换到字符界面
-Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="检测磁盘空间-df"><a href="#检测磁盘空间-df" class="headerlink" title="检测磁盘空间 df"></a>检测磁盘空间 <code>df</code></h2><p><code>df</code>命令用户检测文件系统的磁盘空间占用和空余情况，可以显示所有文件系统对节点和磁盘块的使用情况。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-a</code></td>
-<td style="text-align:center">显示所有文件系统的磁盘使用情况</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-m</code></td>
-<td style="text-align:center">以1024字节为单位显示</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-t &lt;fs&gt;</code></td>
-<td style="text-align:center">显示各指定文件系统的磁盘空间使用情况</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-T</code></td>
-<td style="text-align:center">显示文件系统</td>
-</tr>
-</tbody>
-</table>
-</div>
-<pre><code>## 格式化 `mkfs`
-</code></pre><p><code>mkfs</code>命令相当于<code>DOS/WINDOWS</code>系统中的格式化命令，用户创建指定的文件系统</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">mkfs</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> 设备文件名 <span class="token punctuation">[</span>blocks<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-V</code></td>
-<td style="text-align:center">详细显示模式</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-t &lt;.fs&gt;</code></td>
-<td style="text-align:center">指定文件系统类型，默认值为<code>ext2</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-c</code></td>
-<td style="text-align:center">在创建文件系统的同时，进行磁盘坏块检查</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>blocks</code></td>
-<td style="text-align:center">文件系统块的大小</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="应用软件安装和卸载"><a href="#应用软件安装和卸载" class="headerlink" title="应用软件安装和卸载"></a>应用软件安装和卸载</h2><p>在<code>Linux</code>系统中，几乎所有的软件均通过<code>RPM</code>进行安装、卸载及关机等操作。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token punctuation">[</span>软件包名<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-i</code></td>
-<td style="text-align:center">指定安装的软件包</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-h</code></td>
-<td style="text-align:center">使用<code>#</code>显示详细的安装过程和进度</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-v</code></td>
-<td style="text-align:center">显示安装的详细信息</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-q</code></td>
-<td style="text-align:center">查询系统是否已安装指定的软件包</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-a</code></td>
-<td style="text-align:center">查看系统以安装的所有软件包</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-e</code></td>
-<td style="text-align:center">卸载软件包</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-nodeps</code></td>
-<td style="text-align:center">配合<code>-e</code>参数使用，强制卸载不检查依赖项</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-force</code></td>
-<td style="text-align:center">强制操作，如强制安装删除等</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="查看或配置网卡信息-ifconfig"><a href="#查看或配置网卡信息-ifconfig" class="headerlink" title="查看或配置网卡信息 ifconfig"></a>查看或配置网卡信息 <code>ifconfig</code></h2><p>如果，我们只是敲<code>ifconfig</code>，它会显示所有网卡的信息</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">显示字段</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>eh0</code></td>
-<td style="text-align:center">网络接口名称</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Link encap</code></td>
-<td style="text-align:center">链路封装协议</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Hwaddr</code></td>
-<td style="text-align:center">网络接口的<code>MAC</code>地址</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Inet addr</code></td>
-<td style="text-align:center"><code>IP</code>地址</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Bcast</code></td>
-<td style="text-align:center">广播地址</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Mask</code></td>
-<td style="text-align:center">子网掩码</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>UP</code></td>
-<td style="text-align:center">网络接口状态标识，<code>UP</code>已经启用，<code>DOWN</code>已经停用</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>BROADCAST</code></td>
-<td style="text-align:center">广播协议，表示网络接口是否支持广播</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>RUNNING</code></td>
-<td style="text-align:center">传播协议，表示网络接口是否已经开始传输分组数据</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>MULTICAST</code></td>
-<td style="text-align:center">多播协议，表示网络接口是否支持多播</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>MTU,Metric</code></td>
-<td style="text-align:center"><code>MTU</code>最大传输单位，单位：字节，<code>Metric</code>度量值，用于<code>RIP</code>建立</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>RX bytes</code></td>
-<td style="text-align:center">接受数据字节统计</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>TX bytes</code></td>
-<td style="text-align:center">发送数据字节统计</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="测试远程主机连通性-ping"><a href="#测试远程主机连通性-ping" class="headerlink" title="测试远程主机连通性 ping"></a>测试远程主机连通性 <code>ping</code></h2><ul>
-<li><code>ping</code>通过<code>ICMP</code>协议向远程主机发送<code>ECHO_REQUEST</code>请求，期望主机回复<code>ECHO_REPLY</code>消息</li>
-<li>通过<code>ping</code>命令可以检查是否与远程主机建立了<code>TCP/IP</code>连接</li>
-</ul>
-<h2 id="网络路由设置-route"><a href="#网络路由设置-route" class="headerlink" title="网络路由设置 route"></a>网络路由设置 <code>route</code></h2><p><code>route</code>可以增加、修改、显示路由信息</p>
-<pre class="line-numbers language-none"><code class="language-none">route [-v] [-A family] add default [gw 默认网关地址] [[dev interface]]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="监控网络状态-netstat"><a href="#监控网络状态-netstat" class="headerlink" title="监控网络状态 netstat"></a>监控网络状态 <code>netstat</code></h2><p><code>netstat</code>命令监控网络状态，包括接口设置、<code>`IP</code>路由、各种网络协议的统计</p>
+                <h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>对于复杂的问题，由于特征值的数量增多，对于拟合出来的多项式复杂度可能会急剧膨胀，这样一来单独使用线性回归或逻辑回归可能就不太能满足需求了</p>
+<h3 id="神经元"><a href="#神经元" class="headerlink" title="神经元"></a>神经元</h3><p>神经元是神经网络里的一个运算单元，可以是线性回归，可以实逻辑回归或是其他算法，图中简单的表示对$h$函数做运算，$h_{\theta}(x)=\frac{1}{1+e^{-\theta^TX}}$ ，有输入$x_1,x_2,x_3$，有$x_0$没有绘出但是$x_0$存在且始终等于0，$x_0$称为偏移单元或偏移神经元。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628215722790.77ybw4u1djg0.png" alt="image-20210628215722790"></p>
+<p>有时我们会说这是一个带有$Sigmoid$或者是$Logistic$激活函数的人工神经元，在神经网络的术语中，激活单元是指代非线性函数$g(z)=\frac{1}{1+e^{-z}}$的另一个术语</p>
+<p>$\theta$在之前的描述种被称为模型的参数，在神经网络种有人会称它为模型的权重</p>
+<h3 id="神经网络-1"><a href="#神经网络-1" class="headerlink" title="神经网络"></a>神经网络</h3><p>神经网络其实就是一组神经元链接在一起的集合，图中的神经网络输入$x_1,x_2,x_3$，当然有一个隐藏的$x_0$,$a_1^{(2)},a_2^{(2)},a_3^{(2)}$是3个神经元，并且有一个隐藏的神经元$a_0^{(2)}$，最后一层有一个输出节点假设函数$h_{\Theta}(x)$。</p>
+<p>在神经网络的术语中第一层叫做输入层，最后一层叫做输出层，中间的叫做隐藏层</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628222223412.3bc00ng5hx40.png" alt="image-20210628222223412"></p>
+<h4 id="计算步骤"><a href="#计算步骤" class="headerlink" title="计算步骤"></a>计算步骤</h4><p>$a_i^{(j)}$代表第$j$层第$i$个神经元或单元</p>
+<p>$\Theta^{(j)}$ 权重参数，控制从某一层到下一层的映射</p>
+<p>从第一层的4个参数到第二层的3个神经元，通过$\Theta$来转换，$\Theta$的维度可以表示为$s_{j+1}\times (s_j+1)$</p>
+<p>每一层的转换都是通过$\Theta$来实现，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628223711250.nxoa5h4xysg.png" alt="image-20210628223711250"></p>
+<h3 id="向量化表示"><a href="#向量化表示" class="headerlink" title="向量化表示"></a>向量化表示</h3><p>仔细观察$x$向$z$转换的过程，我们将$x$组成一个向量，$z^{(2)}$来表示运算时$g$的参数,$z^{(2)}$的大小时$3\times 1$</p>
+<p>$z^{(2)}$由$\Theta^{(1)}$与$a^{(1)}$矩阵相乘而来，$a^{(1)}$时输入的参数，加上隐藏的$x_0$的话，$a^{(1)}$的规格时$4\times 1$，以此类推，</p>
+<p>计算$z^{(3)}$时，通过$\Theta^{(2)}$与$a^{(2)}$相乘就可以得到，而结果$h_{\Theta}(x)$就是$z^{(3)}$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628224340442.5da2n0tpw8c0.png" alt="image-20210628224340442"></p>
+<p>神经网络与常规的逻辑回归相比特殊之处在于，不直接使用输入的参数来计算结果，而是通过$\Theta$来计算中间隐藏层，通过隐藏层来计算最终结果</p>
                 
             </div>
             <hr/>
@@ -916,7 +637,7 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://orzff.cn/6c72ecbc/">http://orzff.cn/6c72ecbc/</a>
+                    <a href="http://orzff.cn/94af8a7/">http://orzff.cn/94af8a7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -954,8 +675,12 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
-                                    <span class="chip bg-color">Linux 系统管理</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
                                 </a>
                             
                         </div>
@@ -1395,45 +1120,55 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/a67e3062/">
+                <a href="/94af8a7/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-o3gmw9.2q0klcmfizw0.png" class="responsive-img" alt="VI和VIM基本操作">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-9m2561.lcx657rph1c.jpg" class="responsive-img" alt="吴恩达机器学习4">
                         
-                        <span class="card-title">VI和VIM基本操作</span>
+                        <span class="card-title">吴恩达机器学习4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            VI和VIM基本操作
+                            吴恩达机器学习笔记(四)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Linux 学习笔记
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
+                                </a>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vim/">
-                        <span class="chip bg-color">Vim</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -1447,30 +1182,34 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/e7492e71/">
+                <a href="/972e6d04/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-q2z19q.6fc3nh9zxeo0.jpg" class="responsive-img" alt="Linux用户权限">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-dp3yg3.qt5rkp8gx68.jpg" class="responsive-img" alt="吴恩达机器学习3">
                         
-                        <span class="card-title">Linux用户权限</span>
+                        <span class="card-title">吴恩达机器学习3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux用户权限
+                            吴恩达机器学习笔记(三)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    Linux 学习笔记
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
+                                </a>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
@@ -1480,8 +1219,12 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">
-                        <span class="chip bg-color">用户权限</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -1649,6 +1392,13 @@ Ctrl+Alt+F7 切换到图形界面<span aria-hidden="true" class="line-numbers-ro
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

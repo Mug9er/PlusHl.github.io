@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>吴恩达机器学习4</title>
+    <url>//94af8a7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>对于复杂的问题，由于特征值的数量增多，对于拟合出来的多项式复杂度可能会急剧膨胀，这样一来单独使用线性回归或逻辑回归可能就不太能满足需求了</p>
+<h3 id="神经元"><a href="#神经元" class="headerlink" title="神经元"></a>神经元</h3><p>神经元是神经网络里的一个运算单元，可以是线性回归，可以实逻辑回归或是其他算法，图中简单的表示对$h$函数做运算，$h_{\theta}(x)=\frac{1}{1+e^{-\theta^TX}}$ ，有输入$x_1,x_2,x_3$，有$x_0$没有绘出但是$x_0$存在且始终等于0，$x_0$称为偏移单元或偏移神经元。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628215722790.77ybw4u1djg0.png" alt="image-20210628215722790"></p>
+<p>有时我们会说这是一个带有$Sigmoid$或者是$Logistic$激活函数的人工神经元，在神经网络的术语中，激活单元是指代非线性函数$g(z)=\frac{1}{1+e^{-z}}$的另一个术语</p>
+<p>$\theta$在之前的描述种被称为模型的参数，在神经网络种有人会称它为模型的权重</p>
+<h3 id="神经网络-1"><a href="#神经网络-1" class="headerlink" title="神经网络"></a>神经网络</h3><p>神经网络其实就是一组神经元链接在一起的集合，图中的神经网络输入$x_1,x_2,x_3$，当然有一个隐藏的$x_0$,$a_1^{(2)},a_2^{(2)},a_3^{(2)}$是3个神经元，并且有一个隐藏的神经元$a_0^{(2)}$，最后一层有一个输出节点假设函数$h_{\Theta}(x)$。</p>
+<p>在神经网络的术语中第一层叫做输入层，最后一层叫做输出层，中间的叫做隐藏层</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628222223412.3bc00ng5hx40.png" alt="image-20210628222223412"></p>
+<h4 id="计算步骤"><a href="#计算步骤" class="headerlink" title="计算步骤"></a>计算步骤</h4><p>$a_i^{(j)}$代表第$j$层第$i$个神经元或单元</p>
+<p>$\Theta^{(j)}$ 权重参数，控制从某一层到下一层的映射</p>
+<p>从第一层的4个参数到第二层的3个神经元，通过$\Theta$来转换，$\Theta$的维度可以表示为$s_{j+1}\times (s_j+1)$</p>
+<p>每一层的转换都是通过$\Theta$来实现，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628223711250.nxoa5h4xysg.png" alt="image-20210628223711250"></p>
+<h3 id="向量化表示"><a href="#向量化表示" class="headerlink" title="向量化表示"></a>向量化表示</h3><p>仔细观察$x$向$z$转换的过程，我们将$x$组成一个向量，$z^{(2)}$来表示运算时$g$的参数,$z^{(2)}$的大小时$3\times 1$</p>
+<p>$z^{(2)}$由$\Theta^{(1)}$与$a^{(1)}$矩阵相乘而来，$a^{(1)}$时输入的参数，加上隐藏的$x_0$的话，$a^{(1)}$的规格时$4\times 1$，以此类推，</p>
+<p>计算$z^{(3)}$时，通过$\Theta^{(2)}$与$a^{(2)}$相乘就可以得到，而结果$h_{\Theta}(x)$就是$z^{(3)}$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628224340442.5da2n0tpw8c0.png" alt="image-20210628224340442"></p>
+<p>神经网络与常规的逻辑回归相比特殊之处在于，不直接使用输入的参数来计算结果，而是通过$\Theta$来计算中间隐藏层，通过隐藏层来计算最终结果</p>]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>吴恩达机器学习3</title>
     <url>//972e6d04/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h2><h3 id="二元分类"><a href="#二元分类" class="headerlink" title="二元分类"></a>二元分类</h3><p>二元分类中$y$值只能取两个值，0或1</p>

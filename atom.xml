@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-06-27T07:35:25.938Z</updated>
+  <updated>2021-06-28T14:55:30.943Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>吴恩达机器学习4</title>
+    <link href="http://orzff.cn//94af8a7/"/>
+    <id>http://orzff.cn//94af8a7/</id>
+    <published>2021-06-28T13:28:27.000Z</published>
+    <updated>2021-06-28T14:55:30.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;吴恩达机器学习笔记(四)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="学习笔记" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="机器学习" scheme="http://orzff.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="学习笔记" scheme="http://orzff.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>吴恩达机器学习3</title>
@@ -419,26 +443,6 @@
     
     
       <category term="用户权限" scheme="http://orzff.cn/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 命令</title>
-    <link href="http://orzff.cn//9da1ef6b/"/>
-    <id>http://orzff.cn//9da1ef6b/</id>
-    <published>2021-04-27T08:24:09.000Z</published>
-    <updated>2021-05-31T11:58:01.147Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux 命令&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux 学习笔记" scheme="http://orzff.cn/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Linux 命令" scheme="http://orzff.cn/tags/Linux-%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
