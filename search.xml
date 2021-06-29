@@ -20,7 +20,19 @@
 <p>$z^{(2)}$由$\Theta^{(1)}$与$a^{(1)}$矩阵相乘而来，$a^{(1)}$时输入的参数，加上隐藏的$x_0$的话，$a^{(1)}$的规格时$4\times 1$，以此类推，</p>
 <p>计算$z^{(3)}$时，通过$\Theta^{(2)}$与$a^{(2)}$相乘就可以得到，而结果$h_{\Theta}(x)$就是$z^{(3)}$</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628224340442.5da2n0tpw8c0.png" alt="image-20210628224340442"></p>
-<p>神经网络与常规的逻辑回归相比特殊之处在于，不直接使用输入的参数来计算结果，而是通过$\Theta$来计算中间隐藏层，通过隐藏层来计算最终结果</p>]]></content>
+<p>神经网络与常规的逻辑回归相比特殊之处在于，不直接使用输入的参数来计算结果，而是通过$\Theta$来计算中间隐藏层，通过隐藏层来计算最终结果</p>
+<h3 id="神经元计算样例"><a href="#神经元计算样例" class="headerlink" title="神经元计算样例"></a>神经元计算样例</h3><p>通过神经网络的一层层传递，我们可以在一些简单的计算的基础上再进行一些复杂计算，从而得到很好的计算结果</p>
+<h4 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212300157.6kenj8uti7k0.png" alt="image-20210629212300157"></p>
+<p>如图所示，我们设计设计一个神经元，将参数设置成$(-30,10,10)$，利用$g$函数可以达到与运算的效果</p>
+<h4 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212455820.2ufhqvf7l5u0.png" alt="image-20210629212455820"></p>
+<p>跟与运算相似，将参数设置成$(-10, 20, 20)$就可以达到或运算的效果</p>
+<h4 id="非运算"><a href="#非运算" class="headerlink" title="非运算"></a>非运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212850643.1pxty2aj90tc.png" alt="image-20210629212850643"></p>
+<p>非运算，在需要运算的值前面加上一个很大的参数，就可以实现非运算了</p>
+<h4 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629213642403 (1" alt="image-20210629213642403 (1)">.32ylofm62j40.png)</p>
+<p>异或运算在中间的隐藏层实现与预算和非与运算来通过或运算得到异或运算，通过真值表可以看到正确性</p>
+<h3 id="多元分类"><a href="#多元分类" class="headerlink" title="多元分类"></a>多元分类</h3><p>多元分类是在单元分类的基础上输出多个结果代表多个种类</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629214734064.4rz1e6wlqd80.png" alt="image-20210629214734064"></p>
+<p>再多元分类中$y^{(i)}$不在代表一个值，而是一个向量，其中1的位置代表$y^{(i)}$的类型，我们要做的就是通过训练找到合适的$\Theta$，使得$h_{\Theta}(x^{(i)})\approx y^{(i)}$</p>]]></content>
       <categories>
         <category>机器学习</category>
         <category>学习笔记</category>
