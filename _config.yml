@@ -126,7 +126,6 @@ archive_generator:
 
 index_generator:
   per_page: 20
-  order_by: -date
 
 tag_generator:
   per_page: 10
