@@ -123,9 +123,10 @@ archive_generator:
   per_page: 20
   yearly: true
   monthly: true
-  index_generator:
-    per_page: 20
 
+index_generator:
+  per_page: 20
+  order_by: -date
 
 tag_generator:
   per_page: 10
