@@ -64,7 +64,7 @@ dream:
   enable: true
   showTitle: true
   title: 我的梦想
-  text: 做一个自由的而非奴隶的、进步的而非保守的、进取的而非退隐的、世界的而非锁国的、实利的而非虚文的、科学的而非想象的新青年
+  text: 心中有丘壑，眉间显山河
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -564,7 +564,7 @@ subtitle:
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
   sub:
-    - 自由的而非奴隶的、进步的而非保守的、进取的而非退隐的、世界的而非锁国的、实利的而非虚文的、科学的而非想象的
+    - 永远在学习，永远在思考，永远在行动
    
 # 手机二级菜单.
 navMenu:
