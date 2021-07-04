@@ -3,16 +3,16 @@
   <entry>
     <title>吴恩达机器学习5</title>
     <url>//7e4dc831/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h1><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704195854656.2lsjkjwd5e80.png" alt="image-20210704195854656"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h1><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704195854656.2lsjkjwd5e80.png" alt="命名规则"></p>
 <p>使用$L$来代表神经网络的层数</p>
 <p>使用$s_l$来代表第$l$层的神经元数目</p>
-<h2 id="代价函数-1"><a href="#代价函数-1" class="headerlink" title="代价函数"></a>代价函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704200652152.6e3sjb675mo0.png" alt="image-20210704200652152"></p>
+<h2 id="代价函数-1"><a href="#代价函数-1" class="headerlink" title="代价函数"></a>代价函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704200652152.6e3sjb675mo0.png" alt="代价函数"></p>
 <p>相对于单个的逻辑回归的代价函数，整个神经网络的代价函数只对输出层进行计算，计算第$i$的输出与训练集的结果$y_i$之间的差距。因为神经网络的数据不是唯一，可能由多个分类的输出，所以$K$代表输出的分类个数。计算正则化也是如何，跟逻辑回归类似，不计算0下表的$\Theta$</p>
 <h1 id="反向传播算法"><a href="#反向传播算法" class="headerlink" title="反向传播算法"></a>反向传播算法</h1><h2 id="向前传播方法"><a href="#向前传播方法" class="headerlink" title="向前传播方法"></a>向前传播方法</h2><p>向前传播方法是前面用到的方法</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704201536262.33e5qpshz1o0.png" alt="image-20210704201536262"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704201536262.33e5qpshz1o0.png" alt="向前传播方法"></p>
 <p>从输入开始，对每一层进行计算得到下一层的结果，以此往复得到最终结果</p>
 <h2 id="反向传播方法"><a href="#反向传播方法" class="headerlink" title="反向传播方法"></a>反向传播方法</h2><p>方向传播方法从直观上说就是对每一个节点计算$\delta_j^{(l)}$代表第$l$层，第$j$个节点的误差</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704205325691.3i6ni2tf3u40.png" alt="image-20210704205325691"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704205325691.3i6ni2tf3u40.png" alt="反向传播方法"></p>
 <p>还是使用4层的神经网络来说</p>
 <p>$\delta_j^{(4)}=a_j^{(4)}-y_j$</p>
 <p>第四层就是输出值和$y$值的误差，然后我们反向传播到第三层</p>
@@ -27,7 +27,7 @@
 <p>同样的$\delta^{(2)}$也是如此</p>
 <p>$\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)} .* g’(z^{(2)})$</p>
 <p>在不严谨的情况下，我们可以得到初略的偏导数$\frac{\partial}{\partial \Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\delta_i^{l+1}$ 这些都是忽略的正则化的情况下</p>
-<h3 id="反向传播算法-1"><a href="#反向传播算法-1" class="headerlink" title="反向传播算法"></a>反向传播算法</h3><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704205722145.5eidr8is6h00.png" alt="image-20210704205722145"></p>
+<h3 id="反向传播算法-1"><a href="#反向传播算法-1" class="headerlink" title="反向传播算法"></a>反向传播算法</h3><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704205722145.5eidr8is6h00.png" alt="反向传播算法"></p>
 <p>一开始我们将所有的$\Delta$设置为0，$\Delta$是$\delta$的大写形式</p>
 <p>然后我们每一层计算$a^{l}$,计算到输出层以后倒回来计算$\delta$,一直计算到$\delta^2$</p>
 <p>然后计算$\Delta$,$\Delta$的计算公式:$\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)}+a_j^{(l)}\delta_i^{(l+1)}$</p>
@@ -36,7 +36,7 @@
 <p>这里加上了正则化</p>
 <p>最终的偏导正好等于$\frac{\partial}{\partial \Theta_{ij}^{(l)}}J(\Theta)=D_{ij}^{(l)}$</p>
 <h3 id="理解反向传播算法"><a href="#理解反向传播算法" class="headerlink" title="理解反向传播算法"></a>理解反向传播算法</h3><p>以单一的输出并且忽略$\lambda$为例，代价函数可以写成$cost(i)=y^{(i)}\log h_{\Theta}(x^{(i)})+(1-y^{(i)})\log h_{\Theta}(x^{(i)})$</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704212854863.47c4lnlvmdy0.png" alt="image-20210704212854863"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704212854863.47c4lnlvmdy0.png" alt="理解反向传播算法"></p>
 <p>最终的代价值是由每个节点的误差累计而成，所以对于最终的带价值，每一个$\delta_j^{(l)}$都相当于这个代价的偏导，由这些误差联合作用得到最终的误差值，而每一个$\delta_{i}^{(l)}$都可以从后面的$\delta$推导出来，比如$\delta_2^{2}=\Theta_{12}^{(2)}\delta_{1}^{(3)}+\Theta_{22}^{(2)}\delta^{(3)}_2$</p>
 <p>这样就可以得出$\delta$的推导公式$\delta^{(l)}=(\Theta^{(l)})^T\delta^{(l+1)}$，至于那么求导暂时没搞懂</p>]]></content>
       <categories>
