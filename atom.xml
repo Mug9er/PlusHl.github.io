@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mug-9&#39;s blog</title>
   
-  <subtitle>Stay Hungry, Stay Foolish</subtitle>
+  <subtitle>Hello World</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-06-29T13:50:16.569Z</updated>
+  <updated>2021-07-04T11:44:11.248Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>吴恩达机器学习5</title>
+    <link href="http://orzff.cn//7e4dc831/"/>
+    <id>http://orzff.cn//7e4dc831/</id>
+    <published>2021-07-03T06:32:32.000Z</published>
+    <updated>2021-07-04T11:44:11.248Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;吴恩达机器学习笔记(五)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="学习笔记" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="机器学习" scheme="http://orzff.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="学习笔记" scheme="http://orzff.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>吴恩达机器学习4</title>
     <link href="http://orzff.cn//94af8a7/"/>
     <id>http://orzff.cn//94af8a7/</id>
     <published>2021-06-28T13:28:27.000Z</published>
-    <updated>2021-06-29T13:50:16.569Z</updated>
+    <updated>2021-07-04T11:44:11.247Z</updated>
     
     <summary type="html">
     
@@ -45,7 +69,7 @@
     <link href="http://orzff.cn//972e6d04/"/>
     <id>http://orzff.cn//972e6d04/</id>
     <published>2021-06-25T13:37:42.000Z</published>
-    <updated>2021-06-27T07:35:25.938Z</updated>
+    <updated>2021-07-04T11:42:21.639Z</updated>
     
     <summary type="html">
     
@@ -69,7 +93,7 @@
     <link href="http://orzff.cn//74ea918c/"/>
     <id>http://orzff.cn//74ea918c/</id>
     <published>2021-06-25T12:05:15.000Z</published>
-    <updated>2021-06-27T08:45:09.990Z</updated>
+    <updated>2021-07-04T11:44:11.268Z</updated>
     
     <summary type="html">
     
@@ -79,12 +103,12 @@
     
       <category term="机器学习" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="作业" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/"/>
+      <category term="机器学习作业" scheme="http://orzff.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/"/>
     
     
       <category term="机器学习" scheme="http://orzff.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="作业" scheme="http://orzff.cn/tags/%E4%BD%9C%E4%B8%9A/"/>
+      <category term="机器学习作业" scheme="http://orzff.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
@@ -117,7 +141,7 @@
     <link href="http://orzff.cn//f303f9cc/"/>
     <id>http://orzff.cn//f303f9cc/</id>
     <published>2021-06-03T03:25:07.000Z</published>
-    <updated>2021-06-15T13:42:58.534Z</updated>
+    <updated>2021-07-04T11:44:11.247Z</updated>
     
     <summary type="html">
     
@@ -139,7 +163,7 @@
     <link href="http://orzff.cn//51b0a147/"/>
     <id>http://orzff.cn//51b0a147/</id>
     <published>2021-06-02T06:41:03.000Z</published>
-    <updated>2021-06-15T13:42:58.534Z</updated>
+    <updated>2021-07-04T11:44:11.247Z</updated>
     
     <summary type="html">
     
@@ -423,26 +447,6 @@
     
     
       <category term="Linux 系统管理" scheme="http://orzff.cn/tags/Linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux用户权限</title>
-    <link href="http://orzff.cn//e7492e71/"/>
-    <id>http://orzff.cn//e7492e71/</id>
-    <published>2021-04-27T13:53:40.000Z</published>
-    <updated>2021-05-31T11:58:01.148Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux用户权限&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux 学习笔记" scheme="http://orzff.cn/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="用户权限" scheme="http://orzff.cn/tags/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/"/>
     
   </entry>
   

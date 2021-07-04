@@ -552,7 +552,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2021-07-04
                 </div>
                 
 
@@ -596,33 +596,33 @@
             <div id="articleContent">
                 <h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>对于复杂的问题，由于特征值的数量增多，对于拟合出来的多项式复杂度可能会急剧膨胀，这样一来单独使用线性回归或逻辑回归可能就不太能满足需求了</p>
 <h3 id="神经元"><a href="#神经元" class="headerlink" title="神经元"></a>神经元</h3><p>神经元是神经网络里的一个运算单元，可以是线性回归，可以实逻辑回归或是其他算法，图中简单的表示对$h$函数做运算，$h_{\theta}(x)=\frac{1}{1+e^{-\theta^TX}}$ ，有输入$x_1,x_2,x_3$，有$x_0$没有绘出但是$x_0$存在且始终等于0，$x_0$称为偏移单元或偏移神经元。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628215722790.77ybw4u1djg0.png" alt="image-20210628215722790"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628215722790.77ybw4u1djg0.png" alt="神经元"></p>
 <p>有时我们会说这是一个带有$Sigmoid$或者是$Logistic$激活函数的人工神经元，在神经网络的术语中，激活单元是指代非线性函数$g(z)=\frac{1}{1+e^{-z}}$的另一个术语</p>
 <p>$\theta$在之前的描述种被称为模型的参数，在神经网络种有人会称它为模型的权重</p>
 <h3 id="神经网络-1"><a href="#神经网络-1" class="headerlink" title="神经网络"></a>神经网络</h3><p>神经网络其实就是一组神经元链接在一起的集合，图中的神经网络输入$x_1,x_2,x_3$，当然有一个隐藏的$x_0$,$a_1^{(2)},a_2^{(2)},a_3^{(2)}$是3个神经元，并且有一个隐藏的神经元$a_0^{(2)}$，最后一层有一个输出节点假设函数$h_{\Theta}(x)$。</p>
 <p>在神经网络的术语中第一层叫做输入层，最后一层叫做输出层，中间的叫做隐藏层</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628222223412.3bc00ng5hx40.png" alt="image-20210628222223412"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628222223412.3bc00ng5hx40.png" alt="神经网络"></p>
 <h4 id="计算步骤"><a href="#计算步骤" class="headerlink" title="计算步骤"></a>计算步骤</h4><p>$a_i^{(j)}$代表第$j$层第$i$个神经元或单元</p>
 <p>$\Theta^{(j)}$ 权重参数，控制从某一层到下一层的映射</p>
 <p>从第一层的4个参数到第二层的3个神经元，通过$\Theta$来转换，$\Theta$的维度可以表示为$s_{j+1}\times (s_j+1)$</p>
 <p>每一层的转换都是通过$\Theta$来实现，</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628223711250.nxoa5h4xysg.png" alt="image-20210628223711250"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628223711250.nxoa5h4xysg.png" alt="计算步骤"></p>
 <h3 id="向量化表示"><a href="#向量化表示" class="headerlink" title="向量化表示"></a>向量化表示</h3><p>仔细观察$x$向$z$转换的过程，我们将$x$组成一个向量，$z^{(2)}$来表示运算时$g$的参数,$z^{(2)}$的大小时$3\times 1$</p>
 <p>$z^{(2)}$由$\Theta^{(1)}$与$a^{(1)}$矩阵相乘而来，$a^{(1)}$时输入的参数，加上隐藏的$x_0$的话，$a^{(1)}$的规格时$4\times 1$，以此类推，</p>
 <p>计算$z^{(3)}$时，通过$\Theta^{(2)}$与$a^{(2)}$相乘就可以得到，而结果$h_{\Theta}(x)$就是$z^{(3)}$</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628224340442.5da2n0tpw8c0.png" alt="image-20210628224340442"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210628224340442.5da2n0tpw8c0.png" alt="向量化表示"></p>
 <p>神经网络与常规的逻辑回归相比特殊之处在于，不直接使用输入的参数来计算结果，而是通过$\Theta$来计算中间隐藏层，通过隐藏层来计算最终结果</p>
 <h3 id="神经元计算样例"><a href="#神经元计算样例" class="headerlink" title="神经元计算样例"></a>神经元计算样例</h3><p>通过神经网络的一层层传递，我们可以在一些简单的计算的基础上再进行一些复杂计算，从而得到很好的计算结果</p>
-<h4 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212300157.6kenj8uti7k0.png" alt="image-20210629212300157"></p>
+<h4 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212300157.6kenj8uti7k0.png" alt="与运算"></p>
 <p>如图所示，我们设计设计一个神经元，将参数设置成$(-30,10,10)$，利用$g$函数可以达到与运算的效果</p>
-<h4 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212455820.2ufhqvf7l5u0.png" alt="image-20210629212455820"></p>
+<h4 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212455820.2ufhqvf7l5u0.png" alt="或运算"></p>
 <p>跟与运算相似，将参数设置成$(-10, 20, 20)$就可以达到或运算的效果</p>
-<h4 id="非运算"><a href="#非运算" class="headerlink" title="非运算"></a>非运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212850643.1pxty2aj90tc.png" alt="image-20210629212850643"></p>
+<h4 id="非运算"><a href="#非运算" class="headerlink" title="非运算"></a>非运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629212850643.1pxty2aj90tc.png" alt="非运算"></p>
 <p>非运算，在需要运算的值前面加上一个很大的参数，就可以实现非运算了</p>
-<h4 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629213642403 (1" alt="image-20210629213642403 (1)">.32ylofm62j40.png)</p>
+<h4 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h4><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629213642403 (1" alt="异或运算">.32ylofm62j40.png)</p>
 <p>异或运算在中间的隐藏层实现与预算和非与运算来通过或运算得到异或运算，通过真值表可以看到正确性</p>
 <h3 id="多元分类"><a href="#多元分类" class="headerlink" title="多元分类"></a>多元分类</h3><p>多元分类是在单元分类的基础上输出多个结果代表多个种类</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629214734064.4rz1e6wlqd80.png" alt="image-20210629214734064"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210629214734064.4rz1e6wlqd80.png" alt="多元分类"></p>
 <p>再多元分类中$y^{(i)}$不在代表一个值，而是一个向量，其中1的位置代表$y^{(i)}$的类型，我们要做的就是通过训练找到合适的$\Theta$，使得$h_{\Theta}(x^{(i)})\approx y^{(i)}$</p>
                 
             </div>
@@ -1132,29 +1132,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/94af8a7/">
+                <a href="/7e4dc831/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-9m2561.lcx657rph1c.jpg" class="responsive-img" alt="吴恩达机器学习4">
                         
-                        <span class="card-title">吴恩达机器学习4</span>
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/medias/featureimages/12.jpg" class="responsive-img" alt="吴恩达机器学习5">
+                        
+                        <span class="card-title">吴恩达机器学习5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            吴恩达机器学习笔记(四)
+                            吴恩达机器学习笔记(五)
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1171,7 +1171,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1431,7 +1430,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.3k</span>
+                        class="white-color">67.1k</span>
             
             
             

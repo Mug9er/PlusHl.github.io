@@ -552,21 +552,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-27
+                    2021-07-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -621,6 +621,21 @@
 <p>$Cost(h_{\theta}(x),y) = \left\{ \begin{array}{lr} -\log(h_{\theta}(x)) &amp; if\ y = 1  \\ -\log(1-h_{\theta}(x)) &amp; if\ y = 0 \end{array} \right. $</p>
 <p>因为代价函数中包括了两种不同的状态，不利于梯度下降函数的运行，所以我们要简化代价函数</p>
 <p>$Cost(h_{\theta}(x),y) = -y \log(h_{\theta}(x)) - (1-y)\log(1-h_{\theta}(x))$</p>
+<blockquote>
+<p> 关于为什么要选择这个代价函数，我偶然看见一个UP做过一个视频，<a href="[&quot;损失函数&quot;是如何设计出来的？直观理解&quot;最小二乘法&quot;和&quot;极大似然估计法&quot;_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Y64y1Q7hi?spm_id_from=333.851.b_7265636f6d6d656e64.9">视频在这</a>)我简单说一下我的理解</p>
+<p>因为神经网络的每次迭代都是通过改变$W,b$的值来实现，那么对于每一次训练我们来比较差错的话，就是在</p>
+<p>当前$W,b$的情况下，去得到得出原本正确的$x_1,x_2,x_3…$的概率$P(x_1,x_2,…,x_n|W,b)$</p>
+<p>因为神经网络得到的$y_i$跟$W,b$存在线性关系，所以还可以写成$\prod\limits_{i=1}^nP(x_i|y_i)$</p>
+<p>神经网络算出的$y_i$的值只有01两种情况，所以这个式子还符合伯努利分布 :</p>
+<p>$x_i\in{0,1}$</p>
+<p>$f(x)=p^x(1-p)^{1-x}= \left\{ \begin{array}{lr} p, &amp; x=1  \\ 1-p, &amp; x=0 \end{array} \right. \ $</p>
+<p>在伯努利分布中$p$代表为1的概率，而神经网络中的$y_i$也是为真的概率,那么方程就可以写成</p>
+<p>$\prod\limits_{i=1}^ny_i^{x_i}(1-y_i)^{1-x_i}$，加上$log$变成加法</p>
+<p> $\log(\prod\limits_{i=1}^ny_i^{x_i}(1-y_i)^{1-x_i}) \\ = \sum\limits_{i=1}^n \log(y_i^{x_i}(1-y_i)^{1-x_i}) \\ = \sum\limits_{i=1}^n (x_i  \log y_i + (1-x_i) log(1-y_i)) $</p>
+<p>那么这里就是在当前迭代的情况下，最符合训练集的概率，这个公式是寻找最大值，所以加上负号变成</p>
+<p>寻找最小值，以符合梯度下降，这就是逻辑回归的梯度下降</p>
+<p>$Cost(h_{\theta}(x),y) = -y \log(h_{\theta}(x)) - (1-y)\log(1-h_{\theta}(x))$</p>
+</blockquote>
 <p>这样我们就将两个式子简化成一行，新的代价函数为：</p>
 <p>$J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_{\theta}(x^{(i)}), y^{(i)}) \\ = -\frac{1}{m}\sum\limits_{i=1}^m[y^{(i)}\log(h_{\theta}(x^{(i)}))+(1-y^{(i)})\log(1-h_{\theta}(x^{(i)}))] $</p>
 <p>我们利用梯度下降去寻找最小的$\min\limits_{\theta}J(\theta)$,去预测一个新的参数$x$为1的概率</p>
@@ -1265,8 +1280,8 @@
                                     机器学习
                                 </a>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/" class="post-category">
-                                    作业
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    机器学习作业
                                 </a>
                             
                             
@@ -1280,8 +1295,8 @@
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%9C%E4%B8%9A/">
-                        <span class="chip bg-color">作业</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/">
+                        <span class="chip bg-color">机器学习作业</span>
                     </a>
                     
                 </div>
@@ -1476,7 +1491,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.3k</span>
+                        class="white-color">67.1k</span>
             
             
             

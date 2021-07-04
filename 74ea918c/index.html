@@ -516,8 +516,8 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/tags/%E4%BD%9C%E4%B8%9A/">
-                                <span class="chip bg-color">作业</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/">
+                                <span class="chip bg-color">机器学习作业</span>
                             </a>
                         
                     </div>
@@ -532,8 +532,8 @@
                                 机器学习
                             </a>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%9C%E4%B8%9A/" class="post-category">
-                                作业
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                机器学习作业
                             </a>
                         
                     </div>
@@ -552,21 +552,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-27
+                    2021-07-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    865
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -747,6 +747,65 @@ grad = 1 / m * X' * (h - y) + lambda / m * theta;
 grad(1) =  1 / m * (X' * (h - y))(1);
 % =============================================================
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="第三周"><a href="#第三周" class="headerlink" title="第三周"></a>第三周</h1><h3 id="Vectorize-Logistic-Regression"><a href="#Vectorize-Logistic-Regression" class="headerlink" title="$Vectorize\ Logistic\ Regression$"></a>$Vectorize\ Logistic\ Regression$</h3><p>跟过拟合的代价函数类似，可以直接套</p>
+<p>— $lrCostFunction.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [J, grad] = lrCostFunction(theta, X, y, lambda)
+%LRCOSTFUNCTION Compute cost and gradient for logistic 
+m = length(y);
+J = 0;
+grad = zeros(size(theta));
+% ====================== YOUR CODE HERE ======================
+h = sigmoid(X * theta);
+J = -1 / m * (y' * log(h) + (1-y')*(log(1-h))) + lambda / (2 * m) * (sum(theta .^ 2) - theta(1) .^ 2);
+grad = 1 / m * X' * (h - y) + lambda / m * theta;
+grad(1) =  1 / m * (X' * (h - y))(1);
+% =============================================================
+grad = grad(:);
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="One-vs-All-Training"><a href="#One-vs-All-Training" class="headerlink" title="$One-vs-All\ Training$"></a>$One-vs-All\ Training$</h3><p>利用$fmincg$来计算$all_theta$ ,$fmincg$计算训练集对每个数字算出的参数，把参数加入$all_theta$ 即可</p>
+<p>— $oneVsAll.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function [all_theta] = oneVsAll(X, y, num_labels, lambda)
+m = size(X, 1);
+n = size(X, 2);
+all_theta = zeros(num_labels, n + 1);
+X = [ones(m, 1) X];
+% ====================== YOUR CODE HERE ======================
+initial_theta = zeros(n + 1, 1);
+options = optimset('GradObj', 'on', 'MaxIter', 50);
+for i = 1:num_labels
+  all_theta(i,:) = fmincg(@(t)(lrCostFunction(t, X, (y==i), lambda)), initial_theta, options);
+endfor
+% ========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Predict-for-One-Vs-All"><a href="#Predict-for-One-Vs-All" class="headerlink" title="$Predict\ for\ One-Vs-All$"></a>$Predict\ for\ One-Vs-All$</h3><p>用$X\times \theta^T$来计算每个样例对每个数字的几率</p>
+<p>$[m\times(n+1)]\times[10\times(n+1)]^T$</p>
+<p>利用max来得到最大几率的索引</p>
+<p>— $predictOneVsAll.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function p = predictOneVsAll(all_theta, X)
+m = size(X, 1);
+num_labels = size(all_theta, 1);
+p = zeros(size(X, 1), 1);
+X = [ones(m, 1) X];
+% ====================== YOUR CODE HERE ====================== 
+all_p = sigmoid(X * all_theta');
+[A, p] = max(all_p,  [], 2);
+% =========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Implement-Predict"><a href="#Implement-Predict" class="headerlink" title="$Implement\ Predict$"></a>$Implement\ Predict$</h3><p>题目给出了$4000\to 25\to10$的神经网络，输入层400个参数，隐藏层25个，输出层10个，代表这个样例是某个数字的可能性</p>
+<p>题目给出了参数$\Theta_1$和$\Theta_2$,我们只需要使用即可</p>
+<p>— $predict.m$</p>
+<pre class="line-numbers language-octave" data-language="octave"><code class="language-octave">function p = predict(Theta1, Theta2, X)
+m = size(X, 1);
+num_labels = size(Theta2, 1);
+p = zeros(size(X, 1), 1);
+% ====================== YOUR CODE HERE ======================
+X = [ones(m, 1) X];
+hide_layer =  sigmoid(X * Theta1');
+hide_layer = [ones(m, 1) hide_layer];
+out_layer = sigmoid(hide_layer * Theta2');
+[A, p] = max(out_layer, [], 2);
+% =========================================================================
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -814,8 +873,8 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
                                     <span class="chip bg-color">机器学习</span>
                                 </a>
                             
-                                <a href="/tags/%E4%BD%9C%E4%B8%9A/">
-                                    <span class="chip bg-color">作业</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BD%9C%E4%B8%9A/">
+                                    <span class="chip bg-color">机器学习作业</span>
                                 </a>
                             
                         </div>
@@ -1552,7 +1611,7 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.3k</span>
+                        class="white-color">67.1k</span>
             
             
             
