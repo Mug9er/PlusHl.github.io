@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="C++学习笔记(五), Mug-9&#39;s blog">
+    <meta name="keywords" content="数学基础, Mug-9&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>C++学习笔记(五) | Mug-9&#39;s blog</title>
+    <title>数学基础 | Mug-9&#39;s blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
 
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-281d5y.3h3nsqkoyka0.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-v9z1dl.7fhsn4aycfk0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++学习笔记(五)</h1>
+                    <h1 class="description center-align post-title">数学基础</h1>
                 </div>
             </div>
         </div>
@@ -512,8 +512,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">C++ 学习笔记</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">数学基础</span>
                             </a>
                         
                     </div>
@@ -524,8 +524,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                C++ 学习
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                数学基础
                             </a>
                         
                     </div>
@@ -537,28 +537,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-10
+                    2021-07-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-07-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -586,131 +586,105 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C-学习笔记（五）"><a href="#C-学习笔记（五）" class="headerlink" title="C++ 学习笔记（五）"></a>C++ 学习笔记（五）</h1><h2 id="C-类型转换"><a href="#C-类型转换" class="headerlink" title="C++类型转换"></a>C++类型转换</h2><p>尽量少使用类型转换，除非用来解决特殊问题</p>
-<h3 id="静态转换static-cast"><a href="#静态转换static-cast" class="headerlink" title="静态转换static_cast"></a>静态转换<code>static_cast</code></h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">目标类型 目标对象 <span class="token operator">=</span> <span class="token keyword">static_cast</span><span class="token operator">&lt;</span>目标类型<span class="token operator">&gt;</span><span class="token punctuation">(</span>原对象<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="向量范数"><a href="#向量范数" class="headerlink" title="向量范数"></a>向量范数</h2><p>向量一范数：$||X||_1=\sum\limits_{i=1}^n|x_i|$</p>
+<p>向量二范数：$||X||_2=(\sum\limits_{i=1}^nx_i^2)^{\frac{1}{2}}=\sqrt{\sum\limits_{i=1}^nx_i^2}$</p>
+<p>向量无穷范数：$||X||_{\infin}=\max\limits_{i\le i\le n}|x_i|$</p>
+<h2 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h2><h3 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h3><p>对于实数：$|\sum\limits_{i=1}^{n}a_i|\le \sum\limits_{i=1}^n|a_i|,a_i\in \R$</p>
+<p>对于向量形式：$(\sum\limits_{i=1}^na_ib_i)^2\le \sum\limits_{i=1}^na_i^2 \sum\limits_{i=1}^nb_i^2\leftrightarrow|<a,b>|\le ||a|| \cdot ||b||$</a,b></p>
+<p><strong>证明</strong>：</p>
+<p>$右边-右边=\sum\limits_{ij}(a_ib_j-a_jb_i)^2\ge0$</p>
+<p><strong>??</strong>：</p>
+<p>$\forall \lambda \ge 0,\sum\limits_{i=1}^n(a_i-\lambda b_i)^2\ge0$</p>
+<p>$\sum\limits_{i=1}^n(a_i^2-2a_ib_i\lambda+b_i^2\lambda^2) \ge 0\(\sum\limits_{i=1}^{n}b_i^2)\lambda^2-2(\sum\limits_{i=1}^na_ib_i)\lambda+\sum\limits_{i=1}^na_i^2\ge 0$</p>
+<p>这是关于$\lambda$的二次函数</p>
+<h3 id="算数几何平均不等式"><a href="#算数几何平均不等式" class="headerlink" title="算数几何平均不等式"></a>算数几何平均不等式</h3><p>$(a_1,a_2,…a_n)$</p>
+<p>算数平均值：$\frac{\sum\limits_{i=1}^na_i}{n}$</p>
+<p>几何平均值：$(\prod\limits_{i=1}^na_i)^\frac{1}{n}$</p>
+<p>算数平均值大于等于几何平均值</p>
+<p>$\frac{\sum\limits_{i=1}^na_i}{n} \ge (\prod\limits_{i=1}^na_i)^\frac{1}{n}$</p>
+<p><strong>证明</strong></p>
+<p>$n=2$时：</p>
+<p>$\frac{1}{2}(a_1+a_2)\ge \sqrt{a_1a_2}\\ \leftrightarrow(a_1+a_2)^2\ge4a_1a_2\\ \leftrightarrow (a_1-a_2)^2 \ge 0$</p>
+<p>$n=3$时：</p>
+<p>$\frac{1}{2}(a_1+a_2+a_3)\ge (a_1a_2a_3)^{\frac{1}{3}}\\ \leftrightarrow x^3+y^3+z^3 \ge 3xyz\\ \leftrightarrow (x+y+z)((x-y)^2+(y-z)^2+(z-x)^2) \ge 0$</p>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><ul>
+<li><p>序列$a_n$收敛跟$a_n$时柯西列等价</p>
+</li>
+<li><p>单调有界序列一定有极限</p>
+</li>
+<li>$\lim\limits_{n\to\infin}(1+\frac{1}{n})^n=e$</li>
+<li>$|a_n| \le b_n$， $\sum\limits_{n\ge 1}b_n$收敛那么$\sum\limits_{n\ge 1}a_n$收敛</li>
+<li>上极限：$\lim\limits_{n\to \infin}\sup a_n \triangleq \lim\limits_{n\to \infin}(\sup\limits_{m\ge n}a_m) = \inf\limits_{n\ge 1}(\sup\limits_{m\ge n} a_m)$</li>
+<li>下极限：$\lim\limits_{n\to \infin}\inf a_n \triangleq \lim\limits_{n\to \infin}(\inf\limits_{m\ge n}a_m) = \sup\limits_{n\ge 1}(\inf\limits_{m\ge n} a_m)$</li>
+<li>$\sum\limits_{n\ge 1}\frac{1}{n^s}$收敛$\iff\ s&gt;1$，$\sum\limits_{n\ge 1}\frac{1}{n}$发散</li>
+<li>$\sum\limits_{n\ge 2}\frac{1}{n(\log n)^s}$收敛$\iff\ s&gt;1$，$\sum\limits_{n\ge 2}\frac{1}{n(\log n)}$发散</li>
+<li>$\sum\limits_{n\ge0}\frac{(-1)^n}{2n+1}=\frac{\pi}{4}$</li>
+</ul>
+<h2 id="点集"><a href="#点集" class="headerlink" title="点集"></a>点集</h2><p>开集，闭集，紧集</p>
+<h3 id="开集"><a href="#开集" class="headerlink" title="开集"></a>开集</h3><p>定义： $A \subset \R^n, \forall  x \in A$都存在以$x$为中心，$r&gt;0$为半径的一个球$\{y\in\R^n: ||y-x|| &lt; r\}$叫做$B(x,r)$ 然后$B(x,r)\subset A$。</p>
+<p>性质： </p>
 <ul>
-<li><p>用于类层次结构中的基类和派生类之间指针或引用的转换，没有父子关系的不能转换</p>
+<li>任意个开集并，那么也是开集$\cup A_i$</li>
+<li>有限个开集交，那么也是开集 $\cap^NA_i$</li>
+</ul>
+<h3 id="闭集"><a href="#闭集" class="headerlink" title="闭集"></a>闭集</h3><p>$A$闭集 $\iff A^C$开集</p>
+<p>$\{ x_k\}_{k\ge 1} \subset A, \lim\limits_{k\to \infin}x_k = x \in A$</p>
+<p>$x_k$序列属于$A$，并且$x_k$的极限在$A$中，那么$x$也属于$A$</p>
+<h3 id="紧集"><a href="#紧集" class="headerlink" title="紧集"></a>紧集</h3><p>$A$称为紧集，如果$A$是有界闭集，即$A$是闭集并且存在开球$B(x,r)$使得$A\subset B(x,r)$</p>
+<h3 id="空集和实数集"><a href="#空集和实数集" class="headerlink" title="空集和实数集"></a>空集和实数集</h3><p>空集：是开集，是闭集，是紧集</p>
+<p>实数集：是开集，是闭集，不是紧集</p>
+<h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><p>连续函数： $\lim\limits_{x\to a}f(x)=f(a)$</p>
 <ul>
-<li>进行上行转换（派生类的指针或引用转换成基类）是安全的</li>
-<li>进行下行转换（基类指针或引用转换成派生类）时，由于没有动态类型检查，所以时不安全的</li>
+<li>$\forall \gt 0, \exists\delta\gt0$使得对于任何满足条件$||x-a||\lt\delta$的$x$都成立$|f(x)-f(a)|&lt;\epsilon$</li>
+</ul>
+<p>若$f:D\subset \R^n \to \R$，那么$|f(x)-f(y)|\le k||x-y||$对于任何属于$D$的$x,y$都成立</p>
+<p>若$f:D\subset \R^n \to \R$在$D$中任何点都连续，则称其在$D$上连续</p>
+<ul>
+<li>$f$在开集$D$上连续，等价于，对于任何开集$U\subset \R$，其逆像$f^{-1}(U)=\{x\in\R^n : f(x)\in U\}\subset \R^n$仍是开集</li>
+</ul>
+<p>常用函数(幂指对，三角函数，多项式)都是连续函数</p>
+<h3 id="两个重要函数极限"><a href="#两个重要函数极限" class="headerlink" title="两个重要函数极限"></a>两个重要函数极限</h3><ul>
+<li>$\lim\limits_{x\to 0}\frac{sinx}{x}=1$<ul>
+<li>$0\lt x \lt \frac{\pi}{2} \Longrightarrow cosx \lt \frac{sinx}{x} \lt 1$</li>
+<li>因此，函数$\frac{sinx}{x}$可看作定义在$\R$上的连续函数</li>
 </ul>
 </li>
-<li><p>用于基本数据类型之间的转换，如将<code>int</code>转换成<code>char</code>，把<code>char</code>转换成<code>int</code>，这种转换的安全性也要开发人员来保证</p>
+<li>$\lim\limits_{x\to +\infin}(1+\frac{1}{x})^x=e$<ul>
+<li>$n\le x \le n+1 \Longrightarrow (1+\frac{1}{n+1})^n \lt (1+\frac{1}{x})^x \lt (1+\frac{1}{n})^{n+1}$</li>
+</ul>
 </li>
 </ul>
-<h3 id="动态转换dynamic-cast"><a href="#动态转换dynamic-cast" class="headerlink" title="动态转换dynamic_cast"></a>动态转换<code>dynamic_cast</code></h3><p><code>dynamic_cast</code>非常严格，失去精度或者不安全都不可以转换</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">目标类型 目标对象 <span class="token operator">=</span> <span class="token keyword">dynamic_cast</span><span class="token operator">&lt;</span>目标类型<span class="token operator">&gt;</span><span class="token punctuation">(</span>原对象<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h3><p>函数$f:[a,b]\to \R$连续，且$f(a)\not= f(b)$,则对于任何$f(a)$和$f(b)$之间的值$s$,都存在$x\in (a,b)$使得$f(x)=s$</p>
+<h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><ul>
+<li><p>可导$\Longrightarrow$连续,可导$\not\Longleftarrow$连续</p>
+</li>
+<li><p>$(fg)’=f’g+fg’,(af+bg)’=af’+bg’,(\frac{f}{g})’=\frac{f’g-fg’}{g^2}$</p>
+</li>
+<li>链式法则：$(f(g(x)))’=f’(g(x))g’(x)$</li>
+<li>$f(x) = det(I+xA),f’(0)=tr(A)$</li>
+<li>$f:[a,b]\to\R$,$f$在$x\in (a,b)$取得局部最小值$\Longrightarrow f’(x)=0$</li>
+</ul>
+<h3 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h3><p>$f$在$[a,b]$上连续，并在$(a,b)$上可微，则存在$x\in (a,b)$使得$f’(x)=\frac{f(b)-f(a)}{b-a}$</p>
+<p>$Rlolle$定理：如果$f(a)=f(b)$，则存在$x\in(a,b)$使得$f’(x)=0$</p>
+<h3 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h3><p>假设$f$和$g$在$(a,b)$上可微，并且对于任何$x\in (a,b)$都有$g’(x)\not=0$,如果下述条件满足</p>
 <ul>
-<li><p>基础类型之间不能转换</p>
-</li>
-<li><p><code>dynamic_cast</code>如果发生了多态，那么可以让基类转为派生类，向下转换</p>
-</li>
+<li>$\lim\limits_{x-\to a}f(x)=\lim\limits_{x\to a}g(x)=0$或者$\lim\limits_{x\to a}g(x)=+\infin$</li>
+<li>$\lim\limits_{x\to a}\frac{f’(x)}{g’(x)}=A$</li>
 </ul>
-<h3 id="常量转换const-cast"><a href="#常量转换const-cast" class="headerlink" title="常量转换const_cast"></a>常量转换<code>const_cast</code></h3><p>用来修改<code>const</code>属性</p>
+<p>则有$\lim\limits_{x\to a}\frac{f(x)}{g(x)}=A$</p>
+<p>$\frac{f(x)}{g(x)}\approx \frac{f’(x)}{g’(x)}=\lim\limits_{x\to a}\frac{f’(x)}{g’(x)}$</p>
+<p>$[a,b]$上的单调函数几乎处处可微</p>
+<h2 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h2><p>若$f$在$x_0$的一个邻域内$(n+1)$次可微，则对于该邻域内的任意$x$都成立</p>
+<p>$f(x)=\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+R_n(x)$</p>
+<p>其中余项$R_n(x)$满足</p>
 <ul>
-<li>常量指针被转化成非常量指针，并且仍然指向原来的对象</li>
-<li>常量引用被转换成非常量引用，并且仍然指向原来的对象</li>
+<li>无穷小量形式：$R_n(x)=o((x-x_0)^n)$</li>
+<li>微分形式：存在$\theta\in(x,x_0)$使得$R_n(x)=\frac{f^{(n+1)}(\theta)}{(n+1)!}(x-x_0)^{(n+1)}$</li>
+<li>积分形式：$R_n(x)=\frac{1}{n!}\int_{x_0}^x(x-t)^nf^{(n+1)}(t)dt $</li>
+<li>$e^x=\sum\limits_{k=0}^n\frac{x^k}{k!}+o(x^n)$</li>
+<li>$\log(1+x)=\sum\limits_{k=1}^n(-1)^{(k+1)}\frac{x^k}{k}+o(x^n)$</li>
+<li>$\log(1-x)=-\sum\limits_{k=1}^n\frac{x^k}{k}+o(x^n)$</li>
 </ul>
-<p><strong>注意</strong>:不能直接对非指针和非引用的变量使用<code>const_cast</code>操作符去直接移除它的<code>const</code></p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span> p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token operator">*</span>newp <span class="token operator">=</span> <span class="token keyword">const_cast</span><span class="token operator">&lt;</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token operator">*</span> p1 <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span>newp1 <span class="token operator">=</span> <span class="token keyword">const_cast</span><span class="token operator">&lt;</span><span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="重新解释转换reinterpert-cast"><a href="#重新解释转换reinterpert-cast" class="headerlink" title="重新解释转换reinterpert_cast"></a>重新解释转换<code>reinterpert_cast</code></h3><p>最不安全，不推荐使用</p>
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">try</span><span class="token punctuation">{</span>
-    <span class="token comment">// 试图执行的内容</span>
-    <span class="token comment">// 在可能出现异常的地方抛出异常throw</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
- 	<span class="token comment">// try下面catch捕获异常   </span>
-    <span class="token comment">// catch(捕获类型) ... 代表所有其他类型</span>
-    <span class="token comment">// 如果不想处理异常，继续向上抛出throw</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="跳级"><a href="#跳级" class="headerlink" title="跳级"></a>跳级</h3><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnCFive/image-20210510100605400.1wh5scq2w1c0.png" alt="image-20210510100605400"></p>
-<h3 id="异常基本处理"><a href="#异常基本处理" class="headerlink" title="异常基本处理"></a>异常基本处理</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">myd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span>b <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// return -1; 早期处理方式，返回-1</span>
-        <span class="token keyword">throw</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 抛出int类型异常，异常必须处理，如果不处理就挂掉</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> a<span class="token operator">/</span>b<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> ret <span class="token operator">=</span>  <span class="token function">myd</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 早期如果返回-1， 无法区分到底是结果还是异常</span>
-    <span class="token keyword">try</span><span class="token punctuation">{</span>
-        <span class="token function">myd</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">// 捕获int类型异常</span>
-        <span class="token comment">// 如果不想在这处理，就抛出，返回上一层处理,类型不变</span>
-        <span class="token keyword">throw</span><span class="token punctuation">;</span>
-    	<span class="token comment">//. 异常处理</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//其他类型异常捕获</span>
-        
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">try</span><span class="token punctuation">{</span>
-        <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 如果异常都没有处理，那么成员terminate函数是程序中断</span>
-        <span class="token comment">// ...</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="自定义异常类"><a href="#自定义异常类" class="headerlink" title="自定义异常类"></a>自定义异常类</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyException</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token operator">:</span>
-      <span class="token keyword">void</span> <span class="token function">printError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">// try{ 抛出异常</span>
-<span class="token comment">//	throw MyException();</span>
-<span class="token comment">// }</span>
-<span class="token comment">// 捕获异常</span>
-<span class="token keyword">catch</span><span class="token punctuation">(</span>MyException e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="栈解旋"><a href="#栈解旋" class="headerlink" title="栈解旋"></a>栈解旋</h3><ul>
-<li>从try开始到throw抛出异常之前，所有栈上的对象，都会被释放，这个过程称为栈解旋</li>
-<li>栈上对象构造和析构顺序相反</li>
-</ul>
-<h3 id="异常的接口声明"><a href="#异常的接口声明" class="headerlink" title="异常的接口声明"></a>异常的接口声明</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throw</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//thrwo(int) 只能抛出int类型异常</span>
-    <span class="token keyword">throw</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-    <span class="token comment">// 抛出double类型直接挂掉</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//thrwo() 不跑出任何类型异常</span>
-    <span class="token keyword">throw</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="异常变量声明周期"><a href="#异常变量声明周期" class="headerlink" title="异常变量声明周期"></a>异常变量声明周期</h3><p>异常变量的构造是在<code>throw</code>抛出异常时构造，析构实在<code>catch</code>处理完以后析构</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyException</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token operator">:</span>
-      <span class="token keyword">void</span> <span class="token function">printError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">throw</span> <span class="token function">MyException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        <span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>MyException e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// catch时通过拷贝构造又会有一份数据，所以建议使用&amp; </span>
-        <span class="token comment">// catch(MyException &amp;e)</span>
-        
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token comment">// 返回指针，使用new，在堆区开辟内存，然后手动delete</span>
-<span class="token keyword">void</span> <span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token function">MyException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        <span class="token function">dowork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>MyException <span class="token operator">*</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// catch时通过拷贝构造又会有一份数据，所以建议使用&amp; </span>
-        <span class="token comment">// catch(MyException &amp;e)</span>
-        <span class="token keyword">delete</span> e<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="异常的多态"><a href="#异常的多态" class="headerlink" title="异常的多态"></a>异常的多态</h3><p>利用多态来实现<code>printError</code>同一个接口的使用</p>
-<h3 id="系统的异常库"><a href="#系统的异常库" class="headerlink" title="系统的异常库"></a>系统的异常库</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdexcept&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    ofstream <span class="token function">ofs</span><span class="token punctuation">(</span>path， ios<span class="token operator">::</span>out<span class="token operator">|</span>ios<span class="token operator">::</span>trunc<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>ofs<span class="token punctuation">.</span>is_open<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">//... 打开失败    }    ofs &lt;&lt; "content" &lt;&lt; endl;}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    ifstream <span class="token function">ifs</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> ios<span class="token operator">::</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>ifs<span class="token punctuation">.</span>is_open<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">//... 打开失败    }    // 第一种方式    char buf[1024];    while(ifs &gt;&gt; buf) { // 按行读取        cout &lt;&lt; buf &lt;&lt; endl;    }    // 第二种方式    while(!ifs.enf()) { // enf读到文件尾        ifs.getline(buf, sizeof(buf));        cout &lt;&lt; buf  &lt;&lt; endl;    }    // 第三种方式 不推荐 按单个字符读取    char c;    while((c = ifs.get()) != EOF) {        cout &lt;&lt; c &lt;&lt; endl;    }    }</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -736,7 +710,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://orzff.cn/2c61a387/">http://orzff.cn/2c61a387/</a>
+                    <a href="http://orzff.cn/e403a46/">http://orzff.cn/e403a46/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -774,8 +748,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">C++ 学习笔记</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">数学基础</span>
                                 </a>
                             
                         </div>
@@ -1215,45 +1189,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/deefd94b/">
+                <a href="/e403a46/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/LearnML/wallhaven-rdqw1m.6e249wt5bss0.jpg" class="responsive-img" alt="机器学习笔记(一)">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-v9z1dl.7fhsn4aycfk0.jpg" class="responsive-img" alt="数学基础">
                         
-                        <span class="card-title">机器学习笔记(一)</span>
+                        <span class="card-title">数学基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            机器学习笔记(一)
+                            智能计算数学基础
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ML-%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    ML 学习
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    数学基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ML-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">ML 学习笔记</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">数学基础</span>
                     </a>
                     
                 </div>
@@ -1267,30 +1243,34 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2acaf4fa/">
+                <a href="/7e4dc831/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-72j9j9.4g0jy30nmqe0.jpg" class="responsive-img" alt="C++学习笔记(四)">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k7zv97.2u8spfxicri0.jpg" class="responsive-img" alt="吴恩达机器学习5">
                         
-                        <span class="card-title">C++学习笔记(四)</span>
+                        <span class="card-title">吴恩达机器学习5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++学习笔记(四)
+                            吴恩达机器学习笔记(五)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    C++ 学习
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
+                                </a>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
@@ -1300,8 +1280,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">C++ 学习笔记</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -1469,6 +1453,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

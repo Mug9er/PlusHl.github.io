@@ -552,21 +552,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-20
+                    2021-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -674,6 +674,20 @@
 <p>$repeat\ until\ convergence\ \{ \\ \theta_j\ :=\  \theta_j\ - \alpha \ \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1) (for j=0 and j=1) \\ \}$</p>
 <p>$\theta_0$和$\theta_1$同时更新，而不是先更新$\theta_0$，然后再更新$\theta_1$</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56.6zxmtif8pt40.png" alt="更新方法"></p>
+<blockquote>
+<p><strong>泰勒展开</strong></p>
+<p>泰勒公式是将一个在$x=x_0$处具有$n$阶导数的函数$f(x)$利用关于$(x-x0)$的$n$次多项式来逼近函数的方法。</p>
+<p>若函数$f(x)$在包含$x_0$的某个闭区间$[a,b]$上具有$n$阶导数，且在开区间$(a,b)$上具有$(n+1)$阶导数，则对闭区间$[a,b]$上任意一点$x$，成立下式：</p>
+<p>$f(x) = \frac{f(x_0)}{0!}+\frac{f’(x_0)}{1!}(x-x_0)+…+\frac{f^{(n)}(x_0)}{n!} + R_n(x)$</p>
+<p>梯度下降在推导过程中使用了1阶泰勒展开</p>
+<p>$f(x+\Delta x)\approx f(x) + a^t\Delta x$</p>
+<p>$\Delta x$是一个向量，$a$也是一个向量,$a^t$就是当前的梯度</p>
+<p>梯度下降的目的是找到一个方向使得$f(x)\gt f(x+\Delta x)$, 在$x$附近小范围的$\Delta x$找到一个点使得$f(x+\Delta x)$最小，然后向着这个的方向移动并迭代，在计算$\min\limits_{||\Delta x|| \le \epsilon} f(x+\Delta x)$时使用泰勒展开减小计算量</p>
+<p><strong>柯西不等式</strong></p>
+<p>两个向量做内积时$||<a,b>||^2 \le ||a||^2 ||b||^2$,等式成立当且仅当$a,b$在一条直线上，或者说$a,b$线性相关</a,b></p>
+<p>$a^t\Delta x=<a,\delta x=""> \ge -||a|| \ ||b|| \ge -||a||\epsilon$</a,\delta></p>
+<p>即$a^t\Delta x \ge -\epsilon ||a||$不等式成立时$\Delta x = -\lambda a, \lambda &gt;0$</p>
+</blockquote>
 <h4 id="梯度下降如何达到最优点"><a href="#梯度下降如何达到最优点" class="headerlink" title="梯度下降如何达到最优点"></a>梯度下降如何达到最优点</h4><p>我们现在使用一个简单函数来解释一下梯度下降算法</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06.7ce3ttmbrrc.png" alt="梯度下降如何达到最优点"></p>
 <p>假设我们的参数只有一个</p>
@@ -1509,7 +1523,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">69k</span>
+                        class="white-color">70.7k</span>
             
             
             
@@ -1797,9 +1811,24 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

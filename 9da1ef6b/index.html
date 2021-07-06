@@ -1814,7 +1814,7 @@ tar -xjvf 文件名.tar.bz2 -C 路径<span aria-hidden="true" class="line-number
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">69k</span>
+                        class="white-color">70.7k</span>
             
             
             
@@ -2102,9 +2102,24 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
