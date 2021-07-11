@@ -544,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-07
+                    2021-07-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    15 分
                 </div>
                 
 
@@ -685,6 +685,71 @@
 <li>$\log(1+x)=\sum\limits_{k=1}^n(-1)^{(k+1)}\frac{x^k}{k}+o(x^n)$</li>
 <li>$\log(1-x)=-\sum\limits_{k=1}^n\frac{x^k}{k}+o(x^n)$</li>
 </ul>
+<h2 id="多元微分"><a href="#多元微分" class="headerlink" title="多元微分"></a>多元微分</h2><h3 id="一元微分"><a href="#一元微分" class="headerlink" title="一元微分"></a>一元微分</h3><p>$f$在点$x$处可微$\iff f(y)=f(x)+a(y-x)+o(y-x),f(x)$是固定的$a(y-x)$可以看成增量$\Delta x,$$o(y-x)$ 是无穷小量</p>
+<p>不考虑无穷小量时，$f(y)$可近似看成$f(y)\approx f(x)+a(y-x)$,这个就是关于增量$\Delta x=y-x$的线性函数</p>
+<p>这样一元微分就在$x$出展开成了一个线性函数</p>
+<h3 id="多元微分-1"><a href="#多元微分-1" class="headerlink" title="多元微分"></a>多元微分</h3><h3 id="什么是多元函数"><a href="#什么是多元函数" class="headerlink" title="什么是多元函数"></a>什么是多元函数</h3><p>多元函数就是在定义域$D\subset\mathbb{R}^n$ 通过某些规则达到$f(x)$</p>
+<p>比如$f(x)=||x||_2^2=\sum\limits_{i=1}^nx_i^2$这就是一个多元函数</p>
+<p>如果$f:D\subset \mathbb{R}^n \to \mathbb{R}$ 这就代表$f(x)$是一个单值多元函数</p>
+<p>如果：$f:D\subset\mathbb{R}^n\to\mathbb{R}^m$,这就代表$f(x)$是一个多值多元函数</p>
+<p>关于多值多元函数，可以看成$x\to(f_1(x),\cdots,f_m(x))$其中每个$f$都是一个单值多元函数$f:D\subset\mathbb{R}^n \to \mathbb{R}$</p>
+<p>$f(x_1,x_2)=(x_1+x_2, x_1x_2)$这个就是一个$\mathbb{R}^2\to\mathbb{R}^2$的多元函数</p>
+<h3 id="多元微分-2"><a href="#多元微分-2" class="headerlink" title="多元微分"></a>多元微分</h3><p>对多元函数$f:D\subset\mathbb{R}^n\to\mathbb{R}^m$求微分可以借鉴一元微分的方法，在$x$处将微分展开成一个线性函数</p>
+<p>$f(y)\approx f(x)+L(y-x)$</p>
+<p>$L$是一个线性映射，将$n$维的向量映射成$m$为的向量，也可以说是一个矩阵，$L(y-x)$是作用在$y-x$之上的</p>
+<blockquote>
+<p>$L(y-x)$也可写成$L(y-x)=A(y-x)$,$L(y-x)$是$n\times m$形式的， $y-x$是一个$n\times1$的向量，$A$是一个$m\times$n的矩阵，线性映射可以唯一的写成矩阵形式</p>
+</blockquote>
+<p>对于$f:D\subset \mathbb{R}^n\to \mathbb{R}^m$，如果存在一个矩阵$A$，使得$f(y)=f(x)+A(y-x)+o(||y-x||)$成立，那么就称$f$在点$x\subset D$处可微,$A$记作微分$A=Df(x)$</p>
+<p>也可以写成$\exists A \ \ st. \ \ \lim\limits_{y\to x} \frac{||f(y)-f(x)-A(y-x)||}{||y-x||}=0$</p>
+<p>例子： $f(x)=Ax+b, A_{m\times n},b\in \mathbb{R}^m$</p>
+<p>此时$Df(x)=?$</p>
+<p>证明： $f(y)-f(x)\\=Ay+b-(Ax+b)\\=A(y-x)$</p>
+<p>所以$f(y)-f(x)=A(y-x)$</p>
+<p>那么$\lim\limits_{y\to x} \frac{||f(y)-f(x)-A(y-x)||}{||y-x||}=0$成立，所以$Df(x)=A$</p>
+<h3 id="偏导"><a href="#偏导" class="headerlink" title="偏导"></a>偏导</h3><p>$f:D\subset\mathbb{R}^n\to\mathbb{R}$,对于这样一个映射，其多元微分可以写成$f(y)=f(x)+Df(x)(y-x)+o(||y-x||)$</p>
+<p>其中$Df(x)$是$1\times n$的，所以$Df(x)$也可以看成$v^t$</p>
+<p>即$f(y)=f(x)+v^t(y-x)+o(||y-x||)\\f(y)=f(x)+\sum\limits_{i=1}^nv_i(y_i-x_i)+o(||y-x||)$</p>
+<p>将$i$固定，$\forall j\not= i,y_j=x_j$，保留一个$i$将其他方向的变量全部固定，这样$x,y$就可以看成处于同一条轴上</p>
+<p>此时$f(x_1,\cdots,x_{i-1},y_i,x_{i+1},\cdots,x_n)=f(x_1,\cdots,x_n)+v_i(y_i-x_i)+o(|y_i-x_i|)$</p>
+<p>因为$f$函数的所有其他变量全部都固定成了$x_i$,$f(x_1,\cdots,x_{i-1},y_i,x_{i+1},\cdots,x_n)$相当于只有一个自变量$y_i$这样$f(x_1,\cdots,x_{i-1},y_i,x_{i+1},\cdots,x_n)$可以看成是一个关于$y_i$的函数$g(y_i)$,此时$g(y_i)=g(x_1)+v_i(y_i-x_i)+o(|y_i-x_i|)$在这个一元函数中，可以明显发现$g$的微分就是$v_i=g’(x_i)$</p>
+<p>其他的$i$都被固定住，求出的这个$g’_i(x_i)$就叫做$f$在$x$处第$i$个方向的偏导数，$g’_i(x_i)$可以写成$\partial_if(x)$</p>
+<p>如果偏导存在,那么$Df(x)=(g’_1(x_i),g’_2(x_i),\cdots,g’_n(x_n))=(\partial_1if(x),\cdots,\partial_nif(x))$</p>
+<p>将$Df(x)$竖起来的话，就叫做梯度</p>
+<h3 id="梯度和偏导"><a href="#梯度和偏导" class="headerlink" title="梯度和偏导"></a>梯度和偏导</h3><p>如果$f$在点$x$处可维$\Longrightarrow Df(x)=(\triangledown f(x))^t$，梯度是多元微分的转置，也能推出$f(y)=f(x)+\triangledown f(x)(y-x)+o(||y-x||)$</p>
+<p>可微$\Longrightarrow $梯度存在，梯度存在$\not\Longrightarrow$ 可微</p>
+<p>当$f:D\in\mathbb{R}^n\to \mathbb{R}，D是开集$，向量每个方向的偏导数$\partial_if(x)$都存在并且连续，此时可以推出来$\Longrightarrow $$f$在$D$上可微</p>
+<p>$f$在$D$上偏导存在并且连续，我们记作$f\in C^1(D)$</p>
+<h3 id="计算微分"><a href="#计算微分" class="headerlink" title="计算微分"></a>计算微分</h3><h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>对于$A\in \mathbb{R}^{m\times n},b\in \mathbb{R}^m$</p>
+<p>计算一个函数$f(x)=||AX-b||^2$的微分</p>
+<p>$f(x)$ $=||AX-b||^2\\=(AX-b)^t(AX-b)\\=(X^tA^t-b^t)(AX-b) \\ = X^tA^tAX-b^tAX-X^tA^tb+b^tb\\=X^t(A^tA)X-2(A^tb)^tX+b^tb\$</p>
+<p>这个就是关于$X$的二次函数</p>
+<p>$f(x)=\frac{1}{2}X^tpX+q^tX+r,p=2A^tA,q=-2(A^tb)$</p>
+<p>此时对$X$微分，梯度就等于$\triangledown f(x)=pX=q=2A^tAX+2A^tb$</p>
+<p>梯度转置一下就是微分了</p>
+<h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>$f(x)=e^{w^tx},w,x\in \mathbb{R}^n$求微分</p>
+<p>$f(x)$可以看成$f(x)=e^{w_1x_1+w_2x_2+\cdots+w_nx_n}$</p>
+<p>求偏导时$\part_1f(x)=w_1e^{w_1x_1+\cdots+w_nx_n} \\ \part_if(x)=w_ie^{w_1x_1+\cdots+w_nx_n}$</p>
+<p>$\triangledown f(x) = (w_1e^{w_1x_1+\cdots+w_nx_n},\cdots, w_ne^{w_1x_1+\cdots+w_nx_n})^t=f(x)w$</p>
+<p>计算出来的梯度为$wf(x)$，因为$f(x)$是连续的，所以梯度也是连续的，那么就可以推出$\triangledown f(x)=(Df(x))^t, Df(x)=f(x)w^t$</p>
+<h3 id="复合函数求导"><a href="#复合函数求导" class="headerlink" title="复合函数求导"></a>复合函数求导</h3><p>一元函数求导: $g(f(x))’=g’(f(x))f’(x)$</p>
+<p>多元函数: $D(g\circ f(x))=D g(f(x))Df(x)$</p>
+<blockquote>
+<p>$g\circ f(x)=g(f(x))$</p>
+<p>其中$f:\mathbb{R}^n\to \mathbb{R}^m \\g:\mathbb{R}^m\to \mathbb{R}^k$</p>
+<p>$g\circ f(x): \mathbb{R}^n\to \mathbb{R}^k$</p>
+</blockquote>
+<p>一元函数：$(fg)’(x)=f(x)g’(x)+f’(x)=g(x)$</p>
+<p>多元函数：$D(fg)(x)=f(x)Dg(x)+g(x)Df(x)$</p>
+<h3 id="矩阵微分"><a href="#矩阵微分" class="headerlink" title="矩阵微分"></a>矩阵微分</h3><p>$f: D\in \mathbb{R}^{m\times n}\to \mathbb{R}, f(A),A_{m\times n}$</p>
+<p>多元函数参数是矩阵时求偏导，实际上$f(A)$的参数是一个$m\times n$的行向量，但是写的时候还是当作矩阵来写</p>
+<p>$(Df(A))_{i,j}=\part_{a_{ij}}f(A)$,对矩阵的第$i,j$位置求偏导</p>
+<p>例子：$f(A)=tr(AB),A:m\times n,B: n\times m$，求$Df(A)$</p>
+<p>$f(A) = tr(AB)=\sum\limits_{i=1}^m(AB)_{ii}\\ =\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{i,j}b_{j,i}=\sum\limits_{i.j}a_{j,i}b_{i,j}$</p>
+<p>此时$f(A)=\sum a_{i,j}b_{j,i}$</p>
+<p>$\part_{a_{i,j}}f(A)=b_{j,i}\(Df(A))_{i,j}=b_{j,i}=(B^t)_{i,j}$</p>
+<p>所以$f(A)=tr(AB) \Longrightarrow D(f(A))=B^t$</p>
+<p>$tr(A)=tr(A^t) \\ f(A)=tr(ABA^t)\Longrightarrow A(B+B^t)$</p>
                 
             </div>
             <hr/>
@@ -1480,7 +1545,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">70.8k</span>
+                        class="white-color">72.4k</span>
             
             
             
