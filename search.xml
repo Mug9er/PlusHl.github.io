@@ -161,12 +161,58 @@
 <h3 id="矩阵微分"><a href="#矩阵微分" class="headerlink" title="矩阵微分"></a>矩阵微分</h3><p>$f: D\in \mathbb{R}^{m\times n}\to \mathbb{R}, f(A),A_{m\times n}$</p>
 <p>多元函数参数是矩阵时求偏导，实际上$f(A)$的参数是一个$m\times n$的行向量，但是写的时候还是当作矩阵来写</p>
 <p>$(Df(A))_{i,j}=\partial_{a_{ij}}f(A)$,对矩阵的第$i,j$位置求偏导</p>
-<p>例子：$f(A)=tr(AB),A:m\times n,B: n\times m$，求$Df(A)$</p>
+<p><strong>例子</strong>：$f(A)=tr(AB),A:m\times n,B: n\times m$，求$Df(A)$</p>
 <p>$f(A) = tr(AB)=\sum\limits_{i=1}^m(AB)_{ii}\\ =\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{i,j}b_{j,i}=\sum\limits_{i.j}a_{j,i}b_{i,j}$</p>
 <p>此时$f(A)=\sum a_{i,j}b_{j,i}$</p>
 <p>$\partial_{a_{i,j}}f(A)=b_{j,i}\\ (Df(A))_{i,j}=b_{j,i}=(B^t)_{i,j}$</p>
-<p>所以$f(A)=tr(AB) \Longrightarrow D(f(A))=B^t$</p>
-<p>$tr(A)=tr(A^t) \\ f(A)=tr(ABA^t)\Longrightarrow A(B+B^t)$</p>]]></content>
+<p>$f(A)=tr(AB) \Longrightarrow D(f(A))=B^t$</p>
+<p><strong>例子：</strong>$f(A)=tr(ABA^t),A:m\times n,B: n\times n$求$Df(A)$</p>
+<p>$f(A)$$=tr(ABA^t) \\ =\sum(ABA^t)_{i,i}\\ = \sum (A)_{i,j}(B)_{j,k}(A^t)_{k.i} \\ = \sum (A)_{i,j}(B)_{j,k}(A)_{i,k}\\ =\sum a_{i,j}b_{j,k}a_{i,k}$</p>
+<p>此时，为了区分$\partial a_{i,j}f$中的$i,j$,我们将$f(A)$中的$i,j,k$转换成$i’,j’,k’$</p>
+<p>$f(A)=\sum a_{i’,j’}b_{j’,k’}a_{i’,k’}\\ \partial_{a_{i,j}}f=\sum \partial_{a_{i,j}}(a_{i’,j’}a_{i’k’})b_{j’,k’}$</p>
+<p>在$\partial_{a_{i,j}}$中是两个函数相乘的形式$(fg)’=f’g+g’f$</p>
+<p>所以$\partial_{a_{i,j}}f=\sum \partial_{a_{i,j}}(a_{i’,j’})a_{i’k’}b_{j’,k’}+\partial_{a_{i,j}}(a_{i’,k’})a_{i’j’}b_{j’,k’}$</p>
+<p>前一项中的$\partial_{a_{i,j}}(a_{i’,j’})$只有在$i’=i,j’=j$是才不为0，所以第一项可以写成$\sum a_{i,k’}b_{j,k’}$</p>
+<p>后一项同理$i’=i,k’=j$时才为1，$\sum a_{i,j’}b_{j’,k}$,整理一下$\partial_{a_{i,j}}f=\sum\limits_{k}a_{i,k}b_{j,k}+\sum\limits_{k}a_{i,k}b_{k,j}\\=(AB^t)_{i,j}+(AB)_{i,j}=(AB^t+AB)_{i,j}$</p>
+<p>所以$f(A)=tr(ABA^t)\Longrightarrow Df(A)=A(B+B^t)$</p>
+<p>$tr(A)=tr(A^t) \\ f(A)=tr(ABA^t)\Longrightarrow A(B+B^t)$</p>
+<blockquote>
+<p>$||A||^2=tr(AA^t)=tr(AIA^t)\\Df(A)=A(I+I^t)=2AI=2A$</p>
+</blockquote>
+<p><strong>例子</strong>：$f(A)=x^tA^{-1}x,$ $A$是可逆的$n$阶对称方阵，$x\in \mathbb{R}^n$,求$Df(X0)$</p>
+<p>$f(A+ \epsilon) - f(A)\\ =x^t(A+\epsilon)^{-1}x-x^tA^{-1}x \\ = x^t((A+\epsilon)^{-1}-A^{-1})x$ </p>
+<p>因为$x^t,x$都是常量，所以关键就是$(A+\epsilon)^{-1}-A^{-1}$</p>
+<p>$(A+\epsilon)^{-1}-A^{-1}\\ =(I+A^{-1}\epsilon)^{-1}-A^{-1}$</p>
+<p>因为$\epsilon$是一个小值，而一个小值可以写成$(I-X)^{-1}=I+X+X^2+X^3+\cdots$</p>
+<p> 所以，原式=$(I-A^{-1}\epsilon+(A^{-1}\epsilon)^2-(A^{-1}\epsilon)^3+\cdots)A^{-1}-A^{-1} \\ =A^{-1}-A^{-1}\epsilon A^{-1}+(A^{-1}\epsilon)^2 A^{-1}-(A^{-1}\epsilon)^3 A^{-1} + \cdots - A^{-1}\\ = -A^{-1}\epsilon A^{-1} + o(\epsilon)$</p>
+<p>后面那些小值可以看成一个关于$\epsilon$的无穷小量</p>
+<p>$f(A+\epsilon)-f(A)=x^t(-A^{-1}\epsilon A^{-1} + o(\epsilon))x \\ = -x^tA^{-1}\epsilon A^{-1}x + o(\epsilon) $</p>
+<p>$x^tA^{-1}$和$A^{-1}x$都是向量，所以$-x^tA^{-1}\epsilon A^{-1}x$是关于$\epsilon$分量的线性组合</p>
+<p>设$A^{-1}x = y,y^t=x^t(A^{-1})^t=x^tA^{-1}$</p>
+<p>原式=$-y^t\epsilon y + o(\epsilon)$</p>
+<p>$f(A+\epsilon)-f(A) = -\sum\limits_{i,j}y_iy_j\epsilon_{i,j}+o(\epsilon)$</p>
+<p>偏微分就为：$\partial_{a_{i,j}}f(A)=-y_iy_j = -(yy^t)_{i,j}$</p>
+<p>导数就为：$Df(A)=-yy^t=-A^{-1}x(A^{-1}x)^t=-A^{-1}xx^tA^{-1}$</p>
+<h3 id="矩阵二阶展开"><a href="#矩阵二阶展开" class="headerlink" title="矩阵二阶展开"></a>矩阵二阶展开</h3><ul>
+<li><p>多元函数：$\partial_j(\partial_if(x))$等价于$\partial_{i,j}f(x)$</p>
+</li>
+<li><p>对于$f:D\in \mathbb{R}^n \to \mathbb{R}$,如果$\partial_{i,j}f$都存在且连续，称$f$是$D$上二次连续可微的函数$f \in C^2(D)$</p>
+<p>$(\partial_{i,j}f)_{1\le i,j \le n}$是一个$n\times n$矩阵 ，称为$Hessian$矩阵，</p>
+<p>梯度可以看成是一阶导数，对每个向量求偏导，$Hessian$可以看成是二阶导数，对已经求出的导数再对每个向量求偏导，最终得到的是一个$n\times n$的矩阵 </p>
+</li>
+<li><p><strong>二阶展开：</strong> $f(y)=f(x)+Df(x)(y-x)+\frac{1}{2}(y-x)^t(\partial_{i,j}f)(y-x)+D(||y-x||^2)$</p>
+<p>因为$Df(x)$是梯度的转置，而$\partial_{i,j}f$可以写成$\triangledown^2f$</p>
+<p>所以也可以写成：$f(y)=f(x)+\triangledown f(x)(y-x)+\frac{1}{2}(y-x)^t\triangledown^2f(x)(y-x)+o(||y-x||^2)$</p>
+</li>
+<li><p>如果$f(y)=f(x)+q^t(y-x)+\frac{1}{2}(y-x)^tp(y-x)+o(||y-x||^2),$其中$q=\triangledown f(x),p=\triangledown ^2 f(x)$</p>
+</li>
+</ul>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>对于定义域在$D$上的函数$f$找极小值</p>
+<p>如果存在$x^<em>$，在$x^</em>$的邻域$B(x^<em>,r)$内，所有值都小于$f(x^</em>)$的$f(x^<em>)\le f(x)$，那么$x^</em>$就是这个函数在$B(x^*,r)$的局部极小值</p>
+<h3 id="局部极小值必要条件"><a href="#局部极小值必要条件" class="headerlink" title="局部极小值必要条件"></a>局部极小值必要条件</h3><p>$x^<em>$是局部极小值$\Longrightarrow$ $Df(x^</em>)=0,\triangledown^2f(x^*)\ge 0$</p>
+<p><strong>半正定矩阵:</strong> $P \Longleftrightarrow x^tPx \ge 0, \forall x \in \mathbb{R}^n$ </p>
+<p><strong>正定矩阵:</strong> $P \Longleftrightarrow x^tPx &gt; 0, \forall x \in \mathbb{R}^n-\{0\}$ </p>
+<h3 id="局部极小值充分条件"><a href="#局部极小值充分条件" class="headerlink" title="局部极小值充分条件"></a>局部极小值充分条件</h3><p>$Df(x^<em>)=0,\triangledown^2f(x^</em>) &gt; 0$ $\Longrightarrow$ $x^*$是局部极小值</p>]]></content>
       <categories>
         <category>数学基础</category>
       </categories>
@@ -4310,23 +4356,23 @@ STATICFILES_DIRS = [
 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样<code>Django</code>不仅可以将<code>/</code> 映射到<code>index.html</code>，而且还可以顺利找到静态文件</p>
 <h3 id="backend-配置"><a href="#backend-配置" class="headerlink" title="backend 配置"></a><code>backend</code> 配置</h3><p>在<code>backend</code>中创建<code>urls</code></p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
-<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">from django.urls import path
+from . import views
 
-urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
-    path<span class="token punctuation">(</span><span class="token string">'books/'</span><span class="token punctuation">,</span> view <span class="token operator">=</span> views<span class="token punctuation">.</span>books<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"books"</span><span class="token punctuation">)</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+urlpatterns = [
+    path('books/', view = views.books, name="books")
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>backend/views.py</code>中</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>http<span class="token punctuation">.</span>response <span class="token keyword">import</span>  JsonResponse
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">from django.shortcuts import render
+from django.http.response import  JsonResponse
 
-<span class="token comment"># Create your views here.</span>
+# Create your views here.
 
-<span class="token keyword">def</span> <span class="token function">books</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    books <span class="token operator">=</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'title'</span><span class="token punctuation">:</span> <span class="token string">"python"</span><span class="token punctuation">,</span> <span class="token string">"price"</span><span class="token punctuation">:</span> <span class="token number">89</span><span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-    <span class="token keyword">return</span> JsonResponse<span class="token punctuation">(</span>books<span class="token punctuation">,</span> safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+def books(request):
+    books = [
+        {'id': 1, 'title': "python", "price": 89}
+    ]
+    return JsonResponse(books, safe=False)
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>此时访问<code>/</code>我们可以看到使用<code>Django</code>作为后端的<code>VueJS</code>前端,访问<code>/api/books</code>我们可以看到<code>json</code>数据</p>
 <h3 id="解决开发时的跨域问题"><a href="#解决开发时的跨域问题" class="headerlink" title="解决开发时的跨域问题"></a>解决开发时的跨域问题</h3><p>使用<code>corsheaders</code></p>
@@ -4367,8 +4413,8 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
         <category>配置</category>
       </categories>
       <tags>
-        <tag>Django</tag>
         <tag>Vue</tag>
+        <tag>Django</tag>
       </tags>
   </entry>
   <entry>
@@ -4675,8 +4721,8 @@ mv support_center_nginx.conf nginx_backend.conf`<span aria-hidden="true" class="
         <category>配置</category>
       </categories>
       <tags>
-        <tag>Django</tag>
         <tag>Vue</tag>
+        <tag>Django</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
