@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="数学基础, Mug-9&#39;s blog">
+    <meta name="keywords" content="数学基础-分析, Mug-9&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>数学基础 | Mug-9&#39;s blog</title>
+    <title>数学基础-分析 | Mug-9&#39;s blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
 
@@ -396,7 +396,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数学基础</h1>
+                    <h1 class="description center-align post-title">数学基础-分析</h1>
                 </div>
             </div>
         </div>
@@ -516,6 +516,10 @@
                                 <span class="chip bg-color">数学基础</span>
                             </a>
                         
+                            <a href="/tags/%E5%BE%AE%E5%88%86/">
+                                <span class="chip bg-color">微分</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -524,8 +528,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
-                                数学基础
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                智能计算数学基础
                             </a>
                         
                     </div>
@@ -544,21 +548,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-12
+                    2021-07-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    5.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    29 分
                 </div>
                 
 
@@ -796,6 +800,87 @@
 <p><strong>半正定矩阵:</strong> $P \Longleftrightarrow x^tPx \ge 0, \forall x \in \mathbb{R}^n$ </p>
 <p><strong>正定矩阵:</strong> $P \Longleftrightarrow x^tPx &gt; 0, \forall x \in \mathbb{R}^n-\{0\}$ </p>
 <h3 id="局部极小值充分条件"><a href="#局部极小值充分条件" class="headerlink" title="局部极小值充分条件"></a>局部极小值充分条件</h3><p>$Df(x^<em>)=0,\triangledown^2f(x^</em>) &gt; 0$ $\Longrightarrow$ $x^*$是局部极小值</p>
+<h3 id="无约束优化问题"><a href="#无约束优化问题" class="headerlink" title="无约束优化问题"></a>无约束优化问题</h3><p> <strong>例子：</strong> $f(x)=\frac{1}{2}||Ax-b||^2,A$是$m\times n, rank(A)=m \le n, b\in \mathbb{R}^m$,求局部极小值$x^*$</p>
+<p>$f(x)$ $ = \frac{1}{2}(Ax-b)^t(Ax-b)\\ = \frac{1}{2}(x^tA^t-b^t)(Ax-b) \\ = \frac{1}{2}x^t(A^tA)x - (A^tb)^tx+\frac{1}{2}b^tb$</p>
+<p>令$p = A^tA,q = -A^tb$</p>
+<p>原式=$\frac{1}{2}x^tpx+q^tx+r$</p>
+<p>那么这是一个关于$x$的二次函数，所以$\triangledown f(x)=A^tAx-A^tb,\triangledown^2f(x)=A^tA$</p>
+<ul>
+<li><p>如果$x^*$是局部极小值点，那么$\triangle f(x) = 0 , \triangledown^2f(x) \ge 0$</p>
+<p>即$A^tAx = A^tb,A^tA \ge 0$</p>
+</li>
+<li><p>如果$A^tAx = A^tb,A^tA &gt; 0$那么就能推出$x^*$是局部极小</p>
+</li>
+</ul>
+<p>因为$rank(A)$等于$m$,所以$A$是可逆的，那么$x^*$就可以用$(A^tA)^{-1}A^tb$求出</p>
+<p> <strong>例子：</strong> $f(x)= \frac{1}{2}||Ax-b||^2 + \frac{\lambda}{2}||x||^2$,求局部最优解$x^*$   </p>
+<ul>
+<li><p>$x^<em>$ 局部极小值可以推出   $\triangledown f(x^</em>)=A^tAx^<em>-A^tb+\lambda x^</em>=0, \triangledown^2 f(x^*)=A^tAI+\lambda \ge 0$ </p>
+<p>$A^tA+\lambda I\ge0$永远成立，因为$A^tA+\lambda I$可以左右加上$x$，可以写成$x^t(A^tA+\lambda I)x \Longrightarrow ||Ax||^2 + \lambda ||x||^2 \ge 0$</p>
+</li>
+<li><p>$\triangledown f(x^<em>)=0, \triangledown^2f(x^</em>) &gt; 0$可以推出$x^<em>$是局部极小，当$x$不为零时，$\triangledown^2f(x^</em>)$永远成立</p>
+</li>
+</ul>
+<p>​    所以$x^<em>$是局部极小值等价于$\triangledown f(x^</em>) = 0 \Longleftrightarrow A^tAx^<em>+\lambda x^</em>=A^tb$</p>
+<p>因为$A^A+\lambda I$是正定矩阵，所以是$A^A+\lambda I$可逆的</p>
+<p>$A^tAx^<em>+\lambda x^</em>=A^tb \Longleftrightarrow (A^tA+\lambda I)x^<em> = A^tb \Longleftrightarrow x^</em> = (A^tA+\lambda I)^{-1}A^tb$</p>
+<h3 id="有约束优化问题"><a href="#有约束优化问题" class="headerlink" title="有约束优化问题"></a>有约束优化问题</h3><h4 id="线性约束"><a href="#线性约束" class="headerlink" title="线性约束"></a>线性约束</h4><p><strong>例子：</strong> $\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b &amp; A_{p \times n}, rank(A) = p, b\in \mathbb{R}^p \end{array}  \right.  \end{equation}$</p>
+<p>$x$满足线性约束条件，在这个线性约束条件下来找最小值</p>
+<p>$x^<em>$满足$Ax^</em>=b$,如果存在$Ax=b$,那么可以推导到$A(x-x^<em>)=0$，此时，$x-x^</em>$是$Ay=0$的解</p>
+<p>$\{x: Ax=b\}=x^*+\{y: Ay= 0\}$,所有的$y$构成的集合被称为矩阵$A$的零空间$N(A)$，矩阵的零空间是一个线性空间</p>
+<blockquote>
+<p>$N(A):A$的零空间，是一个线性空间</p>
+<p>$dim(N(A)) = n-p$</p>
+<p>假设$\{\alpha_1,\cdots,\alpha_{n-p} \}$是$N(A)$的一组基，其中$\alpha_1,\cdots,\alpha_{n-p}$线性无关</p>
+<p>那么$N(A)=\{ u_1\alpha_1+u_2\alpha_2+\cdots+u_{n-p}\alpha_{n-p}： u_i \in \mathbb{R} \}$，零空间中的所有元素都可以通过基来构造出来</p>
+<p>$\alpha_i$是$n\times 1$的向量， 因为 $Ax=b$,$b$ 是$p \times 1$的向量</p>
+</blockquote>
+<p>所以$\{x:Ax=b \}=x^*+N(A)$</p>
+<p>如果$x$使得$Ax-b=0$，那么可以等价于$x=x^<em>+\sum\limits_{i=1}^{n-p}u_i\alpha_i = x^</em> + (\alpha_1,\cdots,\alpha_{n-p})\begin{equation} \left( \begin{array}{lr} u_1 \\ \vdots \\ u_{n-p} \end{array}  \right)  \end{equation}$ </p>
+<p>将$(\alpha_1,\cdots,\alpha_{n-p})$写成矩阵形式得到一个$n\times (n-p)$的矩阵$B$</p>
+<p>$Ax=b \Longleftrightarrow x = x^<em> + By,B:n\times (n-p), y\in \mathbb{R}^{n-p} \\ \{ x\in \mathbb{R}^n: Ax=b \}=\{ y\in \mathbb{R}^{n-p} \} \Longleftrightarrow  x = x^</em> + By$</p>
+<p>$Ax =b$的解就相当于$x = x^<em> + By$,在$f(x)$中将$x$替换成$x^</em>+By$，即$\min\limits_{y\in \mathbb{R}^{n-p}}f(x^*+By)$。</p>
+<p>有约束问题通过将约束条件的解求出来，写成一个$x^*$加零空间的形式将有约束问题转化成无约束的优化问题</p>
+<p> 将$f(x^*)$做二阶的泰勒展开后得到</p>
+<p>$f(x^<em>+\epsilon)=f(x^</em>)+\triangledown f(x^<em>)^t\epsilon + \frac{1}{2}\epsilon^t\triangledown^2f(x^</em>)\epsilon+o(||\epsilon||^2)$</p>
+<p>将$\epsilon =By$代入</p>
+<p>$f(x^<em>+By)=f(x^</em>)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x^*)B)y+o(||y||^2)$</p>
+<p>设$f(x^*+By)$ 写成一个关于$y$的函数 $g(y)$</p>
+<p>则：$g(y)=g(0)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x^*)B)y+o(||y||^2)$</p>
+<p>那么：$\triangledown g(0)=B^t \triangledown f(x^<em>)\\ \triangledown^2g(0)=B^t\triangledown^2f(x^</em>)B$</p>
+<p>$g(y)=f(x^<em>+By)$，如果$x^</em>$是$f$的局部极小，那么等价于$0$是$g$的局部极小，而$g$的一阶微分和二阶微分都已经求出来了，那么其解也就确定了</p>
+<p>$\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b  \end{array}  \right.  \end{equation}$</p>
+<ul>
+<li>$x^*$是局部极小$\Longrightarrow$ $\triangledown g(0)=0， \triangledown^2g(0) \ge 0$</li>
+<li>如果$B^t \triangledown f(x^<em>) = 0,B^t\triangledown^2f(x^</em>)B &gt; 0 \Longrightarrow x^*$是局部极小</li>
+</ul>
+<blockquote>
+<p><strong>拉格朗日乘子法 </strong></p>
+<p>$N(A)=\{x:Ax=0\} $ 零空间</p>
+<p>$ R(A)=\{Ax: x\in \mathbb{R}^n\}$ 矩阵$A$的像空间</p>
+<p>$(N(A))^{\bot}=R(A^t)$ 零空间的正交补时$A^t$的像空间</p>
+<p>正交补的定义：$V^{\bot}=\{y\in\mathbb{R}^n : y^tx = 0, \forall x \in V\}$</p>
+<p>因为$B^t=\begin{equation} \left( \begin{array}{lr} \alpha^t_1 \\ \vdots \\ \alpha^t_{n-p} \end{array}  \right)  \end{equation}$</p>
+<p>所以$B^t\triangledown f(x^<em>)=0$ $\Longleftrightarrow \alpha_i^t\triangledown f(x^</em>)=0,\forall i\in \{1,\cdots,n-p\}\\ \Longleftrightarrow \triangledown f(x^<em>) \in N(A)^{\bot} \\ \Longleftrightarrow  \triangledown f(x^</em>) \in R(A^t) , R(A^t)=\{A^ty: y\in \mathbb{R}^p \} \\ \Longleftrightarrow  \exists \mu \in \mathbb{R}^p st.\ \triangledown f(x^*)+A^t\mu=0 $ </p>
+<p>关于$B^t\triangledown f(x^<em>)=0$ 经过一些看不懂的变换可以等价于$\exists \mu \in \mathbb{R}^p$,使得$\triangledown f(x^</em>)+A^t\mu=0$</p>
+<p>而在拉格朗日乘子法中针对一开始的优化问题，可以写成$L(x,\mu) = f(x)+\mu^t(Ax-b)$</p>
+<p>而$L(x,\mu)$对$x$求导就可得 $\triangledown f(x^*) + A^t\mu$</p>
+</blockquote>
+<h4 id="拉格朗日乘子"><a href="#拉格朗日乘子" class="headerlink" title="拉格朗日乘子"></a>拉格朗日乘子</h4><p>对于$\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b  \end{array}  \right.  \end{equation}$</p>
+<p>$x^<em>$局部极小$\Longrightarrow\partial_x L(x^</em>,\mu)=0$，其中$L(x,\mu)=f(x)+\mu^t(Ax-b)$</p>
+<p><strong>例子</strong> $\begin{equation} \left\{ \begin{array}{lr} minimize\  \sum\limits_{i=1}^nx_i\log x_i \\ sub\ to\  \sum\limits_{i=1}^nx_i=1 \end{array}  \right.  \end{equation}$</p>
+<p>$L(x,\mu)=\sum\limits_{i=1}^nx_i\log x_i + \mu(\sum\limits_{i=1}^nx_i-1)$</p>
+<p>$x$局部最小$\Longrightarrow \partial_xL=0,\Longrightarrow \forall i,\partial_{xi}L=0 \\ \Longrightarrow 1+ \log x_i + \mu = 0, \forall i\\ \Longrightarrow \log x_i = -(1+\mu) \Longrightarrow x_i = e^{-(1+\mu)}, \forall i \\ \Longrightarrow x_1 = x_2=…=x_n=\frac{1}{n}$</p>
+<p>考虑$B^t\triangledown^2f(x)B$,其中$\partial_{x,i}f = 1+\log x_i$，那么$\triangledown ^2f(x)=\begin{equation} \left( \begin{array}{lr} \frac{1}{x_1} &amp;&amp; &amp;&amp; \\  &amp;&amp; \frac{1}{x_2}  \\ &amp;&amp; &amp;&amp; \ddots &amp;&amp; \\ &amp;&amp; &amp;&amp; &amp;&amp; \frac{1}{x_n} \end{array}  \right)  \end{equation} &gt; 0$</p>
+<p>$\triangledown ^2f(x)$是正定矩阵，而$B$又是满秩的所以$B^t\triangledown^2f(x)B$是正定矩阵</p>
+<p>所以$x=(\frac{1}{n},\cdots,\frac{1}{n})^t$是局部极小</p>
+<h4 id="非线性约束"><a href="#非线性约束" class="headerlink" title="非线性约束"></a>非线性约束</h4><p>$\begin{equation} \left\{ \begin{array}{lr} minimize\  f(x) \\ sub\ to\  h_i(x)=0 \end{array}  \right.  \end{equation}$</p>
+<h5 id="解局部参数化"><a href="#解局部参数化" class="headerlink" title="解局部参数化"></a>解局部参数化</h5><p>$g:(-1,1)\to \mathbb{R}^n,g(0)=x^*$</p>
+<p>$R(g)\subset D$，$D$是$f(x)$的定义域</p>
+<p>同时符合$h_i(g)=0$</p>
+<p>$x^*$是局部极小$\Longrightarrow 0$是$f \circ g$的局部极小 $\Longrightarrow (f \circ g)’(0)= 0, f(f \circ g)’’(0)\ge 0$</p>
+<p>$h_i \circ g=0 \Longrightarrow (h_i \circ g)’(0) = 0, (h_i \circ g)’’(0) = 0$</p>
+<p>根据上面的4个导数和$g$的任意性可以得到解$x^*$的必要条件</p>
                 
             </div>
             <hr/>
@@ -861,6 +946,10 @@
                             
                                 <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
                                     <span class="chip bg-color">数学基础</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BE%AE%E5%88%86/">
+                                    <span class="chip bg-color">微分</span>
                                 </a>
                             
                         </div>
@@ -1300,47 +1389,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/e403a46/">
+                <a href="/d6347b6b/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-v9z1dl.7fhsn4aycfk0.jpg" class="responsive-img" alt="数学基础">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-3z3v8d.5nzgm186f140.jpg" class="responsive-img" alt="数学基础-代数">
                         
-                        <span class="card-title">数学基础</span>
+                        <span class="card-title">数学基础-代数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            智能计算数学基础
+                            智能计算数学基础-代数
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    数学基础
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    智能计算数学基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">数学基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E6%95%B0/">
+                        <span class="chip bg-color">代数</span>
                     </a>
                     
                 </div>
@@ -1591,7 +1682,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">73.4k</span>
+                        class="white-color">76.1k</span>
             
             
             

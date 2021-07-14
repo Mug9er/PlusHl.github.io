@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-07-12T09:30:04.595Z</updated>
+  <updated>2021-07-14T11:05:20.473Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -17,22 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数学基础</title>
-    <link href="http://orzff.cn//e403a46/"/>
-    <id>http://orzff.cn//e403a46/</id>
-    <published>2021-07-06T14:46:19.000Z</published>
-    <updated>2021-07-12T09:30:04.595Z</updated>
+    <title>数学基础-代数</title>
+    <link href="http://orzff.cn//d6347b6b/"/>
+    <id>http://orzff.cn//d6347b6b/</id>
+    <published>2021-07-14T10:11:24.000Z</published>
+    <updated>2021-07-14T11:05:20.473Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;智能计算数学基础&lt;/p&gt;
+      &lt;p&gt;智能计算数学基础-代数&lt;/p&gt;
     
     </summary>
     
-      <category term="数学基础" scheme="http://orzff.cn/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+      <category term="智能计算数学基础" scheme="http://orzff.cn/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="数学基础" scheme="http://orzff.cn/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="代数" scheme="http://orzff.cn/tags/%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数学基础-分析</title>
+    <link href="http://orzff.cn//e403a46/"/>
+    <id>http://orzff.cn//e403a46/</id>
+    <published>2021-07-06T14:46:19.000Z</published>
+    <updated>2021-07-14T10:11:09.128Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;智能计算数学基础-分析&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="智能计算数学基础" scheme="http://orzff.cn/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="数学基础" scheme="http://orzff.cn/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="微分" scheme="http://orzff.cn/tags/%E5%BE%AE%E5%88%86/"/>
     
   </entry>
   
@@ -427,26 +451,6 @@
     
     
       <category term="QT" scheme="http://orzff.cn/tags/QT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VI和VIM基本操作</title>
-    <link href="http://orzff.cn//a67e3062/"/>
-    <id>http://orzff.cn//a67e3062/</id>
-    <published>2021-04-28T16:21:54.000Z</published>
-    <updated>2021-05-31T11:58:01.150Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;VI和VIM基本操作&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux 学习笔记" scheme="http://orzff.cn/categories/Linux-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Vim" scheme="http://orzff.cn/tags/Vim/"/>
     
   </entry>
   
