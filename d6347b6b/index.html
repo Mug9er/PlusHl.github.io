@@ -548,21 +548,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-07-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    19 分
                 </div>
                 
 
@@ -699,6 +699,185 @@
 <li>$\mathcal{B} ◦ \mathcal{A} $对应的矩阵为 $M$</li>
 <li>可以验证 $M = BA$，与矩阵乘法相容 (矩阵乘法的一种定义)</li>
 </ul>
+<h3 id="内积"><a href="#内积" class="headerlink" title="内积"></a>内积</h3><p>$V$是实数域$\mathbb{R}$上的线性空间，若$\emptyset:V \times V \to \mathbb{R}$满足</p>
+<ul>
+<li><p>(双线性) $\emptyset(\alpha_1+\alpha_2\beta)=\emptyset(\alpha_1,\beta)+\emptyset(\alpha_2,\beta),\emptyset(\lambda\alpha_1,\beta)=\lambda\emptyset(\alpha_1,\beta)\\\emptyset(\alpha_1,\beta_1+\beta_2)=\emptyset(\alpha,\beta_1)+\emptyset(\alpha,\beta_2),\emptyset(\alpha,\lambda\beta)=\lambda\emptyset(\alpha,\beta)$</p>
+<p>函数取$V$中的两个分量进行运算，对加法和数乘运算保持线性</p>
+</li>
+<li><p>(对称性) $\emptyset(\alpha,\beta)=\emptyset(\beta, \alpha)$</p>
+</li>
+<li><p>(正定性)$\emptyset(\alpha,\alpha)&gt;0$对所有$0\not= \alpha \in V$</p>
+</li>
+</ul>
+<p>那么$\emptyset(\cdot,\cdot)$称为内积，记作$&lt;\cdot,\cdot&gt;$,$V$为$\mathrm{Euclid}$空间</p>
+<h4 id="内积的表示"><a href="#内积的表示" class="headerlink" title="内积的表示"></a>内积的表示</h4><p>设$\{v_1,\cdots,v_n\}$是$V$的一组基，由于内积的双线性，只需要知道所有的$<v_i,v_j>$，即可知道任意两个元素的内积。$S$称为内积在这组基下的度量矩阵，其是对称的.</v_i,v_j></p>
+<p>$S=\begin{equation} \left[ \begin{array}{lr} <v_1,v_1> &amp; <v_1,v_2> &amp; \cdots &amp; <v_1,v_n> \\ \vdots &amp; \vdots &amp; \cdots  &amp; \vdots \\ <v_n,v_1> &amp; <v_n,v_2> &amp; \cdots &amp; <v_n,v_n>  \end{array}  \right]  \end{equation}$</v_n,v_n></v_n,v_2></v_n,v_1></v_1,v_n></v_1,v_2></v_1,v_1></p>
+<p>对于任意两个元素，$x^T=(x_1,x_2,\cdots,x_n),y^T=(y_1,y_2,\cdots,y_n)$</p>
+<p>坐标表示为$(x_1,x_2,\cdots,x_n),(y_1,y_2,\cdots,y_n)$，其值为$x=x_1v_1+\cdots+x_nv_n, y= y_1v_1+\cdots+y_nv_n$,对$x,y$做内积时，根据双线性规则，展开以后可以写成$<x,y>=x^TSy$</x,y></p>
+<p>当$<v_i,v_i>=1,<v_i,v_j>=0$对所有的$i\not=j$时，$S$为单位阵，内积变为$x^Ty=x_1y_1+x_2y_2+\cdots+x_ny_n$</v_i,v_j></v_i,v_i></p>
+<p>此时$v_i$是一组标准正交基</p>
+<h4 id="正交"><a href="#正交" class="headerlink" title="正交"></a>正交</h4><ul>
+<li><p>元素与元素$\alpha \bot \beta: &lt;\alpha,\beta&gt;=0$</p>
+</li>
+<li><p>元素与集合$\alpha \bot T: &lt;\alpha, \beta&gt;=0$对任意$\beta \in T$</p>
+</li>
+<li><p>集合与集合$S \bot T: &lt;\alpha, \beta&gt;=0$对任意$\alpha \in S, \beta \in T$</p>
+</li>
+<li><p>集合$S \subseteq U$，正交补 $S^{\bot}:= \{\alpha \in U|S \bot \alpha\}$，$U$的子空间</p>
+<p>$S$不一定是一个子空间，但是$S$的正交补一定是$U$的子空间</p>
+</li>
+</ul>
+<h4 id="范数或模长"><a href="#范数或模长" class="headerlink" title="范数或模长"></a>范数或模长</h4><p>$||\alpha|| := \sqrt{&lt;\alpha,\alpha&gt;}$</p>
+<ul>
+<li>$\mathrm{Cauchy-Schwarz}$不等式$|&lt;\alpha,\beta&gt;|\le ||\alpha||\cdot||\beta||$,$\alpha,\beta$同方向时取等号</li>
+</ul>
+<h4 id="夹角"><a href="#夹角" class="headerlink" title="夹角"></a>夹角</h4><p>$cost\theta = \frac{&lt;\alpha,\beta&gt;}{||\alpha||\cdot ||\beta||}$</p>
+<h4 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h4><p>$d(\alpha, \beta) := ||\alpha-\beta||$</p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>$A_{m\times n}=\begin{equation} \left[ \begin{array}{lr} a_{11} &amp; a_{12} &amp; \cdots &amp;  a_{1n} \\ \vdots &amp; \vdots &amp; \cdots  &amp; \vdots \\a_{n1}  &amp; a_{n2} &amp; \cdots &amp; a_{nn}  \end{array}  \right]  \end{equation}$</p>
+<ul>
+<li>行向量构成$\mathbb{R}^n$的子空间</li>
+<li>列向量构成$\mathbb{R}^m$的子空间</li>
+<li>行秩=列秩=秩</li>
+<li>当$m=n$时<ul>
+<li>迹：$tr(A)=a_{11}+a_{22}+\cdots+a_{nn}$</li>
+<li>行列式： $det(A),|A|$</li>
+</ul>
+</li>
+</ul>
+<p><strong>加法</strong>：$A_{m\times n} + A’_{m\times n} = A’’_{m\times n}$</p>
+<p><strong>乘法：</strong> $A_{m\times n} \cdot B_{n \times l} = C_{ m \times l} $</p>
+<p><strong>当$m=n$时</strong></p>
+<ul>
+<li>乘法非交换：通常$AB \not= BA$</li>
+<li>乘法单位元： $I_{n\times n}$</li>
+<li>逆元：若$BA=AB=I$,$B$称为$A$的逆，记作$A^{-1}$<ul>
+<li>未必存在，但存在即唯一</li>
+</ul>
+</li>
+<li>若$A,B$为$n$阶可逆方阵，$(AB)^{-1}=B^{-1}A^{-1}$</li>
+<li>若$A,B$为$n$阶方阵，$\mathrm{det}(AB)=\mathrm{det}(A)\mathrm{det}(B)$</li>
+</ul>
+<p><strong>矩阵转置：</strong></p>
+<ul>
+<li>$(AB)^T=B^TA^T$</li>
+<li>若$A$可逆，$(A^T)^{-1}=(A^{-1})^T$</li>
+</ul>
+<h3 id="矩阵分块"><a href="#矩阵分块" class="headerlink" title="矩阵分块"></a>矩阵分块</h3><p><strong>矩阵分块运算</strong></p>
+<p>$\begin{equation} \left[ \begin{array}{lr}A_{k\times m} &amp; A_{k\times n} \\ A_{l\times m} &amp; A_{l\times n}  \end{array}  \right]  \end{equation}_{(k+l)\times (m+n)} \cdot  $ $\begin{equation} \left[ \begin{array}{lr}B_{m\times p} &amp; B_{m\times q} \\ B_{m\times p} &amp; B_{n\times q}  \end{array}  \right]  \end{equation}_{(m+n)\times (p+q)}$</p>
+<p>$= \begin{equation} \left[ \begin{array}{lr}A_{k\times m}B_{m\times p}+A_{k\times n}B_{n\times p} &amp; A_{k\times n}B_{m\times q}+A_{k\times n}B_{n\times q} \\ A_{l\times m}B_{m\times p}+A_{l\times n}B_{n\times p} &amp; A_{l\times n}B_{m\times q}+A_{\times n}B_{n\times q}  \end{array}  \right]  \end{equation}_{(k+l)\times (p+q)}  $</p>
+<p><strong>矩阵按行（列）分块</strong></p>
+<p>$A_{m\times n} = \begin{equation} \left[ \begin{array}{lr} \alpha_1^T \\ \alpha_2^T   \\ \vdots \\ \alpha_m^T \end{array}  \right]  \end{equation}  =  $ $[\beta_1,\beta_2,\cdots,\beta_n]$</p>
+<p>左乘矩阵$B$，每一行都是$A$的行向量$a_i^T$的线性组合，左乘$B$相当于对$A$做行变换，右乘$B$相当于对$A$做列变换</p>
+<h3 id="初等矩阵与初等变换"><a href="#初等矩阵与初等变换" class="headerlink" title="初等矩阵与初等变换"></a>初等矩阵与初等变换</h3><p>对$1\le i &lt; j\le n$，将$n$阶单位阵$I_n$的第$i,j$行互换得到的方阵</p>
+<p>$P_{ij}=\begin{equation} \left[ \begin{array}{lr} I_{i-1} &amp;  &amp;   &amp;   &amp;  \\  &amp; 0 &amp;    &amp; 1 &amp;  \\   &amp;   &amp; I_{j-i-1} &amp;  &amp; \\ &amp; 1 &amp; &amp; 0 &amp; \\ &amp; &amp; &amp; &amp; I_{n-j} \end{array}  \right]  \end{equation}$</p>
+<ul>
+<li>左乘$P_{ij},A\to P_{ij}A$,行变换，相当于将$A$的第$i,j$行互换</li>
+<li>右乘$P_{ij},B\to BP_{ij}$,列变换，相当于将$B$的第$i,h$列互换</li>
+<li>$P_{ij}$的逆时$P_{ij}$</li>
+</ul>
+<p>对$1\le i,j \le n, i\not= j, \lambda \not= 0$,将$n$阶单位阵$I_n$的第$j$行的$\lambda$倍加到第$i$行得到的方阵</p>
+<p>$T_{ij}(\lambda)=\begin{equation} \left[ \begin{array}{lr} I_{i-1} &amp;  &amp;   &amp;   &amp;  \\  &amp; 1 &amp;    &amp; \lambda  &amp;  \\   &amp;   &amp; \ddots &amp;  &amp; \\ &amp;   &amp; &amp; 1 &amp; \\ &amp; &amp; &amp; &amp; I_{n-j} \end{array}  \right]  \end{equation}$</p>
+<ul>
+<li>左乘$T_{ij}(\lambda),A\to T_{ij}(\lambda)A$，行变换，相当于将$A$的第$i$行的$\lambda$倍加到第$i$行</li>
+<li>右乘$T_{ij}(\lambda),B\to BT_{ij}(\lambda)$，列变换，相当于将$B$的第$i$行的$\lambda$倍加到第$j$行</li>
+<li>$T_{ij}(\lambda)$的逆是$T_{ij}(-\lambda)$</li>
+</ul>
+<p>任何可逆方阵可以写成上述三种初等方阵的乘积</p>
+<p>任何$m\times n$阶矩阵$A$可以通过有限次初等行变换和初等列变换得到</p>
+<p>$PAQ=\begin{equation} \left[ \begin{array}{lr} I_r &amp; 0  \\ 0 &amp; 0 \end{array}  \right]  \end{equation}$</p>
+<ul>
+<li>$r=\mathrm{rank}(A),A$的秩</li>
+<li>$\mathrm{rank}$是可逆变换下的不变量</li>
+<li>$A$可逆当且仅当$r=m=n$</li>
+</ul>
+<p>$A$是一个$m\times n$的矩阵$A\in \mathbb{R}^{m\times n}$,将向量从$n$维映到$m$维$A: \mathbb{R}^n \to \mathbb{R}^m$</p>
+<p>$Ax=\begin{equation} \left[ \begin{array}{lr} I_r &amp; 0  \\ 0 &amp; 0 \end{array}  \right]  \end{equation}$ $\begin{equation} \left( \begin{array}{lr} x_1  \\ \vdots \\ x_n \end{array}  \right)  \end{equation}=$ $\begin{equation} \left( \begin{array}{lr} x_1  \\ \vdots \\ x_r \\ 0 \\  \vdots  \\ 0 \end{array}  \right)  \end{equation}$</p>
+<p>$\dim \mathrm{Im}(A) = rank(A) = r $ $A$的像的维度是$r$</p>
+<p>$ \dim \mathcal{N}(A) = n - r$ $A$的零空间的维度是$n-r$</p>
+<h3 id="矩阵的列空间"><a href="#矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间</h3><p>$A_{m\times n} $的列空间$C(A):= \{Ax|x\in \mathbb{R}^n\}$，所有的列向量的线性组合</p>
+<ul>
+<li>$A=[\beta_1 \ \beta_2 \ \cdots \ \beta_n],C(A)=\{x_1\beta_1+x_2\beta_2+\cdots+x_n\beta_n | x_i \in \mathbb{R}^n\}$</li>
+<li>也就等于$\mathrm{Im}(A)$</li>
+<li>是$\mathbb{R}^m$的子空间</li>
+<li>$\dim C(A)=rank(A) = r$ 列空间的维数等于矩阵$A$的秩，也可以是或最大线性无关组的数量</li>
+</ul>
+<p>$A_{m\times n}=C_{m \times r}R_{r \times n}$</p>
+<p>$A = \begin{equation} \left[ \begin{array}{lr} 1 &amp; 2 &amp; 3  \\ 3 &amp; 1 &amp; 4 \\ 2 &amp; 3 &amp; 5 \end{array}  \right]  \end{equation}$其中$\begin{equation} \left[ \begin{array}{lr} 1  \\ 3 \\ 2 \end{array}  \right]  \end{equation}+$ $\begin{equation} \left[ \begin{array}{lr} 2  \\ 1 \\ 3\end{array}  \right]  \end{equation}=$ $\begin{equation} \left[ \begin{array}{lr} 3 \\ 3 \\ 5 \end{array}  \right]  \end{equation}$</p>
+<p>前两列构成列空间中的一组基</p>
+<p>$A_{m\times n}=C_{m \times r}R_{r \times n} = \begin{equation} \left[ \begin{array}{lr} 1 &amp; 2  \\ 3 &amp; 1  \\ 2 &amp; 3 \end{array}  \right]  \end{equation}$ $\begin{equation} \left[ \begin{array}{lr} 1 &amp; 0 &amp; 1  \\ 0 &amp; 1 &amp; 1  \end{array}  \right]  \end{equation}$</p>
+<p>矩阵$A$可以分解成列空间的一组基与行空间的一组基相乘</p>
+<ul>
+<li>行秩=列秩</li>
+</ul>
+<p>因为$A$的秩$r=2, n-r=3-2=1$所以$\mathcal{N}(A)$非平凡，维数为1，这也就意味着$Ax=0$有非零解$(1,1,1-1)^T$是$\mathcal{N}(A)$的一组基</p>
+<h3 id="矩阵的行空间"><a href="#矩阵的行空间" class="headerlink" title="矩阵的行空间"></a>矩阵的行空间</h3><p>$A = \begin{equation} \left[ \begin{array}{lr} \alpha_1^T  \\ \vdots \\ \alpha_m^T \end{array}  \right]  \end{equation}$</p>
+<p>定义行空间=$\{y_1\alpha_1+y_2\alpha_2+\cdots+y_m\alpha_m|y_i \in \mathbb{R}\}$</p>
+<ul>
+<li>事实上等于$A^T$的列空间，记作$C(A^T)$</li>
+<li>也等于$\mathrm{Im}(A^T)$</li>
+<li>是$\mathbb{R}^n$的子空间，$\dim C(A^T)=rank A^T = r$</li>
+</ul>
+<p>$\mathcal{N}(A)\bot C(A^T),\mathcal{N}(A)\bigoplus C(A^T)=\mathbb{R}^n$</p>
+<p>$\mathcal{N}(A^T)\bot C(A),\mathcal{N}(A^T)\bigoplus C(A)=\mathbb{R}^m$</p>
+<h3 id="列空间与行空间"><a href="#列空间与行空间" class="headerlink" title="列空间与行空间"></a>列空间与行空间</h3><p>$Ax = 0$, 即$\begin{equation} \left[ \begin{array}{lr} \alpha_1^T  \\ \vdots \\ \alpha_m^T \end{array}  \right]  \end{equation}$ $\begin{equation} \left[ \begin{array}{lr}x \end{array}  \right]  \end{equation}=$ $ \begin{equation} \left[ \begin{array}{lr} 0  \\ \vdots \\ 0 \end{array}  \right]  \end{equation}$</p>
+<ul>
+<li>零空间$\mathcal{N}(A)$中的元素$x$与$A$的每一行正交</li>
+<li>若$x$为行空间$C(A^T)$中非零元素(行向量线性组合)， $Ax \not= 0$</li>
+<li>零空间$\mathcal{N}(A)$中的元素$x$与$A$的行空间正交$x\bot C(A^T)$</li>
+<li>零空间$\mathcal{N}(A^T)$中的元素$y$与$A$的列空间正交$y\bot C(A)$</li>
+</ul>
+<p>$\mathcal{N}(A)$维数 $n-r$, $\mathcal{N}(A^T)$维数 $m-r$</p>
+<p>$C(A^T)$维数$r$, $C(A)$维数$r$</p>
+<p>$C(A^T)$通过$A$可以映射到$C(A)$,同样的$C(A)$可以通过$A^T$映射到$C(A^T)$</p>
+<p>$\mathcal{N}(A)$通过$A$映射到0，$\mathcal{N}(A^T)$通过$A^T$映射到0</p>
+<p>$A_{m\times n}$虽然本身是$\mathbb{R}^n\to \mathbb{R}^m$的线性映射，但未必是可逆的(未必是满秩)，因为有零空间映射到0，这样是映射不回来的，但将$A$看作$C(A^T)\to C(A)$的映射时，它时可逆的(维数相同，满射)，反之$A^T$是$C(A)\to C(A^T)$的可逆映射，进一步$A^TA$是$C(A^T)$到自身的可逆线性变换</p>
+<p><strong>$A^TA$的零空间$\mathcal{N}(A^TA)$等于$A$的零空间$\mathcal{N}(A)$</strong></p>
+<ul>
+<li>$x \in \mathcal{N}(A) \Longleftrightarrow Ax = 0 \Longrightarrow A^TAx = 0$</li>
+<li>$A^TAx = 0 \Longrightarrow Ax \in \mathcal{N}(A^T) \Longrightarrow Ax \in \mathcal{N}(A^T) \cap C(A) = \{0\}$</li>
+</ul>
+<p>$A$的列向量线性无关，则$A^TA$可逆</p>
+<ul>
+<li>$A$的列向量线性无关$\Longrightarrow \mathcal{N}(A)=0 \Longrightarrow \mathcal{N}(A^TA) = 0$</li>
+</ul>
+<h2 id="方程组消元和-LU-分解"><a href="#方程组消元和-LU-分解" class="headerlink" title="方程组消元和$LU$分解"></a>方程组消元和$LU$分解</h2><p>考虑方程组 $Ax =b$</p>
+<p>$2x+3y=7 \\ 4x+7y=15$       $2x+3y=7\\ y=1$         $x=2\\y=1$</p>
+<p>左乘$T_{ij}(\lambda)$（下三角， $i&gt; j$）对方程进行消元，变为上三角</p>
+<p>$TA =  \begin{equation} \left[ \begin{array}{lr} 1 &amp; 0  \\ -2 &amp; 1  \end{array}  \right]  \end{equation}$ $ \begin{equation} \left[ \begin{array}{lr} 2 &amp; 3  \\ 4 &amp; 7  \end{array}  \right]  \end{equation}$ = $ \begin{equation} \left[ \begin{array}{lr} 2 &amp; 3  \\ 0 &amp; 1  \end{array}  \right]  \end{equation}$ $=U$</p>
+<p>$A = \begin{equation} \left[ \begin{array}{lr} 1 &amp; 0  \\ -2 &amp; 1  \end{array}  \right]  \end{equation}^{-1}$ $ \begin{equation} \left[ \begin{array}{lr} 2 &amp; 3  \\ 0 &amp; 1  \end{array}  \right]  \end{equation}= $ $ \begin{equation} \left[ \begin{array}{lr} 1 &amp; 0  \\ 2 &amp; 1  \end{array}  \right]  \end{equation}$ $ \begin{equation} \left[ \begin{array}{lr} 2 &amp; 3  \\ 0 &amp; 1  \end{array}  \right]  \end{equation}= LU$ </p>
+<p>对矩阵$A$进行初等变换，左乘一个$T$变成上三角，因为$T$是可逆矩阵，再做成一个$T^{-1}$，就可以将$A$分解成一个上三角和一个下三角矩阵相乘的形式，这就是$LU$分解</p>
+<p>更一般的情况，需要交换$A$的行，</p>
+<p>那么$PA=LU$,其中$L$是下三角矩阵对角线为1，$P$为置换矩阵，是$P_{ij}$的乘积，进一步</p>
+<p>$PA=LDU$</p>
+<p>$D$是对角阵，使得$U$每行第一个非零元素为1</p>
+<h3 id="方程组求解"><a href="#方程组求解" class="headerlink" title="方程组求解"></a>方程组求解</h3><p>方程组$Ax=b$</p>
+<ul>
+<li>$Ax \in C(A)$</li>
+<li>有解当且仅当$b\in C(A)$</li>
+<li>有界当且仅当 $A$的列秩等于$[A|b]$的列秩</li>
+</ul>
+<p>若$x_s$是一组特解，那么通解</p>
+<p>$x_g = x_s + x_h$, 其中$x_h$是七次方程组$Ax=0$的解，即$x_h\in \mathcal{N}(A)$</p>
+<ul>
+<li>方程组消元相当于行变换$(P_{i,j},D_i(\lambda), T_{i,j}(\lambda))$</li>
+<li>消元得到的矩阵每一行第一个非零元素为1，其上元素为0</li>
+</ul>
+<p>得到阶梯矩阵，极大线性无关组就是每行第一个为1的列组成的空间，剩下的列可以有线性无关组构成。</p>
+<p>列空间的即就是极大线性无关组，零空间的基可以通过列空间之外的列并根据列空间中的基做运算得到</p>
+<h2 id="正交方阵"><a href="#正交方阵" class="headerlink" title="正交方阵"></a>正交方阵</h2><p>$Q_{n\times n}$的列向量$q_1,\cdots,q_n$是标准正交的</p>
+<p>$Q^TQ = \begin{equation} \left[ \begin{array}{lr} q_1^T \\ q_2^T   \\ \vdots \\ q_m^T \end{array}  \right]  \end{equation}   $ $[q_1,q_2,\cdots,q_n]$ $= I_n$ ,对角线上元素都为一，非对角线上元素都为0，所以相乘为$I$</p>
+<p>$ I_n  = QQ^T = [q_1,q_2,\cdots,q_n]\begin{equation} \left[ \begin{array}{lr} q_1^T \\ q_2^T   \\ \vdots \\ q_m^T \end{array}  \right]  \end{equation} = q_1q_q^T+\cdots+q_nq_n^T$</p>
+<ul>
+<li><p>$Q^{-1} = Q^T$</p>
+</li>
+<li><p>$Q_1,Q_2$是正交方阵，则$Q_1Q_2,Q_2Q_1$亦然</p>
+</li>
+<li>等距： $||Qx||^2=x^TQ^TQx=x^Tx=||x||^2$</li>
+<li>特征值的模长为1: $Qx=\lambda x, ||Qx||^2=||x||^2 \Longrightarrow |\lambda|^2 = 1$</li>
+</ul>
+<p><strong>正交方阵举例</strong></p>
+<p>逆时针旋转$\theta$角的矩阵</p>
+<p>$\begin{equation} \left[ \begin{array}{lr} \cos\theta &amp; -\sin \theta\\ \sin \theta  &amp; \cos \theta  \end{array}  \right]  \end{equation}   $</p>
                 
             </div>
             <hr/>
@@ -1491,7 +1670,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">76.1k</span>
+                        class="white-color">79.1k</span>
             
             
             
