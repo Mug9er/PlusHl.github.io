@@ -433,7 +433,7 @@
 </ul>
 <h2 id="谱定理"><a href="#谱定理" class="headerlink" title="谱定理"></a>谱定理</h2><p>进一步，如果$A$的特征值为实数，且有$n$个线性无关，彼此正交的特征向量。通过将这些特征向量标准化，得到$A$的一组标准正交基$q_1,\cdots,q_n$,此时有</p>
 <p>$AQ=Q\Lambda$                 $A=Q\Lambda Q^T$</p>
-<p>其中$Q$为$q_1,\cdots,q_n$（列向量）构成的正交方阵，$\Lambda=diag(\lambda_1,\cdots,\lambda_n)$</p>
+<p>其中$Q$为$q_1,\cdots,q_n$（列向量）构成的正交方阵，$\Lambda=diag(\lambda_1,\cdots,\lambda_n)$，对角线形式的方阵</p>
 <p>特别地，$A=Q\Lambda Q^T=\lambda_1q_1q_1^T+\lambda_2q_2q_2^T+\lambda_nq_nq_n^T$</p>
 <h3 id="实对称方阵"><a href="#实对称方阵" class="headerlink" title="实对称方阵"></a>实对称方阵</h3><p>设$S$是实对称方阵，则$S$的特征值$\lambda$是实数</p>
 <p>若$Sx=\lambda x$</p>
@@ -451,11 +451,129 @@
 </ul>
 <h3 id="正定实对称方阵"><a href="#正定实对称方阵" class="headerlink" title="正定实对称方阵"></a>正定实对称方阵</h3><p>实对称方阵$S$是正定的，如果满足下述条件之一：</p>
 <ul>
-<li>$x^TSx&gt;0$，对所有非零$x$</li>
+<li>$x^TSx&gt;0$，对所有非零$x$， 相当于满足正定的双线性函数构成的度量方阵就是正定实对称方阵</li>
 <li>所有特征值$\lambda_i&gt;0$</li>
 <li>$S=A^TA$，$A$的列向量线性无关</li>
 <li>所有顺序主子序$&gt;0$，即所有左上角的子矩阵的行列式$&gt;0$</li>
-</ul>]]></content>
+</ul>
+<p>性质：</p>
+<ul>
+<li>$S,T$正定，则$S+T$正定<ul>
+<li>$x^T(S+T)x=x^TSx+x^TTx&gt;0$</li>
+</ul>
+</li>
+<li>$S$正定，则$S^{-1}$正定<ul>
+<li>$\frac{1}{\lambda}&gt;0$</li>
+</ul>
+</li>
+</ul>
+<h3 id="半正定对称方阵"><a href="#半正定对称方阵" class="headerlink" title="半正定对称方阵"></a>半正定对称方阵</h3><p>实对称方阵$S$是半正定的，如果满足下述条件之一：</p>
+<ul>
+<li>$x^TSx \ge 0$，对所有非零$x$</li>
+<li>所有特征值$\lambda_i\ge 0$</li>
+<li>所有的顺序主子式$\ge0$,即左上角的子矩阵的行列式$\ge 0$</li>
+</ul>
+<p>根据谱定理，半正定是对称方阵能表示成$A^TA$。反过来，$A$是任意实矩阵，则$A^TA$</p>
+<ul>
+<li>对称的</li>
+<li>特征值为实数，有正交的特征向量</li>
+<li>$x^TA^TAx=||Ax||\ge 0$，半正定</li>
+</ul>
+<h2 id="mathrm-SVD-分解"><a href="#mathrm-SVD-分解" class="headerlink" title="$\mathrm{SVD}$分解"></a>$\mathrm{SVD}$分解</h2><h3 id="一般矩阵的-mathrm-SVD-分解"><a href="#一般矩阵的-mathrm-SVD-分解" class="headerlink" title="一般矩阵的$\mathrm{SVD}$分解"></a>一般矩阵的$\mathrm{SVD}$分解</h3><p>对于一般矩阵$A\in \mathbb{R}^{m \times n}$， 可以看成$\mathbb{R}^n\to  \mathbb{R}^m$的线性映射。进一步$A$诱导了$C(A^T)\to C(A)$的满射（事实上是同构映射）</p>
+<p>$\begin{equation} \left\{ \begin{array}{lr} A v_1=\alpha_1u_1  \\ Av_2=\alpha_2u_2 \\ \vdots \\ Av_r=\alpha_ru_r \\ Av_{r+1}=0\\ \vdots\ \\ Av_n=0 \end{array}  \right\}  \end{equation}$</p>
+<p>希望找到$\mathbb{R}^n$的一组标准正交基$v_1,\cdots,v_n$（其中$v_1,\cdots,v_n$是$C(A^T)$的一组标准正交基，$v_{r+1},\cdots,v_r$是$\mathcal{N}(A)$的一组标准正交基）使得$u_1,\cdots,u_r$是$C(A)$的一组标准正交基。从而可以将其补充成$\mathbb{R}^m$的一组标准正交基$u_1,\cdots,u_m$</p>
+<p>假设标准正交基$v_1,\cdots,v_n$和$u_1,\cdots,u_m$满足上述条件，实矩阵$A\in \mathbb{R}^{m\times n}$ 有奇异值分解</p>
+<p>$A=U\Sigma V^T = \begin{equation} \left[ \begin{array}{lr}  u_1, \cdots, u_m\end{array}  \right]  \end{equation}$ $\begin{equation} \left[ \begin{array}{lr} \sigma_1 &amp; &amp; &amp;  \\ &amp; \ddots &amp; &amp; 0 \\ &amp; &amp; \sigma_r &amp; \\ &amp; 0 &amp; &amp; 0  \end{array}  \right]  \end{equation}_{m\times n}$  $\begin{equation} \left[ \begin{array}{lr}  v_1^T \\ \vdots \\ v_n^T \end{array}  \right]  \end{equation}$</p>
+<p>其中$U$为$m$阶正交方阵，$V$为$n$阶正交方阵的，$r$为$\mathrm{rank}(A)$，$\sum_{m\times n}$非零对角元满足$\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r \ge 0$， 称为$A$的奇异值，$u_i,v_i$称为奇异向量</p>
+<h3 id="mathrm-SVD-分解的存在性"><a href="#mathrm-SVD-分解的存在性" class="headerlink" title="$\mathrm{SVD}$分解的存在性"></a>$\mathrm{SVD}$分解的存在性</h3><p>若奇异值分解存在， $A^TA=V\Sigma^TU^TU\Sigma V^T=V(\Sigma^T\Sigma)V^T$, $U$是标准正交所以$U’=U^T$</p>
+<p>考察$A^TA$,$A^TA$的特点：</p>
+<ul>
+<li><p>半正定，对称</p>
+</li>
+<li><p>特征值为实数($\ge 0$)，有正交的特征向量，根据谱定理</p>
+<p>$A^TA=V\Lambda_{n\times n}V^T$</p>
+</li>
+<li><p>取$v_i$为$A^TA$的正交特征向量</p>
+</li>
+<li><p>$\sigma_i^2$（奇异值的平方）是$A^TA$的第$i$个非零特征值(按大小顺序)</p>
+</li>
+</ul>
+<p>现只需证明$u_i=\frac{Av_i}{\sigma_i}(1 \le i \le r)$是正交的</p>
+<ul>
+<li><p>$u^T_iu_j=\frac{1}{\sigma_i\sigma_j}v_i^TA^TAv_j, i \not= j \le r$</p>
+<p>只看$A^TAv_j$，因为$v_j$是$A^TA$的特征向量，所以可以写成$A^TAv_j=\sigma_i^2v_j$</p>
+<p>原式等于$\frac{\sigma_i}{\sigma_j}v^T_iv_j =0$ 成立，说明$u_iu_j$是成交的</p>
+</li>
+</ul>
+<p>最后将$u_i$扩充成$\mathbb{R}^m$的一组标准正交基，便得到了$\mathrm{SVD}$分解</p>
+<p>对于$AA^T$</p>
+<ul>
+<li><p>$AA^T=U\Sigma V^T\Sigma^TU^T=U(\Sigma \Sigma^T)U^T$</p>
+</li>
+<li><p>半正定，对称</p>
+</li>
+<li><p>特征值为实数($\ge 0$)，有正交的特征向量，根据谱定理</p>
+<p>$AA^T=U\Lambda’_{m\times m}U^T$</p>
+</li>
+<li><p>取$u_i$为$AA^T$的(正交的)特征向量</p>
+</li>
+<li><p>$\sigma^2_i$是$AA^T$的第$i$个非零特征值（按大小顺序）</p>
+<ul>
+<li>$\sigma_i^2$即是$A^TA$的第$i$个非零特征值，也是$AA^T$的第$i$个非零特征值</li>
+<li>不矛盾！因为$AB$和$BA$有相同的非零特征值</li>
+</ul>
+</li>
+</ul>
+<p>实际中，计算$\mathrm{SVD}$分解并不是通过$A^TA$.比如$m&gt;&gt;n$,复杂度高</p>
+<h3 id="mathrm-SVD-分解性质"><a href="#mathrm-SVD-分解性质" class="headerlink" title="$\mathrm{SVD}$分解性质"></a>$\mathrm{SVD}$分解性质</h3><p>当$A$可逆式($r=m=n$)，由于$U,V$式正交方阵，行列式为$\pm 1$，$|\det (A)|=\sigma_1\cdot \sigma_2\cdots \sigma_r$</p>
+<ul>
+<li>$\sigma_1\cdots\sigma_2\cdots\sigma_r=|\lambda_1\cdot \lambda_2\cdots\lambda_m|$</li>
+</ul>
+<p>通常$\mathrm{tr}(A)\not= \sigma_1+\sigma_2+\cdots+\sigma_r$</p>
+<p>当$A$为半正定方阵时，$\mathrm{SVD}$分解也是普芬姐，奇异值就是非零特征值</p>
+<h3 id="矩阵的极分解"><a href="#矩阵的极分解" class="headerlink" title="矩阵的极分解"></a>矩阵的极分解</h3><p>根据方阵$A$的$SVD$分解，可以给出矩阵的极分解</p>
+<p>$A=U\Sigma V^T=(U\Sigma U^T)(UV^T)=SQ$</p>
+<p>其中$S$为半正定对称方阵，$Q$为正交方阵</p>
+<h3 id="矩阵的-mathrm-SVD-分解"><a href="#矩阵的-mathrm-SVD-分解" class="headerlink" title="矩阵的$\mathrm{SVD}$分解"></a>矩阵的$\mathrm{SVD}$分解</h3><p>$A=U\Sigma V^T = \begin{equation} \left[ \begin{array}{lr}  u_1, \cdots, u_m\end{array}  \right]  \end{equation}_{m\times m}$ $\begin{equation} \left[ \begin{array}{lr} \sigma_1 &amp; &amp; &amp;  \\ &amp; \ddots &amp; &amp; 0 \\ &amp; &amp; \sigma_r &amp; \\ &amp; 0 &amp; &amp; 0  \end{array}  \right]  \end{equation}_{m\times n}$  $\begin{equation} \left[ \begin{array}{lr}  v_1^T \\ \vdots \\ v_n^T \end{array}  \right]  \end{equation}_{n\times n}$</p>
+<p>$= \alpha_1u_1v_1^T+\alpha_2u_2v_2^T+\cdots+\alpha_ru_rv_r^T$</p>
+<p>$=\begin{equation} \left[ \begin{array}{lr}  u_1, \cdots, u_r\end{array}  \right]  \end{equation}_{m\times r}$ $\begin{equation} \left[ \begin{array}{lr} \sigma_1 &amp; &amp;  \\ &amp; \ddots &amp;  \\ &amp; &amp; \sigma_r    \end{array}  \right]  \end{equation}_{r\times r}$ $\begin{equation} \left[ \begin{array}{lr}  v_1^T \\ \vdots \\ v_r^T \end{array}  \right]  \end{equation}_{r\times n}$</p>
+<p>$u_{r+1},\cdots,u_m\in \mathcal{N}(A^T)$， $v_{r+1},\cdots,v_n\in \mathcal{N}(A)$，没有贡献</p>
+<h3 id="A-k-和-mathrm-Eckart-Young-定理"><a href="#A-k-和-mathrm-Eckart-Young-定理" class="headerlink" title="$A_k$和$\mathrm{Eckart-Young}$定理"></a>$A_k$和$\mathrm{Eckart-Young}$定理</h3><p>设$A_k\in \mathbb{R}_{m\times n}$,</p>
+<p>$A = U\Sigma V^T=\sigma_1u_1v_1^T+\sigma_2u_2v_2^T+\cdots+\sigma_ru_rv_r^T$</p>
+<p>对$1\le k \le r$，令</p>
+<p>$A_K := U_k\Sigma_kV_k^T=\sigma_1u_1v_1^T+\sigma+2u_2v_2^T+\cdots+\sigma_ku_kv_k^T$</p>
+<p>则$\mathrm{rank}A_k = k,$且随着$k$增大，$A_k$ 逼近$A$</p>
+<p><strong>$\mathrm{Eckart-Young}$定理</strong>： 对$\mathbb{R}_{m\times n}$中任意秩为$k$的矩阵$B_{m\times n}$，有$||A-B||\ge ||A-A_k||$ ($||A-b||$，两个矩阵的距离)</p>
+<p>直观的说，$A_k$时所有$\mathrm{rank}k$的矩阵中距离$A$最近的</p>
+<blockquote>
+<p>谈距离，就需要定义度量</p>
+<ul>
+<li>度量$d$需要满足三个性质：<ul>
+<li>（非负性）$d(x,y)\ge 0$且$d(x,y)=0\Longleftrightarrow x=y$</li>
+<li>（对称性）$dx(x,y)=d(y,x)$</li>
+<li>（三角不等式） $d(x,z) \le d(x,y)+d(y,z)$</li>
+</ul>
+</li>
+<li>向量的度量通过范数定义$d(v_1,v_2):=||v_1-v_2||$</li>
+<li>向量的范数需要满足：<ul>
+<li>（非负性）$||v||\ge 0 $且$||V||=0 \Longleftrightarrow v = 0$</li>
+<li>（齐次性）$||cv|| = |c|||v||$</li>
+<li>（三角不等式）$||v_1+v_2|| \le ||v_1||+||v_2||$</li>
+</ul>
+</li>
+<li>向量的范数<ul>
+<li>($l_2$范数) $||v||_2 := \sqrt{|v_1|^2+\cdots||v_n|^2}$</li>
+<li>($l_1$范数)$||v||_1 :=  |v_1| + \cdots||v_n|$</li>
+<li>($l_{\infty}$范数) $||v||_{\infty} := \max\limits_{1\le i\le n}|v_i|$</li>
+</ul>
+</li>
+<li>矩阵的范数<ul>
+<li>$spertral\ norm:$ $||A||_2 := \max\limits_{x\not= 0} \frac{||Ax||_2}{||x||_2}$</li>
+<li>$Frobenius\ norm :$ $||A||_F := \sqrt{\sum_{i,j}|a_{ij}|^2}$</li>
+</ul>
+</li>
+</ul>
+</blockquote>]]></content>
       <categories>
         <category>智能计算数学基础</category>
       </categories>
