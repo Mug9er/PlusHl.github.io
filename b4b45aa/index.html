@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Django与mysql相连, Mug-9&#39;s blog">
+    <meta name="keywords" content="数学基础-概率, Mug-9&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>Django与mysql相连 | Mug-9&#39;s blog</title>
+    <title>数学基础-概率 | Mug-9&#39;s blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
 
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-rd35yq.w241vzya18w.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k71qmm.k767tapw0h8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Django与mysql相连</h1>
+                    <h1 class="description center-align post-title">数学基础-概率</h1>
                 </div>
             </div>
         </div>
@@ -512,12 +512,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Django/">
-                                <span class="chip bg-color">Django</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">数学基础</span>
                             </a>
                         
-                            <a href="/tags/%E8%BF%9E%E6%8E%A5MySQL/">
-                                <span class="chip bg-color">连接MySQL</span>
+                            <a href="/tags/%E6%A6%82%E7%8E%87/">
+                                <span class="chip bg-color">概率</span>
                             </a>
                         
                     </div>
@@ -528,8 +528,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
-                                配置
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                智能计算数学基础
                             </a>
                         
                     </div>
@@ -541,28 +541,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-27
+                    2021-07-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-07-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    880
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    8 分
                 </div>
                 
 
@@ -590,258 +590,107 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Django与mysql相连"><a href="#Django与mysql相连" class="headerlink" title="Django与mysql相连"></a>Django与mysql相连</h2><h3 id="Django链接数据库"><a href="#Django链接数据库" class="headerlink" title="Django链接数据库"></a>Django链接数据库</h3><p>在项目根setting.py中更改默认配置</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">DATABASES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token string">'default'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token string">'ENGINE'</span><span class="token operator">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
-        <span class="token string">'NAME'</span><span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
-        <span class="token string">'USER'</span><span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
-        <span class="token string">'PASSWORD'</span><span class="token operator">:</span> <span class="token string">'****'</span><span class="token punctuation">,</span>
-        <span class="token string">'HOST'</span><span class="token operator">:</span> <span class="token string">'****'</span><span class="token punctuation">,</span>
-        <span class="token string">'PORT'</span><span class="token operator">:</span> <span class="token string">'3306'</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>ENGINE</code> 用于特定的数据库引擎的配置，一般选项如下</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>sqlite3
-django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>postgresql
-django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>mysql
-django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>oracle<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>NAME</code>:要连接的数据库名称的配置<br><code>USER</code>:配置连接数据库的用户账号<br><code>PASSWORD</code>:配置连接数据库的登录密码<br><code>HOST</code>:配置数据库所在的主机IP地址<br> <code>PORT</code>:配置连接数据库的端口号<br><code>CHARSET</code>:配置连接数据库交互数据编码格式</p>
-<h3 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h3><p><code>Django</code>项目中定义模型数据，其实就是定义class类型，通过类型创建的对象来封装管理数据，一定要在这里明确关联和对应关系</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">程序</th>
-<th style="text-align:center">数据库</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>class</code>类型</td>
-<td style="text-align:center"><code>table</code> 表格</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>attr</code>属性</td>
-<td style="text-align:center"><code>field</code>字段</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>object</code>对象</td>
-<td style="text-align:center"><code>record</code>记录</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>模型中的属性与数据库中的字段对应</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">对象中的属性类型定义</th>
-<th style="text-align:center">表中的字段类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>AutoField()</code></td>
-<td style="text-align:center"><code>auto_increment</code> 自动增长</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>BOoleanField()</code></td>
-<td style="text-align:center"><code>bool</code> 布尔类型</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>NullNooleanField()</code></td>
-<td style="text-align:center"><code>bool or null</code> 扩展布尔类型</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>CharField()</code></td>
-<td style="text-align:center"><code>varchar</code> 字符串</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>TextField()</code></td>
-<td style="text-align:center"><code>text</code> 长文本</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>IntegerField()</code></td>
-<td style="text-align:center"><code>int</code> 整数</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>DecimalField()</code></td>
-<td style="text-align:center"><code>double</code> 双精度</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>FloatField()</code></td>
-<td style="text-align:center"><code>float</code>  单精度</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>DateField()</code></td>
-<td style="text-align:center"><code>date</code> 日期</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>TimeField()</code></td>
-<td style="text-align:center"><code>time</code> 时间</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>DateTimeField()</code></td>
-<td style="text-align:center"><code>datetime</code> 日期时间</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>FileField()</code></td>
-<td style="text-align:center"><code>blob</code> 二进制</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>ImageField()</code></td>
-<td style="text-align:center"><code>bolb</code>二进制</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>每个字段定义时，都有自己的一些特殊选项指定</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>null</code></td>
-<td style="text-align:center">如果为<code>True</code>，将NULL空值存储到数据库中，默认<code>False</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>blank</code></td>
-<td style="text-align:center">如果为<code>True</code>，表示该字段允许存储空值，默认<code>False</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>db_column</code></td>
-<td style="text-align:center">字段名称，如果不指定，直接使用类型属性的名称作为字段名称</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>db_index</code></td>
-<td style="text-align:center">如果设置为<code>True</code>，表示个当前字段添加索引支持</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>default</code></td>
-<td style="text-align:center">给字段默认值</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>primary_key</code></td>
-<td style="text-align:center">是否设置当前字段为主键</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>unique</code></td>
-<td style="text-align:center">如果为<code>True</code>，该字段储存的值必须时唯一的</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>在大部分项目汇总，还会涉及到多表关联</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ForeignKey</td>
-<td style="text-align:center">一对一关联，该字段定义在多个一方</td>
-</tr>
-<tr>
-<td style="text-align:center">ManToManyField</td>
-<td style="text-align:center">多对多关联关系，该字段两方都需要定义</td>
-</tr>
-<tr>
-<td style="text-align:center">OneToOneField</td>
-<td style="text-align:center">一对一关联，该字段可以定义在任意一方</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>项目结构</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">├── backend
-│   ├── __init__<span class="token punctuation">.</span>py
-│   ├── admin<span class="token punctuation">.</span>py
-│   ├── migrations
-│   │   └── __init__<span class="token punctuation">.</span>py
-│   ├── models<span class="token punctuation">.</span>py
-│   ├── tests<span class="token punctuation">.</span>py
-│   └── views<span class="token punctuation">.</span>py
-├── manage<span class="token punctuation">.</span>py
-└── ulb_manager
-    ├── __init__<span class="token punctuation">.</span>py
-    ├── settings<span class="token punctuation">.</span>py
-    ├── urls<span class="token punctuation">.</span>py
-    └── wsgi<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在根目录的<code>setting.py</code>中添加</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">INSTALLED_APPS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token comment">///...</span>
-    <span class="token string">'backend'</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>修改<code>backend/models.py</code></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
-
-
-# Create your models here<span class="token punctuation">.</span>
-<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token operator">:</span>
-    id <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">AutoField</span><span class="token punctuation">(</span>primary_key <span class="token operator">=</span> True<span class="token punctuation">)</span>
-    account <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-    password <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-
-    def <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token operator">:</span> # 表中每条数据显示账号
-        <span class="token keyword">return</span> u<span class="token string">'account: %s'</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>account
-
-
-<span class="token keyword">class</span> <span class="token class-name">Class</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token operator">:</span>
-    id <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">AutoField</span><span class="token punctuation">(</span>primary_key <span class="token operator">=</span> True<span class="token punctuation">)</span>
-    name <span class="token operator">=</span> models<span class="token punctuation">.</span><span class="token function">CharField</span><span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>model</code>中定义两个类，代表两个表<code>User，Class</code>，</p>
-<p>创建两个表</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py makemigrations<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>同步到<code>mysql</code></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py migrate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这时在<code>mysql</code>中可以看到新增加的表</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">mysql<span class="token operator">&gt;</span> show tables<span class="token punctuation">;</span>
-<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span>
-<span class="token operator">|</span> Tables_in_test             <span class="token operator">|</span>
-<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span>
-<span class="token operator">|</span> auth_group                 <span class="token operator">|</span>
-<span class="token operator">|</span> auth_group_permissions     <span class="token operator">|</span>
-<span class="token operator">|</span> auth_permission            <span class="token operator">|</span>
-<span class="token operator">|</span> auth_user                  <span class="token operator">|</span>
-<span class="token operator">|</span> auth_user_groups           <span class="token operator">|</span>
-<span class="token operator">|</span> auth_user_user_permissions <span class="token operator">|</span>
-<span class="token operator">|</span> backend_class              <span class="token operator">|</span>
-<span class="token operator">|</span> backend_user               <span class="token operator">|</span>
-<span class="token operator">|</span> django_admin_log           <span class="token operator">|</span>
-<span class="token operator">|</span> django_content_type        <span class="token operator">|</span>
-<span class="token operator">|</span> django_migrations          <span class="token operator">|</span>
-<span class="token operator">|</span> django_session             <span class="token operator">|</span>
-<span class="token operator">|</span> user                       <span class="token operator">|</span>
-<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="后台显示数据库"><a href="#后台显示数据库" class="headerlink" title="后台显示数据库"></a>后台显示数据库</h3><p>在<code>backend/admin.py</code>中注册模型</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
-
-<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> <span class="token operator">*</span>
-<span class="token comment"># Register your models here.</span>
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>User<span class="token punctuation">)</span>
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Class<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>运行<code>django</code></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py runserver <span class="token number">8888</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在<code>http://127.0.0.1:8888/admin/</code>中可以看到后台登录界面</p>
-<h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>账号和密码都是<code>admin</code>，其他可以随便填</p>
-<p>这时可以通过后台登录界面进入后台看到数据库数据</p>
-<h3 id="修改-语言和时区"><a href="#修改-语言和时区" class="headerlink" title="修改 语言和时区"></a>修改 语言和时区</h3><p>在<code>根目录/setting.py</code>中修改 语言和时区</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token constant">LANGUAGE_CODE</span> <span class="token operator">=</span> <span class="token string">'zh-Hans'</span>
-
-<span class="token constant">TIME_ZONE</span> <span class="token operator">=</span> <span class="token string">'Asia/Shanghai'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>后台界面可以显示中文，通过增加可以添加数据</p>
+                <h2 id="描述随机方法"><a href="#描述随机方法" class="headerlink" title="描述随机方法"></a>描述随机方法</h2><ul>
+<li>$\mathrm{E}(x)$  ,期望，均值，</li>
+<li>$\mathrm{var}(x)$ 方差  $\mathrm{E}(x-\bar{x})^2$</li>
+<li>$\rho(x,y) $  相关系数</li>
+<li>$\mathrm{PDF}$：概率密度函数$\mathrm{p}(x)$<ul>
+<li>高斯密度：$p(x)=\frac{1}{(2\pi \sigma^2 ) ^{\frac{1}{2}}} \mathrm{exp}\{-\frac{1}{2} \frac{(x-m)^2}{\sigma^2}\}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="大数定理"><a href="#大数定理" class="headerlink" title="大数定理"></a>大数定理</h3><p>$\lim\limits_{n\to \infty}\mathrm{P}(|\frac{S_n}{n}-p|&lt; \varepsilon ) = 1$</p>
+<p>伯努利实验，重复$n$次，每次成功概率为$p$,总成功次数为$S_n$ ，$\forall \varepsilon &gt; 0$</p>
+<h2 id="重要的-mathrm-PDF"><a href="#重要的-mathrm-PDF" class="headerlink" title="重要的$\mathrm{PDF}$"></a>重要的$\mathrm{PDF}$</h2><h3 id="mathrm-Reyleigh-分布"><a href="#mathrm-Reyleigh-分布" class="headerlink" title="$\mathrm{Reyleigh}$分布"></a>$\mathrm{Reyleigh}$分布</h3><p>$x_1 \sim N(0,\sigma^2), x_2\sim N(0, \sigma^2)$，其中$x_1,x_2$是独立的</p>
+<p>定义一个概率密度函数$x=\sqrt{x_1^2+x_2^2}$</p>
+<p>这个$x$的$\mathrm{PDF}$：</p>
+<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x}{\sigma^2}exp(-\frac{1}{2\sigma^2}x) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<h3 id="mathrm-Rician-分布"><a href="#mathrm-Rician-分布" class="headerlink" title="$\mathrm{Rician}$分布"></a>$\mathrm{Rician}$分布</h3><p>$x_1\sim N(\mu_1, \sigma^2), x_2 \sim N(\mu_2, \sigma^2)$, 其中$x_1,x_2$独立</p>
+<p>定义一个概率密度函数$x=\sqrt{x_1^2+x_2^2}$</p>
+<p>$\mathrm{PSF}$为：</p>
+<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x}{\sigma^2}exp[-\frac{1}{2\sigma^2}(x^2+\alpha^2)]I_0(\frac{\alpha x}{\sigma^2}) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<p>$\alpha^2=\mu_1^2+\mu_2^2, I_0(u)= \frac{1}{\pi}\int_{0}^{\pi}\mathrm{exp}(u\mathrm{cost}\theta)d\theta=\int_{0}^{2\pi}\mathrm{exp}(u\mathrm{cos}\theta)\frac{d\theta}{2\pi}$</p>
+<p>$\alpha^2$等于0是就是$\mathrm{Reyleigh}$的$\mathrm{PDF}$</p>
+<blockquote>
+<p>$I_0(u)$是贝塞尔函数，是数学上一类特殊函数的总称，通常单说的贝塞尔函数值第一类贝塞尔函数</p>
+<ul>
+<li>第一类$r$阶贝塞尔函数，简称$J$函数，记作$J_r$:<ul>
+<li>$J_r(u)=\Sigma_{k=0}^{\infty}\frac{(-1)^k}{k!\Gamma(k+r+1)}(\frac{u}{2})^{2k+r}$</li>
+<li>$J_r(u)=\frac{(\frac{1}{2}u)^r}{\sqrt{\pi}\Gamma(r+\frac{1}{2})}\int_0^{\pi}\mathrm{cos}(u\mathrm{cos}\theta)\mathrm{sin}^{2r}\theta d\theta$</li>
+</ul>
+</li>
+<li>第一类修正贝塞尔函数<ul>
+<li>$I_r(u)=i^{-r}J_r(iu)=\Sigma_{k=0}^{\infty}\frac{(\frac{1}{2}u)^r}{k!\Gamma(k+r+1)}$</li>
+<li>$I_r(u)=\frac{(\frac{1}{2}u)^r}{\sqrt{\pi}\Gamma(r+\frac{1}{2})}\int_0^{\pi}\mathrm{exp}(u\mathrm{cos}\theta)\mathrm{sin}^{2r}\theta d\theta$</li>
+</ul>
+</li>
+</ul>
+<p>伽马函数，也叫第二类欧拉积分，是阶乘函数在实数与复数上扩展的一类函数</p>
+<ul>
+<li>定义<ul>
+<li>$\Gamma(u)=\int_0^{\infty}t^{u-1}\mathrm{exp}(-t)dt$</li>
+</ul>
+</li>
+<li>性质：<ul>
+<li>$\Gamma(u)=(u-1)\Gamma(u-1)(\mathrm{for \ any \ u})$</li>
+<li>$\Gamma(\frac{1}{2})=\sqrt{\pi}$</li>
+<li>$\Gamma(1)=1$</li>
+<li>$\Gamma(n)=(n-1)! $ $n$是一个整数</li>
+</ul>
+</li>
+</ul>
+<p>贝塔函数，也叫第一类欧拉积分，又称为$\mathrm{B}$函数</p>
+<ul>
+<li><p>定义：对任意实数$u,v&gt;0, \mathrm{B}(u,v)=\int_0^1x^{u-1}(1-x)^{v-1}dx$</p>
+</li>
+<li><p>性质：</p>
+<ul>
+<li>$\mathrm{B}(u,v)=\mathrm{B}(v,u)$</li>
+<li>$\mathrm{B}(u,v)= \frac{v-1}{u+v-1}\mathrm{B}(u.v-1)\ \ (u&gt;0, v&gt;1)$</li>
+<li>$\mathrm{B}(u,v)= \frac{v-1}{u+v-1}\mathrm{B}(u-1.v)\ \ (u&gt;1, v&gt;0)$</li>
+<li>$\mathrm{B}(u,v)= \frac{(u-1)(v-1)}{(u+v-1)(u+v-2)}\mathrm{B}(u-1.v-1)\ \ (u&gt;1, v&gt;1)$</li>
+</ul>
+<p>对于任意的正实数$u,v,\mathrm{B}(u,v)=\frac{\Gamma(u)\Gamma(v)}{\Gamma(u+v)}$</p>
+<p>对于任意的正整数$u,v, \mathrm{B}(u,v)=\frac{u+v}{uvC_{u+v}^u}=\frac{1}{vC_{u+v-1}^{u-1}}$</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="mathrm-Chi-Squared-Central"><a href="#mathrm-Chi-Squared-Central" class="headerlink" title="$\mathrm{Chi-Squared(Central)}$"></a>$\mathrm{Chi-Squared(Central)}$</h3><p>$x_1\sim N(0, 1), x_2 \sim N(0, 1),\cdots, x_1\sim N(0,1)$</p>
+<p>定义$x=\Sigma_{i=1}^vx_i^2$</p>
+<p>$x$的$\mathrm{PDF}$为：</p>
+<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2^{v/2}\Gamma(\frac{v}{2})}x^{v/2-1}exp(-\frac{1}{2}x)  &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<p>$v$是个数</p>
+<p>当$v=2$时，$x$的$\mathrm{PDF}$就是$\mathrm{Reyleigh}$分布的平方</p>
+<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2}exp(-\frac{1}{2}x) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<h3 id="mathrm-Chi-Squared-Noncentral"><a href="#mathrm-Chi-Squared-Noncentral" class="headerlink" title="$\mathrm{Chi-Squared(Noncentral)}$"></a>$\mathrm{Chi-Squared(Noncentral)}$</h3><p>$x_1\sim N(\mu_1, 1), x_2 \sim N(\mu_2, 1),\cdots, x_1\sim N(\mu_i,1)$</p>
+<p>定义$x=\Sigma_{i=1}^vx_i^2$</p>
+<p>$x$的$\mathrm{PDF}$为：</p>
+<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2}(\frac{x}{\lambda})^{\frac{v-2}{4}}exp[-\frac{1}{2}(x+\lambda)]I_{\frac{v}{2}-1}(\sqrt{\lambda x})  &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<p>表达式：$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x^{\frac{v}{2}-1}exp[-\frac{1}{2}(x+\lambda)]}{2^{\frac{v}{2}}} \sum\limits_{k=0}^{\infty}\frac{(\frac{\lambda x}{4})^k}{k! \Gamma(\frac{v}{2})+k}   &amp;  x&gt; 0\\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<p>$v$表示相加的个数， $\lambda=\sum_{i=1}^v\mu_i^2$,$\lambda$表示均值的平方和</p>
+<h3 id="mathrm-T-分布"><a href="#mathrm-T-分布" class="headerlink" title="$\mathrm{T}$分布"></a>$\mathrm{T}$分布</h3><p>$x_1\sim N(0,1), x_2 \sim \mathcal{X}_v^2$， 其中$x_1,x_2$独立</p>
+<p>定义$x=\frac{x_1}{\sqrt{x_2/v}}$</p>
+<p>$x$的$\mathrm{PDF}$为： $p(x)=\frac{\Gamma(\frac{v+1}{2})}{\sqrt{v\pi}\Gamma(\frac{v}{2})}(1+\frac{x^2}{v})^{-\frac{v+1}{2}}$</p>
+<p>$v$趋于$\infty$时，就是标准的正态分布</p>
+<p>$\mathrm{F(Central)}$分布</p>
+<p>$x_1\sim \mathcal{X}_{v_1}^2, x_2\sim \mathcal{X}_{v_2}^2, x_1,x_2$独立</p>
+<p>定义$x=\frac{x_1/v_1}{x_2/v_2}$</p>
+<p>$x$的$\mathrm{PDF}$为：$p(x)=\begin{equation} \left\{ \begin{array}{lr}\frac{(\frac{v_1}{v_2})^{\frac{v_1}{2}}}{B(\frac{v_1}{2},\frac{v_2}{2})} \frac{x^{\frac{v_1}{2}-1}}{(1+\frac{v_1}{v_2}x)^{\frac{v_1+v_2}{2}}} &amp;  x&gt; 0\\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
+<p>表达式：$p(x)=exp(-\frac{\lambda}{2})\sum\limits_{k=0}^{\infty}\frac{(\frac{\lambda}{2})^k}{k!}\frac{(\frac{v_1}{v_2})^{\frac{v_1}{2}+k}}{B(\frac{x_1+2k}{2}, \frac{v_2}{2})}x^{\frac{v_1}{2}+k-1}(1+\frac{v_1}{v_2}x)^{-\frac{1}{2}(v_1+v_2)-k}$</p>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>独立同分布之和是高斯分布，高斯分布的线性组合也是高斯分布</p>
+<h2 id="白噪声"><a href="#白噪声" class="headerlink" title="白噪声"></a>白噪声</h2><p>每个时刻的噪声之间正交</p>
+<p>$E[w(n+k)w(n)]=\sigma^2 \delta(k)$</p>
+<h2 id="独立和不相关"><a href="#独立和不相关" class="headerlink" title="独立和不相关"></a>独立和不相关</h2><h3 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h3><p>对于连续性随机变量, $f(x,y)=f_X(x)f_Y(y)$</p>
+<p>对于离散型的随机变量, $P(XY)=P(X)P(Y)$</p>
+<p>独立的性质：$E(XY)=E(X)E(Y)$</p>
+<h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p><strong>协方差：</strong> $cov(X,Y)=E\{(X-E(X))(Y-E(Y))\}=E(XY)-E(X)E(Y)$</p>
+<p><strong>相关性质：</strong> $\rho_{X,Y}=\frac{cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}\in [-1,1]$</p>
+<p>$\rho_{X,Y}\in [-1,0)$为负相关</p>
+<p>$\rho_{X,Y}\in (0, 1]$为正相关</p>
+<p>$\rho_{X,Y}=0$为不相关 $E(XY)=E(X)E(Y)$</p>
+<h3 id="独立和相关的联系和区别"><a href="#独立和相关的联系和区别" class="headerlink" title="独立和相关的联系和区别"></a>独立和相关的联系和区别</h3><p>$X,Y$独立 $\Longrightarrow E(XY)=E(X)E(Y)\Longrightarrow cov(X,Y)=0 \Longrightarrow X,Y$不想管</p>
+<p>$X,Y$不相关不能得到独立</p>
+<p>独立性是指两个变量的发生概率一点关系没有，而相关性通常是指线性关系。如果两个变量不相关，指的是线性关系里的不相关，但是不能说它们没有关系，可能是线性以外的其他关系。</p>
                 
             </div>
             <hr/>
@@ -867,7 +716,7 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://orzff.cn/3a7fd0d4/">http://orzff.cn/3a7fd0d4/</a>
+                    <a href="http://orzff.cn/b4b45aa/">http://orzff.cn/b4b45aa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -905,12 +754,12 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Django/">
-                                    <span class="chip bg-color">Django</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">数学基础</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BF%9E%E6%8E%A5MySQL/">
-                                    <span class="chip bg-color">连接MySQL</span>
+                                <a href="/tags/%E6%A6%82%E7%8E%87/">
+                                    <span class="chip bg-color">概率</span>
                                 </a>
                             
                         </div>
@@ -1350,45 +1199,51 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/4e01c297/">
+                <a href="/b4b45aa/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-l3qqwq.52mr3slkonw0.jpg" class="responsive-img" alt="vultr+cloudflare">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k71qmm.k767tapw0h8.jpg" class="responsive-img" alt="数学基础-概率">
                         
-                        <span class="card-title">vultr+cloudflare</span>
+                        <span class="card-title">数学基础-概率</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vultr+cloudflare 
+                            智能计算数学基础-概率
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    配置
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    智能计算数学基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%A3%9E%E6%9C%BA/">
-                        <span class="chip bg-color">飞机</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">数学基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A6%82%E7%8E%87/">
+                        <span class="chip bg-color">概率</span>
                     </a>
                     
                 </div>
@@ -1402,30 +1257,30 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/5218864/">
+                <a href="/d6347b6b/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-j3eqo5.56v9uocyvrc0.jpg" class="responsive-img" alt="axios与django通信">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-3z3v8d.5nzgm186f140.jpg" class="responsive-img" alt="数学基础-代数">
                         
-                        <span class="card-title">axios与django通信</span>
+                        <span class="card-title">数学基础-代数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            axios与django通信
+                            智能计算数学基础-代数
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    配置
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    智能计算数学基础
                                 </a>
                             
                             
@@ -1435,12 +1290,12 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Django/">
-                        <span class="chip bg-color">Django</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">数学基础</span>
                     </a>
                     
-                    <a href="/tags/Axios%E9%80%9A%E4%BF%A1/">
-                        <span class="chip bg-color">Axios通信</span>
+                    <a href="/tags/%E4%BB%A3%E6%95%B0/">
+                        <span class="chip bg-color">代数</span>
                     </a>
                     
                 </div>
