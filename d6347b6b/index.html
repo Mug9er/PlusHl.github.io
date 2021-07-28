@@ -555,14 +555,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8k
+                    8.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    37 分
+                    40 分
                 </div>
                 
 
@@ -883,7 +883,8 @@
 <h3 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h3><p>$y$在$x$上的投影</p>
 <p>如果$x$是单位向量，那么$y$在$x$上的投影就是$x$与$y$做内积$x^Ty$，这得到的时投影的长度，求投影的话还要再乘上$x$方向，这里$x$时单位向量，所以直接乘上$x$即可，投影即是$xx^Ty$。</p>
 <p>如果$x$不是单位向量，那么还是使用$x^Ty$来求投影的长度，不过这个长度是投影的长度乘上$x$的长度，这里要除掉$x$的长度$\frac{x^Ty}{||x||}$，再乘上$x$的方向$\frac{x}{||x||}$,经过展开就是：</p>
-<p>$\frac{x^Ty}{||x||} \cdot \frac{x}{||x||} = \frac{x^Ty}{x^Tx}x= x\frac{x^Ty}{x^Tx} = \frac{xx^T}{x^tx}y$</p>
+<p>$\frac{x^Ty}{||x||} \cdot \frac{x}{||x||} = \frac{x^Ty}{x^Tx}x= x\frac{x^Ty}{x^Tx} = \frac{xx^T}{x^Tx}y$</p>
+<p>在一个线性转换矩阵的列空间上投影可以写成$A(A^TA)^{-1} A^T$</p>
 <p>经过化简得到的投影由一个矩阵和$y$组成，这就意味这对于任意的$y$，它再$x$上的投影都是$\frac{xx^T}{x^tx}y$</p>
 <ul>
 <li>$P=\frac{xx^T}{x^Tx}$称为投影矩阵</li>
@@ -1157,10 +1158,32 @@
 <li>矩阵的范数<ul>
 <li>$spertral\ norm:$ $||A||_2 := \max\limits_{x\not= 0} \frac{||Ax||_2}{||x||_2}$</li>
 <li>$Frobenius\ norm :$ $||A||_F := \sqrt{\sum_{i,j}|a_{ij}|^2}$</li>
+<li>事实上，$||A||_2=\sigma_1$<ul>
+<li>$\max\limits_{x \not= 0} \frac{||Ax||_2}{||x||_2}=\max\limits_{x\not=0}\frac{||U\Sigma V^Tx||_2}{||x||_2} = \max\limits_{y\not= 0}\frac{||U\Sigma y||_2}{||Vy||_2} = \max\limits_{y\not= 0} \frac{||\Sigma y||_2}{||y||_2}$ 由于正交变换不影响范数</li>
+<li>$||A||_F = \sqrt{\mathrm{tr}(A^TA)} = \sqrt{\Sigma_{i}\sigma_i^2}$</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </blockquote>
+<h3 id="矩阵的伪逆"><a href="#矩阵的伪逆" class="headerlink" title="矩阵的伪逆"></a>矩阵的伪逆</h3><p>定义矩阵$A_{m\times n}$的伪逆为$A^{ \dagger }_{n\times m} = V\Sigma^{\dagger} U^T$</p>
+<p>其中$\Sigma^{\dagger} = \begin{equation} \left[ \begin{array}{lr} 1/\sigma_1 &amp; &amp; &amp;  \\ &amp; \ddots &amp; &amp; 0 \\ &amp; &amp; 1/\sigma_r &amp; \\ &amp; 0 &amp; &amp; 0  \end{array}  \right]  \end{equation}_{n\times m}$ </p>
+<p>$A^{\dagger}A=V  \begin{equation} \left[ \begin{array}{lr} 1 &amp; &amp; &amp;  \\ &amp; \ddots &amp; &amp; 0 \\ &amp; &amp; 1 &amp; \\ &amp; 0 &amp; &amp; 0  \end{array}  \right]  \end{equation}_{n\times n} V^T, AA^{\dagger} = U$ $ \begin{equation} \left[ \begin{array}{lr} 1 &amp; &amp; &amp;  \\ &amp; \ddots &amp; &amp; 0 \\ &amp; &amp; 1 &amp; \\ &amp; 0 &amp; &amp; 0  \end{array}  \right]  \end{equation}_{m \times m} U^T$</p>
+<ul>
+<li>若$A$可逆，$A^{\dagger}=A^{-1}=V\Sigma^{-1}U^T$</li>
+<li>若$\mathrm{rank}A=n$，则$A^TA$可逆，$A^{\dagger}=(A^TA)^{-1}A^T$<ul>
+<li>$(A^TA)^{-1}A^T=(V\Sigma^T\Sigma V^T)^{-1}V\Sigma^T U^T \\  = V(\Sigma^T\Sigma)^{-1}V^TV\Sigma^TU^T = V\Sigma^{\dagger}U^T$</li>
+</ul>
+</li>
+<li>若$\mathrm{rank}A=m$，则$AA^T$可逆，$A^{\dagger}=A^T(AA^T)^{-1}$</li>
+</ul>
+<p>对于$1\le i \le r$</p>
+<p>$Av_i=\sigma_iu_i,A^{\dagger}u_i=1/\sigma_iv_i\\ A^{\dagger}A=1_{C(A^T)}, AA^{\dagger}=1_{C(A)}$</p>
+<p>令$b=b_A+n_N$,</p>
+<p>其中$b_A\in C(A)$是$b$在$C(A)$中的投影，$b_N\in \mathcal{N}(A^T)=\mathcal{N}(A^{\dagger})$</p>
+<p>此时$Ax=b_A$有解$\hat{x}=A^{\dagger}b_A$</p>
+<p>$\hat{x}=A^{\dagger}b_A+A^{\dagger}b_N=A^{\dagger}b$</p>
                 
             </div>
             <hr/>
@@ -1953,7 +1976,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">83.1k</span>
+                        class="white-color">83.5k</span>
             
             
             
