@@ -795,39 +795,39 @@
 </li>
 </ul>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>对于定义域在$D$上的函数$f$找极小值</p>
-<p>如果存在$x^<em>$，在$x^</em>$的邻域$B(x^<em>,r)$内，所有值都小于$f(x^</em>)$的$f(x^<em>)\le f(x)$，那么$x^</em>$就是这个函数在$B(x^*,r)$的局部极小值</p>
+<p>如果存在$x’$，在$x’$的邻域$B(x’,r)$内，所有值都小于$f(x’)$的$f(x’)\le f(x)$，那么$x’$就是这个函数在$B(x’,r)$的局部极小值</p>
 <h3 id="局部极小值必要条件"><a href="#局部极小值必要条件" class="headerlink" title="局部极小值必要条件"></a>局部极小值必要条件</h3><p>$x^{<em>}$是局部极小值$\Longrightarrow$ $Df(x^{</em>})=0,\triangledown^2f(x^{*})\ge 0$</p>
 <p><strong>半正定矩阵:</strong> $P \Longleftrightarrow x^tPx \ge 0, \forall x \in \mathbb{R}^n$ </p>
 <p><strong>正定矩阵:</strong> $P \Longleftrightarrow x^tPx &gt; 0, \forall x \in \mathbb{R}^n-\{0\}$ </p>
-<h3 id="局部极小值充分条件"><a href="#局部极小值充分条件" class="headerlink" title="局部极小值充分条件"></a>局部极小值充分条件</h3><p>$Df(x^{<em>})=0,\triangledown^2f(x^{</em>}) &gt; 0$ $\Longrightarrow$ $x^*$是局部极小值</p>
-<h3 id="无约束优化问题"><a href="#无约束优化问题" class="headerlink" title="无约束优化问题"></a>无约束优化问题</h3><p> <strong>例子：</strong> $f(x)=\frac{1}{2}||Ax-b||^2,A$是$m\times n, rank(A)=m \le n, b\in \mathbb{R}^m$,求局部极小值$x^*$</p>
+<h3 id="局部极小值充分条件"><a href="#局部极小值充分条件" class="headerlink" title="局部极小值充分条件"></a>局部极小值充分条件</h3><p>$Df(x^{<em>})=0,\triangledown^2f(x^{</em>}) &gt; 0$ $\Longrightarrow$ $x’$是局部极小值</p>
+<h3 id="无约束优化问题"><a href="#无约束优化问题" class="headerlink" title="无约束优化问题"></a>无约束优化问题</h3><p> <strong>例子：</strong> $f(x)=\frac{1}{2}||Ax-b||^2,A$是$m\times n, rank(A)=m \le n, b\in \mathbb{R}^m$,求局部极小值$x’$</p>
 <p>$f(x)$ $ = \frac{1}{2}(Ax-b)^t(Ax-b)\\ = \frac{1}{2}(x^tA^t-b^t)(Ax-b) \\ = \frac{1}{2}x^t(A^tA)x - (A^tb)^tx+\frac{1}{2}b^tb$</p>
 <p>令$p = A^tA,q = -A^tb$</p>
 <p>原式=$\frac{1}{2}x^tpx+q^tx+r$</p>
 <p>那么这是一个关于$x$的二次函数，所以$\triangledown f(x)=A^tAx-A^tb,\triangledown^2f(x)=A^tA$</p>
 <ul>
-<li><p>如果$x^*$是局部极小值点，那么$\triangle f(x) = 0 , \triangledown^2f(x) \ge 0$</p>
+<li><p>如果$x’$是局部极小值点，那么$\triangle f(x) = 0 , \triangledown^2f(x) \ge 0$</p>
 <p>即$A^tAx = A^tb,A^tA \ge 0$</p>
 </li>
-<li><p>如果$A^tAx = A^tb,A^tA &gt; 0$那么就能推出$x^*$是局部极小</p>
+<li><p>如果$A^tAx = A^tb,A^tA &gt; 0$那么就能推出$x’$是局部极小</p>
 </li>
 </ul>
-<p>因为$rank(A)$等于$m$,所以$A$是可逆的，那么$x^*$就可以用$(A^tA)^{-1}A^tb$求出</p>
-<p> <strong>例子：</strong> $f(x)= \frac{1}{2}||Ax-b||^2 + \frac{\lambda}{2}||x||^2$,求局部最优解$x^*$   </p>
+<p>因为$rank(A)$等于$m$,所以$A$是可逆的，那么$x’$就可以用$(A^tA)^{-1}A^tb$求出</p>
+<p> <strong>例子：</strong> $f(x)= \frac{1}{2}||Ax-b||^2 + \frac{\lambda}{2}||x||^2$,求局部最优解$x’$   </p>
 <ul>
-<li><p>$x^<em>$ 局部极小值可以推出   $\triangledown f(x^</em>)=A^tAx^<em>-A^tb+\lambda x^</em>=0, \triangledown^2 f(x^*)=A^tAI+\lambda \ge 0$ </p>
+<li><p>$x’$ 局部极小值可以推出   $\triangledown f(x’)=A^tAx’-A^tb+\lambda x’=0, \triangledown^2 f(x’)=A^tAI+\lambda \ge 0$ </p>
 <p>$A^tA+\lambda I\ge0$永远成立，因为$A^tA+\lambda I$可以左右加上$x$，可以写成$x^t(A^tA+\lambda I)x \Longrightarrow ||Ax||^2 + \lambda ||x||^2 \ge 0$</p>
 </li>
-<li><p>$\triangledown f(x^<em>)=0, \triangledown^2f(x^</em>) &gt; 0$可以推出$x^<em>$是局部极小，当$x$不为零时，$\triangledown^2f(x^</em>)$永远成立</p>
+<li><p>$\triangledown f(x’)=0, \triangledown^2f(x’) &gt; 0$可以推出$x’$是局部极小，当$x$不为零时，$\triangledown^2f(x’)$永远成立</p>
 </li>
 </ul>
-<p>​    所以$x^<em>$是局部极小值等价于$\triangledown f(x^</em>) = 0 \Longleftrightarrow A^tAx^<em>+\lambda x^</em>=A^tb$</p>
+<p>​    所以$x’$是局部极小值等价于$\triangledown f(x’) = 0 \Longleftrightarrow A^tAx’+\lambda x’=A^tb$</p>
 <p>因为$A^A+\lambda I$是正定矩阵，所以是$A^A+\lambda I$可逆的</p>
-<p>$A^tAx^<em>+\lambda x^</em>=A^tb \Longleftrightarrow (A^tA+\lambda I)x^<em> = A^tb \Longleftrightarrow x^</em> = (A^tA+\lambda I)^{-1}A^tb$</p>
+<p>$A^tAx’+\lambda x’=A^tb \Longleftrightarrow (A^tA+\lambda I)x’ = A^tb \Longleftrightarrow x’ = (A^tA+\lambda I)^{-1}A^tb$</p>
 <h3 id="有约束优化问题"><a href="#有约束优化问题" class="headerlink" title="有约束优化问题"></a>有约束优化问题</h3><h4 id="线性约束"><a href="#线性约束" class="headerlink" title="线性约束"></a>线性约束</h4><p><strong>例子：</strong> $\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b &amp; A_{p \times n}, rank(A) = p, b\in \mathbb{R}^p \end{array}  \right.  \end{equation}$</p>
 <p>$x$满足线性约束条件，在这个线性约束条件下来找最小值</p>
-<p>$x^<em>$满足$Ax^</em>=b$,如果存在$Ax=b$,那么可以推导到$A(x-x^<em>)=0$，此时，$x-x^</em>$是$Ay=0$的解</p>
-<p>$\{x: Ax=b\}=x^*+\{y: Ay= 0\}$,所有的$y$构成的集合被称为矩阵$A$的零空间$N(A)$，矩阵的零空间是一个线性空间</p>
+<p>$x’$满足$Ax’=b$,如果存在$Ax=b$,那么可以推导到$A(x-x’)=0$，此时，$x-x’$是$Ay=0$的解</p>
+<p>$\{x: Ax=b\}=x’+\{y: Ay= 0\}$,所有的$y$构成的集合被称为矩阵$A$的零空间$N(A)$，矩阵的零空间是一个线性空间</p>
 <blockquote>
 <p>$N(A):A$的零空间，是一个线性空间</p>
 <p>$dim(N(A)) = n-p$</p>
@@ -835,24 +835,24 @@
 <p>那么$N(A)=\{ u_1\alpha_1+u_2\alpha_2+\cdots+u_{n-p}\alpha_{n-p}： u_i \in \mathbb{R} \}$，零空间中的所有元素都可以通过基来构造出来</p>
 <p>$\alpha_i$是$n\times 1$的向量， 因为 $Ax=b$,$b$ 是$p \times 1$的向量</p>
 </blockquote>
-<p>所以$\{x:Ax=b \}=x^*+N(A)$</p>
-<p>如果$x$使得$Ax-b=0$，那么可以等价于$x=x^<em>+\sum\limits_{i=1}^{n-p}u_i\alpha_i = x^</em> + (\alpha_1,\cdots,\alpha_{n-p})\begin{equation} \left( \begin{array}{lr} u_1 \\ \vdots \\ u_{n-p} \end{array}  \right)  \end{equation}$ </p>
+<p>所以$\{x:Ax=b \}=x’+N(A)$</p>
+<p>如果$x$使得$Ax-b=0$，那么可以等价于$x=x’+\sum\limits_{i=1}^{n-p}u_i\alpha_i = x’ + (\alpha_1,\cdots,\alpha_{n-p})\begin{equation} \left( \begin{array}{lr} u_1 \\ \vdots \\ u_{n-p} \end{array}  \right)  \end{equation}$ </p>
 <p>将$(\alpha_1,\cdots,\alpha_{n-p})$写成矩阵形式得到一个$n\times (n-p)$的矩阵$B$</p>
-<p>$Ax=b \Longleftrightarrow x = x^<em> + By,B:n\times (n-p), y\in \mathbb{R}^{n-p} \\ \{ x\in \mathbb{R}^n: Ax=b \}=\{ y\in \mathbb{R}^{n-p} \} \Longleftrightarrow  x = x^</em> + By$</p>
-<p>$Ax =b$的解就相当于$x = x^<em> + By$,在$f(x)$中将$x$替换成$x^</em>+By$，即$\min\limits_{y\in \mathbb{R}^{n-p}}f(x^*+By)$。</p>
-<p>有约束问题通过将约束条件的解求出来，写成一个$x^*$加零空间的形式将有约束问题转化成无约束的优化问题</p>
-<p> 将$f(x^*)$做二阶的泰勒展开后得到</p>
-<p>$f(x^<em>+\epsilon)=f(x^</em>)+\triangledown f(x^<em>)^t\epsilon + \frac{1}{2}\epsilon^t\triangledown^2f(x^</em>)\epsilon+o(||\epsilon||^2)$</p>
+<p>$Ax=b \Longleftrightarrow x = x’ + By,B:n\times (n-p), y\in \mathbb{R}^{n-p} \\ \{ x\in \mathbb{R}^n: Ax=b \}=\{ y\in \mathbb{R}^{n-p} \} \Longleftrightarrow  x = x’ + By$</p>
+<p>$Ax =b$的解就相当于$x = x’ + By$,在$f(x)$中将$x$替换成$x’+By$，即$\min\limits_{y\in \mathbb{R}^{n-p}}f(x’+By)$。</p>
+<p>有约束问题通过将约束条件的解求出来，写成一个$x’$加零空间的形式将有约束问题转化成无约束的优化问题</p>
+<p> 将$f(x’)$做二阶的泰勒展开后得到</p>
+<p>$f(x’+\epsilon)=f(x’)+\triangledown f(x’)^t\epsilon + \frac{1}{2}\epsilon^t\triangledown^2f(x’)\epsilon+o(||\epsilon||^2)$</p>
 <p>将$\epsilon =By$代入</p>
-<p>$f(x^<em>+By)=f(x^</em>)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x^*)B)y+o(||y||^2)$</p>
-<p>设$f(x^*+By)$ 写成一个关于$y$的函数 $g(y)$</p>
-<p>则：$g(y)=g(0)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x^*)B)y+o(||y||^2)$</p>
-<p>那么：$\triangledown g(0)=B^t \triangledown f(x^<em>)\\ \triangledown^2g(0)=B^t\triangledown^2f(x^</em>)B$</p>
-<p>$g(y)=f(x^<em>+By)$，如果$x^</em>$是$f$的局部极小，那么等价于$0$是$g$的局部极小，而$g$的一阶微分和二阶微分都已经求出来了，那么其解也就确定了</p>
+<p>$f(x’+By)=f(x’)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x’)B)y+o(||y||^2)$</p>
+<p>设$f(x’+By)$ 写成一个关于$y$的函数 $g(y)$</p>
+<p>则：$g(y)=g(0)+(B^t\triangledown f(x))^t y + \frac{1}{2}y^t(B^t\triangledown^2f(x’)B)y+o(||y||^2)$</p>
+<p>那么：$\triangledown g(0)=B^t \triangledown f(x’)\\ \triangledown^2g(0)=B^t\triangledown^2f(x’)B$</p>
+<p>$g(y)=f(x’+By)$，如果$x’$是$f$的局部极小，那么等价于$0$是$g$的局部极小，而$g$的一阶微分和二阶微分都已经求出来了，那么其解也就确定了</p>
 <p>$\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b  \end{array}  \right.  \end{equation}$</p>
 <ul>
-<li>$x^*$是局部极小$\Longrightarrow$ $\triangledown g(0)=0， \triangledown^2g(0) \ge 0$</li>
-<li>如果$B^t \triangledown f(x^<em>) = 0,B^t\triangledown^2f(x^</em>)B &gt; 0 \Longrightarrow x^*$是局部极小</li>
+<li>$x’$是局部极小$\Longrightarrow$ $\triangledown g(0)=0， \triangledown^2g(0) \ge 0$</li>
+<li>如果$B^t \triangledown f(x’) = 0,B^t\triangledown^2f(x’)B &gt; 0 \Longrightarrow x’$是局部极小</li>
 </ul>
 <blockquote>
 <p><strong>拉格朗日乘子法 </strong></p>
@@ -861,13 +861,13 @@
 <p>$(N(A))^{\bot}=R(A^t)$ 零空间的正交补时$A^t$的像空间</p>
 <p>正交补的定义：$V^{\bot}=\{y\in\mathbb{R}^n : y^tx = 0, \forall x \in V\}$</p>
 <p>因为$B^t=\begin{equation} \left( \begin{array}{lr} \alpha^t_1 \\ \vdots \\ \alpha^t_{n-p} \end{array}  \right)  \end{equation}$</p>
-<p>所以$B^t\triangledown f(x^<em>)=0$ $\Longleftrightarrow \alpha_i^t\triangledown f(x^</em>)=0,\forall i\in \{1,\cdots,n-p\}\\ \Longleftrightarrow \triangledown f(x^<em>) \in N(A)^{\bot} \\ \Longleftrightarrow  \triangledown f(x^</em>) \in R(A^t) , R(A^t)=\{A^ty: y\in \mathbb{R}^p \} \\ \Longleftrightarrow  \exists \mu \in \mathbb{R}^p st.\ \triangledown f(x^*)+A^t\mu=0 $ </p>
-<p>关于$B^t\triangledown f(x^<em>)=0$ 经过一些看不懂的变换可以等价于$\exists \mu \in \mathbb{R}^p$,使得$\triangledown f(x^</em>)+A^t\mu=0$</p>
+<p>所以$B^t\triangledown f(x’)=0$ $\Longleftrightarrow \alpha_i^t\triangledown f(x’)=0,\forall i\in \{1,\cdots,n-p\}\\ \Longleftrightarrow \triangledown f(x’) \in N(A)^{\bot} \\ \Longleftrightarrow  \triangledown f(x’) \in R(A^t) , R(A^t)=\{A^ty: y\in \mathbb{R}^p \} \\ \Longleftrightarrow  \exists \mu \in \mathbb{R}^p st.\ \triangledown f(x’)+A^t\mu=0 $ </p>
+<p>关于$B^t\triangledown f(x’)=0$ 经过一些看不懂的变换可以等价于$\exists \mu \in \mathbb{R}^p$,使得$\triangledown f(x’)+A^t\mu=0$</p>
 <p>而在拉格朗日乘子法中针对一开始的优化问题，可以写成$L(x,\mu) = f(x)+\mu^t(Ax-b)$</p>
-<p>而$L(x,\mu)$对$x$求导就可得 $\triangledown f(x^*) + A^t\mu$</p>
+<p>而$L(x,\mu)$对$x$求导就可得 $\triangledown f(x’) + A^t\mu$</p>
 </blockquote>
 <h4 id="拉格朗日乘子"><a href="#拉格朗日乘子" class="headerlink" title="拉格朗日乘子"></a>拉格朗日乘子</h4><p>对于$\begin{equation} \left\{ \begin{array}{lr} minimize_{x\in D}\  f(x) \\ sub\ to\  Ax = b  \end{array}  \right.  \end{equation}$</p>
-<p>$x^<em>$局部极小$\Longrightarrow\partial_x L(x^</em>,\mu)=0$，其中$L(x,\mu)=f(x)+\mu^t(Ax-b)$</p>
+<p>$x’$局部极小$\Longrightarrow\partial_x L(x’,\mu)=0$，其中$L(x,\mu)=f(x)+\mu^t(Ax-b)$</p>
 <p><strong>例子</strong> $\begin{equation} \left\{ \begin{array}{lr} minimize\  \sum\limits_{i=1}^nx_i\log x_i \\ sub\ to\  \sum\limits_{i=1}^nx_i=1 \end{array}  \right.  \end{equation}$</p>
 <p>$L(x,\mu)=\sum\limits_{i=1}^nx_i\log x_i + \mu(\sum\limits_{i=1}^nx_i-1)$</p>
 <p>$x$局部最小$\Longrightarrow \partial_xL=0,\Longrightarrow \forall i,\partial_{xi}L=0 \\ \Longrightarrow 1+ \log x_i + \mu = 0, \forall i\\ \Longrightarrow \log x_i = -(1+\mu) \Longrightarrow x_i = e^{-(1+\mu)}, \forall i \\ \Longrightarrow x_1 = x_2=…=x_n=\frac{1}{n}$</p>
@@ -875,12 +875,12 @@
 <p>$\triangledown ^2f(x)$是正定矩阵，而$B$又是满秩的所以$B^t\triangledown^2f(x)B$是正定矩阵</p>
 <p>所以$x=(\frac{1}{n},\cdots,\frac{1}{n})^t$是局部极小</p>
 <h4 id="非线性约束"><a href="#非线性约束" class="headerlink" title="非线性约束"></a>非线性约束</h4><p>$\begin{equation} \left\{ \begin{array}{lr} minimize\  f(x) \\ sub\ to\  h_i(x)=0 \end{array}  \right.  \end{equation}$</p>
-<h5 id="解局部参数化"><a href="#解局部参数化" class="headerlink" title="解局部参数化"></a>解局部参数化</h5><p>$g:(-1,1)\to \mathbb{R}^n,g(0)=x^*$</p>
+<h5 id="解局部参数化"><a href="#解局部参数化" class="headerlink" title="解局部参数化"></a>解局部参数化</h5><p>$g:(-1,1)\to \mathbb{R}^n,g(0)=x^{*}$</p>
 <p>$R(g)\subset D$，$D$是$f(x)$的定义域</p>
 <p>同时符合$h_i(g)=0$</p>
-<p>$x^*$是局部极小$\Longrightarrow 0$是$f \circ g$的局部极小 $\Longrightarrow (f \circ g)’(0)= 0, f(f \circ g)’’(0)\ge 0$</p>
+<p>$x’$是局部极小$\Longrightarrow 0$是$f \circ g$的局部极小 $\Longrightarrow (f \circ g)’(0)= 0, f(f \circ g)’’(0)\ge 0$</p>
 <p>$h_i \circ g=0 \Longrightarrow (h_i \circ g)’(0) = 0, (h_i \circ g)’’(0) = 0$</p>
-<p>根据上面的4个导数和$g$的任意性可以得到解$x^*$的必要条件</p>
+<p>根据上面的4个导数和$g$的任意性可以得到解$x’$的必要条件</p>
                 
             </div>
             <hr/>
