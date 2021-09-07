@@ -1035,16 +1035,16 @@
 <p>还是使用4层的神经网络来说</p>
 <p>$\delta_j^{(4)}=a_j^{(4)}-y_j$</p>
 <p>第四层就是输出值和$y$值的误差，然后我们反向传播到第三层</p>
-<p>$\delta^{(3)}=(\Theta^{(3)})^T\delta^{(4)} .* g’(z^{(3)})$</p>
+<p>$\delta^{(3)}=(\Theta^{(3)})^T\delta^{(4)} * g’(z^{(3)})$</p>
 <p>$\delta^{(3)}$由参数$\Theta^{(3)}$转置叉乘$\delta^{(4)}$然后点乘(这里点乘只是各个数字相乘) $g(z^{(3)})$的导数，</p>
 <blockquote>
 <p>对$g$函数求导，先设</p>
 <p>$a = g(z) = \frac{1}{1+e^{-z}} $</p>
 <p>$g’(z) \\ = (\frac{1}{1+e^{-z}})’ \\ = \frac{1’(\frac{1}{1+e^{-z}})+1(\frac{1}{1+e^{-z}})’}{(1+e^{-z})^2} \\ = \frac{e^{-z}}{(1+e^{-z})^2} \\ = \frac{e^{-z}+1-1}{(1+e^{-z})^2} \\ = \frac{(e^{-z}+1) -1}{(1+e^{-z})^2} \\ = \frac{1}{(1+e^{-z})}-\frac{1}{(1+e^{-z})^2} \\ = a - a^2 \\ = a(1-a)$</p>
 </blockquote>
-<p>那么现在$g’(z^{(3)})$就为$a^{(3)}.*(1-a^{(3)})$</p>
+<p>那么现在$g’(z^{(3)})$就为$a^{(3)}*(1-a^{(3)})$</p>
 <p>同样的$\delta^{(2)}$也是如此</p>
-<p>$\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)} .* g’(z^{(2)})$</p>
+<p>$\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)} * g’(z^{(2)})$</p>
 <p>在不严谨的情况下，我们可以得到初略的偏导数$\frac{\partial}{\partial \Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\delta_i^{l+1}$ 这些都是忽略的正则化的情况下</p>
 <h3 id="反向传播算法-1"><a href="#反向传播算法-1" class="headerlink" title="反向传播算法"></a>反向传播算法</h3><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Andrew-ML/image-20210704205722145.5eidr8is6h00.png" alt="反向传播算法"></p>
 <p>一开始我们将所有的$\Delta$设置为0，$\Delta$是$\delta$的大写形式</p>
@@ -1061,8 +1061,8 @@
 <h1 id="展开参数"><a href="#展开参数" class="headerlink" title="展开参数"></a>展开参数</h1><p>假设一个神经网络第一层有10个节点，第二层有10个节点，第三层有1个节点</p>
 <p>$s_1=10,s_2=10,s_3=1$</p>
 <p>那么对应的参数就为</p>
-<p>$\Theta^{(1)}\in\R^{10\times11},\Theta^{(2)}\in\R^{(10\times11)},\Theta^{(3)}\in\R^{(1\times11)}$</p>
-<p>$D^{(1)}\in\R^{10\times11},D^{(2)}\in\R^{(10\times11)},D^{(3)}\in\R^{(1\times11)}$</p>
+<p>$\Theta^{(1)}\in\mathbb{R}^{10\times11},\Theta^{(2)}\in\mathbb{R}^{(10\times11)},\Theta^{(3)}\in\mathbb{R}^{(1\times11)}$</p>
+<p>$D^{(1)}\in\mathbb{R}^{10\times11},D^{(2)}\in\mathbb{R}^{(10\times11)},D^{(3)}\in\mathbb{R}^{(1\times11)}$</p>
 <p>$\Theta,D$都是矩阵，但是对于高级优化函数</p>
 <blockquote>
 <p>$function\ [jVal,\ gradient] = costFunction(theta)\\ … \\ optTheta=fminunc(@costFunction, initialTheta, options)$</p>
@@ -1104,7 +1104,7 @@
 <h2 id="随机初始化-1"><a href="#随机初始化-1" class="headerlink" title="随机初始化"></a>随机初始化</h2><p>随机初始化是解决对称权重的初始化方法。</p>
 <p>随机初始化所有的$\Theta_{ij}^{(l)}$在$[-\epsilon,\epsilon]$之间</p>
 <blockquote>
-<p>$Theta = ranf(10,11)<em>(2</em>INIT_EPSILON) - INIT_EPSILON$</p>
+<p>$Theta = ranf(10,11) \times (2 \times INIT_EPSILON) - INIT_EPSILON$</p>
 </blockquote>
 <h1 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h1><h2 id="选择神经网络结构"><a href="#选择神经网络结构" class="headerlink" title="选择神经网络结构"></a>选择神经网络结构</h2><ul>
 <li>根据特征的维度确定输入单元个数</li>
