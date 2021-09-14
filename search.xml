@@ -724,7 +724,7 @@
 <p>向量二范数：$||X||_2=(\sum\limits_{i=1}^nx_i^2)^{\frac{1}{2}}=\sqrt{\sum\limits_{i=1}^nx_i^2}$</p>
 <p>向量无穷范数：$||X||_{\infty}=\max\limits_{i\le i\le n}|x_i|$</p>
 <h2 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h2><h3 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h3><p>对于实数：$|\sum\limits_{i=1}^{n}a_i|\le \sum\limits_{i=1}^n|a_i|,a_i\in \mathbb{R}$</p>
-<p>对于向量形式：$(\sum\limits_{i=1}^na_ib_i)^2\le \sum\limits_{i=1}^na_i^2 \sum\limits_{i=1}^nb_i^2\leftrightarrow|<a,b>|\le ||a|| \cdot ||b||$</a,b></p>
+<p>对于向量形式：$(\sum\limits_{i=1}^na_ib_i)^2\le \sum\limits_{i=1}^na_i^2 \sum\limits_{i=1}^nb_i^2\leftrightarrow| \lt a,b \gt|\le ||a|| \cdot ||b||$</p>
 <p><strong>证明</strong>：</p>
 <p>右边-左边$=\sum\limits_{ij}(a_ib_j-a_jb_i)^2\ge0$</p>
 <p><strong>??</strong>：</p>
