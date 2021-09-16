@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="数学基础-概率, Mug-9&#39;s blog">
+    <meta name="keywords" content="三维重建基础, Mug-9&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>数学基础-概率 | Mug-9&#39;s blog</title>
+    <title>三维重建基础 | Mug-9&#39;s blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Mug-9/Mug9er.github.io@master/libs/artitalk/dist/css/artitalk.min.css">
 
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k71qmm.k767tapw0h8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-dpelyj.3lovtcfm5200.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数学基础-概率</h1>
+                    <h1 class="description center-align post-title">三维重建基础</h1>
                 </div>
             </div>
         </div>
@@ -512,12 +512,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">数学基础</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A6%82%E7%8E%87/">
-                                <span class="chip bg-color">概率</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                <span class="chip bg-color">机器视觉</span>
                             </a>
                         
                     </div>
@@ -528,8 +524,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
-                                智能计算数学基础
+                            <a href="/categories/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/" class="post-category">
+                                三维重建
                             </a>
                         
                     </div>
@@ -541,28 +537,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-28
+                    2021-09-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-29
+                    2021-09-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -590,107 +586,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="描述随机方法"><a href="#描述随机方法" class="headerlink" title="描述随机方法"></a>描述随机方法</h2><ul>
-<li>$\mathrm{E}(x)$  ,期望，均值，</li>
-<li>$\mathrm{var}(x)$ 方差  $\mathrm{E}(x-\bar{x})^2$</li>
-<li>$\rho(x,y) $  相关系数</li>
-<li>$\mathrm{PDF}$：概率密度函数$\mathrm{p}(x)$<ul>
-<li>高斯密度：$p(x)=\frac{1}{(2\pi \sigma^2 ) ^{\frac{1}{2}}} \mathrm{exp}\{-\frac{1}{2} \frac{(x-m)^2}{\sigma^2}\}$</li>
-</ul>
-</li>
-</ul>
-<h3 id="大数定理"><a href="#大数定理" class="headerlink" title="大数定理"></a>大数定理</h3><p>$\lim\limits_{n\to \infty}\mathrm{P}(|\frac{S_n}{n}-p|&lt; \varepsilon ) = 1$</p>
-<p>伯努利实验，重复$n$次，每次成功概率为$p$,总成功次数为$S_n$ ，$\forall \varepsilon &gt; 0$</p>
-<h2 id="重要的-mathrm-PDF"><a href="#重要的-mathrm-PDF" class="headerlink" title="重要的$\mathrm{PDF}$"></a>重要的$\mathrm{PDF}$</h2><h3 id="mathrm-Reyleigh-分布"><a href="#mathrm-Reyleigh-分布" class="headerlink" title="$\mathrm{Reyleigh}$分布"></a>$\mathrm{Reyleigh}$分布</h3><p>$x_1 \sim N(0,\sigma^2), x_2\sim N(0, \sigma^2)$，其中$x_1,x_2$是独立的</p>
-<p>定义一个概率密度函数$x=\sqrt{x_1^2+x_2^2}$</p>
-<p>这个$x$的$\mathrm{PDF}$：</p>
-<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x}{\sigma^2}exp(-\frac{1}{2\sigma^2}x) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<h3 id="mathrm-Rician-分布"><a href="#mathrm-Rician-分布" class="headerlink" title="$\mathrm{Rician}$分布"></a>$\mathrm{Rician}$分布</h3><p>$x_1\sim N(\mu_1, \sigma^2), x_2 \sim N(\mu_2, \sigma^2)$, 其中$x_1,x_2$独立</p>
-<p>定义一个概率密度函数$x=\sqrt{x_1^2+x_2^2}$</p>
-<p>$\mathrm{PSF}$为：</p>
-<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x}{\sigma^2}exp[-\frac{1}{2\sigma^2}(x^2+\alpha^2)]I_0(\frac{\alpha x}{\sigma^2}) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<p>$\alpha^2=\mu_1^2+\mu_2^2, I_0(u)= \frac{1}{\pi}\int_{0}^{\pi}\mathrm{exp}(u\mathrm{cost}\theta)d\theta=\int_{0}^{2\pi}\mathrm{exp}(u\mathrm{cos}\theta)\frac{d\theta}{2\pi}$</p>
-<p>$\alpha^2$等于0是就是$\mathrm{Reyleigh}$的$\mathrm{PDF}$</p>
-<blockquote>
-<p>$I_0(u)$是贝塞尔函数，是数学上一类特殊函数的总称，通常单说的贝塞尔函数值第一类贝塞尔函数</p>
-<ul>
-<li>第一类$r$阶贝塞尔函数，简称$J$函数，记作$J_r$:<ul>
-<li>$J_r(u)=\Sigma_{k=0}^{\infty}\frac{(-1)^k}{k!\Gamma(k+r+1)}(\frac{u}{2})^{2k+r}$</li>
-<li>$J_r(u)=\frac{(\frac{1}{2}u)^r}{\sqrt{\pi}\Gamma(r+\frac{1}{2})}\int_0^{\pi}\mathrm{cos}(u\mathrm{cos}\theta)\mathrm{sin}^{2r}\theta d\theta$</li>
-</ul>
-</li>
-<li>第一类修正贝塞尔函数<ul>
-<li>$I_r(u)=i^{-r}J_r(iu)=\Sigma_{k=0}^{\infty}\frac{(\frac{1}{2}u)^r}{k!\Gamma(k+r+1)}$</li>
-<li>$I_r(u)=\frac{(\frac{1}{2}u)^r}{\sqrt{\pi}\Gamma(r+\frac{1}{2})}\int_0^{\pi}\mathrm{exp}(u\mathrm{cos}\theta)\mathrm{sin}^{2r}\theta d\theta$</li>
-</ul>
-</li>
-</ul>
-<p>伽马函数，也叫第二类欧拉积分，是阶乘函数在实数与复数上扩展的一类函数</p>
-<ul>
-<li>定义<ul>
-<li>$\Gamma(u)=\int_0^{\infty}t^{u-1}\mathrm{exp}(-t)dt$</li>
-</ul>
-</li>
-<li>性质：<ul>
-<li>$\Gamma(u)=(u-1)\Gamma(u-1)(\mathrm{for \ any \ u})$</li>
-<li>$\Gamma(\frac{1}{2})=\sqrt{\pi}$</li>
-<li>$\Gamma(1)=1$</li>
-<li>$\Gamma(n)=(n-1)! $ $n$是一个整数</li>
-</ul>
-</li>
-</ul>
-<p>贝塔函数，也叫第一类欧拉积分，又称为$\mathrm{B}$函数</p>
-<ul>
-<li><p>定义：对任意实数$u,v&gt;0, \mathrm{B}(u,v)=\int_0^1x^{u-1}(1-x)^{v-1}dx$</p>
-</li>
-<li><p>性质：</p>
-<ul>
-<li>$\mathrm{B}(u,v)=\mathrm{B}(v,u)$</li>
-<li>$\mathrm{B}(u,v)= \frac{v-1}{u+v-1}\mathrm{B}(u.v-1)\ \ (u&gt;0, v&gt;1)$</li>
-<li>$\mathrm{B}(u,v)= \frac{v-1}{u+v-1}\mathrm{B}(u-1.v)\ \ (u&gt;1, v&gt;0)$</li>
-<li>$\mathrm{B}(u,v)= \frac{(u-1)(v-1)}{(u+v-1)(u+v-2)}\mathrm{B}(u-1.v-1)\ \ (u&gt;1, v&gt;1)$</li>
-</ul>
-<p>对于任意的正实数$u,v,\mathrm{B}(u,v)=\frac{\Gamma(u)\Gamma(v)}{\Gamma(u+v)}$</p>
-<p>对于任意的正整数$u,v, \mathrm{B}(u,v)=\frac{u+v}{uvC_{u+v}^u}=\frac{1}{vC_{u+v-1}^{u-1}}$</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="mathrm-Chi-Squared-Central"><a href="#mathrm-Chi-Squared-Central" class="headerlink" title="$\mathrm{Chi-Squared(Central)}$"></a>$\mathrm{Chi-Squared(Central)}$</h3><p>$x_1\sim N(0, 1), x_2 \sim N(0, 1),\cdots, x_1\sim N(0,1)$</p>
-<p>定义$x=\Sigma_{i=1}^vx_i^2$</p>
-<p>$x$的$\mathrm{PDF}$为：</p>
-<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2^{v/2}\Gamma(\frac{v}{2})}x^{v/2-1}exp(-\frac{1}{2}x)  &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<p>$v$是个数</p>
-<p>当$v=2$时，$x$的$\mathrm{PDF}$就是$\mathrm{Reyleigh}$分布的平方</p>
-<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2}exp(-\frac{1}{2}x) &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<h3 id="mathrm-Chi-Squared-Noncentral"><a href="#mathrm-Chi-Squared-Noncentral" class="headerlink" title="$\mathrm{Chi-Squared(Noncentral)}$"></a>$\mathrm{Chi-Squared(Noncentral)}$</h3><p>$x_1\sim N(\mu_1, 1), x_2 \sim N(\mu_2, 1),\cdots, x_1\sim N(\mu_i,1)$</p>
-<p>定义$x=\Sigma_{i=1}^vx_i^2$</p>
-<p>$x$的$\mathrm{PDF}$为：</p>
-<p>$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{1}{2}(\frac{x}{\lambda})^{\frac{v-2}{4}}exp[-\frac{1}{2}(x+\lambda)]I_{\frac{v}{2}-1}(\sqrt{\lambda x})  &amp; x &gt; 0   \\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<p>表达式：$p(x)=\begin{equation} \left\{ \begin{array}{lr} \frac{x^{\frac{v}{2}-1}exp[-\frac{1}{2}(x+\lambda)]}{2^{\frac{v}{2}}} \sum\limits_{k=0}^{\infty}\frac{(\frac{\lambda x}{4})^k}{k! \Gamma(\frac{v}{2})+k}   &amp;  x&gt; 0\\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<p>$v$表示相加的个数， $\lambda=\sum_{i=1}^v\mu_i^2$,$\lambda$表示均值的平方和</p>
-<h3 id="mathrm-T-分布"><a href="#mathrm-T-分布" class="headerlink" title="$\mathrm{T}$分布"></a>$\mathrm{T}$分布</h3><p>$x_1\sim N(0,1), x_2 \sim \mathcal{X}_v^2$， 其中$x_1,x_2$独立</p>
-<p>定义$x=\frac{x_1}{\sqrt{x_2/v}}$</p>
-<p>$x$的$\mathrm{PDF}$为： $p(x)=\frac{\Gamma(\frac{v+1}{2})}{\sqrt{v\pi}\Gamma(\frac{v}{2})}(1+\frac{x^2}{v})^{-\frac{v+1}{2}}$</p>
-<p>$v$趋于$\infty$时，就是标准的正态分布</p>
-<p>$\mathrm{F(Central)}$分布</p>
-<p>$x_1\sim \mathcal{X}_{v_1}^2, x_2\sim \mathcal{X}_{v_2}^2, x_1,x_2$独立</p>
-<p>定义$x=\frac{x_1/v_1}{x_2/v_2}$</p>
-<p>$x$的$\mathrm{PDF}$为：$p(x)=\begin{equation} \left\{ \begin{array}{lr}\frac{(\frac{v_1}{v_2})^{\frac{v_1}{2}}}{B(\frac{v_1}{2},\frac{v_2}{2})} \frac{x^{\frac{v_1}{2}-1}}{(1+\frac{v_1}{v_2}x)^{\frac{v_1+v_2}{2}}} &amp;  x&gt; 0\\  0 &amp; x &lt; 0 \end{array}  \right\}  \end{equation}$</p>
-<p>表达式：$p(x)=exp(-\frac{\lambda}{2})\sum\limits_{k=0}^{\infty}\frac{(\frac{\lambda}{2})^k}{k!}\frac{(\frac{v_1}{v_2})^{\frac{v_1}{2}+k}}{B(\frac{x_1+2k}{2}, \frac{v_2}{2})}x^{\frac{v_1}{2}+k-1}(1+\frac{v_1}{v_2}x)^{-\frac{1}{2}(v_1+v_2)-k}$</p>
-<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>独立同分布之和是高斯分布，高斯分布的线性组合也是高斯分布</p>
-<h2 id="白噪声"><a href="#白噪声" class="headerlink" title="白噪声"></a>白噪声</h2><p>每个时刻的噪声之间正交</p>
-<p>$E[w(n+k)w(n)]=\sigma^2 \delta(k)$</p>
-<h2 id="独立和不相关"><a href="#独立和不相关" class="headerlink" title="独立和不相关"></a>独立和不相关</h2><h3 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h3><p>对于连续性随机变量, $f(x,y)=f_X(x)f_Y(y)$</p>
-<p>对于离散型的随机变量, $P(XY)=P(X)P(Y)$</p>
-<p>独立的性质：$E(XY)=E(X)E(Y)$</p>
-<h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p><strong>协方差：</strong> $cov(X,Y)=E\{(X-E(X))(Y-E(Y))\}=E(XY)-E(X)E(Y)$</p>
-<p><strong>相关性质：</strong> $\rho_{X,Y}=\frac{cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}\in [-1,1]$</p>
-<p>$\rho_{X,Y}\in [-1,0)$为负相关</p>
-<p>$\rho_{X,Y}\in (0, 1]$为正相关</p>
-<p>$\rho_{X,Y}=0$为不相关 $E(XY)=E(X)E(Y)$</p>
-<h3 id="独立和相关的联系和区别"><a href="#独立和相关的联系和区别" class="headerlink" title="独立和相关的联系和区别"></a>独立和相关的联系和区别</h3><p>$X,Y$独立 $\Longrightarrow E(XY)=E(X)E(Y)\Longrightarrow cov(X,Y)=0 \Longrightarrow X,Y$不想管</p>
-<p>$X,Y$不相关不能得到独立</p>
-<p>独立性是指两个变量的发生概率一点关系没有，而相关性通常是指线性关系。如果两个变量不相关，指的是线性关系里的不相关，但是不能说它们没有关系，可能是线性以外的其他关系。</p>
+                
                 
             </div>
             <hr/>
@@ -716,7 +612,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://orzff.cn/b4b45aa/">http://orzff.cn/b4b45aa/</a>
+                    <a href="http://orzff.cn/2048abda/">http://orzff.cn/2048abda/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -754,12 +650,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">数学基础</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A6%82%E7%8E%87/">
-                                    <span class="chip bg-color">概率</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                    <span class="chip bg-color">机器视觉</span>
                                 </a>
                             
                         </div>
@@ -1199,9 +1091,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2048abda/">
                     <div class="card-image">
@@ -1218,9 +1111,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1233,6 +1126,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1251,23 +1145,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/d6347b6b/">
+                <a href="/b4b45aa/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-3z3v8d.5nzgm186f140.jpg" class="responsive-img" alt="数学基础-代数">
+                        <img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/cover/wallhaven-k71qmm.k767tapw0h8.jpg" class="responsive-img" alt="数学基础-概率">
                         
-                        <span class="card-title">数学基础-代数</span>
+                        <span class="card-title">数学基础-概率</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            智能计算数学基础-代数
+                            智能计算数学基础-概率
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-28
                             </span>
                         <span class="publish-author">
                             
@@ -1288,8 +1182,8 @@
                         <span class="chip bg-color">数学基础</span>
                     </a>
                     
-                    <a href="/tags/%E4%BB%A3%E6%95%B0/">
-                        <span class="chip bg-color">代数</span>
+                    <a href="/tags/%E6%A6%82%E7%8E%87/">
+                        <span class="chip bg-color">概率</span>
                     </a>
                     
                 </div>
