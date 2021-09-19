@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orzff.cn/"/>
-  <updated>2021-09-16T04:24:42.061Z</updated>
+  <updated>2021-09-19T09:17:58.254Z</updated>
   <id>http://orzff.cn/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VS2019+Win10配置Open3D</title>
+    <link href="http://orzff.cn//27efac3c/"/>
+    <id>http://orzff.cn//27efac3c/</id>
+    <published>2021-09-19T09:03:50.000Z</published>
+    <updated>2021-09-19T09:17:58.254Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;VS2019+Win10配置Open3D&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="配置" scheme="http://orzff.cn/categories/%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Open3D" scheme="http://orzff.cn/tags/Open3D/"/>
+    
+      <category term="配置" scheme="http://orzff.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>三维重建基础</title>
     <link href="http://orzff.cn//2048abda/"/>
     <id>http://orzff.cn//2048abda/</id>
     <published>2021-09-16T03:10:00.000Z</published>
-    <updated>2021-09-16T04:24:42.061Z</updated>
+    <updated>2021-09-16T17:02:02.095Z</updated>
     
     <summary type="html">
     
@@ -426,26 +448,6 @@
     <summary type="html">
     
       &lt;p&gt;C++学习笔记(四)&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="C++ 学习" scheme="http://orzff.cn/categories/C-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="C++ 学习笔记" scheme="http://orzff.cn/tags/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++学习笔记(二)</title>
-    <link href="http://orzff.cn//5287e3ee/"/>
-    <id>http://orzff.cn//5287e3ee/</id>
-    <published>2021-05-04T06:21:25.000Z</published>
-    <updated>2021-05-31T11:58:01.011Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;C++学习笔记(二)&lt;/p&gt;
     
     </summary>
     
