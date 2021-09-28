@@ -1,10 +1,15 @@
 ---
 title: VS2019+Win10配置Open3D
 mathjax: false
+img: >-
+  https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/VS2019+Open3DConfig/wallhaven-9mrxox.2i69xgusd5g0.jpg
+categories:
+  - 配置
+tags:
+  - Open3D
+  - 配置
+abbrlink: 27efac3c
 date: 2021-09-19 17:03:50
-img: https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/VS2019+Open3DConfig/wallhaven-9mrxox.2i69xgusd5g0.jpg
-categories: [配置]
-tags: [Open3D, 配置]
 ---
 
 VS2019+Win10配置Open3D
