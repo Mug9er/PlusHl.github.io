@@ -261,7 +261,50 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 <p>$\rho_{X,Y}=0$为不相关 $E(XY)=E(X)E(Y)$</p>
 <h3 id="独立和相关的联系和区别"><a href="#独立和相关的联系和区别" class="headerlink" title="独立和相关的联系和区别"></a>独立和相关的联系和区别</h3><p>$X,Y$独立 $\Longrightarrow E(XY)=E(X)E(Y)\Longrightarrow cov(X,Y)=0 \Longrightarrow X,Y$不想管</p>
 <p>$X,Y$不相关不能得到独立</p>
-<p>独立性是指两个变量的发生概率一点关系没有，而相关性通常是指线性关系。如果两个变量不相关，指的是线性关系里的不相关，但是不能说它们没有关系，可能是线性以外的其他关系。</p>]]></content>
+<p>独立性是指两个变量的发生概率一点关系没有，而相关性通常是指线性关系。如果两个变量不相关，指的是线性关系里的不相关，但是不能说它们没有关系，可能是线性以外的其他关系。</p>
+<h2 id="统计推断"><a href="#统计推断" class="headerlink" title="统计推断"></a>统计推断</h2><h3 id="y-n-A-w-n"><a href="#y-n-A-w-n" class="headerlink" title="$y(n)=A+w(n)$"></a>$y(n)=A+w(n)$</h3><p>根据获得的$y$中恢复$\hat A$</p>
+<p>当只有$y[0]$时：$\hat{A}=x[0], E(\hat{A})=A,Var(\hat{A})-\sigma^2$</p>
+<p>当有$x[0],x[1],…x[n]$时，$\hat{A}=(x[0]+x[1]+…+x[n-1])/n,E(\hat{A})=A,Var(\hat{A})=\frac{\sigma^2}{n}$</p>
+<h3 id="y-n-x-n-w-n-x-n-A-A-和-y-n-h-x-n-w-n-x-n-A-A-h-to-0"><a href="#y-n-x-n-w-n-x-n-A-A-和-y-n-h-x-n-w-n-x-n-A-A-h-to-0" class="headerlink" title="$y(n)=x(n)+w(n),x(n)=-A,+A$ 和$y(n)=h x(n)+w(n),x(n)=-A,+A,h\to 0$"></a>$y(n)=x(n)+w(n),x(n)=-A,+A$ 和$y(n)=h x(n)+w(n),x(n)=-A,+A,h\to 0$</h3><p>从获得的$y$中恢复$\hat x(n)$。</p>
+<p>例子：已知$y[1] = 0.1x[1]+w[1], x[1]=+10$或 $-10$, </p>
+<p>先验信息：$p(x(n)=+A)=p(x(n)=-A)=0.5$</p>
+<p>当$x(n)$发生的情况下$y(n)$发生的概率服从高斯分布：${y(n)|x(n)} \sim N(h x(n), \sigma^2)$， $p(y(n)|x(n))=\frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(y(n)-hx(n))^2}{2\sigma^2}}$</p>
+<p> $p(y(n)|x(n))$意味着当给定$x(n)$后，$y(n)$为某个值的概率可能性</p>
+<p><strong>ML(最大似然)</strong></p>
+<p>当先验等概时，即$p(x(n)=+10)=p(x(n)=-10)=0.5$，接收$y(n)=0.5$，此时似然函数$p(y(n)|x(n)) =  \begin{equation} \left\{ \begin{array}{lr} 0.35 &amp;, x(n)=+10 \\ 0.13 &amp;, x(n)=-10 \end{array}  \right . \end{equation}\\  $，可以判断$x(n)$等于$+10$</p>
+<p><strong>MAP(最大后验概率)</strong></p>
+<p>后验概率：$p(x|y)$表示 当接收到$y$的值以后，$x$为某个值的概率，$p(x|y)=\frac{p(x) p(y|x)}{p(y)}$</p>
+<p>当接收$y(n)$为$0.5$，$x(n)$是$+10$的概率是$0.2$， $x(n)$是$-10$的概率是$0.8$时，$p(x(n)|y(n)) =  \begin{equation} \left\{ \begin{array}{lr} 0.07 &amp;, x(n)=+10 \\ 0.10 &amp;, x(n)=-10 \end{array}  \right . \end{equation}\\  $</p>
+<h3 id="bold-y-Hx-w"><a href="#bold-y-Hx-w" class="headerlink" title="$\bold{y = Hx + w}$"></a>$\bold{y = Hx + w}$</h3><p>从获得的$\bold{y}$中恢复$\bold{\hat{x}}$</p>
+<p>这里一个$y(n)$对应多个$x(n)$</p>
+<p>从接收到的$y$中恢复$\bold{x}$, 对于同分布的高斯噪声可以看成$\bold{\hat{x}}= \mathbb{arg} \min\limits_{x}|\bold{y-Hx}|^2$</p>
+<h3 id="bold-y-Xh-w"><a href="#bold-y-Xh-w" class="headerlink" title="$\bold{y=Xh+w}$"></a>$\bold{y=Xh+w}$</h3><p>从获得的$\bold{y}$中恢复$\bold{\hat{h}}$，$\bold{X}$处于连续分布</p>
+<p><strong>LS： 最小二乘法</strong></p>
+<p>将$h$看成一个常量</p>
+<p>模型$\bold{y=Sh+w}$，高斯白噪声$\bold{w}\sim N(0, \bold{I}_w)$，$\bold{h}$为未知常量</p>
+<p>$J(\bold{h})=\bold{|y-Sh|}^2, \bold{\hat{h}} = \min\limits_{h}J(\bold{h})$</p>
+<p>$J{(\bold{h})}=(\bold{y-Sh})^H(\bold{y-Sh})=\bold{y}^H\bold{y}-2\bold{y}^H\bold{Sh}+\bold{h}^H\bold{S}^H\bold{Sh}$</p>
+<p>$\frac{\partial J(\bold{h})}{\partial \bold{h}}=-2\bold{S}^H\bold{y}+2\bold{S}^H\bold{Sh}$</p>
+<p>$\bold{\hat{h}}=(\bold{S}^H\bold{S})^{-1}\bold{S}^H\bold{y}=\bold{S}^{\dagger}\bold{y}$</p>
+<p><strong>LMMSE：</strong></p>
+<p>将$h$看成一个随机变量</p>
+<p>估计单个$h$</p>
+<p>已知$w\sim N(0, \sigma_1^2), h\sim N(0, \sigma_2^2), s[1]$， 估计$h$</p>
+<p>令估计量$\hat{h}=ay[1]$</p>
+<p>$a= \mathbb{arg} \min\limits_{a} E\{ ||h - \hat{h}||^2\} = \mathbb{arg} \min\limits_{a}E\{ ||h - ay[1] ||^2 \}$</p>
+<p>$M = E\{ || h - \hat{h} ||^2 \} = E\{ ||h - ay[1]||^2 \} = E(h^2)-2E(ay[1]h) + E[(ay[1])^2]$</p>
+<p>$\frac{\partial M}{\partial a} = 0 \to \frac{\partial M}{\partial a}= 0 - 2E(y[1]h)+2aE(y^2[1])=0 \to a= \frac{E(y[1]h)}{E(y^2[1])}$</p>
+<p>$\hat{h}=ay = \frac{E(y[1]h)}{E(y^2[1])} y[1]$</p>
+<p>$——————————————————————————$</p>
+<p>模型$\bold{y=Sh+w}$，其中$\bold{w} \sim N(0, \bold{I_w})$为高斯白噪声， 参数$h$为未知变量</p>
+<p>令$\bold{\hat{h}} = \bold{Ay}$，已知$h$的先验信息， $\bold{h}\sim N(0, \bold{R_h})$</p>
+<p>$A = \mathbb{arg} \min\limits_{A}E\{||\bold{h - \hat{h}}||\}=\mathbb{arg} \min\limits_{A}E\{||\bold{h} - \bold{Ay}||^2\}$</p>
+<p>$M = E\{||\bold{h-Ay} ||^2\} = E\{tr[(\bold{h}-\bold{A}(\bold{Sh}+\bold{w}))(\bold{h}-\bold{A}(\bold{Sh}+\bold{w}))^H]\}$</p>
+<p>$=tr\{\bold{R_h}\}-tr\{\bold{R_hS}^H\bold{A}^H\}-tr\{ \bold{ASR_h}\} + tr\{ \bold{A}(\bold{SR_h}\bold{S}^H + \sigma^2_w \bold{I}) \bold{A}^H\}$</p>
+<p>$\frac{\partial M}{\partial \bold{A}} = 2(\bold{SR_hS}^H+\sigma_w^2\bold{I})\bold{A} - 2\bold{R_h}^H\bold{S}^H $</p>
+<p>$\bold{A} = \bold{R_h}^H\bold{S}^H(\bold{SR_hS}^H+\sigma_w^2\bold{I})^{-1}$</p>
+<p>$\bold{\hat{h}} = \bold{R_hS}^H(\bold{SR_hS}^H + \sigma_w^2\bold{I})^{-1}\bold{y}$</p>
+<h3 id="y-n-h-x-n-w-n-x-n-A-A"><a href="#y-n-h-x-n-w-n-x-n-A-A" class="headerlink" title="$y(n)=h x(n)+w(n),x(n)=-A,+A$"></a>$y(n)=h x(n)+w(n),x(n)=-A,+A$</h3><p>从获得的$y$中恢复$\hat{h}$</p>]]></content>
       <categories>
         <category>智能计算数学基础</category>
       </categories>
@@ -477,7 +520,7 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 <p>$A$是一个$m\times n$的矩阵$A\in \mathbb{R}^{m\times n}$,将向量从$n$维映到$m$维$A: \mathbb{R}^n \to \mathbb{R}^m$</p>
 <p>$Ax=\begin{equation} \left[ \begin{array}{lr} I_r &amp; 0  \\ 0 &amp; 0 \end{array}  \right]  \end{equation}$ $\begin{equation} \left( \begin{array}{lr} x_1  \\ \vdots \\ x_n \end{array}  \right)  \end{equation}=$ $\begin{equation} \left( \begin{array}{lr} x_1  \\ \vdots \\ x_r \\ 0 \\  \vdots  \\ 0 \end{array}  \right)  \end{equation}$</p>
 <p>$\dim \mathrm{Im}(A) = rank(A) = r $ $A$的像的维度是$r$</p>
-<p>$ \dim \mathcal{N}(A) = n - r$ $A$的零空间的维度是$n-r$</p>
+<p>$ \dim \mathcal{N}(A) = n - r$ $A$的零空间的维度是$n-r$，$\mathcal{N}(A)$的维度就代表再矩阵初等变换中有多少向量被映成0。</p>
 <h3 id="矩阵的列空间"><a href="#矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间</h3><p>$A_{m\times n} $的列空间$C(A):= \{Ax|x\in \mathbb{R}^n\}$，所有的列向量的线性组合</p>
 <ul>
 <li>$A=[\beta_1 \ \beta_2 \ \cdots \ \beta_n],C(A)=\{x_1\beta_1+x_2\beta_2+\cdots+x_n\beta_n | x_i \in \mathbb{R}^n\}$</li>
@@ -505,7 +548,7 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 <p>$\mathcal{N}(A^T)\bot C(A),\mathcal{N}(A^T)\bigoplus C(A)=\mathbb{R}^m$</p>
 <h3 id="列空间与行空间"><a href="#列空间与行空间" class="headerlink" title="列空间与行空间"></a>列空间与行空间</h3><p>$Ax = 0$, 即$\begin{equation} \left[ \begin{array}{lr} \alpha_1^T  \\ \vdots \\ \alpha_m^T \end{array}  \right]  \end{equation}$ $\begin{equation} \left[ \begin{array}{lr}x \end{array}  \right]  \end{equation}=$ $ \begin{equation} \left[ \begin{array}{lr} 0  \\ \vdots \\ 0 \end{array}  \right]  \end{equation}$</p>
 <ul>
-<li>零空间$\mathcal{N}(A)$中的元素$x$与$A$的每一行正交</li>
+<li>零空间$\mathcal{N}(A)$中的元素$x$与$A$的每一行正交，因为$A$的每一行个数有$n$个所以$\mathcal{N}(A)\in \mathbb{R}^n$，同理$\mathcal{N}(A)\in \mathbb{R}^m$</li>
 <li>若$x$为行空间$C(A^T)$中非零元素(行向量线性组合)， $Ax \not= 0$</li>
 <li>零空间$\mathcal{N}(A)$中的元素$x$与$A$的行空间正交$x\bot C(A^T)$</li>
 <li>零空间$\mathcal{N}(A^T)$中的元素$y$与$A$的列空间正交$y\bot C(A)$</li>
