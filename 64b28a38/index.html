@@ -528,8 +528,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
-                                数学基础
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                智能数学基础
                             </a>
                         
                     </div>
@@ -548,21 +548,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-05
+                    2021-10-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    14 分
                 </div>
                 
 
@@ -717,6 +717,39 @@
 <li>$I(X;Y)=H(X)+H(Y)-H(XY)$</li>
 <li>$I(X;Y)$ 确定通过信道的信息量的多少，因此称它为信道传输率或传信率</li>
 </ul>
+<h2 id="学习要点"><a href="#学习要点" class="headerlink" title="学习要点"></a>学习要点</h2><p><strong>自信息：</strong> $I(a_i) = -\log p_i$</p>
+<p><strong>自互信息：</strong> $I(a_i;b_j) = \log \frac{P(a_i/b_j)}{p(a_i)} = I(a_i) - I(a_i/b_j)$</p>
+<p><strong>信息熵：</strong> $H(X) = E[I(a_i)] = -\sum\limits_{i=1}^n p_i \log p_i$</p>
+<p><strong>联合熵：</strong> $H(XY) = \sum\limits_{i=1}^n \sum\limits_{j=1}^m p(x_iy_j)I(x_iy_j) = -\sum\limits_{i=1}^{n}\sum\limits_{j=1}^m p(x_iy_j)\log_2p(x_iy_j)$</p>
+<p><strong>条件熵：</strong> $H(Y/X) = E[I(y_j/x_i)] = \sum\limits_{j=1}^m \sum\limits_{i=1}^n p(x_iy_j)I(y_j/x_i) = -\sum\limits_{j=1}^m \sum\limits_{i=1}^n p(x_iy_j) \log p(y_j/x_i)$</p>
+<p><strong>熵函数性质：</strong></p>
+<ul>
+<li>对称性： $H(p_1,p_2,\cdots,p_n) = H(p_2, p_1, \cdots, p_n)$</li>
+<li>非负性：$H(X)\ge 0$</li>
+<li>扩展性：$\lim \limits_{\epsilon \to 0} H_{n+1}(p_1, p_2, \cdots, p_n, \epsilon)=H_n(p_1, p_2,\cdots, p_n)$</li>
+<li>确定性：$H(1, 0) = H(1, 0, 0) = H(1,0,0,\cdots, 0)=0$</li>
+<li>可加性：$H(XY) = H(X)+H(Y/X)$</li>
+<li>极值性：$\log n = H_0 \ge H_1 \ge \cdots H_{\infty}$</li>
+<li>上凸性：$H[\theta P_i + (1-\theta)Q_i] \ge \theta H(P_i) + (1-\theta)H(Q_i)$</li>
+</ul>
+<p><strong>联合熵与信息熵、条件熵的关系：</strong> </p>
+<p>$H(X/Y) \le H(X), H(Y/X) \le H(Y), H(XY) \le H(X) + H(Y)$</p>
+<p>$H(XY) = H(X) + H(Y/X) = H(Y) + H(X/Y)$</p>
+<p><strong>平均互信息：</strong> $I(X;Y) = \sum\limits_{j} \sum\limits_{j} p(x_i y_j) I(x_i; y_j)= \sum\limits_{j}\sum\limits_{i} p(x_i y_j) \log \frac{p(x_i/y_j)}{p(x_i)}$</p>
+<p><strong>平均互信息与各类熵之间的关系：</strong> $I(X;Y) = H(X)-H(X/Y)=H(Y)-H(Y/X)=H(X)+H(Y)-H(XY)$</p>
+<p><strong>信息散度：</strong> $D(P//Q) = \sum\limits_{X} P(x) \log \frac{P(x)}{Q(x)}$</p>
+<p><strong>数据处理定理：</strong></p>
+<p>$I(X;Z) \le I(Y;Z), I(X;Z) \le I(X;Y)\\ I(X;Y_1) \le I(X;Y_1Y_2)\le \cdots \le I(X; Y_1\cdots Y_m)$</p>
+<p><strong>序列熵、平均符号熵和极限熵：</strong></p>
+<p>$H(\vec{X}) = H(X_1 X_2\cdots X_L) = - \sum\limits_{i_1}\sum\limits_{i_2}\cdots \sum\limits_{i_L} P_{i_1i_2\cdots i_L} \log P_{i_1i_2\cdots i_L} $</p>
+<p>$H_L(\vec{X}) = \frac{1}{L} H(X_1 X_2\cdots X_L)$</p>
+<p>$H_{\infty} (\vec{X}) = H_{\infty} = \lim\limits_{L\to \infty} \frac{1}{L} H(\vec{X}) = \lim\limits_{L\to \infty} H(X_L / X_{L-1} X_{L-2} \cdots X_{L-m})$</p>
+<p><strong>马尔可夫信源：</strong></p>
+<p>$H(X_L/X_{L-1} X_{L-2} \cdots X+1) = H(X_L / X_{L-1} X_{L-2} \cdots X_{L-m})$</p>
+<p>$H_{\infty} = -\sum\limits_{i=1}^n \sum\limits_{j=1}^n \pi_i P_{ji} \log P_{ji}, pi_i \in \{\pi_1, \pi_2,\cdots,\pi_{n^L} \}$为极限分布</p>
+<p><strong>近似马尔可夫信源：</strong></p>
+<p>$H_{m+1}=\lim \limits_{L\to \infty} H(X_L/X_{L-1}\cdots X_{L-m})$</p>
+<p>$\log n = H_0 \ge H_1 \ge \cdots H_{\infty}$</p>
                 
             </div>
             <hr/>
@@ -1252,8 +1285,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    数学基础
+                            <a href="/categories/%E6%99%BA%E8%83%BD%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    智能数学基础
                                 </a>
                             
                             
@@ -1516,7 +1549,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">91.1k</span>
+                        class="white-color">91.6k</span>
             
             
             
