@@ -544,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    11 分
                 </div>
                 
 
@@ -612,7 +612,7 @@
 <li>这些几何模型参数就是相机参数</li>
 <li>这个求解参数的过程就称之为相机标定</li>
 </ul>
-<h4 id="坐标系转换"><a href="#坐标系转换" class="headerlink" title="坐标系转换"></a>坐标系转换</h4><h5 id="世界坐标系"><a href="#世界坐标系" class="headerlink" title="世界坐标系"></a>世界坐标系</h5><p>由于摄像机与被设想物体可以放置在环境中的任意位置，这样就需要在环境中建立一个坐标系，来表示设计摄像机和被摄物体的位置，这个坐标系就称为<strong>世界坐标系</strong>，世界坐标系通常是以物体中心为远点展开的。</p>
+<h4 id="坐标系转换"><a href="#坐标系转换" class="headerlink" title="坐标系转换"></a>坐标系转换</h4><h5 id="相机坐标系到世界坐标系"><a href="#相机坐标系到世界坐标系" class="headerlink" title="相机坐标系到世界坐标系"></a>相机坐标系到世界坐标系</h5><h5 id="世界坐标系"><a href="#世界坐标系" class="headerlink" title="世界坐标系"></a>世界坐标系</h5><p>由于摄像机与被设想物体可以放置在环境中的任意位置，这样就需要在环境中建立一个坐标系，来表示设计摄像机和被摄物体的位置，这个坐标系就称为<strong>世界坐标系</strong>，世界坐标系通常是以物体中心为远点展开的。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/image-20210916203429253.2dn7wdrk01wk.png" alt="世界坐标系"></p>
 <p>图中的$O_w,X_w,Y_w,Z_w$就构成了世界坐标系</p>
 <h5 id="相机坐标系"><a href="#相机坐标系" class="headerlink" title="相机坐标系"></a>相机坐标系</h5><p>也是一个三维直角坐标系，原点位于镜头光心处，$x,y$轴分别与相面（摄像机的两边）的两边平行，$z$轴为镜头光轴，与相平面（摄像机的镜头平面）垂直。</p>
@@ -621,18 +621,18 @@
 <p>根据线代知识，可以通过旋转矩阵来实现旋转。</p>
 <p>$ \begin{bmatrix}X_c\\Y_c\\Z_c \end{bmatrix} = \begin{bmatrix}1 &amp; 0 &amp; 0\\0 &amp; cos\theta &amp; sin\theta \\ 0 &amp; -sin\theta &amp; cos\theta \end{bmatrix} \begin{bmatrix}X\\Y \\ Z \end{bmatrix}$， $\begin{cases} X_c = X \\ Y_c = cos\theta\cdot Y + sin\theta \cdot Z \\ Z_c = -sin \theta \cdot Y + cos\theta\cdot Z \end{cases}\ $</p>
 <p>通过上面的转换可以将原本的坐标系按$X$轴旋转$\theta$度，得到一个新的坐标轴$X_c,Y_c,Z_c$</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/IMG_0602(20210916-233005" alt="坐标转换">.6ywhg1p8g68.PNG)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/zfsdfg.58g35fd8iss0.PNG" alt="坐标转换"></p>
 <p>将$P$从原先的坐标系转换到新的坐标系，根据上图可以得到新的$y$是线1+线2，新的$z$是线3-线4</p>
 <p>即新的坐标就是$\begin{cases} X_c = X \\ Y_c = cos\theta\cdot Y + sin\theta \cdot Z \\ Z_c = -sin \theta \cdot Y + cos\theta\cdot Z \end{cases}\ $</p>
-<p>按照不同轴进行旋转的旋转矩阵如下：</p>
+<p>按照不同轴进行顺时针旋转的旋转矩阵如下：</p>
 <ul>
-<li>沿$X$轴旋转：$R(X, \theta) = \begin{bmatrix}1 &amp; 0 &amp; 0\\0 &amp; cos\theta &amp; sin\theta \\ 0 &amp; -sin\theta &amp; cos\theta \end{bmatrix} $</li>
-<li>沿$Y$轴旋转：$R(Y, \theta) =\begin{bmatrix} cos\theta &amp; 0 &amp; -sin\theta\\0 &amp; 1 &amp; 0 \\ sin\theta &amp; 0 &amp; cos\theta \end{bmatrix} $</li>
-<li>沿$Z$轴旋转：$R(Z, \theta) =\begin{bmatrix} cos\theta &amp; sin\theta  &amp; 0 \\ -sin\theta &amp; cos\theta &amp; 0\\0 &amp; 0 &amp; 1\end{bmatrix} $</li>
+<li>沿$X$轴旋转：$R(X, \theta) = \begin{bmatrix}1 &amp; 0 &amp; 0\\0 &amp; cos\theta &amp; -sin\theta \\ 0 &amp; sin\theta &amp; cos\theta \end{bmatrix} $</li>
+<li>沿$Y$轴旋转：$R(Y, \theta) =\begin{bmatrix} cos\theta &amp; 0 &amp; sin\theta\\0 &amp; 1 &amp; 0 \\ -sin\theta &amp; 0 &amp; cos\theta \end{bmatrix} $</li>
+<li>沿$Z$轴旋转：$R(Z, \theta) =\begin{bmatrix} cos\theta &amp; -sin\theta  &amp; 0 \\ sin\theta &amp; cos\theta &amp; 0\\0 &amp; 0 &amp; 1\end{bmatrix} $</li>
 </ul>
-<p>其中旋转角的正方向由右手螺旋定则给定，所以</p>
+<p>其中旋转角的正方向由右手螺旋定则给定，并且</p>
 <p>将三个绕不同方向旋转的矩阵进行相乘</p>
-<p>$[\sideset{^a}RPY{_B}(\phi, \theta, \psi)] = R(Z_A, \varphi)R(Y_A, \theta)R(X_A, \psi) \\ = \begin{bmatrix} c\varphi c\theta &amp; s\varphi c\psi+c\varphi s\theta s\psi &amp; s\varphi s\psi+c\varphi s\theta c\psi\\ s\varphi c\theta &amp; c\varphi c\psi- s\varphi s\theta s\psi &amp; c\varphi s\psi-s\varphi s\theta c\psi \\ -s\theta &amp; -c\theta s\psi &amp; c\theta c\psi \end{bmatrix}$</p>
+<p>$[\sideset{^a}RPY{_B}(\phi, \theta, \psi)] = R(Z_A, \varphi)R(Y_A, \theta)R(X_A, \psi) \\ = \begin{bmatrix} c\varphi s\theta &amp; c\varphi s\theta s\psi-s\varphi c\psi &amp; c\varphi s\theta c\psi+s\varphi s\psi\\ c\varphi c\theta &amp; s\varphi s\theta s\psi + c\varphi c\psi &amp; s\varphi s\theta s\psi-c\varphi s\psi \\ -s\theta &amp; c\theta s\psi &amp; c\theta c\psi \end{bmatrix}$</p>
 <h5 id="左乘还是右乘"><a href="#左乘还是右乘" class="headerlink" title="左乘还是右乘"></a>左乘还是右乘</h5><ul>
 <li><p>左乘： 相对于固定坐标系进行变换</p>
 <p>$V’ = R \ast V = R_Z \ast R_Y \ast R_X  V$</p>
@@ -646,6 +646,57 @@
 <p>即：$ \begin{bmatrix}r_{11} &amp; r_{12} &amp; r_{13}\\r_{21} &amp; r_{22} &amp; r_{23} \\ r_{31} &amp; r_{32} &amp; r_{33} \end{bmatrix} \begin{bmatrix}X_W\\Y_W \\ Z_W \end{bmatrix}+\begin{bmatrix}t_x\\ t_y \\ t_z \end{bmatrix}$</p>
 <p>将$R,T$合并成一个其次线性方程组</p>
 <p>$ \begin{bmatrix}x_c\\y_c\\z_c \\ 1 \end{bmatrix} = \begin{bmatrix} R &amp; t\\0 &amp; 1\end{bmatrix}+\begin{bmatrix} x_w \\ y_w \\ z_w \\ 1\end{bmatrix}$</p>
+<h5 id="相机坐标系到图像坐标系"><a href="#相机坐标系到图像坐标系" class="headerlink" title="相机坐标系到图像坐标系"></a>相机坐标系到图像坐标系</h5><p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/image-20211019191516093.1upujpxtrjs0.png" alt="相机坐标系和图像坐标系"></p>
+<p>空间中任意一点$P$与其图像点$p$之间的关系，$P$与相机光心$o$的连线为$oP$，$oP$与像平面的交点$p$即为空间点$P$在图像平面上的投影。</p>
+<p>该过程为透视投影，如下矩阵表示：</p>
+<p>$ s\begin{bmatrix}X\\Y\\ 1 \end{bmatrix} = \begin{bmatrix} f &amp;  0 &amp; 0 &amp; 0\\0 &amp; f &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \begin{bmatrix}x \\ y\\ z \\ 1\end{bmatrix}$</p>
+<p>其中，$s$为比例因子($s$不为0)，$f$为有效焦距(光心到图像平面的距离)，$(x, y, z,1)^T$是空间点$P$在相机坐标系$oxyz$中的齐次坐标$(X,Y,1)^T$是像点$p$在图像坐标系$OXY$中的齐次坐标。</p>
+<h5 id="图像坐标系到像素坐标系转换"><a href="#图像坐标系到像素坐标系转换" class="headerlink" title="图像坐标系到像素坐标系转换"></a>图像坐标系到像素坐标系转换</h5><p><strong>像素坐标系</strong></p>
+<ul>
+<li>像素坐标系$uov$是一个二维直角坐标系，反映了相机$CCD/CMOS$芯片中像素的排列情况</li>
+<li>原点$o$位于图像的左上角，$u$轴、$v$轴分别于像面的两边平行</li>
+<li>像素坐标系中坐标轴的单位是像素(整数)</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/image-20211019185725854.70c0cm03l1s0.png" alt="图像坐标系和成像坐标系"></p>
+<p><strong>图像坐标系</strong></p>
+<ul>
+<li>像素坐标系不利于坐标变换，因此需要建立图像坐标系$XOY$</li>
+<li>其坐标轴的单位通常为毫米(mm)， 原点是相机光轴于相面的交点（称为主点），即图像的中心</li>
+<li>$X$轴，$Y$轴分别与$u$轴、$v$轴平行，故两个坐标系实际是平移关系，即可以通过平移就得到</li>
+</ul>
+<p><strong>图像坐标系转换为像素坐标系</strong></p>
+<p>$ \begin{bmatrix}u\\v\\ 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{dX} &amp;  0 &amp; u_0\\0 &amp; \frac{1}{dY} &amp; v_0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} \begin{bmatrix}X \\ Y  \\ 1\end{bmatrix}$</p>
+<p>其中，$dX$，$dY$ 分别为像素在$X、Y$轴方向上的物理尺寸，$u_0,v_0$为主点（图像原点）坐标</p>
+<ul>
+<li>$dX$的单位是$mm/$像素， $X$的单位是$mm$</li>
+</ul>
+<h5 id="世界坐标系转换成像素坐标系"><a href="#世界坐标系转换成像素坐标系" class="headerlink" title="世界坐标系转换成像素坐标系"></a>世界坐标系转换成像素坐标系</h5><p>$ s \begin{bmatrix}u\\v\\ 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{dX} &amp;  0 &amp; u_0\\0 &amp; \frac{1}{dY} &amp; v_0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} \begin{bmatrix} f &amp;  0 &amp; 0 &amp; 0\\0 &amp; f &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \begin{bmatrix} R &amp;  t\\0 &amp; 1\end{bmatrix}  \begin{bmatrix} x_w \\ y_w \\ z_w  \\ 1\end{bmatrix}$</p>
+<p>$= \begin{bmatrix} \alpha_x &amp;  0 &amp; u_0 &amp; 0\\0 &amp; \alpha_y &amp; v_0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}\begin{bmatrix} R &amp;  t\\0 &amp; 1\end{bmatrix}  \begin{bmatrix} x_w \\ y_w \\ z_w  \\ 1\end{bmatrix} = M_1M_2X_w = MX_w$ </p>
+<p>其中，$\alpha_x=\frac{f}{dX}, \alpha_y = \frac{y}{dY}$，称为$u,v$的尺度因子，$M_1$称为相机的内部参数矩阵，$M_2$称为相机的外部参数矩阵，$M$称为投影矩阵</p>
+<h5 id="畸变参数"><a href="#畸变参数" class="headerlink" title="畸变参数"></a>畸变参数</h5><ul>
+<li>在几何光学和阴极射线管(CRT)显示中，畸变是对直线投影的一种畸变</li>
+<li>简单来说直线投影式场景内的以条直线投影到图片上也保持为一条直线</li>
+<li>那畸变简单来说就是一条直线投影到图片上不能保持一条直线了，这时一种光学畸变</li>
+<li>畸变一般分为两大类，包括径向畸变和切向畸变，主要的一般径向畸变有时也会有轻微的切向畸变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/image-20211019230838250.4dq1hlrs2xa0.png" alt="畸变"></p>
+<p><strong>径向畸变</strong></p>
+<ul>
+<li>实际摄像机的透镜总是在成像仪的边缘产生显著的畸变，这种现象来源于“筒形”或“鱼眼”的影响</li>
+<li>光纤在原理透镜中心的地方比靠经中心的地方更加弯曲，对于常用的普通透镜来说，这种现象更加严重</li>
+<li>对于径向畸变，成像仪中心（光学中心）的畸变为0，随着向边缘移动，畸变越来越严重</li>
+</ul>
+<p><strong>切向畸变</strong></p>
+<ul>
+<li>切向畸变是由于透镜制造上的缺陷使得透镜本身与图像平面不平行而产生的</li>
+<li>切向畸变可分为：薄透镜畸变、离心畸变</li>
+</ul>
+<p><strong>畸变矫正</strong></p>
+<ul>
+<li>径向畸变矫正公式：$\begin{cases} x_{corr} = x_{dis}(1+k_1r^2+k_2r^4+k_3r^6) \\  y_{corr}= y_{dis}(1+k_1r^2+k_2r^4+k_3r^6)  \end{cases}\ $</li>
+<li>切向畸变矫正方式：$\begin{cases} x_{corr} = x_{dis}(2p_1xy+p_2(r^2+2x^2)) \\  y_{corr}= y_{dis} + [p_1(r^2+2y^2)+2p_2xy]  \end{cases}\ $</li>
+</ul>
+<p>其中，$x_dis$和$y_dis$表示有畸变的坐标，$x_{corr}$和$y_{corr}$表示修复后的坐标，$k_1,k_2,k_3$表示径向畸变参数，$p_1,p_2$表示切向畸变参数</p>
                 
             </div>
             <hr/>
@@ -1413,6 +1464,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1432,7 +1490,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">91.6k</span>
+                        class="white-color">92.7k</span>
             
             
             
