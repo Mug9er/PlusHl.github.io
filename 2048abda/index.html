@@ -544,21 +544,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-19
+                    2021-10-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    16 分
                 </div>
                 
 
@@ -651,6 +651,8 @@
 <p>该过程为透视投影，如下矩阵表示：</p>
 <p>$ s\begin{bmatrix}X\\Y\\ 1 \end{bmatrix} = \begin{bmatrix} f &amp;  0 &amp; 0 &amp; 0\\0 &amp; f &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \begin{bmatrix}x \\ y\\ z \\ 1\end{bmatrix}$</p>
 <p>其中，$s$为比例因子($s$不为0)，$f$为有效焦距(光心到图像平面的距离)，$(x, y, z,1)^T$是空间点$P$在相机坐标系$oxyz$中的齐次坐标$(X,Y,1)^T$是像点$p$在图像坐标系$OXY$中的齐次坐标。</p>
+<p>$s$不是固定的，以$x$举例：$s X = fx, \frac{s}{f} = \frac{x}{X}$，世界坐标系中的物体距离的远近会影响$s$的大小。</p>
+<p>通过这样的转换，3维世界中的点可以转换到2维世界中，其中$x,y$经过转换成了新的坐标，$z$统一变成1，2维世界中不在有深度信息。</p>
 <h5 id="图像坐标系到像素坐标系转换"><a href="#图像坐标系到像素坐标系转换" class="headerlink" title="图像坐标系到像素坐标系转换"></a>图像坐标系到像素坐标系转换</h5><p><strong>像素坐标系</strong></p>
 <ul>
 <li>像素坐标系$uov$是一个二维直角坐标系，反映了相机$CCD/CMOS$芯片中像素的排列情况</li>
@@ -697,6 +699,18 @@
 <li>切向畸变矫正方式：$\begin{cases} x_{corr} = x_{dis}(2p_1xy+p_2(r^2+2x^2)) \\  y_{corr}= y_{dis} + [p_1(r^2+2y^2)+2p_2xy]  \end{cases}\ $</li>
 </ul>
 <p>其中，$x_dis$和$y_dis$表示有畸变的坐标，$x_{corr}$和$y_{corr}$表示修复后的坐标，$k_1,k_2,k_3$表示径向畸变参数，$p_1,p_2$表示切向畸变参数</p>
+<h4 id="张氏标定法"><a href="#张氏标定法" class="headerlink" title="张氏标定法"></a>张氏标定法</h4><h5 id="标定参考物"><a href="#标定参考物" class="headerlink" title="标定参考物"></a>标定参考物</h5><p>标定参考物一般都是棋盘，棋盘是一块黑白方块间隔组成的标定板，我们用它作为相机标定的标定物（从真实世界映射到数字图像内的对象）。之所以我们用棋盘作为标定物是因为平面棋盘模式更容易处理（相对于复杂的三维物体），但与此同时，二维物体相对于三维物体会缺少一部分信息，于是我们会多次改变棋盘的方位来捕获图像，以获得更丰富的坐标信息。</p>
+<p>因为世界坐标系是人为定义的，所以我们可以假设标定棋盘位于世界坐标系中$Z_w=0$的平面，这时原矩阵</p>
+<p>$s \begin{bmatrix}u\\v\\ 1 \end{bmatrix} = \begin{bmatrix} \alpha_x &amp;  0 &amp; u_0 &amp; 0\\0 &amp; \alpha_y &amp; v_0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}\begin{bmatrix} R &amp;  t\\0 &amp; 1\end{bmatrix}  \begin{bmatrix} x_w \\ y_w \\ z_w  \\ 1\end{bmatrix}$ 就可以写成$\begin{bmatrix}u\\v\\ 1 \end{bmatrix} = s\begin{bmatrix} f_x &amp;  \gamma &amp; u_0 \\0 &amp; f_y &amp; v_0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} r_1 &amp; r_2 &amp; t\end{bmatrix}  \begin{bmatrix} x_w \\ y_w  \\ 1\end{bmatrix}$，其中$\gamma$是畸变参数</p>
+<h5 id="单应性变换"><a href="#单应性变换" class="headerlink" title="单应性变换"></a>单应性变换</h5><p>来描述物体在世界坐标系和像素坐标系之间的位置映射关系，对应的变换矩阵称为单应性矩阵。在上述式子中，单应性矩阵定义为：</p>
+<p>$H=s\begin{bmatrix} f_x &amp;  \gamma &amp; u_0 \\0 &amp; f_y &amp; v_0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} r_1 &amp; r_2 &amp; t\end{bmatrix} = s M \begin{bmatrix} r_1 &amp;  r_2 &amp; t\end{bmatrix}, M = \begin{bmatrix}  f_x &amp;  \gamma &amp; u_0 \\0 &amp; f_y &amp; v_0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}$</p>
+<h5 id="估计单应性矩阵"><a href="#估计单应性矩阵" class="headerlink" title="估计单应性矩阵"></a>估计单应性矩阵</h5><p>首先单应性矩阵可以写成这样：$H= \begin{bmatrix} h_{11} &amp;  h_{12} &amp; h_{13} \\ h_{21} &amp; h_{22} &amp; h_{23} \\ h_{31} &amp; h_{32} &amp; h_{33} \end{bmatrix}$</p>
+<p>我们假设两张图像中的对应点对对齐次坐标为$(x’,y’,1)$和$(x,y,1)$，那么：$\begin{bmatrix} x’  \\ y’ \\ 1 \end{bmatrix} \sim \begin{bmatrix} h_{11} &amp;  h_{12} &amp; h_{13} \\ h_{21} &amp; h_{22} &amp; h_{23} \\ h_{31} &amp; h_{32} &amp; h_{33} \end{bmatrix} \begin{bmatrix} x  \\ y \\ 1 \end{bmatrix}$</p>
+<p>展开后：$x’ = \frac{h_{11}x+h_{12}y+h_{13}}{h_{31}x+h_{32}y+h{33}} \\ y’ = \frac{h_{21}x+h_{22}y+h_{23}}{h_{31}x+h_{32}y+h{33}}$</p>
+<p>由于齐次方程组乘上一个非零常数$k$并不改变结果，比如$x’ = \frac{kh_{11}x+kh_{12}y+kh_{13}}{kh_{31}x+kh_{32}y+kh{33}} \\ y’ = \frac{kh_{21}x+kh_{22}y+kh_{23}}{kh_{31}x+kh_{32}y+kh{33}}$, 所以对于最终的结果常量$h_{33}$我们可以将其乘上一个$k$使其为1，与之对应的其他参数也会乘上$k$。简单来说，不管最终求出来的$h_{33}$是多少，都会有一个$k$使其变成1，那么我们就消除了一个自由度，只剩下8个未知量。</p>
+<p>化简$x’,y’$：$(h_{31}x+h_{32}y+h_{33})x’ = h_{11}x + h_{12}y + h_{13} \\  (h_{31}x + h_{32}y + h_{33})y’ = h_{21}x + h_{22}y + h_{23}$ $\to$ $h_{11}x + h_{12}y + h_{13} - h_{31}xx’-h{32}yx’-h_{33}X’ = 0\\ h_{21}x + h_{22}y + h_{23} - h_{31}xy’ - h_{32}yy’-h_{33}y’ = 0$ </p>
+<p>写成矩阵形式：$\begin{bmatrix} x_1 &amp; y_1 &amp; 1 &amp; 0  &amp; 0 &amp; 0 &amp; -x_1x_1’ &amp; -y_1x_1’ &amp; -x_1’  \\  0 &amp; 0 &amp; 0 &amp; x_1 &amp; y_1 &amp; 1 &amp; -x_1y_1’ &amp; -y_1y_1’ &amp; -y_1’ \\  \\ \\ \\ \\ \\  \end{bmatrix} \begin{bmatrix} h_{11} \\ h_{12} \\ h_{13} \\ h_{21} \\ h_{22} \\ h_{23} \\ h_{31} \\ h_{32} \\ h_{33}  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\  \\  \\  \\  \\  \\  \\   \end{bmatrix}$</p>
+<p>因为已经确定了一个参数，所以只需要确定4个点就可以解出剩余的8个未知量</p>
                 
             </div>
             <hr/>
@@ -1490,7 +1504,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">92.7k</span>
+                        class="white-color">93.8k</span>
             
             
             
