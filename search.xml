@@ -301,6 +301,7 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 <p><img src="https://cdn.jsdelivr.net/gh/Mug-9/imge-stroage@master/Dim3Rebuild/zfsdfg.58g35fd8iss0.PNG" alt="坐标转换"></p>
 <p>将$P$从原先的坐标系转换到新的坐标系，根据上图可以得到新的$y$是线1+线2，新的$z$是线3-线4</p>
 <p>即新的坐标就是$\begin{cases} X_c = X \\ Y_c = cos\theta\cdot Y + sin\theta \cdot Z \\ Z_c = -sin \theta \cdot Y + cos\theta\cdot Z \end{cases}\ $</p>
+<p>由绿色坐标系转向黄色坐标系则相反：$\begin{cases} X_c = X \\ Y_c = cos\theta\cdot Y - sin\theta \cdot Z \\ Z_c = sin \theta \cdot Y + cos\theta\cdot Z \end{cases}\ $</p>
 <p>按照不同轴进行顺时针旋转的旋转矩阵如下：</p>
 <ul>
 <li>沿$X$轴旋转：$R(X, \theta) = \begin{bmatrix}1 &amp; 0 &amp; 0\\0 &amp; cos\theta &amp; -sin\theta \\ 0 &amp; sin\theta &amp; cos\theta \end{bmatrix} $</li>
@@ -328,7 +329,7 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 <p>该过程为透视投影，如下矩阵表示：</p>
 <p>$ s\begin{bmatrix}X\\Y\\ 1 \end{bmatrix} = \begin{bmatrix} f &amp;  0 &amp; 0 &amp; 0\\0 &amp; f &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \begin{bmatrix}x \\ y\\ z \\ 1\end{bmatrix}$</p>
 <p>其中，$s$为比例因子($s$不为0)，$f$为有效焦距(光心到图像平面的距离)，$(x, y, z,1)^T$是空间点$P$在相机坐标系$oxyz$中的齐次坐标$(X,Y,1)^T$是像点$p$在图像坐标系$OXY$中的齐次坐标。</p>
-<p>$s$不是固定的，以$x$举例：$s X = fx, \frac{s}{f} = \frac{x}{X}$，世界坐标系中的物体距离的远近会影响$s$的大小。</p>
+<p>$s$不是固定的，以$x$举例：$s X = fx, \frac{s}{f} = \frac{x}{X}, X = f\frac{x}{z}$，世界坐标系中的物体距离的远近会影响$s$的大小。</p>
 <p>通过这样的转换，3维世界中的点可以转换到2维世界中，其中$x,y$经过转换成了新的坐标，$z$统一变成1，2维世界中不在有深度信息。</p>
 <h5 id="图像坐标系到像素坐标系转换"><a href="#图像坐标系到像素坐标系转换" class="headerlink" title="图像坐标系到像素坐标系转换"></a>图像坐标系到像素坐标系转换</h5><p><strong>像素坐标系</strong></p>
 <ul>
@@ -351,7 +352,8 @@ git submodule update<span aria-hidden="true" class="line-numbers-rows"><span></s
 </ul>
 <h5 id="世界坐标系转换成像素坐标系"><a href="#世界坐标系转换成像素坐标系" class="headerlink" title="世界坐标系转换成像素坐标系"></a>世界坐标系转换成像素坐标系</h5><p>$ s \begin{bmatrix}u\\v\\ 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{dX} &amp;  0 &amp; u_0\\0 &amp; \frac{1}{dY} &amp; v_0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} \begin{bmatrix} f &amp;  0 &amp; 0 &amp; 0\\0 &amp; f &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \begin{bmatrix} R &amp;  t\\0 &amp; 1\end{bmatrix}  \begin{bmatrix} x_w \\ y_w \\ z_w  \\ 1\end{bmatrix}$</p>
 <p>$= \begin{bmatrix} \alpha_x &amp;  0 &amp; u_0 &amp; 0\\0 &amp; \alpha_y &amp; v_0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}\begin{bmatrix} R &amp;  t\\0 &amp; 1\end{bmatrix}  \begin{bmatrix} x_w \\ y_w \\ z_w  \\ 1\end{bmatrix} = M_1M_2X_w = MX_w$ </p>
-<p>其中，$\alpha_x=\frac{f}{dX}, \alpha_y = \frac{y}{dY}$，称为$u,v$的尺度因子，$M_1$称为相机的内部参数矩阵，$M_2$称为相机的外部参数矩阵，$M$称为投影矩阵</p>
+<p>$u = f_x\frac{X}{Z} +c_x, v = f_y \frac{Y}{Z}+c_y$</p>
+<p>其中，$\alpha_x=\frac{f}{dX}, \alpha_y = \frac{y}{dY}$，$\alpha_x$也可以写成$f_x, s$称为$u,v$的尺度因子，$M_1$称为相机的内部参数矩阵，$M_2$称为相机的外部参数矩阵，$M$称为投影矩阵</p>
 <h5 id="畸变参数"><a href="#畸变参数" class="headerlink" title="畸变参数"></a>畸变参数</h5><ul>
 <li>在几何光学和阴极射线管(CRT)显示中，畸变是对直线投影的一种畸变</li>
 <li>简单来说直线投影式场景内的以条直线投影到图片上也保持为一条直线</li>
